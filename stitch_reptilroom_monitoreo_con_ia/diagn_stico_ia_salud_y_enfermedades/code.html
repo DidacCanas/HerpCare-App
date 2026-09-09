@@ -1,0 +1,370 @@
+<!DOCTYPE html><html class="dark" lang="es"><head><meta charset="utf-8"><meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" name="viewport"><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=Outfit:wght@500;600;700&amp;display=swap" rel="stylesheet"><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"><style>@layer base{html,body{width:100vw;margin:0;padding:0;background-color:#101412;color:#e0e3df;}body{overscroll-behavior:none;-webkit-tap-highlight-color:transparent;}.pb-safe{padding-bottom:env(safe-area-inset-bottom,0px);}.pt-safe{padding-top:env(safe-area-inset-top,0px);}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = { darkMode: "class", theme: { extend: { colors: { "on-secondary-fixed": "#390c00", "tertiary-container": "#223a22", "primary-fixed": "#caead4", "secondary-fixed-dim": "#ffb59c", "primary-container": "#1e3a2b", "secondary": "#ffb59c", "on-primary-fixed-variant": "#304d3d", "error": "#ffb4ab", "secondary-container": "#832c07", "surface-container-lowest": "#0b0f0d", "surface-bright": "#363a38", "surface-container-highest": "#323633", "secondary-fixed": "#ffdbcf", "tertiary": "#b1cead", "surface-tint": "#aeceb9", "inverse-primary": "#486554", "on-secondary-fixed-variant": "#802a05", "error-container": "#93000a", "on-tertiary": "#1d361e", "surface-container-high": "#272b29", "on-primary": "#1a3627", "surface-dim": "#101412", "on-surface": "#e0e3df", "inverse-surface": "#e0e3df", "surface-variant": "#323633", "on-secondary-container": "#ffa080", "background": "#101412", "on-secondary": "#5c1900", "outline-variant": "#424843", "on-primary-container": "#85a490", "tertiary-fixed": "#cdebc8", "on-surface-variant": "#c2c8c2", "surface-container-low": "#181c1a", "on-tertiary-fixed-variant": "#344d33", "surface-container": "#1c201e", "outline": "#8c928c", "tertiary-fixed-dim": "#b1cead", "on-error-container": "#ffdad6", "surface": "#101412", "on-background": "#e0e3df", "primary-fixed-dim": "#aeceb9", "on-tertiary-fixed": "#08200b", "on-primary-fixed": "#042013", "on-error": "#690005", "primary": "#aeceb9", "on-tertiary-container": "#88a485", "inverse-on-surface": "#2d312f" }, borderRadius: { "DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px" }, spacing: { "margin-mobile": "1rem", "card-pad": "1.25rem", "space-xl": "2rem", "space-2xl": "3rem", "space-2xs": "0.25rem", "space-lg": "1.5rem", "gutter-mobile": "1rem", "space-xs": "0.5rem", "space-md": "1rem", "space-sm": "0.75rem" }, fontFamily: { "headline-md": ["Outfit"], "body-md": ["Inter"], "stat-metric": ["Outfit"], "body-lg": ["Inter"], "display-lg": ["Outfit"], "body-sm": ["Inter"], "headline-sm": ["Outfit"], "label-sm": ["Inter"], "label-md": ["Inter"], "headline-lg": ["Outfit"], "title-md": ["Inter"], "label-lg": ["Inter"], "headline-lg-mobile": ["Outfit"] }, fontSize: { "headline-md": ["22px", { "lineHeight": "28px", "fontWeight": "600" }], "body-md": ["14px", { "lineHeight": "20px", "fontWeight": "400" }], "stat-metric": ["28px", { "lineHeight": "32px", "letterSpacing": "-0.02em", "fontWeight": "700" }], "body-lg": ["16px", { "lineHeight": "24px", "fontWeight": "400" }], "display-lg": ["40px", { "lineHeight": "48px", "letterSpacing": "-0.02em", "fontWeight": "700" }], "body-sm": ["12px", { "lineHeight": "16px", "fontWeight": "400" }], "headline-sm": ["18px", { "lineHeight": "24px", "fontWeight": "500" }], "label-sm": ["10px", { "lineHeight": "14px", "letterSpacing": "0.06em", "fontWeight": "600" }], "label-md": ["12px", { "lineHeight": "16px", "letterSpacing": "0.04em", "fontWeight": "500" }], "headline-lg": ["32px", { "lineHeight": "40px", "letterSpacing": "-0.01em", "fontWeight": "600" }], "title-md": ["16px", { "lineHeight": "22px", "fontWeight": "600" }], "label-lg": ["14px", { "lineHeight": "18px", "letterSpacing": "0.02em", "fontWeight": "600" }], "headline-lg-mobile": ["26px", { "lineHeight": "34px", "letterSpacing": "-0.01em", "fontWeight": "600" }] } } } };</script><style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head><body class="bg-surface font-body-md text-body-md text-on-surface min-h-screen flex flex-col selection:bg-primary-container selection:text-primary"><header class="fixed top-0 w-full z-50 pt-safe bg-surface-dim/80 backdrop-blur-xl shadow-[0_4px_20px_rgba(0,0,0,0.35)]"><div class="h-16 px-gutter-mobile flex items-center justify-between"><div class="flex items-center gap-space-sm"><img alt="HerpCare Logo" class="w-8 h-8 rounded-lg object-contain" src="https://lh3.googleusercontent.com/aida/AEtjO1Vl62PH8mojKVBfSbfgPCtuB8KMJnOtz57eyKo9Qrktd1CeZNpc2yT2t4VIC_fKPZozjwpOpbyn_NvpJzRjCe4jUHaIacrAlugikp7ygd-cOG6XkIGTtpaskUV9CjYeYeAK7AVFqyJF-UGtosDVqexPSK-9J5B5Fgl-AVNOieMdXWZy1gHp9paK_NNqwlhM_d1MOsBK8_Y-jewaZl_7mBaPKDJAcSupFdXuJl6n0X7H5gwwoFICpQ7IOg"><span class="font-headline-sm text-headline-sm text-on-surface tracking-wide">HerpCare</span></div><div class="flex items-center gap-space-xs"><div class="w-11 h-11 flex items-center justify-center"><img alt="Profile" class="w-8 h-8 rounded-full object-cover ring-1 ring-outline-variant/40" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD9SNbjPHPHJZcGhyaDvL_SxDx80L2fBkTRZJJx5vJ4EqTWV8jKOQ_Je4T5SqI3IBF6E1rF2uct6rPah_fwnGKfFrYtfRQL_GIMDK-jz7lLdFNxnHHeTAYu65zXJWhXAw44XQCCIDqU9ettng0DU2AfYhCLplRXD9KnoQ_2CTCpS7YIdP_8lHA8RtiwErB6DDSwvE_oYJzTBZtS9k6dJ4HvD_YI1Y-CJgV8ohUnOi3tKorEzQK8zeRx"></div></div></div></header><main class="flex flex-col relative w-full pt-16 pb-24 bg-surface min-h-screen"><div class="flex flex-col w-full pb-8">
+<!-- Biome Scanner Header & Context Bar -->
+<div class="px-margin-mobile pt-space-xs pb-space-sm flex items-center justify-between">
+<div class="flex items-center gap-space-xs min-w-0">
+<span class="w-2.5 h-2.5 rounded-full bg-primary animate-pulse"></span>
+<div class="flex flex-col min-w-0">
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider">Módulo Clínico Bio-IA</span>
+<span class="font-title-md text-title-md text-on-surface truncate">Ziggy • Gecko Leopardo (E. macularius)</span>
+</div>
+</div>
+<div class="flex items-center gap-1 bg-surface-container-high px-2.5 py-1 rounded-full text-on-surface">
+<span class="material-symbols-outlined text-[16px] text-tertiary">biotech</span>
+<span class="font-label-sm text-label-sm text-tertiary">v4.8 HerpScan</span>
+</div>
+</div>
+<!-- Mode Filter Pills (Horizontal Scroll) -->
+<div class="w-full overflow-x-auto px-margin-mobile py-space-xs flex items-center gap-2 no-scrollbar">
+<button class="flex-shrink-0 px-3 py-1.5 rounded-full bg-surface-container text-on-surface-variant font-label-md text-label-md transition-all active:scale-95 flex items-center gap-1.5" onclick="selectScanMode(this, 'general')">
+<span class="material-symbols-outlined text-[16px]">travel_explore</span>
+<span class="">Inspección General</span>
+</button>
+<button class="flex-shrink-0 px-3 py-1.5 rounded-full bg-primary-container text-primary font-label-md text-label-md transition-all active:scale-95 flex items-center gap-1.5 shadow-sm" onclick="selectScanMode(this, 'shed')">
+<span class="material-symbols-outlined text-[16px]">dry_cleaning</span>
+<span class="">Problemas de Muda (Disecdisis)</span>
+</button>
+<button class="flex-shrink-0 px-3 py-1.5 rounded-full bg-surface-container text-on-surface-variant font-label-md text-label-md transition-all active:scale-95 flex items-center gap-1.5" onclick="selectScanMode(this, 'respiratory')">
+<span class="material-symbols-outlined text-[16px]">air</span>
+<span class="">Boca &amp; Respiratorio</span>
+</button>
+<button class="flex-shrink-0 px-3 py-1.5 rounded-full bg-surface-container text-on-surface-variant font-label-md text-label-md transition-all active:scale-95 flex items-center gap-1.5" onclick="selectScanMode(this, 'parasites')">
+<span class="material-symbols-outlined text-[16px]">bug_report</span>
+<span class="">Parásitos / Piel</span>
+</button>
+<button class="flex-shrink-0 px-3 py-1.5 rounded-full bg-surface-container text-on-surface-variant font-label-md text-label-md transition-all active:scale-95 flex items-center gap-1.5" onclick="selectScanMode(this, 'mbs')">
+<span class="material-symbols-outlined text-[16px]">accessibility_new</span>
+<span class="">Signos de EMO</span>
+</button>
+</div>
+<!-- Main Viewport: Clinical AR Camera Scanning Area -->
+<div class="px-margin-mobile pt-space-xs">
+<div class="relative w-full aspect-[4/3] rounded-xl overflow-hidden bg-surface-container-lowest shadow-xl">
+<!-- Specimen Photography Placeholder -->
+<img class="w-full h-full object-cover" data-alt="Macro clinical photography of a captive juvenile leopard gecko resting on natural slate stone substrate, illuminated with daylight spectrum LED terrarium light, showing distinct yellow and black spots with subtle opaque shedding skin around toes and periorbital area, high resolution bio-authentic nature documentary aesthetic." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCtLzNaYaKEGYtCfcPFshV51VrxfTWIbpPC3obkMCPsv4gyAnn00se55uuFk_i51pC62JtyohLm7i1DwpW2eePnMx9AtJmqapUlE6H3nHxsovKmj7oVwjJqtHqgyVhJ4ocZyubgedtSD9XAh_sBNqdhttXVsTjxR_hPLIJ09ByDtcFJYbWhEfwH0UH36tTUy_VumnfDWTvqrhHFLHBJn0-2DCqT38IVX-BfVwsrVS1xZznYhJbpw9co">
+<!-- Dark Vignette / Precision Overlays -->
+<div class="absolute inset-0 bg-gradient-to-t from-surface-container-lowest/90 via-transparent to-surface-container-lowest/40 pointer-events-none"></div>
+<!-- AR Reticle Grid Elements -->
+<div class="absolute inset-3 pointer-events-none flex flex-col justify-between">
+<div class="flex justify-between items-start">
+<div class="flex items-center gap-1.5 bg-surface-container-lowest/80 backdrop-blur-md px-2 py-1 rounded-lg">
+<span class="material-symbols-outlined text-secondary text-[16px] animate-spin" style="animation-duration: 4s;">radar</span>
+<span class="font-label-sm text-label-sm text-secondary tracking-widest uppercase">Escaneo Activo</span>
+</div>
+<div class="bg-surface-container-lowest/80 backdrop-blur-md px-2 py-1 rounded-lg text-right">
+<span class="font-label-sm text-label-sm text-on-surface-variant block">CALIBRACIÓN</span>
+<span class="font-label-md text-label-md text-on-surface font-semibold">Macro Óptico 1.2x</span>
+</div>
+</div>
+<div class="flex justify-between items-end">
+<div class="bg-surface-container-lowest/80 backdrop-blur-md px-2 py-1 rounded-lg flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px] text-tertiary">thermostat</span>
+<span class="font-label-sm text-label-sm text-tertiary">Zona Térmica: 31.4°C</span>
+</div>
+<span class="font-label-sm text-label-sm text-on-surface-variant/80 tracking-widest font-mono">60 FPS • RAW-RGB</span>
+</div>
+</div>
+<!-- AR Veterinary Inspection Hotspots -->
+<!-- Hotspot 1: Ojo Izquierdo (Detected Problem) -->
+<div class="absolute top-[28%] left-[42%] -translate-x-1/2 -translate-y-1/2 cursor-pointer group" onclick="toggleHotspotTooltip('eye')">
+<div class="relative flex items-center justify-center">
+<span class="absolute w-8 h-8 rounded-full bg-secondary/30 animate-ping"></span>
+<span class="relative w-5 h-5 rounded-full bg-secondary flex items-center justify-center text-on-secondary-fixed shadow-md">
+<span class="material-symbols-outlined text-[13px] font-bold">priority_high</span>
+</span>
+</div>
+<!-- Mini Badge Flag -->
+<div class="absolute left-6 -top-2 whitespace-nowrap bg-surface-container-high/90 backdrop-blur-md text-secondary px-2 py-0.5 rounded shadow-md pointer-events-none">
+<span class="font-label-sm text-label-sm font-semibold">Muda retenida: Párpado</span>
+</div>
+</div>
+<!-- Hotspot 2: Garras / Dígitos Delanteros (Detected Problem) -->
+<div class="absolute top-[68%] left-[24%] -translate-x-1/2 -translate-y-1/2 cursor-pointer" onclick="toggleHotspotTooltip('toes')">
+<div class="relative flex items-center justify-center">
+<span class="absolute w-7 h-7 rounded-full bg-secondary/30 animate-ping" style="animation-delay: 0.5s;"></span>
+<span class="relative w-4 h-4 rounded-full bg-secondary flex items-center justify-center text-on-secondary-fixed shadow-md">
+<span class="material-symbols-outlined text-[11px] font-bold">warning</span>
+</span>
+</div>
+<div class="absolute left-5 -top-1 whitespace-nowrap bg-surface-container-high/90 backdrop-blur-md text-secondary px-2 py-0.5 rounded shadow-md pointer-events-none">
+<span class="font-label-sm text-label-sm font-semibold">Anillos en falanges</span>
+</div>
+</div>
+<!-- Hotspot 3: Boca & Rostro (Normal) -->
+<div class="absolute top-[32%] left-[64%] -translate-x-1/2 -translate-y-1/2">
+<div class="w-3.5 h-3.5 rounded-full bg-primary flex items-center justify-center text-on-primary shadow-sm">
+<span class="material-symbols-outlined text-[10px]">check</span>
+</div>
+</div>
+<!-- Hotspot 4: Escamas Dorsales (Normal) -->
+<div class="absolute top-[48%] left-[54%] -translate-x-1/2 -translate-y-1/2">
+<div class="w-3 h-3 rounded-full bg-primary/70 flex items-center justify-center text-on-primary">
+<span class="material-symbols-outlined text-[9px]">check</span>
+</div>
+</div>
+<!-- Hotspot 5: Base de Cola (Normal / Depósito graso OK) -->
+<div class="absolute top-[72%] left-[82%] -translate-x-1/2 -translate-y-1/2">
+<div class="w-3 h-3 rounded-full bg-primary/70 flex items-center justify-center text-on-primary">
+<span class="material-symbols-outlined text-[9px]">check</span>
+</div>
+</div>
+<!-- Hotspot 6: Cloaca / Vent (Normal) -->
+<div class="absolute top-[82%] left-[68%] -translate-x-1/2 -translate-y-1/2">
+<div class="w-3 h-3 rounded-full bg-primary/70 flex items-center justify-center text-on-primary">
+<span class="material-symbols-outlined text-[9px]">check</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Anatomy Coverage Inspection Checklist -->
+<div class="px-margin-mobile pt-space-sm">
+<div class="bg-surface-container-low rounded-xl p-space-sm flex flex-col gap-2">
+<div class="flex items-center justify-between">
+<span class="font-label-md text-label-md text-on-surface-variant uppercase tracking-wider">Puntos de Inspección Biológica (6/6)</span>
+<span class="font-label-sm text-label-sm text-primary font-semibold">100% Cobertura</span>
+</div>
+<div class="grid grid-cols-3 gap-1.5">
+<div class="flex items-center gap-1.5 bg-surface-container px-2 py-1.5 rounded-lg">
+<span class="material-symbols-outlined text-secondary text-[16px]">visibility</span>
+<div class="flex flex-col min-w-0">
+<span class="font-label-sm text-label-sm text-on-surface font-semibold leading-tight">Ojos</span>
+<span class="font-label-sm text-label-sm text-secondary truncate">Anomalía</span>
+</div>
+</div>
+<div class="flex items-center gap-1.5 bg-surface-container px-2 py-1.5 rounded-lg">
+<span class="material-symbols-outlined text-tertiary text-[16px]">sentiment_satisfied</span>
+<div class="flex flex-col min-w-0">
+<span class="font-label-sm text-label-sm text-on-surface font-semibold leading-tight">Boca/Mucosa</span>
+<span class="font-label-sm text-label-sm text-tertiary truncate">Sano</span>
+</div>
+</div>
+<div class="flex items-center gap-1.5 bg-surface-container px-2 py-1.5 rounded-lg">
+<span class="material-symbols-outlined text-tertiary text-[16px]">texture</span>
+<div class="flex flex-col min-w-0">
+<span class="font-label-sm text-label-sm text-on-surface font-semibold leading-tight">Escamas</span>
+<span class="font-label-sm text-label-sm text-tertiary truncate">Sin ectoparásitos</span>
+</div>
+</div>
+<div class="flex items-center gap-1.5 bg-surface-container px-2 py-1.5 rounded-lg">
+<span class="material-symbols-outlined text-secondary text-[16px]">front_hand</span>
+<div class="flex flex-col min-w-0">
+<span class="font-label-sm text-label-sm text-on-surface font-semibold leading-tight">Dígitos</span>
+<span class="font-label-sm text-label-sm text-secondary truncate">Disecdisis</span>
+</div>
+</div>
+<div class="flex items-center gap-1.5 bg-surface-container px-2 py-1.5 rounded-lg">
+<span class="material-symbols-outlined text-tertiary text-[16px]">water_drop</span>
+<div class="flex flex-col min-w-0">
+<span class="font-label-sm text-label-sm text-on-surface font-semibold leading-tight">Base Cola</span>
+<span class="font-label-sm text-label-sm text-tertiary truncate">Grasa Óptima</span>
+</div>
+</div>
+<div class="flex items-center gap-1.5 bg-surface-container px-2 py-1.5 rounded-lg">
+<span class="material-symbols-outlined text-tertiary text-[16px]">radio_button_checked</span>
+<div class="flex flex-col min-w-0">
+<span class="font-label-sm text-label-sm text-on-surface font-semibold leading-tight">Cloaca</span>
+<span class="font-label-sm text-label-sm text-tertiary truncate">Limpia / Libre</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Diagnostic AI Report Card -->
+<div class="px-margin-mobile pt-space-md">
+<div class="bg-surface-container rounded-xl p-card-pad flex flex-col gap-space-md relative overflow-hidden shadow-lg">
+<!-- Ambient Glow Decorator -->
+<div class="absolute -right-12 -top-12 w-32 h-32 rounded-full bg-secondary-container/20 blur-2xl pointer-events-none"></div>
+<!-- Report Header & Status Badge -->
+<div class="flex items-start justify-between gap-2 relative">
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider">Informe Diagnóstico Clínico</span>
+<h2 class="font-headline-sm text-headline-sm text-on-surface font-semibold mt-0.5">Disecdisis Periorbital y Falángica</h2>
+</div>
+<!-- Yellow / Terracotta Alert Pill -->
+<div class="flex items-center gap-1 bg-secondary-container/60 text-secondary px-3 py-1 rounded-full flex-shrink-0">
+<span class="material-symbols-outlined text-[16px]">report_problem</span>
+<span class="font-label-md text-label-md font-semibold">Atención Leve</span>
+</div>
+</div>
+<!-- Metric & Confidence Grid -->
+<div class="grid grid-cols-2 gap-2.5">
+<div class="bg-surface-container-low p-3 rounded-lg flex flex-col justify-between">
+<span class="font-label-sm text-label-sm text-on-surface-variant">Confianza Algorítmica</span>
+<div class="flex items-baseline gap-1 mt-1">
+<span class="font-stat-metric text-stat-metric text-primary">94.2</span>
+<span class="font-headline-sm text-headline-sm text-primary">%</span>
+</div>
+<span class="font-label-sm text-label-sm text-tertiary mt-0.5 flex items-center gap-1">
+<span class="material-symbols-outlined text-[13px]">verified</span>
+            Modelo HerpShed-CNN
+          </span>
+</div>
+<div class="bg-surface-container-low p-3 rounded-lg flex flex-col justify-between">
+<span class="font-label-sm text-label-sm text-on-surface-variant">Severidad / Riesgo</span>
+<div class="flex items-baseline gap-1 mt-1">
+<span class="font-stat-metric text-stat-metric text-secondary">Grado I</span>
+</div>
+<span class="font-label-sm text-label-sm text-secondary-fixed-dim mt-0.5 flex items-center gap-1">
+<span class="material-symbols-outlined text-[13px]">schedule</span>
+            Ventana 24-48h
+          </span>
+</div>
+</div>
+<!-- Visual Diagnostics Detail -->
+<div class="bg-surface-container-high/60 rounded-lg p-3 flex flex-col gap-2">
+<span class="font-label-md text-label-md text-on-surface font-semibold flex items-center gap-1.5">
+<span class="material-symbols-outlined text-secondary text-[18px]">loupe</span>
+          Hallazgos Clínicos Focales
+        </span>
+<ul class="flex flex-col gap-2 font-body-sm text-body-sm text-on-surface-variant">
+<li class="flex items-start gap-2">
+<span class="w-1.5 h-1.5 rounded-full bg-secondary mt-1.5 flex-shrink-0"></span>
+<span class=""><strong class="text-on-surface">Párpado izquierdo:</strong> Capa epidérmica residual seca sobre el canto medial; sin evidencia de absceso retrobulbar por el momento.</span>
+</li>
+<li class="flex items-start gap-2">
+<span class="w-1.5 h-1.5 rounded-full bg-secondary mt-1.5 flex-shrink-0"></span>
+<span class=""><strong class="text-on-surface">Dígitos III y IV (Extremidad anterior der.):</strong> Anillo constrictor incipiente de estrato córneo retenido. Riesgo de isquemia digital si se deseca por completo.</span>
+</li>
+</ul>
+</div>
+<!-- Protocol & First Aid Recommendations -->
+<div class="flex flex-col gap-2.5">
+<div class="flex items-center justify-between">
+<h3 class="font-title-md text-title-md text-on-surface font-semibold flex items-center gap-1.5">
+<span class="material-symbols-outlined text-primary text-[20px]">medical_services</span>
+            Protocolo de Primeros Auxilios
+          </h3>
+<span class="font-label-sm text-label-sm text-tertiary">3 Pasos Clave</span>
+</div>
+<div class="flex flex-col gap-2">
+<!-- Step 1 -->
+<div class="bg-surface-container-low rounded-xl p-3 flex items-start gap-3">
+<div class="w-7 h-7 rounded-full bg-primary-container text-primary flex items-center justify-center font-label-md text-label-md font-bold flex-shrink-0 mt-0.5">
+              1
+            </div>
+<div class="flex flex-col min-w-0">
+<span class="font-label-lg text-label-lg text-on-surface font-semibold">Baño de Hidratación Controlado</span>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-0.5">
+                Sumergir en agua tibia (<span class="text-on-surface font-medium">28°C – 30°C</span>) no superior a la altura de su abdomen durante 15 min en contenedor ventilado con papel absorbente en el fondo.
+              </p>
+</div>
+</div>
+<!-- Step 2 -->
+<div class="bg-surface-container-low rounded-xl p-3 flex items-start gap-3">
+<div class="w-7 h-7 rounded-full bg-primary-container text-primary flex items-center justify-center font-label-md text-label-md font-bold flex-shrink-0 mt-0.5">
+              2
+            </div>
+<div class="flex flex-col min-w-0">
+<span class="font-label-lg text-label-lg text-on-surface font-semibold">Retirada Mecánica Suave</span>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-0.5">
+                Emplear un hisopo estéril humedecido en solución salina para rodar suavemente la piel sobre los dedos. <span class="text-secondary font-medium">Nunca tirar con pinzas si hay resistencia.</span>
+</p>
+</div>
+</div>
+<!-- Step 3 -->
+<div class="bg-surface-container-low rounded-xl p-3 flex items-start gap-3">
+<div class="w-7 h-7 rounded-full bg-primary-container text-primary flex items-center justify-center font-label-md text-label-md font-bold flex-shrink-0 mt-0.5">
+              3
+            </div>
+<div class="flex flex-col min-w-0">
+<span class="font-label-lg text-label-lg text-on-surface font-semibold">Corrección del Microclima</span>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-0.5">
+                Revisar higrómetro. Humedad actual estimada en el refugio húmedo &lt;50%. Rehumedecer el musgo sphagnum hasta alcanzar 70-80% durante la ecdisis.
+              </p>
+</div>
+</div>
+</div>
+</div>
+<!-- Emergency Warning Box -->
+<div class="bg-secondary-container/40 rounded-xl p-3.5 flex items-start gap-3">
+<span class="material-symbols-outlined text-secondary text-[22px] flex-shrink-0 mt-0.5">notification_important</span>
+<div class="flex flex-col">
+<span class="font-label-md text-label-md text-secondary font-bold uppercase tracking-wider">Criterio Veterinario Urgente</span>
+<p class="font-body-sm text-body-sm text-on-surface mt-0.5 leading-relaxed">
+            Si la muda persiste tras <strong>48 horas</strong>, se observa decoloración violácea/oscura en la falange (signo de estrangulamiento vascular) o secreción ocular blanquecina, acude inmediatamente a un veterinario especialista en animales exóticos.
+          </p>
+</div>
+</div>
+<!-- Action Workflow Buttons -->
+<div class="flex flex-col gap-2.5 pt-1">
+<button class="w-full h-12 bg-secondary text-on-secondary font-label-lg text-label-lg rounded-xl flex items-center justify-center gap-2 shadow-md active:scale-[0.98] transition-transform" onclick="triggerToast('Reporte veterinario generado en formato PDF')">
+<span class="material-symbols-outlined text-[20px]">picture_as_pdf</span>
+<span class="">Exportar Reporte PDF para Veterinario</span>
+</button>
+<div class="grid grid-cols-2 gap-2">
+<button class="h-11 bg-surface-container-high hover:bg-surface-bright text-on-surface font-label-md text-label-md rounded-xl flex items-center justify-center gap-1.5 transition-colors active:scale-[0.98]" onclick="triggerToast('Registro guardado en la ficha clínica de Ziggy')">
+<span class="material-symbols-outlined text-tertiary text-[18px]">bookmark_added</span>
+<span class="truncate">Guardar en Ficha</span>
+</button>
+<button class="h-11 bg-surface-container-high hover:bg-surface-bright text-on-surface font-label-md text-label-md rounded-xl flex items-center justify-center gap-1.5 transition-colors active:scale-[0.98]" onclick="restartInspection()">
+<span class="material-symbols-outlined text-primary text-[18px]">restart_alt</span>
+<span class="truncate">Nueva Inspección</span>
+</button>
+</div>
+</div>
+</div>
+</div>
+<!-- Educational Vivarium Bio-Tip Card -->
+<div class="px-margin-mobile pt-space-md">
+<div class="bg-surface-container-low rounded-xl p-space-sm flex items-center gap-3">
+<div class="w-10 h-10 rounded-full bg-primary-container text-primary flex items-center justify-center flex-shrink-0">
+<span class="material-symbols-outlined text-[22px]">eco</span>
+</div>
+<div class="flex flex-col min-w-0">
+<span class="font-label-md text-label-md text-on-surface font-semibold">Consejo Bioactivo HerpCare</span>
+<p class="font-body-sm text-body-sm text-on-surface-variant line-clamp-2">
+          La suplementación con Vitamina A (retinol preformado) en reptiles insectívoros es vital para la renovación regular del epitelio corneal y dérmico.
+        </p>
+</div>
+</div>
+</div>
+<!-- Interactive Feedback Toast (DOM injected) -->
+<div class="fixed bottom-20 left-1/2 -translate-x-1/2 z-50 px-4 py-2.5 rounded-full bg-surface-bright text-on-surface font-label-md text-label-md shadow-2xl flex items-center gap-2 opacity-0 pointer-events-none transition-all duration-300" id="bioToast">
+<span class="material-symbols-outlined text-primary text-[18px]">check_circle</span>
+<span id="bioToastText" class="">Acción completada con éxito</span>
+</div>
+</div>
+<script>
+  function selectScanMode(element, modeId) {
+    const parent = element.parentElement;
+    const buttons = parent.querySelectorAll('button');
+    buttons.forEach(btn => {
+      btn.className = 'flex-shrink-0 px-3 py-1.5 rounded-full bg-surface-container text-on-surface-variant font-label-md text-label-md transition-all active:scale-95 flex items-center gap-1.5';
+    });
+    element.className = 'flex-shrink-0 px-3 py-1.5 rounded-full bg-primary-container text-primary font-label-md text-label-md transition-all active:scale-95 flex items-center gap-1.5 shadow-sm';
+    triggerToast('Modo de análisis cambiado: ' + element.innerText.trim());
+  }
+
+  function toggleHotspotTooltip(type) {
+    if (type === 'eye') {
+      triggerToast('Párpado izquierdo: Retención leve de cutícula');
+    } else if (type === 'toes') {
+      triggerToast('Dígitos: Anillo de muda en falanges distales');
+    }
+  }
+
+  function restartInspection() {
+    triggerToast('Iniciando recalibración óptica del escáner...');
+  }
+
+  function triggerToast(message) {
+    const toast = document.getElementById('bioToast');
+    const toastText = document.getElementById('bioToastText');
+    if (!toast || !toastText) return;
+    toastText.innerText = message;
+    toast.classList.remove('opacity-0', 'pointer-events-none', 'translate-y-2');
+    toast.classList.add('opacity-100', 'translate-y-0');
+    
+    setTimeout(() => {
+      toast.classList.remove('opacity-100', 'translate-y-0');
+      toast.classList.add('opacity-0', 'pointer-events-none', 'translate-y-2');
+    }, 2800);
+  }
+</script></main><nav class="fixed bottom-0 w-full z-50 pb-safe bg-surface-dim/85 backdrop-blur-xl shadow-[0_-4px_24px_rgba(0,0,0,0.45)]" data-active-classes="text-primary font-semibold"><div class="flex justify-around items-center h-16 px-2"><a class="flex flex-col items-center justify-center gap-1 min-w-[64px] h-12 text-on-surface-variant hover:text-on-surface transition-colors duration-200" data-path="reptil-room" href="#"><span class="material-symbols-outlined text-[24px]">nest_cam_indoor</span><span class="font-label-sm text-label-sm tracking-tight">Reptil Room</span></a><a class="flex flex-col items-center justify-center gap-1 min-w-[64px] h-12 text-on-surface-variant hover:text-on-surface transition-colors duration-200" data-path="seguimiento" href="#"><span class="material-symbols-outlined text-[24px]">monitoring</span><span class="font-label-sm text-label-sm tracking-tight">Seguimiento</span></a><a class="flex flex-col items-center justify-center gap-1 min-w-[64px] h-12 text-on-surface-variant hover:text-on-surface transition-colors duration-200" data-path="especies-ia" href="#"><span class="material-symbols-outlined text-[24px]">photo_camera</span><span class="font-label-sm text-label-sm tracking-tight">Especies IA</span></a><a aria-current="page" class="flex flex-col items-center justify-center gap-1 min-w-[64px] h-12 transition-colors duration-200 text-primary font-semibold" data-path="salud-ia" href="#"><span class="material-symbols-outlined text-[24px]">vital_signs</span><span class="font-label-sm text-label-sm tracking-tight">Salud IA</span></a></div></nav>
+
+</body></html>

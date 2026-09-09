@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="es"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" name="viewport"/><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=Outfit:wght@500;600;700&amp;display=swap" rel="stylesheet"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{width:100vw;margin:0;padding:0;background-color:#101412;color:#e0e3df;}body{overscroll-behavior:none;-webkit-tap-highlight-color:transparent;}.pb-safe{padding-bottom:env(safe-area-inset-bottom,0px);}.pt-safe{padding-top:env(safe-area-inset-top,0px);}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = { darkMode: "class", theme: { extend: { colors: { "on-secondary-fixed": "#390c00", "tertiary-container": "#223a22", "primary-fixed": "#caead4", "secondary-fixed-dim": "#ffb59c", "primary-container": "#1e3a2b", "secondary": "#ffb59c", "on-primary-fixed-variant": "#304d3d", "error": "#ffb4ab", "secondary-container": "#832c07", "surface-container-lowest": "#0b0f0d", "surface-bright": "#363a38", "surface-container-highest": "#323633", "secondary-fixed": "#ffdbcf", "tertiary": "#b1cead", "surface-tint": "#aeceb9", "inverse-primary": "#486554", "on-secondary-fixed-variant": "#802a05", "error-container": "#93000a", "on-tertiary": "#1d361e", "surface-container-high": "#272b29", "on-primary": "#1a3627", "surface-dim": "#101412", "on-surface": "#e0e3df", "inverse-surface": "#e0e3df", "surface-variant": "#323633", "on-secondary-container": "#ffa080", "background": "#101412", "on-secondary": "#5c1900", "outline-variant": "#424843", "on-primary-container": "#85a490", "tertiary-fixed": "#cdebc8", "on-surface-variant": "#c2c8c2", "surface-container-low": "#181c1a", "on-tertiary-fixed-variant": "#344d33", "surface-container": "#1c201e", "outline": "#8c928c", "tertiary-fixed-dim": "#b1cead", "on-error-container": "#ffdad6", "surface": "#101412", "on-background": "#e0e3df", "primary-fixed-dim": "#aeceb9", "on-tertiary-fixed": "#08200b", "on-primary-fixed": "#042013", "on-error": "#690005", "primary": "#aeceb9", "on-tertiary-container": "#88a485", "inverse-on-surface": "#2d312f" }, borderRadius: { "DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px" }, spacing: { "margin-mobile": "1rem", "card-pad": "1.25rem", "space-xl": "2rem", "space-2xl": "3rem", "space-2xs": "0.25rem", "space-lg": "1.5rem", "gutter-mobile": "1rem", "space-xs": "0.5rem", "space-md": "1rem", "space-sm": "0.75rem" }, fontFamily: { "headline-md": ["Outfit"], "body-md": ["Inter"], "stat-metric": ["Outfit"], "body-lg": ["Inter"], "display-lg": ["Outfit"], "body-sm": ["Inter"], "headline-sm": ["Outfit"], "label-sm": ["Inter"], "label-md": ["Inter"], "headline-lg": ["Outfit"], "title-md": ["Inter"], "label-lg": ["Inter"], "headline-lg-mobile": ["Outfit"] }, fontSize: { "headline-md": ["22px", { "lineHeight": "28px", "fontWeight": "600" }], "body-md": ["14px", { "lineHeight": "20px", "fontWeight": "400" }], "stat-metric": ["28px", { "lineHeight": "32px", "letterSpacing": "-0.02em", "fontWeight": "700" }], "body-lg": ["16px", { "lineHeight": "24px", "fontWeight": "400" }], "display-lg": ["40px", { "lineHeight": "48px", "letterSpacing": "-0.02em", "fontWeight": "700" }], "body-sm": ["12px", { "lineHeight": "16px", "fontWeight": "400" }], "headline-sm": ["18px", { "lineHeight": "24px", "fontWeight": "500" }], "label-sm": ["10px", { "lineHeight": "14px", "letterSpacing": "0.06em", "fontWeight": "600" }], "label-md": ["12px", { "lineHeight": "16px", "letterSpacing": "0.04em", "fontWeight": "500" }], "headline-lg": ["32px", { "lineHeight": "40px", "letterSpacing": "-0.01em", "fontWeight": "600" }], "title-md": ["16px", { "lineHeight": "22px", "fontWeight": "600" }], "label-lg": ["14px", { "lineHeight": "18px", "letterSpacing": "0.02em", "fontWeight": "600" }], "headline-lg-mobile": ["26px", { "lineHeight": "34px", "letterSpacing": "-0.01em", "fontWeight": "600" }] } } } };</script></head><body class="bg-surface font-body-md text-body-md text-on-surface min-h-screen flex flex-col selection:bg-primary-container selection:text-primary"><header class="fixed top-0 w-full z-50 pt-safe bg-surface-dim/80 backdrop-blur-xl shadow-[0_4px_20px_rgba(0,0,0,0.35)]"><div class="h-16 px-gutter-mobile flex items-center justify-between"><div class="flex items-center gap-space-sm"><img alt="HerpCare Logo" class="h-8 w-auto object-contain" src="https://lh3.googleusercontent.com/aida/AEtjO1V7NIinjIEk-GNdKX4UCjVYH5x_kV9SK-JhlMl5nxJYuE-QjFAIFUW6NUUZXYKbjFxvSDuhsA86sCJj-2aSh9VwLJIYU0dmAsTpA7gK8tJw1Z4bNsx6P7j3f-v89Iax53nrNvhNMfp1yney41jrZlXGq7URyaP01g-vyLRWpz09eMBPWudt3y5NjwRNFAOGWgPnQgRShnW2-hzqBy0YQw3NJMZVKh2NZDXqzhIkWDPdeo5ZzJqWoGxr934"/><span class="font-headline-sm text-headline-sm text-on-surface tracking-wide">HerpCare</span></div><div class="flex items-center gap-space-xs"><div class="w-11 h-11 flex items-center justify-center"><img alt="Profile" class="w-8 h-8 rounded-full object-cover ring-1 ring-outline-variant/40" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD9SNbjPHPHJZcGhyaDvL_SxDx80L2fBkTRZJJx5vJ4EqTWV8jKOQ_Je4T5SqI3IBF6E1rF2uct6rPah_fwnGKfFrYtfRQL_GIMDK-jz7lLdFNxnHHeTAYu65zXJWhXAw44XQCCIDqU9ettng0DU2AfYhCLplRXD9KnoQ_2CTCpS7YIdP_8lHA8RtiwErB6DDSwvE_oYJzTBZtS9k6dJ4HvD_YI1Y-CJgV8ohUnOi3tKorEzQK8zeRx"/></div></div></div></header><main class="flex flex-col relative w-full pt-16 pb-24 bg-surface min-h-screen"><div class="flex flex-col w-full px-margin-mobile space-y-space-md">
+<!-- Caso de Derivación Activa / Urgencia Scanner IA -->
+<section class="relative overflow-hidden rounded-xl bg-surface-container-high p-card-pad shadow-md">
+<!-- Indicador lateral táctil de severidad -->
+<div class="absolute left-0 top-0 bottom-0 w-1 bg-secondary-container"></div>
+<div class="flex items-start justify-between gap-space-xs pl-space-2xs">
+<div class="space-y-1">
+<div class="flex items-center gap-1.5 flex-wrap">
+<span class="inline-flex items-center gap-1 px-2 py-0.5 rounded-full bg-secondary-container text-on-secondary-container font-label-sm text-label-sm">
+<span class="material-symbols-outlined text-[12px]" style="font-variation-settings: 'FILL' 1;">warning</span>
+            Urgencia Recomendada (&lt;24h)
+          </span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Escáner Salud IA #8492</span>
+</div>
+<h1 class="font-title-md text-title-md text-on-surface">
+          Caso: Ziggy <span class="text-on-surface-variant font-normal">(Gecko Leopardo)</span>
+</h1>
+<p class="font-body-sm text-body-sm text-secondary">
+          Disecdisis Falángica con Riesgo Isquémico distal en mano dcha.
+        </p>
+</div>
+<div class="relative w-12 h-12 rounded-lg overflow-hidden shrink-0 bg-surface-container-lowest">
+<img class="w-full h-full object-cover" data-alt="Macro clinical close-up photo of a leopard gecko foot showing retained shed constricting distal phalanges, professional veterinary dermatological photography, dark clinical backdrop, sharp focus, cool ambient lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCLQTqJoTo8V46DomBf4Cbi0b5CkKrbJAmvkX2y1JuaFXWdOKoXPSx7078zS9eljqIiTsqdWse7hppLvpcVhXNGUVK1uvMjMFH708WhcucRQEyiPi4DfMSPzVNwtLRzC_az6M_wVdOaED2HVDDarVnqNNOiepxgzjUB1q_H4ErEIZ-GqeiR4HEW091Zs7lc2EKYYoOnxMvGGGjvOVhRAcV745M8AJj98flkF1uAroikBBWftzLLnF5a"/>
+<div class="absolute bottom-0 inset-x-0 bg-surface-container-lowest/80 text-center py-0.5">
+<span class="font-label-sm text-[9px] text-tertiary">IA Scan</span>
+</div>
+</div>
+</div>
+<!-- Barra de acción directa del informe -->
+<div class="mt-space-sm pt-space-xs flex items-center justify-between gap-space-sm pl-space-2xs">
+<div class="flex items-center gap-2">
+<span class="flex h-2 w-2 rounded-full bg-secondary animate-pulse"></span>
+<span class="font-label-md text-label-md text-on-surface-variant">Triaje pre-adjuntado listo para enviar</span>
+</div>
+<button class="inline-flex items-center gap-1 px-2.5 py-1.5 rounded-lg bg-surface-container text-primary font-label-md text-label-md hover:bg-surface-bright transition-colors duration-150" id="btn-compartir-informe" onclick="compartirInforme()">
+<span class="material-symbols-outlined text-[16px]">share</span>
+<span>Compartir Ficha</span>
+</button>
+</div>
+</section>
+<!-- Filtros y Ubicación Activa -->
+<section class="space-y-space-xs">
+<div class="relative flex items-center w-full">
+<span class="absolute left-3 material-symbols-outlined text-primary text-[20px] pointer-events-none">
+        my_location
+      </span>
+<input class="w-full h-11 pl-10 pr-10 rounded-xl bg-surface-container text-on-surface font-body-sm text-body-sm focus:outline-none cursor-default" readonly="" type="text" value="Madrid (Radio 15 km) • Localización activa"/>
+<button class="absolute right-2.5 w-7 h-7 rounded-lg bg-surface-container-high flex items-center justify-center text-on-surface-variant hover:text-on-surface">
+<span class="material-symbols-outlined text-[18px]">tune</span>
+</button>
+</div>
+<!-- Chips Deslizables de Especialidad -->
+<div class="flex items-center gap-2 overflow-x-auto pb-1 no-scrollbar">
+<button class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-primary-container text-on-primary font-label-md text-label-md shrink-0">
+<span class="material-symbols-outlined text-[15px]" style="font-variation-settings: 'FILL' 1;">verified</span>
+<span>AVEPA Exóticos</span>
+</button>
+<button class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-surface-container text-secondary font-label-md text-label-md shrink-0">
+<span class="material-symbols-outlined text-[15px]">emergency</span>
+<span>Urgencias 24h</span>
+</button>
+<button class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-surface-container text-on-surface-variant font-label-md text-label-md shrink-0">
+<span class="material-symbols-outlined text-[15px]">distance</span>
+<span>&lt; 5 km</span>
+</button>
+<button class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-surface-container text-on-surface-variant font-label-md text-label-md shrink-0">
+<span class="material-symbols-outlined text-[15px]">medical_services</span>
+<span>Hospitalización</span>
+</button>
+</div>
+</section>
+<!-- Vista Previa de Radar / Mapa de Dispersión Geográfica -->
+<section class="space-y-space-xs">
+<div class="flex items-center justify-between">
+<span class="font-label-lg text-label-lg text-on-surface flex items-center gap-1.5">
+<span class="material-symbols-outlined text-primary text-[18px]">near_me</span>
+        Centros Especializados en Ruta
+      </span>
+<span class="font-label-sm text-label-sm text-tertiary">3 clínicas en rango</span>
+</div>
+<div class="relative w-full h-36 rounded-xl overflow-hidden bg-surface-container-low shadow-sm">
+<div class="w-full h-full bg-cover bg-center opacity-40 mix-blend-luminosity" data-location="Madrid Centro, Spain" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuCJl_KVeNxAv--fJccCOHf5zyzrLUQn2iAgnQg8rNlJxsN0LTUfA-NZEvVRNmChKY10lkXzBWmQmfP25Vi3ofuDev8eHTAghosZtId8LQwHRb6O1fumFfM52Mttoza1OE4zIcwu8JWVAqviLRGDiYJgjfA9GTqkR6aEg2bblyylzs-0Ezhb1aI09CsiDQ_30lwd3yntpeAkUwiRHL8lD6gzLbdyBHLmVRHOAfcYg1JSuy3YdRke5HUq')"></div>
+<!-- Overlay de retícula biológica / radar -->
+<div class="absolute inset-0 bg-gradient-to-t from-surface via-transparent to-surface-dim/40 pointer-events-none"></div>
+<!-- Pin 1: Urgencia Inmediata (1.8km) -->
+<div class="absolute top-8 left-1/4 -translate-x-1/2 flex flex-col items-center group cursor-pointer">
+<div class="relative flex items-center justify-center">
+<span class="absolute w-8 h-8 rounded-full bg-secondary/30 animate-ping"></span>
+<div class="w-8 h-8 rounded-full bg-secondary-container text-on-secondary-container flex items-center justify-center shadow-md shadow-secondary-container/40">
+<span class="material-symbols-outlined text-[18px]">local_hospital</span>
+</div>
+</div>
+<div class="mt-1 px-1.5 py-0.5 rounded bg-surface-container-lowest/90 backdrop-blur-sm text-[10px] font-label-sm text-secondary whitespace-nowrap">
+          1.8 km • 24h
+        </div>
+</div>
+<!-- Pin 2: Clínica Terraria (3.4km) -->
+<div class="absolute top-12 right-1/3 flex flex-col items-center group cursor-pointer">
+<div class="w-7 h-7 rounded-full bg-primary-container text-primary flex items-center justify-center shadow-md">
+<span class="material-symbols-outlined text-[16px]">pets</span>
+</div>
+<div class="mt-1 px-1.5 py-0.5 rounded bg-surface-container-lowest/90 backdrop-blur-sm text-[10px] font-label-sm text-on-surface-variant whitespace-nowrap">
+          3.4 km
+        </div>
+</div>
+<!-- Pin 3: Centro Sur (6.2km) -->
+<div class="absolute bottom-4 right-8 flex flex-col items-center group cursor-pointer">
+<div class="w-6 h-6 rounded-full bg-surface-container-high text-on-surface-variant flex items-center justify-center">
+<span class="material-symbols-outlined text-[14px]">location_on</span>
+</div>
+<div class="mt-0.5 px-1 py-0.5 rounded bg-surface-container-lowest/80 backdrop-blur-sm text-[9px] font-label-sm text-outline whitespace-nowrap">
+          6.2 km
+        </div>
+</div>
+<!-- Marcador de Posición de Usuario -->
+<div class="absolute bottom-6 left-12 flex items-center gap-1.5 px-2 py-1 rounded-full bg-surface-container-highest/90 backdrop-blur-md">
+<span class="w-2 h-2 rounded-full bg-primary animate-pulse"></span>
+<span class="font-label-sm text-[10px] text-on-surface">Tú estás aquí</span>
+</div>
+</div>
+</section>
+<!-- Listado Detallado de Clínicas -->
+<section class="space-y-space-sm">
+<div class="flex items-center justify-between pt-1">
+<h2 class="font-headline-sm text-headline-sm text-on-surface">Disponibilidad en Tiempo Real</h2>
+<span class="font-label-md text-label-md text-on-surface-variant">Orden: Proximidad e Idoneidad</span>
+</div>
+<!-- TARJETA 1: Urgencias 24h & Destacado -->
+<article class="relative rounded-xl bg-surface-container p-card-pad space-y-space-sm shadow-md">
+<!-- Acento de prioridad asistencial -->
+<div class="absolute top-0 right-0 w-24 h-24 overflow-hidden pointer-events-none">
+<div class="absolute transform rotate-45 bg-secondary text-on-secondary text-[10px] font-label-sm text-center py-0.5 right-[-35px] top-[18px] w-[120px] shadow-sm">
+          URGENCIAS 24H
+        </div>
+</div>
+<!-- Encabezado con datos clínicos -->
+<div class="flex items-start gap-space-sm pr-12">
+<div class="w-12 h-12 rounded-lg bg-surface-container-highest shrink-0 overflow-hidden">
+<img class="w-full h-full object-cover" data-alt="Modern clinical reception of an exotic veterinary hospital with subtle terrarium lighting, clean Scandinavian interior architecture, glass partitions, clinical green ambiance, professional and sterile reptile care center" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAPmUoK22fr9UdrPfIGs15GjjMHucJm1Pl0Z1BTAKoXRPcpC3ICxZOijN4PD2LYXKIX01ejE7wC_5hPebYvEaFR03B-OP_NPbmq1YO1vG50im0h_O2VxrIo2mms1W9VF3_nOCqLAxIZVkPlkiKlrInzO11rlDW43i03GPcCjQuNUSpaRI7P4_BZevWJlHqLE6P335tesAC0nAhnWpsHxcPQ-AMROOiMXgPAAiFdebq5clRwbvQE81rE"/>
+</div>
+<div class="min-w-0 space-y-0.5">
+<h3 class="font-title-md text-title-md text-on-surface truncate">
+            Hospital Veterinario Madrid Exóticos
+          </h3>
+<div class="flex items-center gap-1.5 text-on-surface-variant">
+<span class="flex items-center text-secondary">
+<span class="material-symbols-outlined text-[15px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="font-label-md text-label-md ml-0.5 text-on-surface font-semibold">4.9</span>
+</span>
+<span class="font-body-sm text-body-sm text-outline">(142 reseñas)</span>
+<span class="text-outline">•</span>
+<span class="font-label-md text-label-md text-tertiary">A 1.8 km (8 min)</span>
+</div>
+</div>
+</div>
+<!-- Especialista de guardia y dotación -->
+<div class="rounded-lg bg-surface-container-low p-2.5 space-y-2">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary text-[18px]">verified_user</span>
+<p class="font-body-sm text-body-sm text-on-surface">
+            De guardia: <strong class="font-medium text-primary">Dra. Elena Rivas</strong> (Acreditada AVEPA Herpetología)
+          </p>
+</div>
+<div class="flex flex-wrap gap-1.5">
+<span class="px-2 py-0.5 rounded bg-surface-container text-on-surface-variant font-label-sm text-label-sm">
+            Quirófano Microcirugía
+          </span>
+<span class="px-2 py-0.5 rounded bg-surface-container text-on-surface-variant font-label-sm text-label-sm">
+            UCI Climatizada Sauros
+          </span>
+<span class="px-2 py-0.5 rounded bg-surface-container text-on-surface-variant font-label-sm text-label-sm">
+            Oxigenoterapia
+          </span>
+</div>
+</div>
+<!-- Acciones Rápidas de Emergencia -->
+<div class="grid grid-cols-1 gap-2 pt-1">
+<a class="flex items-center justify-center gap-2 w-full h-12 rounded-xl bg-secondary-container text-on-secondary-container font-label-lg text-label-lg shadow-md hover:opacity-95 transition-opacity" href="tel:+34910000000">
+<span class="material-symbols-outlined text-[20px]" style="font-variation-settings: 'FILL' 1;">emergency_home</span>
+<span>Llamar Urgencias Ahora (Guardia Activa)</span>
+</a>
+<div class="grid grid-cols-2 gap-2">
+<button class="flex items-center justify-center gap-1.5 h-10 rounded-lg bg-primary-container text-on-primary font-label-md text-label-md hover:bg-opacity-90" onclick="abrirRutaGps('Hospital Veterinario Madrid Exóticos')">
+<span class="material-symbols-outlined text-[17px]">directions_car</span>
+<span>Ruta GPS (8 min)</span>
+</button>
+<button class="flex items-center justify-center gap-1.5 h-10 rounded-lg bg-surface-container-high text-primary font-label-md text-label-md hover:bg-surface-bright" id="btn-enviar-ia" onclick="notificarClinica(this)">
+<span class="material-symbols-outlined text-[17px]">send_and_archive</span>
+<span>Pre-enviar Triaje IA</span>
+</button>
+</div>
+</div>
+</article>
+<!-- TARJETA 2: Clínica Veterinaria Fauna Exótica -->
+<article class="rounded-xl bg-surface-container p-card-pad space-y-space-sm shadow-sm">
+<div class="flex items-start gap-space-sm">
+<div class="w-12 h-12 rounded-lg bg-surface-container-highest shrink-0 overflow-hidden">
+<img class="w-full h-full object-cover" data-alt="Modern veterinary examination table with specialized terrarium heating pad, diagnostic tools for reptiles, natural wood accents, warm botanical clinic mood" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAgCmKhGra1GbYA3kpolIcpowsNpZapZ7fKQm36VdYVwHleYZbAxEcOHrjKiV-n-7oPZWIWzeghu_FxP2-XHkwoawaZizH8UTKvBXyP1oUsNskmv7Fl0eIJOsunzZpBzlfd55uAcMSS2YIjQs4xDhzZ17pLpfd7NO6coK0c0S7CDSrW0QQkPNwJH2JLPlyorlpLBQJm91vvBpS9sBbAXjUn706kDV_urRMTCBk2gmA6mCms78eL0lbw"/>
+</div>
+<div class="min-w-0 flex-1 space-y-0.5">
+<div class="flex items-center justify-between">
+<h3 class="font-title-md text-title-md text-on-surface truncate">
+              Fauna Exótica &amp; Terraria
+            </h3>
+<span class="inline-flex items-center px-2 py-0.5 rounded text-[10px] font-label-sm bg-surface-container-high text-primary">
+              Abierto hoy
+            </span>
+</div>
+<div class="flex items-center gap-1.5 text-on-surface-variant">
+<span class="flex items-center text-secondary">
+<span class="material-symbols-outlined text-[15px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="font-label-md text-label-md ml-0.5 text-on-surface font-semibold">4.8</span>
+</span>
+<span class="font-body-sm text-body-sm text-outline">(98)</span>
+<span class="text-outline">•</span>
+<span class="font-label-md text-label-md text-on-surface-variant">A 3.4 km • Cierra 20:30</span>
+</div>
+</div>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+        Especialistas certificados en quelonios, saurios y anfibios. Manejo de patologías cutáneas y ecografía especializada.
+      </p>
+<div class="grid grid-cols-2 gap-2 pt-1">
+<a class="flex items-center justify-center gap-1.5 h-10 rounded-lg bg-surface-container-high text-on-surface font-label-md text-label-md hover:bg-surface-bright" href="tel:+34910000001">
+<span class="material-symbols-outlined text-[17px]">call</span>
+<span>Consultar Cita</span>
+</a>
+<button class="flex items-center justify-center gap-1.5 h-10 rounded-lg bg-surface-container-high text-on-surface-variant font-label-md text-label-md hover:text-on-surface" onclick="abrirRutaGps('Fauna Exótica y Terraria')">
+<span class="material-symbols-outlined text-[17px]">navigation</span>
+<span>Cómo llegar</span>
+</button>
+</div>
+</article>
+<!-- TARJETA 3: Centro Sur -->
+<article class="rounded-xl bg-surface-container p-card-pad space-y-space-xs shadow-sm">
+<div class="flex items-center justify-between">
+<div class="min-w-0">
+<h3 class="font-title-md text-title-md text-on-surface truncate">
+            Centro Integral Sur (Unidad Exóticos)
+          </h3>
+<div class="flex items-center gap-1.5 text-on-surface-variant mt-0.5">
+<span class="flex items-center text-secondary">
+<span class="material-symbols-outlined text-[14px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="font-label-md text-label-md ml-0.5 text-on-surface">4.7</span>
+</span>
+<span class="font-body-sm text-body-sm text-outline">• 6.2 km</span>
+<span class="font-body-sm text-body-sm text-outline">• Cita previa requerida</span>
+</div>
+</div>
+<a class="w-10 h-10 rounded-lg bg-surface-container-high flex items-center justify-center text-primary hover:bg-surface-bright" href="tel:+34910000002">
+<span class="material-symbols-outlined text-[20px]">call</span>
+</a>
+</div>
+</article>
+</section>
+<!-- Protocolo de Transporte Seguro en Caso de Urgencia -->
+<section class="rounded-xl bg-surface-container-high p-card-pad space-y-space-sm shadow-md">
+<div class="flex items-center gap-2">
+<div class="w-8 h-8 rounded-full bg-primary-container text-primary flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-[18px]">lock</span>
+</div>
+<div>
+<h3 class="font-title-md text-title-md text-on-surface">Protocolo de Transporte Seguro</h3>
+<p class="font-label-sm text-label-sm text-on-surface-variant">Vital para evitar shock térmico o amputación falángica</p>
+</div>
+</div>
+<ul class="space-y-2.5 pt-1">
+<li class="flex items-start gap-2.5">
+<span class="material-symbols-outlined text-primary text-[18px] shrink-0 mt-0.5">inbox</span>
+<div class="font-body-sm text-body-sm text-on-surface">
+<strong class="font-medium text-on-surface">Contenedor oscuro y ventilado:</strong> Usa un tupper opaco con orificios pequeños. La oscuridad reduce los picos de cortisol en un 70%.
+        </div>
+</li>
+<li class="flex items-start gap-2.5">
+<span class="material-symbols-outlined text-primary text-[18px] shrink-0 mt-0.5">thermostat</span>
+<div class="font-body-sm text-body-sm text-on-surface">
+<strong class="font-medium text-on-surface">Gradiente térmico templado (26-28°C):</strong> Botella con agua templada envuelta en un calcetín grueso, fijada a un extremo. Nunca contacto directo.
+        </div>
+</li>
+<li class="flex items-start gap-2.5">
+<span class="material-symbols-outlined text-primary text-[18px] shrink-0 mt-0.5">do_not_disturb_on</span>
+<div class="font-body-sm text-body-sm text-on-surface">
+<strong class="font-medium text-on-surface">Sin sustrato abrasivo:</strong> Coloca solo papel de cocina húmedo templado en la base para humedecer la piel seca sin enredar los dedos.
+        </div>
+</li>
+</ul>
+</section>
+<!-- Banner Alternativo: Teleasistencia Inmediata -->
+<section class="rounded-xl bg-surface-container p-card-pad flex items-center justify-between gap-space-sm shadow-sm">
+<div class="space-y-1">
+<span class="font-label-sm text-label-sm text-secondary font-semibold uppercase tracking-wider">¿Estás a más de 45 min?</span>
+<h3 class="font-title-md text-title-md text-on-surface">Tele-Triaje Herpetológico</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+        Videollamada de contención con un veterinario de guardia antes del viaje.
+      </p>
+</div>
+<button class="px-3.5 py-2.5 rounded-lg bg-surface-container-high text-primary font-label-md text-label-md shrink-0 flex items-center gap-1.5 hover:bg-surface-bright" onclick="conectarTeleasistencia()">
+<span class="material-symbols-outlined text-[18px]">videocam</span>
+<span>Conectar</span>
+</button>
+</section>
+<!-- Notificación Toast Dinámica para Micro-interacciones -->
+<div class="fixed bottom-20 left-4 right-4 z-50 transform translate-y-24 opacity-0 transition-all duration-300 pointer-events-none" id="toast-notificacion">
+<div class="bg-surface-container-highest text-on-surface px-4 py-3 rounded-xl shadow-2xl flex items-center gap-3">
+<span class="material-symbols-outlined text-primary text-[20px]" id="toast-icon">check_circle</span>
+<span class="font-body-sm text-body-sm font-medium" id="toast-text">Informe enviado con éxito</span>
+</div>
+</div>
+</div>
+<script>
+  function mostrarToast(mensaje, iconName = 'check_circle') {
+    const toast = document.getElementById('toast-notificacion');
+    const toastText = document.getElementById('toast-text');
+    const toastIcon = document.getElementById('toast-icon');
+    if (!toast || !toastText || !toastIcon) return;
+    
+    toastText.innerText = mensaje;
+    toastIcon.innerText = iconName;
+    toast.classList.remove('translate-y-24', 'opacity-0');
+    toast.classList.add('translate-y-0', 'opacity-100');
+    
+    setTimeout(() => {
+      toast.classList.remove('translate-y-0', 'opacity-100');
+      toast.classList.add('translate-y-24', 'opacity-0');
+    }, 2800);
+  }
+
+  function compartirInforme() {
+    if (navigator.share) {
+      navigator.share({
+        title: 'HerpCare Salud - Caso Ziggy',
+        text: 'Informe Veterinario HerpCare: Disecdisis Falángica con Riesgo Isquémico. Ficha adjunta.',
+        url: window.location.href
+      }).catch(() => {
+        mostrarToast('Enlace del informe copiado al portapapeles', 'link');
+      });
+    } else {
+      mostrarToast('Ficha de Ziggy lista para compartir', 'inventory_2');
+    }
+  }
+
+  function notificarClinica(boton) {
+    boton.disabled = true;
+    boton.innerHTML = `<span class="material-symbols-outlined text-[17px] animate-spin">progress_activity</span><span>Enviando...</span>`;
+    
+    setTimeout(() => {
+      boton.innerHTML = `<span class="material-symbols-outlined text-[17px] text-tertiary">task_alt</span><span class="text-tertiary">Triaje Recibido</span>`;
+      mostrarToast('Dra. Elena Rivas ha recibido las fotos y constantes de Ziggy', 'mark_email_read');
+    }, 900);
+  }
+
+  function abrirRutaGps(nombreLugar) {
+    mostrarToast(`Iniciando navegación hacia ${nombreLugar}...`, 'near_me');
+  }
+
+  function conectarTeleasistencia() {
+    mostrarToast('Asignando veterinario de guardia para videollamada...', 'phone_in_talk');
+  }
+</script></main><nav class="fixed bottom-0 w-full z-50 pb-safe bg-surface-dim/85 backdrop-blur-xl shadow-[0_-4px_24px_rgba(0,0,0,0.45)]" data-active-classes="text-primary font-semibold"><div class="flex justify-around items-center h-16 px-2"><a class="flex flex-col items-center justify-center gap-1 min-w-[64px] h-12 text-on-surface-variant hover:text-on-surface transition-colors duration-200" data-path="reptil-room" href="#"><span class="material-symbols-outlined text-[24px]">nest_cam_indoor</span><span class="font-label-sm text-label-sm tracking-tight">Reptil Room</span></a><a class="flex flex-col items-center justify-center gap-1 min-w-[64px] h-12 text-on-surface-variant hover:text-on-surface transition-colors duration-200" data-path="seguimiento" href="#"><span class="material-symbols-outlined text-[24px]">monitoring</span><span class="font-label-sm text-label-sm tracking-tight">Seguimiento</span></a><a class="flex flex-col items-center justify-center gap-1 min-w-[64px] h-12 text-on-surface-variant hover:text-on-surface transition-colors duration-200" data-path="especies-ia" href="#"><span class="material-symbols-outlined text-[24px]">photo_camera</span><span class="font-label-sm text-label-sm tracking-tight">Especies IA</span></a><a aria-current="page" class="flex flex-col items-center justify-center gap-1 min-w-[64px] h-12 transition-colors duration-200 text-primary font-semibold" data-path="salud-ia" href="#"><span class="material-symbols-outlined text-[24px]">vital_signs</span><span class="font-label-sm text-label-sm tracking-tight">Salud IA</span></a></div></nav></body></html>
