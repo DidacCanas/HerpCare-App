@@ -9,6 +9,7 @@ Dashboard web para el monitoreo de reptiles y anfibios. Incluye:
 - Inicio de sesión con Google mediante Google Identity Services.
 - Geolocalización para ordenar clínicas y generar rutas.
 - Aplicación instalable en Android como PWA.
+- Registro fotográfico desde la cámara del móvil o la galería.
 - Diseño responsive para móvil y escritorio.
 
 ## Ejecutar localmente
@@ -24,6 +25,16 @@ Después abre [http://localhost:3000](http://localhost:3000).
 También puedes abrir `index.html` directamente en el navegador.
 
 La geolocalización requiere servir la app por `localhost` o HTTPS. El navegador solicitará permiso la primera vez que abras el módulo de veterinarios.
+
+## Cámara en Android
+
+Desde la colección pulsa **Foto**. Puedes:
+
+- Pulsar **Activar cámara** para usar la cámara trasera directamente desde el navegador.
+- Pulsar **Galería** para abrir la cámara o seleccionar una imagen usando el selector nativo de Android.
+- Capturar una vista previa sin subir automáticamente la imagen a ningún servidor.
+
+La cámara directa requiere HTTPS, por lo que funciona en GitHub Pages. En desarrollo también funciona en `localhost`. Android puede bloquear el acceso si la aplicación se abre desde una URL no segura.
 
 ## Estructura principal
 

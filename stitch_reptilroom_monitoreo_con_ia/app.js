@@ -11,6 +11,18 @@ const allowLocationButton = document.getElementById('allowLocationButton');
 const locationMessage = document.getElementById('locationMessage');
 const userLocationStatus = document.getElementById('userLocationStatus');
 const installButton = document.getElementById('installButton');
+const cameraModal = document.getElementById('cameraModal');
+const openCameraButton = document.getElementById('openCameraButton');
+const startCameraButton = document.getElementById('startCameraButton');
+const capturePhotoButton = document.getElementById('capturePhotoButton');
+const choosePhotoButton = document.getElementById('choosePhotoButton');
+const cameraFileInput = document.getElementById('cameraFileInput');
+const cameraVideo = document.getElementById('cameraVideo');
+const cameraCanvas = document.getElementById('cameraCanvas');
+const cameraPhoto = document.getElementById('cameraPhoto');
+const cameraPlaceholder = document.getElementById('cameraPlaceholder');
+const cameraStatus = document.getElementById('cameraStatus');
+let cameraStream;
 let installPromptEvent;
 
 chips.forEach((chip) => {
@@ -58,6 +70,73 @@ const openModal = (modal) => {
 const closeModal = (modal) => {
   if (modal) modal.hidden = true;
 };
+
+const stopCamera = () => {
+  cameraStream?.getTracks().forEach((track) => track.stop());
+  cameraStream = undefined;
+  cameraVideo.srcObject = null;
+  capturePhotoButton.disabled = true;
+};
+
+const showPhotoPreview = (source) => {
+  cameraPhoto.src = source;
+  cameraPhoto.hidden = false;
+  cameraVideo.hidden = true;
+  cameraPlaceholder.hidden = true;
+  cameraStatus.textContent = 'Vista previa lista. La imagen permanece en este dispositivo.';
+};
+
+openCameraButton?.addEventListener('click', () => {
+  openModal(cameraModal);
+  cameraStatus.textContent = 'Activa la cámara o elige una foto de la galería.';
+});
+
+startCameraButton?.addEventListener('click', async () => {
+  if (!navigator.mediaDevices?.getUserMedia) {
+    cameraStatus.textContent = 'La cámara directa no está disponible. Usa Galería para abrir la cámara de Android.';
+    cameraFileInput.click();
+    return;
+  }
+  try {
+    stopCamera();
+    cameraStream = await navigator.mediaDevices.getUserMedia({
+      video: { facingMode: { ideal: 'environment' }, width: { ideal: 1920 }, height: { ideal: 1080 } },
+      audio: false
+    });
+    cameraVideo.srcObject = cameraStream;
+    cameraVideo.hidden = false;
+    cameraPhoto.hidden = true;
+    cameraPlaceholder.hidden = true;
+    capturePhotoButton.disabled = false;
+    cameraStatus.textContent = 'Cámara activa. Encuadra el animal y pulsa Capturar.';
+  } catch (error) {
+    console.error('No se pudo acceder a la cámara:', error);
+    cameraStatus.textContent = 'No se pudo acceder a la cámara. Revisa el permiso o usa Galería.';
+  }
+});
+
+capturePhotoButton?.addEventListener('click', () => {
+  if (!cameraVideo.videoWidth) return;
+  cameraCanvas.width = cameraVideo.videoWidth;
+  cameraCanvas.height = cameraVideo.videoHeight;
+  cameraCanvas.getContext('2d').drawImage(cameraVideo, 0, 0);
+  showPhotoPreview(cameraCanvas.toDataURL('image/jpeg', 0.9));
+  stopCamera();
+});
+
+choosePhotoButton?.addEventListener('click', () => cameraFileInput.click());
+
+cameraFileInput?.addEventListener('change', () => {
+  const [file] = cameraFileInput.files;
+  if (!file) return;
+  showPhotoPreview(URL.createObjectURL(file));
+});
+
+cameraModal?.addEventListener('click', (event) => {
+  if (event.target === cameraModal) closeModal(cameraModal);
+});
+
+document.querySelector('[data-close-modal="cameraModal"]')?.addEventListener('click', stopCamera);
 
 loginButton?.addEventListener('click', () => {
   openModal(loginModal);

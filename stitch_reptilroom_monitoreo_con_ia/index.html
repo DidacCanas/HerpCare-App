@@ -6,6 +6,7 @@
     <meta name="theme-color" content="#101412" />
     <meta name="mobile-web-app-capable" content="yes" />
     <link rel="manifest" href="manifest.webmanifest" />
+    <link rel="icon" href="icon.svg" type="image/svg+xml" />
     <title>HerpCare Dashboard</title>
     <meta name="description" content="Dashboard HerpCare para monitoreo de reptiles, diagnóstico IA y veterinarios especializados." />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -167,9 +168,15 @@
               <div class="eyebrow">Colección Bioactiva</div>
               <h2>Reptil Room</h2>
             </div>
-            <div class="tag tag-tertiary">
-              <span class="pulse small"></span>
-              Microclima Estable
+            <div class="section-actions">
+              <div class="tag tag-tertiary">
+                <span class="pulse small"></span>
+                Microclima Estable
+              </div>
+              <button class="camera-action" id="openCameraButton" type="button">
+                <span class="material-symbols-outlined">photo_camera</span>
+                Foto
+              </button>
             </div>
           </div>
 
@@ -420,6 +427,31 @@
           <button class="primary-btn" id="allowLocationButton" type="button">Permitir ubicación</button>
           <button class="secondary-btn" data-close-modal="locationModal" type="button">Ahora no</button>
         </div>
+      </section>
+    </div>
+
+    <div class="modal-backdrop" id="cameraModal" hidden>
+      <section class="modal-card camera-modal" role="dialog" aria-modal="true" aria-labelledby="cameraTitle">
+        <button class="modal-close" data-close-modal="cameraModal" type="button" aria-label="Cerrar">×</button>
+        <div class="eyebrow">Registro del animal</div>
+        <h2 id="cameraTitle">Tomar fotografía</h2>
+        <p>Permite el acceso a la cámara para registrar una foto del ejemplar. En Android se abrirá la cámara tras aceptar el permiso.</p>
+        <div class="camera-preview">
+          <video id="cameraVideo" autoplay playsinline muted hidden></video>
+          <canvas id="cameraCanvas" hidden></canvas>
+          <img id="cameraPhoto" alt="Vista previa de la fotografía registrada" hidden />
+          <div class="camera-placeholder" id="cameraPlaceholder">
+            <span class="material-symbols-outlined">photo_camera</span>
+            <span>La cámara aún no está activa</span>
+          </div>
+        </div>
+        <input id="cameraFileInput" type="file" accept="image/*" capture="environment" hidden />
+        <div class="camera-controls">
+          <button class="secondary-btn" id="choosePhotoButton" type="button">Galería</button>
+          <button class="primary-btn" id="startCameraButton" type="button">Activar cámara</button>
+          <button class="secondary-btn" id="capturePhotoButton" type="button" disabled>Capturar</button>
+        </div>
+        <div class="camera-status" id="cameraStatus" role="status">La foto se guardará en este dispositivo.</div>
       </section>
     </div>
 

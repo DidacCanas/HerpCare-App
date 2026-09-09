@@ -167,6 +167,31 @@ img {
   gap: 8px;
 }
 
+.section-actions {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex-direction: column;
+  align-items: end;
+}
+
+.camera-action {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  border: 1px solid rgba(174,206,185,.16);
+  border-radius: 999px;
+  padding: 7px 10px;
+  background: rgba(174,206,185,.08);
+  color: var(--primary);
+  font-size: .68rem;
+  font-weight: 700;
+}
+
+.camera-action .material-symbols-outlined {
+  font-size: 1rem;
+}
+
 .scanner-header {
   margin-bottom: 12px;
 }
@@ -1124,6 +1149,65 @@ img {
 
 .modal-note {
   font-size: .68rem !important;
+}
+
+.camera-modal {
+  width: min(100%, 440px);
+}
+
+.camera-preview {
+  position: relative;
+  overflow: hidden;
+  min-height: 220px;
+  border-radius: 16px;
+  background: var(--bg-deep);
+  border: 1px solid rgba(255,255,255,.06);
+  display: grid;
+  place-items: center;
+}
+
+.camera-preview video,
+.camera-preview img {
+  width: 100%;
+  height: 260px;
+  object-fit: cover;
+}
+
+.camera-placeholder {
+  display: grid;
+  place-items: center;
+  gap: 8px;
+  color: var(--muted);
+  font-size: .75rem;
+}
+
+.camera-placeholder .material-symbols-outlined {
+  color: var(--primary);
+  font-size: 2.2rem;
+}
+
+.camera-controls {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 8px;
+  margin-top: 12px;
+}
+
+.camera-controls button {
+  padding-inline: 8px;
+}
+
+.camera-controls button:disabled {
+  opacity: .4;
+  cursor: not-allowed;
+}
+
+.camera-status {
+  min-height: 18px;
+  margin-top: 10px;
+  color: var(--muted);
+  font-size: .68rem;
+  line-height: 1.4;
 }
 
 @media (min-width: 760px) {
