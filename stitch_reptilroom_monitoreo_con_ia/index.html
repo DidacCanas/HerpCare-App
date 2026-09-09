@@ -3,6 +3,9 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#101412" />
+    <meta name="mobile-web-app-capable" content="yes" />
+    <link rel="manifest" href="manifest.webmanifest" />
     <title>HerpCare Dashboard</title>
     <meta name="description" content="Dashboard HerpCare para monitoreo de reptiles, diagnóstico IA y veterinarios especializados." />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -35,9 +38,9 @@
           <button class="nav-item" type="button">Vets</button>
         </nav>
 
-        <div class="profile-pill" aria-label="Perfil del usuario">
+        <button class="profile-pill" id="loginButton" aria-label="Iniciar sesión con Google" type="button">
           <img src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?auto=format&fit=crop&w=200&q=80" alt="Perfil" />
-        </div>
+        </button>
       </header>
 
       <main class="content">
@@ -343,7 +346,11 @@
             <div class="map-pin pin-1"><span>1.8 km</span></div>
             <div class="map-pin pin-2"><span>3.4 km</span></div>
             <div class="map-pin pin-3"><span>6.2 km</span></div>
-            <div class="user-pin">Tú estás aquí</div>
+            <div class="user-pin" id="userLocationStatus">Ubicación pendiente</div>
+          </div>
+          <div class="location-actions">
+            <span id="locationMessage">Activa tu ubicación para ordenar clínicas por distancia.</span>
+            <button class="secondary-btn inline" id="locationButton" type="button">Usar mi ubicación</button>
           </div>
 
           <article class="clinic-card featured">
@@ -360,7 +367,7 @@
             </div>
             <div class="cta-row">
               <button class="primary-btn urgent" type="button">Llamar Urgencias</button>
-              <button class="secondary-btn" type="button">Ruta GPS</button>
+              <button class="secondary-btn directions-button" data-place="Hospital Veterinario Madrid Exóticos" type="button">Ruta GPS</button>
             </div>
           </article>
 
@@ -388,6 +395,38 @@
       </nav>
     </div>
 
+    <button class="install-button" id="installButton" type="button" hidden>
+      <span class="material-symbols-outlined">install_mobile</span>
+      Instalar en Android
+    </button>
+
+    <div class="modal-backdrop" id="loginModal" hidden>
+      <section class="modal-card" role="dialog" aria-modal="true" aria-labelledby="loginTitle">
+        <button class="modal-close" data-close-modal="loginModal" type="button" aria-label="Cerrar">×</button>
+        <div class="eyebrow">Acceso seguro</div>
+        <h2 id="loginTitle">Inicia sesión en HerpCare</h2>
+        <p>Guarda tu colección, historiales y preferencias en tu cuenta de Google.</p>
+        <div id="googleButton" class="google-button"></div>
+        <p class="modal-note" id="loginMessage">Configura el Client ID de Google para activar el acceso.</p>
+      </section>
+    </div>
+
+    <div class="modal-backdrop" id="locationModal" hidden>
+      <section class="modal-card" role="dialog" aria-modal="true" aria-labelledby="locationTitle">
+        <div class="eyebrow">Veterinarios cercanos</div>
+        <h2 id="locationTitle">¿Dónde estás?</h2>
+        <p>Usaremos tu ubicación solo para ordenar clínicas y abrir rutas GPS. No se guarda en el servidor.</p>
+        <div class="action-row">
+          <button class="primary-btn" id="allowLocationButton" type="button">Permitir ubicación</button>
+          <button class="secondary-btn" data-close-modal="locationModal" type="button">Ahora no</button>
+        </div>
+      </section>
+    </div>
+
+    <script>
+      window.HERPCARE_GOOGLE_CLIENT_ID = "";
+    </script>
+    <script src="https://accounts.google.com/gsi/client" async defer></script>
     <script src="app.js"></script>
   </body>
 </html>

@@ -127,6 +127,9 @@ img {
   overflow: hidden;
   border: 1px solid rgba(255,255,255,0.08);
   flex-shrink: 0;
+  padding: 0;
+  background: transparent;
+  cursor: pointer;
 }
 
 .profile-pill img {
@@ -1026,6 +1029,101 @@ img {
 .bottom-item small {
   font-size: 0.62rem;
   font-weight: 700;
+}
+
+.location-actions {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  margin-top: 10px;
+  color: var(--muted);
+  font-size: 0.68rem;
+}
+
+.location-actions .inline {
+  flex-shrink: 0;
+  padding: 8px 10px;
+}
+
+.install-button {
+  position: fixed;
+  right: max(18px, calc((100vw - 940px) / 2));
+  bottom: 92px;
+  z-index: 30;
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  border: 1px solid rgba(174,206,185,.2);
+  border-radius: 999px;
+  padding: 10px 14px;
+  background: var(--primary-strong);
+  color: var(--primary);
+  font-size: .72rem;
+  font-weight: 700;
+  box-shadow: 0 10px 25px rgba(0,0,0,.28);
+}
+
+.install-button[hidden],
+.modal-backdrop[hidden] {
+  display: none;
+}
+
+.install-button .material-symbols-outlined {
+  font-size: 1rem;
+}
+
+.modal-backdrop {
+  position: fixed;
+  inset: 0;
+  z-index: 40;
+  display: grid;
+  place-items: center;
+  padding: 20px;
+  background: rgba(5,8,6,.78);
+  backdrop-filter: blur(8px);
+}
+
+.modal-card {
+  width: min(100%, 380px);
+  position: relative;
+  padding: 22px;
+  border: 1px solid rgba(255,255,255,.08);
+  border-radius: 22px;
+  background: var(--surface-mid);
+  box-shadow: 0 24px 60px rgba(0,0,0,.4);
+}
+
+.modal-card h2 {
+  margin: 8px 0;
+  font-family: "Outfit", sans-serif;
+  font-size: 1.5rem;
+}
+
+.modal-card p {
+  color: var(--muted);
+  line-height: 1.5;
+  font-size: .82rem;
+}
+
+.modal-close {
+  position: absolute;
+  top: 12px;
+  right: 14px;
+  border: 0;
+  background: transparent;
+  color: var(--muted);
+  font-size: 1.6rem;
+  cursor: pointer;
+}
+
+.google-button {
+  min-height: 42px;
+  margin-top: 16px;
+}
+
+.modal-note {
+  font-size: .68rem !important;
 }
 
 @media (min-width: 760px) {
