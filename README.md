@@ -18,7 +18,7 @@
 - `stitch_reptilroom_monitoreo_con_ia/styles.css` — Estilos base y añadidos (empty-state, modales, listas dinámicas, responsive).
 
 ## 4. Configuración local de Google (solo desarrollo)
-Crea un archivo local `stitch_reptilroom_monitoreo_con_ia/config.local.js` (NO subir al repo) con este contenido exacto para pruebas en local:
+Crea un archivo local `stitch_reptilroom_monitoreo_con_ia/config.local.js` (NO subir al repo) para definir o sobrescribir estos valores durante las pruebas en local:
 
 ```javascript
 // config.local.js (NO subir al repo)
