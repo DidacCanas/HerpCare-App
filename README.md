@@ -1,90 +1,52 @@
-# HerpCare
+# HerpCare — feature/ui-tabs-maps
 
-Dashboard web para el monitoreo de reptiles y anfibios. Incluye:
+## 1. Resumen
+- La rama `feat/ui-tabs-maps` implementa: navegación por pestañas (IA/Colección/Peso/Vets), CRUD de ejemplares con `localStorage`, evoluciones de peso por ejemplar con gráficos en Chart.js, panel Vets preparado para Google Maps/Places (fallback simulado), perfil editable y modales de cámara/login/ubicación.
 
-- Diagnóstico visual simulado con IA.
-- Colección de ejemplares y filtros.
-- Evolución de peso con gráfico interactivo.
-- Veterinarios especializados cercanos.
-- Inicio de sesión con Google mediante Google Identity Services.
-- Geolocalización para ordenar clínicas y generar rutas.
-- Aplicación instalable en Android como PWA.
-- Registro fotográfico desde la cámara del móvil o la galería.
-- Diseño responsive para móvil y escritorio.
+## 2. Cómo ejecutar localmente
+- Clona y cambia a la rama:
+  - `git fetch`
+  - `git checkout feat/ui-tabs-maps`
+- Sirve el directorio `stitch_reptilroom_monitoreo_con_ia` con un servidor estático y abre `http://localhost:8080`:
+  - `npx http-server -p 8080`
 
-## Ejecutar localmente
+## 3. Archivos modificados / añadidos
+- `stitch_reptilroom_monitoreo_con_ia/index.html`: estructura de UI con pestañas, paneles y modales.
+- `stitch_reptilroom_monitoreo_con_ia/app.js`: lógica de navegación, colección, pesajes, perfil, GSI y Maps con fallback.
+- `stitch_reptilroom_monitoreo_con_ia/styles.css`: estilos de layout, estados vacíos, tarjetas, modales y panel Vets.
 
-No necesita instalación ni dependencias:
+## 4. Configuración de claves de Google (instrucciones seguras)
+- Crea `stitch_reptilroom_monitoreo_con_ia/config.local.js` (misma carpeta que `index.html`) con estas líneas exactas de ejemplo:
 
-```powershell
-python -m http.server 3000
+```javascript
+// config.local.js (NO subir al repo)
+window.HERPCARE_GOOGLE_CLIENT_ID = "TU_GOOGLE_CLIENT_ID.apps.googleusercontent.com";
+window.HERPCARE_GOOGLE_MAPS_API_KEY = "TU_GOOGLE_MAPS_API_KEY";
 ```
 
-Después abre [http://localhost:3000](http://localhost:3000).
+- Asegúrate de que `stitch_reptilroom_monitoreo_con_ia/config.local.js` esté en `.gitignore`.
+- Incluye `config.local.js` en `index.html` antes de `app.js`:
 
-También puedes abrir `index.html` directamente en el navegador.
-
-La geolocalización requiere servir la app por `localhost` o HTTPS. El navegador solicitará permiso la primera vez que abras el módulo de veterinarios.
-
-## Cámara en Android
-
-Desde la colección pulsa **Foto**. Puedes:
-
-- Pulsar **Activar cámara** para usar la cámara trasera directamente desde el navegador.
-- Pulsar **Galería** para abrir la cámara o seleccionar una imagen usando el selector nativo de Android.
-- Capturar una vista previa sin subir automáticamente la imagen a ningún servidor.
-
-La cámara directa requiere HTTPS, por lo que funciona en GitHub Pages. En desarrollo también funciona en `localhost`. Android puede bloquear el acceso si la aplicación se abre desde una URL no segura.
-
-## Estructura principal
-
-```text
-.
-├── index.html
-├── stitch_reptilroom_monitoreo_con_ia/
-│   ├── index.html
-│   ├── styles.css
-│   ├── app.js
-│   └── terrarium_bio_minimalism/
-│       └── DESIGN.md
-└── README.md
+```html
+<script src="./config.local.js"></script>
 ```
 
-La página `index.html` de la raíz redirige a la aplicación principal para que el proyecto funcione correctamente al publicarlo como sitio estático, incluido GitHub Pages.
+- Para Maps: habilita Maps JavaScript API y Places API en Google Cloud, restringe la key por HTTP referrer y por API.
+- Para GSI: crea OAuth Client ID (Web) y añade origen autorizado (ej. `http://localhost:8080`).
 
-## Configurar inicio de sesión con Google
+## 5. Qué hace el código con las claves
+- Si no hay key, se muestra mapa simulado; si hay key la app inyecta el script Maps con callback `initMap` y usa Places Nearby Search para buscar `veterinarian` alrededor de la ubicación del usuario.
+- GSI se inicializa si hay `window.HERPCARE_GOOGLE_CLIENT_ID` y el cliente decodifica el JWT para rellenar perfil local (MVP).
 
-1. Crea un cliente OAuth 2.0 de tipo **Web application** en Google Cloud Console.
-2. Añade los dominios autorizados, incluyendo el dominio de GitHub Pages.
-3. Copia el Client ID y reemplaza el valor vacío de `window.HERPCARE_GOOGLE_CLIENT_ID` en `stitch_reptilroom_monitoreo_con_ia/index.html`.
+## 6. Cómo probar los flujos (sin claves)
+- Registrar ejemplar desde modal de cámara (o galería), comprobar que aparece en Colección.
+- Ver Evolución de peso: añadir peso y ver gráfico Chart.js.
+- Vets: ver mapa simulado (pins estáticos).
 
-Sin Client ID la interfaz sigue funcionando, pero el botón muestra el mensaje de configuración en lugar de iniciar sesión.
+## 7. Notas de seguridad / despliegue
+- No subir `config.local.js` ni claves al repo.
+- Restringir la Maps API key por HTTP referrer y API.
+- Para proteger Places API o validar GSI, se recomienda backend que verifique credenciales y haga llamadas sensibles.
 
-## Instalar en Android
-
-La aplicación incluye `manifest.webmanifest` y un service worker. En Android, abre la URL publicada con Chrome y pulsa **Instalar aplicación** cuando aparezca el botón de HerpCare, o usa **Menú > Instalar aplicación**.
-
-## Publicar en GitHub
-
-Desde esta carpeta:
-
-```powershell
-git init
-git add .
-git commit -m "Create HerpCare monitoring app"
-git branch -M main
-git remote add origin https://github.com/TU_USUARIO/TU_REPOSITORIO.git
-git push -u origin main
-```
-
-Para activar GitHub Pages:
-
-1. Abre el repositorio en GitHub.
-2. Ve a **Settings > Pages**.
-3. En **Build and deployment**, selecciona **Deploy from a branch**.
-4. Selecciona la rama `main` y la carpeta `/ (root)`.
-5. Guarda los cambios.
-
-## Nota
-
-Las imágenes y fuentes actuales se cargan desde URLs externas. Para una versión de producción conviene descargar los recursos y servirlos desde el propio repositorio.
+## 8. Checklist pendiente (opcional)
+- Pulir UX, validaciones, pruebas móviles, sincronización servidor (opcional).
