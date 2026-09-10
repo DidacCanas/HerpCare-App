@@ -1033,7 +1033,8 @@ img {
 .map-box {
   position: relative;
   margin-top: 12px;
-  height: 150px;
+  min-height: 240px;
+  height: 240px;
   border-radius: 18px;
   background:
     linear-gradient(rgba(13, 17, 15, 0.2), rgba(13, 17, 15, 0.2)),
