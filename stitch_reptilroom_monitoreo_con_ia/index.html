@@ -23,146 +23,57 @@
             <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
               <rect width="100" height="100" rx="24" fill="#18231C"/>
               <path d="M50 15C30.67 15 15 30.67 15 50C15 69.33 30.67 85 50 85C69.33 85 85 69.33 85 50" stroke="#7E9A7B" stroke-width="4" stroke-linecap="round"/>
-              <path d="M48 28C38 32 32 42 34 52C35.5 59.5 42 66 50 67C58 68 64 62 65 54C66 46 60 40 54 39C46 38 43 45 45 49C47 53 51 54 53 51" stroke="#D96B43" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
               <circle cx="42" cy="38" r="3.5" fill="#4ADE80"/>
-              <circle cx="43" cy="37" r="1.5" fill="#0B130E"/>
-              <path d="M68 34C74 38 78 45 78 52" stroke="#4ADE80" stroke-width="3.5" stroke-linecap="round"/>
             </svg>
           </div>
           <div class="brand-text">HerpCare</div>
         </div>
 
         <nav class="nav" aria-label="Navegación principal">
-          <button class="nav-item active" type="button">Diagnóstico</button>
-          <button class="nav-item" type="button">Colección</button>
-          <button class="nav-item" type="button">Peso</button>
-          <button class="nav-item" type="button">Vets</button>
+          <button class="nav-item active" type="button" data-target="iaPanel">IA / Biomódulo</button>
+          <button class="nav-item" type="button" data-target="collectionPanel">Colección</button>
+          <button class="nav-item" type="button" data-target="weightPanel">Peso</button>
+          <button class="nav-item" type="button" data-target="vetsPanel">Vets</button>
         </nav>
 
-        <button class="profile-pill" id="loginButton" aria-label="Iniciar sesión con Google" type="button">
-          <img src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?auto=format&fit=crop&w=200&q=80" alt="Perfil" />
+        <button class="profile-pill" id="profileButton" aria-label="Perfil" type="button">
+          <img id="profileAvatar" src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?auto=format&fit=crop&w=200&q=80" alt="Perfil" />
         </button>
       </header>
 
       <main class="content">
-        <section class="panel scanner-panel" aria-label="Diagnóstico IA">
+        <!-- IA / Biomódulo (vacío hasta registrar primer animal) -->
+        <section id="iaPanel" class="panel scanner-panel" aria-label="Diagnóstico IA">
           <div class="scanner-header">
             <div class="status-wrap">
               <span class="pulse"></span>
               <div>
                 <div class="eyebrow">Módulo Clínico Bio-IA</div>
-                <div class="title">Ziggy • Gecko Leopardo</div>
+                <div class="title">Diagnóstico</div>
               </div>
             </div>
             <div class="tag tag-secondary">
               <span class="material-symbols-outlined">biotech</span>
-              <span>v4.8 HerpScan</span>
+              <span>HerpScan</span>
             </div>
           </div>
 
-          <div class="scan-mode-row" aria-label="Modos de escaneo">
-            <button class="mode-chip" type="button">Inspección General</button>
-            <button class="mode-chip active" type="button">Problemas de Muda</button>
-            <button class="mode-chip" type="button">Boca &amp; Respiratorio</button>
-            <button class="mode-chip" type="button">Parásitos / Piel</button>
-          </div>
-
-          <div class="camera-card">
-            <img src="https://images.unsplash.com/photo-1517849845537-4d257902454a?auto=format&fit=crop&w=1200&q=80" alt="Gecko bajo diagnóstico IA" />
-            <div class="camera-overlay"></div>
-
-            <div class="scan-badges top">
-              <div class="badge badge-warning">Escaneo activo</div>
-              <div class="badge">Macro Óptico 1.2x</div>
-            </div>
-
-            <div class="scan-badges bottom">
-              <div class="badge badge-info">Zona térmica: 31.4°C</div>
-              <div class="badge badge-ghost">60 FPS • RAW-RGB</div>
-            </div>
-
-            <div class="hotspot eye" aria-label="Párpado con problema">
-              <span class="dot warning"></span>
-              <div class="tooltip">Muda retenida: párpado</div>
-            </div>
-            <div class="hotspot toes" aria-label="Dígitos con anillos">
-              <span class="dot warning"></span>
-              <div class="tooltip">Anillos en falanges</div>
-            </div>
-          </div>
-
-          <div class="analysis-grid">
-            <div class="analysis-item">
-              <span class="material-symbols-outlined">visibility</span>
-              <div>
-                <strong>Ojos</strong>
-                <small class="warning-copy">Anomalía</small>
-              </div>
-            </div>
-            <div class="analysis-item">
-              <span class="material-symbols-outlined">sentiment_satisfied</span>
-              <div>
-                <strong>Boca/Mucosa</strong>
-                <small class="safe-copy">Sano</small>
-              </div>
-            </div>
-            <div class="analysis-item">
-              <span class="material-symbols-outlined">texture</span>
-              <div>
-                <strong>Escamas</strong>
-                <small class="safe-copy">Sin ectoparásitos</small>
-              </div>
-            </div>
-            <div class="analysis-item">
-              <span class="material-symbols-outlined">front_hand</span>
-              <div>
-                <strong>Dígitos</strong>
-                <small class="warning-copy">Disecdisis</small>
-              </div>
-            </div>
-          </div>
-
-          <div class="report-card">
-            <div class="report-head">
-              <div>
-                <div class="eyebrow">Informe Diagnóstico Clínico</div>
-                <h2>Disecdisis Periorbital y Falángica</h2>
-              </div>
-              <div class="tag tag-warning">
-                <span class="material-symbols-outlined">report_problem</span>
-                <span>Atención Leve</span>
-              </div>
-            </div>
-
-            <div class="metric-grid">
-              <div class="metric-box">
-                <span>Confianza Algorítmica</span>
-                <div class="metric-value success">94.2%</div>
-                <small>Modelo HerpShed-CNN</small>
-              </div>
-              <div class="metric-box">
-                <span>Severidad / Riesgo</span>
-                <div class="metric-value alert">Grado I</div>
-                <small>Ventana 24-48h</small>
-              </div>
-            </div>
-
-            <div class="findings-box">
-              <div class="subhead">Hallazgos clínicos focales</div>
-              <ul>
-                <li><strong>Párpado izquierdo:</strong> capa epidérmica residual seca sobre el canto medial.</li>
-                <li><strong>Dígitos III y IV:</strong> anillo constrictor incipiente de estrato córneo retenido.</li>
-              </ul>
-            </div>
-
+          <div id="iaEmptyMessage" class="empty-state">
+            <p>No hay ejemplares registrados. Registra tu primer animal para activar diagnósticos IA y almacenamiento de historiales.</p>
             <div class="action-row">
-              <button class="primary-btn" type="button">Revisión 24h</button>
-              <button class="secondary-btn" type="button">Compartir Ficha</button>
+              <button class="primary-btn" id="addSpecimenFromIA">Registrar ejemplar</button>
+              <button class="secondary-btn" id="openCameraFromIA">Abrir cámara</button>
             </div>
+          </div>
+
+          <!-- Contenido IA dinámico se renderiza por app.js cuando haya ejemplares -->
+          <div id="iaContent" hidden>
+            <!-- Placeholder: el contenido real del módulo IA se añadirá cuando exista un animal -->
           </div>
         </section>
 
-        <section class="panel collection-panel" aria-label="Colección de reptiles">
+        <!-- Colección (vacío hasta registrar primer animal) -->
+        <section id="collectionPanel" class="panel collection-panel" aria-label="Colección de reptiles">
           <div class="section-head">
             <div>
               <div class="eyebrow">Colección Bioactiva</div>
@@ -173,232 +84,79 @@
                 <span class="pulse small"></span>
                 Microclima Estable
               </div>
-              <button class="camera-action" id="openCameraButton" type="button">
+              <button class="camera-action" id="openCameraButtonTop" type="button">
                 <span class="material-symbols-outlined">photo_camera</span>
                 Foto
               </button>
             </div>
           </div>
 
-          <div class="search-row">
-            <span class="material-symbols-outlined search-icon">search</span>
-            <input type="text" placeholder="Buscar por nombre, especie o terrario..." />
+          <div id="collectionEmpty" class="empty-state">
+            <p>Tu colección está vacía. Registra tu primer ejemplar para comenzar a llevar historiales, fotos y pesajes.</p>
+            <div class="action-row">
+              <button class="primary-btn" id="addSpecimenButton">Añadir ejemplar</button>
+              <button class="secondary-btn" id="openCameraButton">Tomar foto</button>
+            </div>
           </div>
 
-          <div class="chip-row" aria-label="Filtros de colección">
-            <button class="chip active" type="button">Todos</button>
-            <button class="chip" type="button">Reptiles</button>
-            <button class="chip" type="button">Anfibios</button>
-            <button class="chip" type="button">Atención requerida</button>
-          </div>
-
-          <div class="summary-grid">
-            <div class="summary-card"><strong>6</strong><span>Ejemplares Activos</span></div>
-            <div class="summary-card alert"><strong>1</strong><span>Alimentación Hoy</span></div>
-            <div class="summary-card"><strong>1</strong><span>Pesaje Pendiente</span></div>
-          </div>
-
-          <div class="specimen-list">
-            <article class="specimen-card">
-              <div class="specimen-image">
-                <img src="https://images.unsplash.com/photo-1517849845537-4d257902454a?auto=format&fit=crop&w=900&q=80" alt="Ziggy" />
-                <div class="badge floating">Saludable</div>
-              </div>
-              <div class="specimen-body">
-                <div class="specimen-top">
-                  <h3>Ziggy</h3>
-                  <span class="mini-tag safe">Saludable</span>
-                </div>
-                <p>Eublepharis macularius</p>
-                <div class="specimen-stats">
-                  <div><small>Terrario A-1</small><strong>Desértico 31°C</strong></div>
-                  <div><small>Peso</small><strong>68g +2g</strong></div>
-                </div>
-              </div>
-            </article>
-
-            <article class="specimen-card alert-specimen">
-              <div class="specimen-image">
-                <img src="https://images.unsplash.com/photo-1546182990-dffeafbe841d?auto=format&fit=crop&w=900&q=80" alt="Kaa" />
-                <div class="badge floating warning">Muda próxima</div>
-              </div>
-              <div class="specimen-body">
-                <div class="specimen-top">
-                  <h3>Kaa</h3>
-                  <span class="mini-tag warning">Muda próxima</span>
-                </div>
-                <p>Python regius</p>
-                <div class="specimen-stats">
-                  <div><small>Terrario B-3</small><strong>27°C / 65%</strong></div>
-                  <div><small>Peso</small><strong>1,420g</strong></div>
-                </div>
-              </div>
-            </article>
-
-            <article class="specimen-card">
-              <div class="specimen-image">
-                <img src="https://images.unsplash.com/photo-1564349683136-77e08dba1ef7?auto=format&fit=crop&w=900&q=80" alt="Goliath" />
-                <div class="badge floating safe">Alimentado</div>
-              </div>
-              <div class="specimen-body">
-                <div class="specimen-top">
-                  <h3>Goliath</h3>
-                  <span class="mini-tag safe">Alimentado</span>
-                </div>
-                <p>Ceratophrys cranwelli</p>
-                <div class="specimen-stats">
-                  <div><small>Terrario T-2</small><strong>24°C / 80%</strong></div>
-                  <div><small>Masa</small><strong>145g</strong></div>
-                </div>
-              </div>
-            </article>
+          <div id="specimenList" class="specimen-list" hidden>
+            <!-- Tarjetas de ejemplares se generan desde app.js -->
           </div>
         </section>
 
-        <section class="panel weight-panel" aria-label="Peso y evolución">
+        <!-- Peso y evolución -->
+        <section id="weightPanel" class="panel weight-panel" aria-label="Peso y evolución">
           <div class="section-head compact">
             <div>
               <div class="eyebrow">Evolución de Peso</div>
-              <h2>Ziggy</h2>
+              <h2 id="weightPanelTitle">Selecciona un ejemplar</h2>
             </div>
-            <button class="secondary-btn inline" type="button">Añadir</button>
+            <button class="secondary-btn inline" id="addWeightButton" type="button">Añadir</button>
           </div>
 
-          <div class="tooltip-bar" id="chartTooltip">
-            <div class="tooltip-left">
-              <span class="dot signal"></span>
-              <span id="tooltipDate">12 Mayo 2024</span>
-            </div>
-            <div class="tooltip-right">
-              <strong id="tooltipVal">68.5 g</strong>
-              <span id="tooltipDelta">(+1.5 g)</span>
+          <div id="weightsEmpty" class="empty-state">
+            <p>No hay registros de peso. Registra un ejemplar para comenzar a llevar evolución de peso individual.</p>
+            <div class="action-row">
+              <button class="primary-btn" id="openAddSpecimenFromWeight">Registrar ejemplar</button>
             </div>
           </div>
 
-          <div class="chart-wrap">
-            <svg viewBox="0 0 320 160" role="img" aria-label="Gráfico de peso">
-              <defs>
-                <linearGradient id="healthyBand" x1="0" x2="0" y1="0" y2="1">
-                  <stop offset="0%" stop-color="#1e3a2b" stop-opacity="0.45"/>
-                  <stop offset="100%" stop-color="#1e3a2b" stop-opacity="0.10"/>
-                </linearGradient>
-                <linearGradient id="weightGlow" x1="0" x2="0" y1="0" y2="1">
-                  <stop offset="0%" stop-color="#ffb59c" stop-opacity="0.35"/>
-                  <stop offset="100%" stop-color="#ffb59c" stop-opacity="0.0"/>
-                </linearGradient>
-              </defs>
-              <rect x="25" y="30" width="280" height="90" rx="6" fill="url(#healthyBand)"/>
-              <polyline points="35,114 95,102 160,93 225,78 295,69" fill="none" stroke="#ffb59c" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" />
-              <polygon points="35,114 95,102 160,93 225,78 295,69 295,140 35,140" fill="url(#weightGlow)"/>
-
-              <g class="point" data-date="15 Enero 2024" data-value="61.0 g" data-delta="Inicio año" data-x="35" data-y="114">
-                <circle cx="35" cy="114" r="8" fill="transparent"/>
-                <circle cx="35" cy="114" r="4.5" fill="#101412" stroke="#ffb59c" stroke-width="2.5"/>
-              </g>
-              <g class="point" data-date="12 Febrero 2024" data-value="63.0 g" data-delta="+2.0 g" data-x="95" data-y="102">
-                <circle cx="95" cy="102" r="8" fill="transparent"/>
-                <circle cx="95" cy="102" r="4.5" fill="#101412" stroke="#ffb59c" stroke-width="2.5"/>
-              </g>
-              <g class="point" data-date="30 Marzo 2024" data-value="64.5 g" data-delta="+1.5 g" data-x="160" data-y="93">
-                <circle cx="160" cy="93" r="8" fill="transparent"/>
-                <circle cx="160" cy="93" r="4.5" fill="#101412" stroke="#ffb59c" stroke-width="2.5"/>
-              </g>
-              <g class="point" data-date="28 Abril 2024" data-value="67.0 g" data-delta="+2.5 g" data-x="225" data-y="78">
-                <circle cx="225" cy="78" r="8" fill="transparent"/>
-                <circle cx="225" cy="78" r="4.5" fill="#101412" stroke="#ffb59c" stroke-width="2.5"/>
-              </g>
-              <g class="point active" data-date="12 Mayo 2024" data-value="68.5 g" data-delta="(+1.5 g)" data-x="295" data-y="69">
-                <circle cx="295" cy="69" r="10" fill="#832c07" fill-opacity="0.3"/>
-                <circle cx="295" cy="69" r="5" fill="#ffb59c" stroke="#101412" stroke-width="2"/>
-              </g>
-            </svg>
-          </div>
-
-          <div class="insight-box">
-            <span class="material-symbols-outlined">verified</span>
-            <div>
-              <strong>Crecimiento constante saludable</strong>
-              <p>Dentro del percentil ideal para su morfometría y longitud actual.</p>
-            </div>
-          </div>
-
-          <div class="history-list">
-            <div class="history-item">
-              <div class="icon-wrap"><span class="material-symbols-outlined">scale</span></div>
-              <div>
-                <div class="history-top"><strong>68.5 g</strong><span class="mini-tag safe">+1.5g</span></div>
-                <small>12 May 2024 • Post-muda normal</small>
-              </div>
-            </div>
-            <div class="history-item">
-              <div class="icon-wrap"><span class="material-symbols-outlined">medication</span></div>
-              <div>
-                <div class="history-top"><strong>67.0 g</strong><span class="mini-tag safe">+2.5g</span></div>
-                <small>28 Abr 2024 • Calcio D3 enriquecido</small>
-              </div>
-            </div>
+          <div id="weightsList" hidden>
+            <!-- Tarjetas y gráficos por ejemplar se insertan aquí -->
           </div>
         </section>
 
-        <section class="panel vets-panel" aria-label="Veterinarios cercanos">
+        <!-- Vets: mapa real con Google Maps -->
+        <section id="vetsPanel" class="panel vets-panel" aria-label="Veterinarios cercanos">
           <div class="section-head compact">
             <div>
               <div class="eyebrow">Especialistas cercanos</div>
               <h2>Disponibilidad en tiempo real</h2>
             </div>
-            <span class="small-label">3 clínicas en rango</span>
+            <span class="small-label">Clínicas en rango</span>
           </div>
 
-          <div class="map-box">
-            <div class="map-pin pin-1"><span>1.8 km</span></div>
-            <div class="map-pin pin-2"><span>3.4 km</span></div>
-            <div class="map-pin pin-3"><span>6.2 km</span></div>
-            <div class="user-pin" id="userLocationStatus">Ubicación pendiente</div>
+          <div id="map" class="map-box">
+            <!-- Google Maps se inicializa desde app.js -->
+            <div id="mapMessage" class="map-message">Cargando mapa... añade tu API key en index.html (window.HERPCARE_GOOGLE_MAPS_API_KEY) para activar.</div>
           </div>
+
           <div class="location-actions">
             <span id="locationMessage">Activa tu ubicación para ordenar clínicas por distancia.</span>
             <button class="secondary-btn inline" id="locationButton" type="button">Usar mi ubicación</button>
           </div>
 
-          <article class="clinic-card featured">
-            <div class="clinic-head">
-              <img src="https://images.unsplash.com/photo-1584515933487-779824d29309?auto=format&fit=crop&w=900&q=80" alt="Hospital Veterinario" />
-              <div>
-                <h3>Hospital Veterinario Madrid Exóticos</h3>
-                <div class="review-line"><span class="material-symbols-outlined">star</span><strong>4.9</strong> <small>(142 reseñas)</small> • <span class="muted">A 1.8 km</span></div>
-              </div>
-            </div>
-            <div class="services">
-              <span>Quirófano Microcirugía</span>
-              <span>UCI Climatizada</span>
-            </div>
-            <div class="cta-row">
-              <button class="primary-btn urgent" type="button">Llamar Urgencias</button>
-              <button class="secondary-btn directions-button" data-place="Hospital Veterinario Madrid Exóticos" type="button">Ruta GPS</button>
-            </div>
-          </article>
-
-          <article class="clinic-card">
-            <div class="clinic-head">
-              <img src="https://images.unsplash.com/photo-1548199973-03cce0bbc87b?auto=format&fit=crop&w=900&q=80" alt="Fauna Exótica" />
-              <div>
-                <h3>Fauna Exótica &amp; Terraria</h3>
-                <div class="review-line"><span class="material-symbols-outlined">star</span><strong>4.8</strong> <small>(98 reseñas)</small> • <span class="muted">A 3.4 km</span></div>
-              </div>
-            </div>
-            <div class="services">
-              <span>Ecografía especializada</span>
-              <span>Dermatología reptil</span>
-            </div>
-          </article>
+          <div id="clinicsList">
+            <!-- Lista de clínicas (cards) se genera desde app.js -->
+          </div>
         </section>
       </main>
 
       <nav class="bottom-nav" aria-label="Navegación inferior">
-        <button class="bottom-item active" type="button"><span class="material-symbols-outlined">dashboard</span><small>Home</small></button>
-        <button class="bottom-item" type="button"><span class="material-symbols-outlined">smart_toy</span><small>IA</small></button>
-        <button class="bottom-item" type="button"><span class="material-symbols-outlined">pets</span><small>Reptiles</small></button>
-        <button class="bottom-item" type="button"><span class="material-symbols-outlined">local_hospital</span><small>Vets</small></button>
+        <button class="bottom-item active" type="button" data-target="home">Home</button>
+        <button class="bottom-item" type="button" data-target="iaPanel">IA</button>
+        <button class="bottom-item" type="button" data-target="collectionPanel">Reptiles</button>
+        <button class="bottom-item" type="button" data-target="vetsPanel">Vets</button>
       </nav>
     </div>
 
@@ -407,6 +165,7 @@
       Instalar en Android
     </button>
 
+    <!-- Modales: login, location, camera, profile -->
     <div class="modal-backdrop" id="loginModal" hidden>
       <section class="modal-card" role="dialog" aria-modal="true" aria-labelledby="loginTitle">
         <button class="modal-close" data-close-modal="loginModal" type="button" aria-label="Cerrar">×</button>
@@ -452,11 +211,41 @@
           <button class="secondary-btn" id="capturePhotoButton" type="button" disabled>Capturar</button>
         </div>
         <div class="camera-status" id="cameraStatus" role="status">La foto se guardará en este dispositivo.</div>
+        <div class="action-row" style="margin-top:12px;">
+          <input id="specimenName" placeholder="Nombre del ejemplar" />
+          <input id="specimenSpecies" placeholder="Especie (ej. Eublepharis macularius)" />
+          <button class="primary-btn" id="saveSpecimenButton">Guardar ejemplar</button>
+        </div>
+      </section>
+    </div>
+
+    <div class="modal-backdrop" id="profileModal" hidden>
+      <section class="modal-card" role="dialog" aria-modal="true" aria-labelledby="profileTitle">
+        <button class="modal-close" data-close-modal="profileModal" type="button" aria-label="Cerrar">×</button>
+        <div class="eyebrow">Perfil</div>
+        <h2 id="profileTitle">Tu perfil</h2>
+        <p>Conecta con Google para sincronizar tu información o edítala aquí.</p>
+        <div style="display:flex;gap:8px;align-items:center;margin-top:10px;">
+          <img id="profilePreview" src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?auto=format&fit=crop&w=200&q=80" alt="Avatar" style="width:72px;height:72px;border-radius:12px;object-fit:cover;" />
+          <div>
+            <input id="profilePhotoInput" type="file" accept="image/*" hidden />
+            <button class="secondary-btn" id="changePhotoButton">Cambiar foto</button>
+            <button class="secondary-btn" id="signInGoogleButton">Conectar Google</button>
+          </div>
+        </div>
+
+        <div style="margin-top:12px;display:grid;gap:8px;">
+          <input id="profileName" placeholder="Nombre" />
+          <input id="profileAddress" placeholder="Dirección" />
+          <button class="primary-btn" id="saveProfileButton">Guardar perfil</button>
+        </div>
       </section>
     </div>
 
     <script>
-      window.HERPCARE_GOOGLE_CLIENT_ID = "";
+      // Configura aquí tu Client ID / Maps API Key
+      window.HERPCARE_GOOGLE_CLIENT_ID = ""; // Para Google Sign-In (GSI)
+      window.HERPCARE_GOOGLE_MAPS_API_KEY = ""; // Para Google Maps JS API
     </script>
     <script src="https://accounts.google.com/gsi/client" async defer></script>
     <script src="app.js"></script>
