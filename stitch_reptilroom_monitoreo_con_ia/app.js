@@ -516,17 +516,19 @@ function startCameraCapture() {
   openNativeCameraPicker();
 }
 
-openCameraButtonTop?.addEventListener('click', ()=>{ resetCameraModal(); startCameraCapture(); });
-openCameraButton?.addEventListener('click', ()=>{ resetCameraModal(); startCameraCapture(); });
+openCameraButtonTop?.addEventListener('click', ()=>{ resetCameraModal(); openCameraModal(); startCameraCapture(); });
+openCameraButton?.addEventListener('click', ()=>{ resetCameraModal(); openCameraModal(); startCameraCapture(); });
 addSpecimenButton?.addEventListener('click', () => { resetCameraModal(); openCameraModal(); });
 addSpecimenFromHomeButton?.addEventListener('click', () => { resetCameraModal(); openCameraModal(); });
 openAddSpecimenFromWeightButton?.addEventListener('click', () => { resetCameraModal(); openCameraModal(); });
 openCameraFromHomeButton?.addEventListener('click', () => {
   resetCameraModal();
+  openCameraModal();
   startCameraCapture();
 });
 openGalleryFromHomeButton?.addEventListener('click', () => {
   resetCameraModal();
+  openCameraModal();
   openGalleryPicker();
 });
 goToVetsFromHomeButton?.addEventListener('click', () => showPanel('vetsPanel'));
@@ -669,6 +671,15 @@ if ('serviceWorker' in navigator) {
       if (registration.waiting) {
         registration.waiting.postMessage({ type: 'SKIP_WAITING' });
       }
+      registration.addEventListener('updatefound', () => {
+        const worker = registration.installing;
+        if (!worker) return;
+        worker.addEventListener('statechange', () => {
+          if (worker.state === 'installed') {
+            worker.postMessage({ type: 'SKIP_WAITING' });
+          }
+        });
+      });
     } catch (error) {
       console.error('No se pudo registrar el service worker:', error);
     }
