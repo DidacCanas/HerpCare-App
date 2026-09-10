@@ -24,7 +24,7 @@ window.HERPCARE_GOOGLE_CLIENT_ID = "TU_GOOGLE_CLIENT_ID.apps.googleusercontent.c
 window.HERPCARE_GOOGLE_MAPS_API_KEY = "TU_GOOGLE_MAPS_API_KEY";
 ```
 
-- Asegúrate de que `stitch_reptilroom_monitoreo_con_ia/config.local.js` esté en `.gitignore` (en esta rama ya está añadido).
+- Asegúrate de que `stitch_reptilroom_monitoreo_con_ia/config.local.js` esté en `.gitignore`.
 - Incluye `config.local.js` en `index.html` antes de `app.js`:
 
 ```html
