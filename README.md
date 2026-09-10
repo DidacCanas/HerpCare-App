@@ -27,7 +27,7 @@ window.HERPCARE_GOOGLE_MAPS_API_KEY = "TU_GOOGLE_MAPS_API_KEY";
 ```
 
 - El repositorio ya ignora `stitch_reptilroom_monitoreo_con_ia/config.local.js` en `.gitignore`.
-- `index.html` carga `config.local.js` solo en `localhost` / `127.0.0.1` / `[::1]`, antes de `app.js`.
+- `index.html` carga `config.local.js` solo en hosts de desarrollo local (por ejemplo `localhost`, loopback, IPs privadas o `.local`), antes de `app.js`.
 - Este archivo **no** oculta secretos en producción: cualquier clave cargada en el navegador será visible para el cliente.
 - Para Maps: habilita en Google Cloud **Maps JavaScript API** y **Places API**; usa una browser key restringida por HTTP referrer (ej. `http://localhost:8080`) y por API.
 - Para GSI: crea un **OAuth Client ID (Web)** y añade el origen autorizado (ej. `http://localhost:8080`).

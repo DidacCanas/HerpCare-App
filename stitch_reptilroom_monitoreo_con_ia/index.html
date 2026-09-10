@@ -271,7 +271,14 @@
       window.HERPCARE_GOOGLE_MAPS_API_KEY = ""; // Para Google Maps JS API
     </script>
     <script>
-      if (["localhost", "127.0.0.1", "[::1]"].includes(window.location.hostname)) {
+      const isLocalDevHost =
+        /^(localhost|127(?:\\.\\d{1,3}){3}|0\\.0\\.0\\.0|\\[::1\\])$/.test(window.location.hostname) ||
+        /^10(?:\\.\\d{1,3}){3}$/.test(window.location.hostname) ||
+        /^192\\.168(?:\\.\\d{1,3}){2}$/.test(window.location.hostname) ||
+        /^172\\.(1[6-9]|2\\d|3[0-1])(?:\\.\\d{1,3}){2}$/.test(window.location.hostname) ||
+        window.location.hostname.endsWith(".local");
+
+      if (isLocalDevHost) {
         document.write('<script src="./config.local.js" onerror="window.HERPCARE_CONFIG_LOCAL_MISSING = true"><\\/script>');
       } else {
         window.HERPCARE_CONFIG_LOCAL_MISSING = true;
