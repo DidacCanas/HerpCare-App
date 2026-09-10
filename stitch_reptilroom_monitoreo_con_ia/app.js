@@ -78,7 +78,6 @@ const appFeedbackEl = document.getElementById('appFeedback');
 let currentChart = null;
 let currentSpecimenId = null;
 let feedbackTimeoutId = null;
-let currentPreviewObjectUrl = null;
 
 // Camera state
 let cameraStream;
@@ -381,16 +380,8 @@ addWeightButton?.addEventListener('click', async () => {
 // ---- Camera / Photo capture (re-using and extending existing logic) --------------------
 const stopCamera = () => { try{ cameraStream?.getTracks().forEach(t=>t.stop()); }catch(e){} cameraStream=undefined; cameraVideo.srcObject = null; capturePhotoButton.disabled = true; };
 
-function revokeCurrentPreviewObjectUrl() {
-  if (currentPreviewObjectUrl) {
-    URL.revokeObjectURL(currentPreviewObjectUrl);
-    currentPreviewObjectUrl = null;
-  }
-}
-
 function resetCameraModal() {
   stopCamera();
-  revokeCurrentPreviewObjectUrl();
   cameraFileInput.value = '';
   cameraPhoto.removeAttribute('src');
   cameraPhoto.hidden = true;
@@ -403,7 +394,6 @@ function resetCameraModal() {
 
 function showCapturedPhotoPreview(dataUrl) {
   const safeSource = sanitizeImageSource(dataUrl);
-  revokeCurrentPreviewObjectUrl();
   if (!safeSource.startsWith('data:image/')) {
     cameraStatus.textContent = 'No se pudo usar la imagen capturada.';
     return;
@@ -420,18 +410,27 @@ function showSelectedPhotoPreview(file) {
     cameraStatus.textContent = 'Selecciona un archivo de imagen válido.';
     return;
   }
-  revokeCurrentPreviewObjectUrl();
-  currentPreviewObjectUrl = URL.createObjectURL(file);
-  cameraPhoto.src = currentPreviewObjectUrl;
-  cameraPhoto.hidden = false;
-  cameraVideo.hidden = true;
-  cameraPlaceholder.hidden = true;
-  cameraStatus.textContent = 'Foto lista. Completa el nombre y la especie para guardar el ejemplar.';
-  requestAnimationFrame(() => specimenNameInput?.focus());
+  const reader = new FileReader();
+  reader.onload = () => {
+    const result = typeof reader.result === 'string' ? reader.result : '';
+    if (!result.startsWith('data:image/')) {
+      cameraStatus.textContent = 'No se pudo usar la imagen seleccionada.';
+      return;
+    }
+    cameraPhoto.src = result;
+    cameraPhoto.hidden = false;
+    cameraVideo.hidden = true;
+    cameraPlaceholder.hidden = true;
+    cameraStatus.textContent = 'Foto lista. Completa el nombre y la especie para guardar el ejemplar.';
+    requestAnimationFrame(() => specimenNameInput?.focus());
+  };
+  reader.onerror = () => {
+    cameraStatus.textContent = 'No se pudo leer la imagen seleccionada.';
+  };
+  reader.readAsDataURL(file);
 }
 
 function openCameraModal({ openGallery = false } = {}) {
-  resetCameraModal();
   cameraModal.hidden = false;
   cameraStatus.textContent = openGallery ? 'Selecciona una imagen desde la galería para continuar.' : 'La foto se guardará en este dispositivo.';
   if (!openGallery) {
@@ -474,16 +473,20 @@ async function startCameraCapture() {
   }
 }
 
-openCameraButtonTop?.addEventListener('click', ()=>{ openCameraModal(); startCameraCapture(); });
-openCameraButton?.addEventListener('click', ()=>{ openCameraModal(); startCameraCapture(); });
-addSpecimenButton?.addEventListener('click', () => openCameraModal());
-addSpecimenFromIAButton?.addEventListener('click', () => openCameraModal());
-openAddSpecimenFromWeightButton?.addEventListener('click', () => openCameraModal());
+openCameraButtonTop?.addEventListener('click', ()=>{ resetCameraModal(); openCameraModal(); startCameraCapture(); });
+openCameraButton?.addEventListener('click', ()=>{ resetCameraModal(); openCameraModal(); startCameraCapture(); });
+addSpecimenButton?.addEventListener('click', () => { resetCameraModal(); openCameraModal(); });
+addSpecimenFromIAButton?.addEventListener('click', () => { resetCameraModal(); openCameraModal(); });
+openAddSpecimenFromWeightButton?.addEventListener('click', () => { resetCameraModal(); openCameraModal(); });
 openCameraFromIAButton?.addEventListener('click', () => {
+  resetCameraModal();
   openCameraModal();
   startCameraCapture();
 });
-openGalleryFromIAButton?.addEventListener('click', () => openCameraModal({ openGallery: true }));
+openGalleryFromIAButton?.addEventListener('click', () => {
+  resetCameraModal();
+  openCameraModal({ openGallery: true });
+});
 goToVetsFromHomeButton?.addEventListener('click', () => showPanel('vetsPanel'));
 
 startCameraButton?.addEventListener('click', startCameraCapture);
