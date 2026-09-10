@@ -32,17 +32,25 @@ const panels = {
 const specimenListEl = document.getElementById('specimenList');
 const collectionEmptyEl = document.getElementById('collectionEmpty');
 const iaEmptyEl = document.getElementById('iaEmptyMessage');
+const iaContentEl = document.getElementById('iaContent');
 const weightsEmptyEl = document.getElementById('weightsEmpty');
 const weightsListEl = document.getElementById('weightsList');
 const weightPanelTitle = document.getElementById('weightPanelTitle');
 const addWeightButton = document.getElementById('addWeightButton');
+const addSpecimenButton = document.getElementById('addSpecimenButton');
+const addSpecimenFromIAButton = document.getElementById('addSpecimenFromIA');
+const openCameraFromIAButton = document.getElementById('openCameraFromIA');
+const openGalleryFromIAButton = document.getElementById('openGalleryFromIA');
+const openAddSpecimenFromWeightButton = document.getElementById('openAddSpecimenFromWeight');
 const openCameraButtonTop = document.getElementById('openCameraButtonTop');
 const openCameraButton = document.getElementById('openCameraButton');
+const goToVetsFromHomeButton = document.getElementById('goToVetsFromHome');
 const cameraModal = document.getElementById('cameraModal');
 const cameraVideo = document.getElementById('cameraVideo');
 const cameraCanvas = document.getElementById('cameraCanvas');
 const cameraPhoto = document.getElementById('cameraPhoto');
 const cameraPlaceholder = document.getElementById('cameraPlaceholder');
+const cameraStatus = document.getElementById('cameraStatus');
 const startCameraButton = document.getElementById('startCameraButton');
 const capturePhotoButton = document.getElementById('capturePhotoButton');
 const choosePhotoButton = document.getElementById('choosePhotoButton');
@@ -64,10 +72,12 @@ const signInGoogleButton = document.getElementById('signInGoogleButton');
 const mapEl = document.getElementById('map');
 const mapMessageEl = document.getElementById('mapMessage');
 const clinicsListEl = document.getElementById('clinicsList');
+const appFeedbackEl = document.getElementById('appFeedback');
 
 // Chart state
 let currentChart = null;
 let currentSpecimenId = null;
+let feedbackTimeoutId = null;
 
 // Camera state
 let cameraStream;
@@ -100,28 +110,101 @@ document.querySelectorAll('[data-target]').forEach((btn) => {
 showPanel('iaPanel');
 
 // ---- Specimens (CRUD) -----------------------------------------------------------------
+function showFeedback(message) {
+  if (!appFeedbackEl) return;
+  appFeedbackEl.textContent = message;
+  appFeedbackEl.hidden = false;
+  clearTimeout(feedbackTimeoutId);
+  feedbackTimeoutId = setTimeout(() => {
+   appFeedbackEl.hidden = true;
+  }, 3200);
+}
+
+function renderIAContent(specimens = loadSpecimens()) {
+  if (!iaContentEl) return;
+
+  if (!specimens.length) {
+   iaContentEl.hidden = true;
+   iaContentEl.innerHTML = '';
+   iaEmptyEl.hidden = false;
+   return;
+  }
+
+  const featuredSpecimen = specimens.find((specimen) => specimen.id === currentSpecimenId) || specimens[specimens.length - 1];
+  const totalWeights = (featuredSpecimen.weights || []).length;
+
+  iaEmptyEl.hidden = true;
+  iaContentEl.hidden = false;
+  iaContentEl.innerHTML = `
+   <article class="weight-card">
+     <div class="section-head compact">
+       <div>
+         <div class="eyebrow">Biomódulo activo</div>
+         <h2>${escapeHtml(featuredSpecimen.name || 'Ejemplar')}</h2>
+       </div>
+       <span class="tag tag-secondary">${specimens.length} ejemplar${specimens.length === 1 ? '' : 'es'}</span>
+     </div>
+     <p>${escapeHtml(featuredSpecimen.species || 'Especie pendiente de completar')}</p>
+     <div class="specimen-stats">
+       <div><small>Último peso</small><strong>${latestWeight(featuredSpecimen) || 'Sin pesajes'}</strong></div>
+       <div><small>Registros</small><strong>${totalWeights}</strong></div>
+     </div>
+     <div class="specimen-actions">
+       <button class="secondary-btn" type="button" data-home-action="collection">Ver colección</button>
+       <button class="primary-btn" type="button" data-home-action="weight" data-id="${featuredSpecimen.id}">Abrir peso</button>
+     </div>
+   </article>
+  `;
+
+  iaContentEl.querySelector('[data-home-action="collection"]')?.addEventListener('click', () => showPanel('collectionPanel'));
+  iaContentEl.querySelector('[data-home-action="weight"]')?.addEventListener('click', (event) => {
+   openSpecimenWeightPanel(event.currentTarget.dataset.id);
+  });
+}
+
+function renderWeightPanel(specimens = loadSpecimens()) {
+  if (!specimens.length) {
+   if (currentChart) {
+     try { currentChart.destroy(); } catch (error) {}
+     currentChart = null;
+   }
+   currentSpecimenId = null;
+   weightPanelTitle.textContent = 'Selecciona un ejemplar';
+   weightsListEl.hidden = true;
+   weightsListEl.innerHTML = '';
+   weightsEmptyEl.hidden = false;
+   return;
+  }
+
+  const selectedSpecimen = specimens.find((specimen) => specimen.id === currentSpecimenId) || specimens[0];
+  currentSpecimenId = selectedSpecimen.id;
+  weightPanelTitle.textContent = selectedSpecimen.name || 'Ejemplar';
+  renderWeightsFor(selectedSpecimen);
+}
+
 function renderSpecimens() {
   const specimens = loadSpecimens();
+  renderIAContent(specimens);
+  renderWeightPanel(specimens);
+
   if (!specimens.length) {
-    specimenListEl.hidden = true;
-    collectionEmptyEl.hidden = false;
-    iaEmptyEl.hidden = false;
-    return;
+   specimenListEl.hidden = true;
+   collectionEmptyEl.hidden = false;
+   return;
   }
   specimenListEl.hidden = false;
   collectionEmptyEl.hidden = true;
-  iaEmptyEl.hidden = true;
   specimenListEl.innerHTML = '';
   specimens.forEach((s) => {
-    const art = document.createElement('article');
-    art.className = 'specimen-card';
-    art.innerHTML = `
-      <div class="specimen-image"><img src="${s.photo || placeholderFor(s)}" alt="${s.name || 'Sin nombre'}" /><div class="badge floating">${s.status||'Activo'}</div></div>
+   const art = document.createElement('article');
+   art.className = 'specimen-card';
+   art.innerHTML = `
+     <div class="specimen-image"><img src="${sanitizeImageSource(s.photo) || placeholderFor(s)}" alt="${s.name || 'Sin nombre'}" /><div class="badge floating">${s.status||'Activo'}</div></div>
       <div class="specimen-body">
         <div class="specimen-top"><h3>${escapeHtml(s.name||'Ejemplar')}</h3><span class="mini-tag safe">${escapeHtml(s.species||'--')}</span></div>
         <p>${escapeHtml(s.species || '')}</p>
         <div class="specimen-stats"><div><small>Registrado</small><strong>${new Date(s.createdAt).toLocaleDateString()}</strong></div><div><small>Peso</small><strong>${(latestWeight(s)??'--')}</strong></div></div>
-        <div style="display:flex;gap:8px;margin-top:10px;"><button class="secondary-btn view-btn" data-id="${s.id}">Ver</button><button class="secondary-btn edit-btn" data-id="${s.id}">Editar</button><button class="secondary-btn del-btn" data-id="${s.id}">Eliminar</button></div>
+        <div class="specimen-actions"><button class="secondary-btn view-btn" data-id="${s.id}" type="button">Ver</button><button class="secondary-btn edit-btn" data-id="${s.id}" type="button">Editar</button><button class="secondary-btn del-btn" data-id="${s.id}" type="button">Eliminar</button></div>
       </div>
     `;
     specimenListEl.appendChild(art);
@@ -146,6 +229,21 @@ function placeholderFor(s) {
 
 function escapeHtml(str){ if(!str) return ''; return String(str).replace(/[&<>'"]/g, (c)=>({"&":"&amp;","<":"&lt;",">":"&gt;","'":"&#39;","\"":"&quot;"}[c])); }
 
+function sanitizeImageSource(source) {
+  if (!source) return '';
+  const value = String(source).trim();
+  if (/^(javascript|vbscript):/i.test(value)) return '';
+  if (/^data:/i.test(value) && !/^data:image\//i.test(value)) return '';
+  return value;
+}
+
+function safeTextLabel(value, fallback = 'Ejemplar') {
+  const normalized = String(value || '')
+    .replace(/[<>\u0000-\u001F\u007F]/g, '')
+    .trim();
+  return normalized || fallback;
+}
+
 function latestWeight(specimen){
   try{
     const w = specimen.weights || [];
@@ -157,8 +255,12 @@ function latestWeight(specimen){
 
 function createSpecimen({name, species, photo}){
   const specimens = loadSpecimens();
-  const s = { id: uid(), name, species, photo, weights: [], createdAt: Date.now(), status: 'Saludable'};
-  specimens.push(s); saveSpecimens(specimens); renderSpecimens(); return s;
+  const s = { id: uid(), name, species, photo: sanitizeImageSource(photo), weights: [], createdAt: Date.now(), status: 'Saludable'};
+  specimens.push(s);
+  currentSpecimenId = s.id;
+  saveSpecimens(specimens);
+  renderSpecimens();
+  return s;
 }
 
 function editSpecimen(id){
@@ -171,7 +273,13 @@ function editSpecimen(id){
 
 function deleteSpecimen(id){
   if(!confirm('Eliminar ejemplar? Esto borrará tambien su historial de peso.')) return;
-  const specimens = loadSpecimens().filter(x=>x.id!==id); saveSpecimens(specimens); renderSpecimens();
+  const specimens = loadSpecimens().filter(x=>x.id!==id);
+  if (currentSpecimenId === id) {
+    currentSpecimenId = specimens[0]?.id || null;
+  }
+  saveSpecimens(specimens);
+  renderSpecimens();
+  showFeedback('Ejemplar eliminado correctamente.');
 }
 
 function openSpecimenWeightPanel(id){
@@ -201,30 +309,66 @@ function renderWeightsFor(specimen){
   const labels = (specimen.weights||[]).map(w => new Date(w.date).toLocaleDateString());
   const data = (specimen.weights||[]).map(w => w.value);
 
-  const canvas = document.createElement('canvas');
-  weightsListEl.appendChild(canvas);
+  const card = document.createElement('article');
+  card.className = 'weight-card';
+  card.innerHTML = `
+    <div class="specimen-top">
+      <h3>${escapeHtml(specimen.name || 'Ejemplar')}</h3>
+      <span class="mini-tag safe">${escapeHtml(specimen.species || '--')}</span>
+    </div>
+    <p>${(specimen.weights || []).length ? 'Historial de evolución de peso del ejemplar.' : 'Aún no hay pesajes. Usa “Añadir” para registrar el primero.'}</p>
+    <div class="chart-canvas-wrap"></div>
+  `;
+  weightsListEl.appendChild(card);
 
-  ensureChartJsLoaded().then((Chart)=>{
-    if(currentChart){ try{ currentChart.destroy(); }catch(e){} }
-    currentChart = new Chart(canvas.getContext('2d'), {
-      type: 'line',
-      data: { labels, datasets: [{ label: 'Peso (g)', data, borderColor: '#ffb59c', backgroundColor: 'rgba(255,181,156,0.08)', fill: true, tension: 0.35 }] },
-      options: { responsive: true, scales: { y: { beginAtZero: false } } }
+  const chartWrap = card.querySelector('.chart-canvas-wrap');
+
+  if ((specimen.weights || []).length) {
+    const canvas = document.createElement('canvas');
+    chartWrap.appendChild(canvas);
+
+    ensureChartJsLoaded().then((Chart)=>{
+      if(currentChart){ try{ currentChart.destroy(); }catch(e){} }
+      currentChart = new Chart(canvas.getContext('2d'), {
+        type: 'line',
+        data: { labels, datasets: [{ label: 'Peso (g)', data, borderColor: '#ffb59c', backgroundColor: 'rgba(255,181,156,0.08)', fill: true, tension: 0.35 }] },
+        options: { responsive: true, scales: { y: { beginAtZero: false } } }
+      });
+    }).catch(()=>{
+      const list = document.createElement('div');
+      list.innerHTML = (specimen.weights||[]).map(w=>`<div class="history-item"><div class="icon-wrap"><span class="material-symbols-outlined">scale</span></div><div><div class="history-top"><strong>${w.value} g</strong></div><small>${new Date(w.date).toLocaleString()}</small></div></div>`).join('');
+      chartWrap.appendChild(list);
     });
-  }).catch(()=>{
-    // fallback: simple SVG polyline or list
-    const list = document.createElement('div');
-    list.innerHTML = (specimen.weights||[]).map(w=>`<div class="history-item"><div class="icon-wrap"><span class="material-symbols-outlined">scale</span></div><div><div class="history-top"><strong>${w.value} g</strong></div><small>${new Date(w.date).toLocaleString()}</small></div></div>`).join('');
-    weightsListEl.appendChild(list);
+  } else {
+    if(currentChart){ try{ currentChart.destroy(); }catch(e){} }
+    currentChart = null;
+    const emptyMessage = document.createElement('p');
+    emptyMessage.className = 'map-message';
+    emptyMessage.textContent = 'Todavía no hay registros de peso para este ejemplar.';
+    chartWrap.appendChild(emptyMessage);
+  }
+
+  const historyTitle = document.createElement('h4');
+  historyTitle.textContent = 'Historial';
+  card.appendChild(historyTitle);
+
+  const histDiv = document.createElement('div');
+  histDiv.className='history-list';
+  (specimen.weights||[]).slice().reverse().forEach(w=>{
+    const item = document.createElement('div');
+    item.className='history-item';
+    item.innerHTML = `<div class="icon-wrap"><span class="material-symbols-outlined">scale</span></div><div><div class="history-top"><strong>${w.value} g</strong></div><small>${new Date(w.date).toLocaleString()}</small></div>`;
+    histDiv.appendChild(item);
   });
 
-  // History list
-  const historyTitle = document.createElement('h4'); historyTitle.textContent = 'Historial'; weightsListEl.appendChild(historyTitle);
-  const histDiv = document.createElement('div'); histDiv.className='history-list';
-  (specimen.weights||[]).slice().reverse().forEach(w=>{
-    const item = document.createElement('div'); item.className='history-item'; item.innerHTML = `<div class="icon-wrap"><span class="material-symbols-outlined">scale</span></div><div><div class="history-top"><strong>${w.value} g</strong></div><small>${new Date(w.date).toLocaleString()}</small></div>`; histDiv.appendChild(item);
-  });
-  weightsListEl.appendChild(histDiv);
+  if (!histDiv.children.length) {
+    const item = document.createElement('div');
+    item.className = 'history-item';
+    item.innerHTML = `<div class="icon-wrap"><span class="material-symbols-outlined">info</span></div><div><div class="history-top"><strong>Sin historial</strong></div><small>Añade el primer pesaje desde este panel.</small></div>`;
+    histDiv.appendChild(item);
+  }
+
+  card.appendChild(histDiv);
 }
 
 addWeightButton?.addEventListener('click', async () => {
@@ -236,51 +380,158 @@ addWeightButton?.addEventListener('click', async () => {
   const specimens = loadSpecimens();
   const s = specimens.find(x=>x.id===currentSpecimenId); if(!s) return alert('Ejemplar no encontrado');
   s.weights = s.weights || []; s.weights.push({ date: Date.now(), value }); saveSpecimens(specimens);
-  renderWeightsFor(s);
   renderSpecimens();
+  showFeedback(`Peso añadido a ${s.name}: ${value} g.`);
 });
 
 // ---- Camera / Photo capture (re-using and extending existing logic) --------------------
 const stopCamera = () => { try{ cameraStream?.getTracks().forEach(t=>t.stop()); }catch(e){} cameraStream=undefined; cameraVideo.srcObject = null; capturePhotoButton.disabled = true; };
 
-const showPhotoPreview = (source) => { cameraPhoto.src = source; cameraPhoto.hidden = false; cameraVideo.hidden = true; cameraPlaceholder.hidden = true; };
+function resetCameraModal({ clearForm = true } = {}) {
+  stopCamera();
+  cameraFileInput.value = '';
+  cameraPhoto.removeAttribute('src');
+  cameraPhoto.hidden = true;
+  cameraVideo.hidden = true;
+  cameraPlaceholder.hidden = false;
+  if (clearForm) {
+    specimenNameInput.value = '';
+    specimenSpeciesInput.value = '';
+  }
+  cameraStatus.textContent = 'La foto se guardará en este dispositivo.';
+}
 
-openCameraButtonTop?.addEventListener('click', ()=>{ cameraModal.hidden = false; });
-openCameraButton?.addEventListener('click', ()=>{ cameraModal.hidden = false; });
+function showCapturedPhotoPreview(dataUrl) {
+  const safeSource = sanitizeImageSource(dataUrl);
+  if (!safeSource.startsWith('data:image/')) {
+    cameraStatus.textContent = 'No se pudo usar la imagen capturada.';
+    return;
+  }
+  cameraPhoto.src = safeSource;
+  cameraPhoto.hidden = false;
+  cameraVideo.hidden = true;
+  cameraPlaceholder.hidden = true;
+  cameraStatus.textContent = 'Foto lista. Completa el nombre y la especie para guardar el ejemplar.';
+}
 
-startCameraButton?.addEventListener('click', async ()=>{
-  if (!navigator.mediaDevices?.getUserMedia) { cameraStatus?.textContent = 'No hay cámara disponible'; cameraFileInput.click(); return; }
+function showSelectedPhotoPreview(file) {
+  if (!file?.type?.startsWith('image/')) {
+    cameraStatus.textContent = 'Selecciona un archivo de imagen válido.';
+    return;
+  }
+  const reader = new FileReader();
+  reader.onload = () => {
+    const result = typeof reader.result === 'string' ? reader.result : '';
+    if (!result.startsWith('data:image/')) {
+      cameraStatus.textContent = 'No se pudo usar la imagen seleccionada.';
+      return;
+    }
+    cameraPhoto.src = result;
+    cameraPhoto.hidden = false;
+    cameraVideo.hidden = true;
+    cameraPlaceholder.hidden = true;
+    cameraStatus.textContent = 'Foto lista. Completa el nombre y la especie para guardar el ejemplar.';
+    requestAnimationFrame(() => specimenNameInput?.focus());
+  };
+  reader.onerror = () => {
+    cameraStatus.textContent = 'No se pudo leer la imagen seleccionada.';
+  };
+  reader.readAsDataURL(file);
+}
+
+function openCameraModal({ openGallery = false } = {}) {
+  cameraModal.hidden = false;
+  cameraStatus.textContent = openGallery ? 'Selecciona una imagen desde la galería para continuar.' : 'La foto se guardará en este dispositivo.';
+  if (!openGallery) {
+    requestAnimationFrame(() => specimenNameInput?.focus());
+  }
+  if (openGallery) {
+    requestAnimationFrame(() => {
+      cameraFileInput.click();
+      window.setTimeout(() => choosePhotoButton?.focus(), 250);
+    });
+  }
+}
+
+function openGalleryPicker(message = 'Selecciona una imagen desde la galería para continuar.') {
+  stopCamera();
+  cameraStatus.textContent = message;
+  cameraFileInput.click();
+  window.setTimeout(() => choosePhotoButton?.focus(), 250);
+}
+
+async function startCameraCapture() {
+  if (!navigator.mediaDevices?.getUserMedia) {
+    openGalleryPicker('Tu dispositivo no permite cámara web aquí. Continuamos con la galería.');
+    return;
+  }
+
   try{
     stopCamera();
+    cameraStatus.textContent = 'Preparando cámara...';
     cameraStream = await navigator.mediaDevices.getUserMedia({ video: { facingMode: { ideal: 'environment' } }, audio: false });
-    cameraVideo.srcObject = cameraStream; cameraVideo.hidden = false; cameraPhoto.hidden = true; cameraPlaceholder.hidden = true; capturePhotoButton.disabled = false;
-  }catch(err){ console.error(err); alert('No se pudo acceder a la cámara'); }
+    cameraVideo.srcObject = cameraStream;
+    cameraVideo.hidden = false;
+    cameraPhoto.hidden = true;
+    cameraPlaceholder.hidden = true;
+    capturePhotoButton.disabled = false;
+    cameraStatus.textContent = 'Cámara activa. Captura la foto o guarda el ejemplar sin imagen.';
+  }catch(err){
+    console.error(err);
+    openGalleryPicker('No se pudo acceder a la cámara. Selecciona una foto desde la galería.');
+  }
+}
+
+openCameraButtonTop?.addEventListener('click', ()=>{ resetCameraModal(); openCameraModal(); startCameraCapture(); });
+openCameraButton?.addEventListener('click', ()=>{ resetCameraModal(); openCameraModal(); startCameraCapture(); });
+addSpecimenButton?.addEventListener('click', () => { resetCameraModal(); openCameraModal(); });
+addSpecimenFromIAButton?.addEventListener('click', () => { resetCameraModal(); openCameraModal(); });
+openAddSpecimenFromWeightButton?.addEventListener('click', () => { resetCameraModal(); openCameraModal(); });
+openCameraFromIAButton?.addEventListener('click', () => {
+  resetCameraModal();
+  openCameraModal();
+  startCameraCapture();
 });
+openGalleryFromIAButton?.addEventListener('click', () => {
+  resetCameraModal();
+  openCameraModal({ openGallery: true });
+});
+goToVetsFromHomeButton?.addEventListener('click', () => showPanel('vetsPanel'));
+
+startCameraButton?.addEventListener('click', startCameraCapture);
 
 capturePhotoButton?.addEventListener('click', () => {
   if (!cameraVideo.videoWidth) return;
   cameraCanvas.width = cameraVideo.videoWidth; cameraCanvas.height = cameraVideo.videoHeight;
   cameraCanvas.getContext('2d').drawImage(cameraVideo,0,0);
-  showPhotoPreview(cameraCanvas.toDataURL('image/jpeg', 0.9)); stopCamera();
+  showCapturedPhotoPreview(cameraCanvas.toDataURL('image/jpeg', 0.9)); stopCamera();
 });
 
-choosePhotoButton?.addEventListener('click', ()=> cameraFileInput.click());
+choosePhotoButton?.addEventListener('click', ()=> openGalleryPicker());
 cameraFileInput?.addEventListener('change', ()=>{
   const [file] = cameraFileInput.files || [];
-  if(!file) return; showPhotoPreview(URL.createObjectURL(file));
+  if(!file) return;
+  showSelectedPhotoPreview(file);
 });
 
 document.querySelectorAll('[data-close-modal]').forEach((b)=>b.addEventListener('click', ()=>{
-  document.getElementById(b.dataset.closeModal).hidden = true; stopCamera();
+  document.getElementById(b.dataset.closeModal).hidden = true;
+  if (b.dataset.closeModal === 'cameraModal') {
+    resetCameraModal({ clearForm: false });
+  }
 }));
 
 saveSpecimenButton?.addEventListener('click', ()=>{
   const name = specimenNameInput.value?.trim(); const species = specimenSpeciesInput.value?.trim();
   const photo = cameraPhoto.src || '';
   if(!name) return alert('Añade nombre al ejemplar');
+  const wasEmpty = loadSpecimens().length === 0;
   const s = createSpecimen({ name, species, photo });
-  // reset camera modal
-  specimenNameInput.value=''; specimenSpeciesInput.value=''; cameraPhoto.src=''; cameraPhoto.hidden=true; cameraPlaceholder.hidden=false; cameraModal.hidden=true; renderSpecimens();
+  cameraModal.hidden = true;
+  resetCameraModal();
+  const specimenLabel = safeTextLabel(s.name);
+  showFeedback(wasEmpty ? `Primer ejemplar registrado: ${specimenLabel}.` : `Ejemplar registrado correctamente: ${specimenLabel}.`);
+  showPanel('collectionPanel');
 });
 
 // ---- Profile handling ------------------------------------------------------------------
@@ -388,4 +639,3 @@ if(loadSpecimens().length) document.querySelector('[data-target="collectionPanel
 
 // Expose some helpers for debugging
 window.HerpCare = { loadSpecimens, saveSpecimens, createSpecimen, renderSpecimens, initMapIfAvailable };
-

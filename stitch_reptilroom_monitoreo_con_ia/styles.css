@@ -198,10 +198,9 @@ img {
 
 .section-actions {
   display: flex;
-  align-items: center;
   gap: 8px;
   flex-direction: column;
-  align-items: end;
+  align-items: flex-end;
 }
 
 .camera-action {
@@ -409,6 +408,118 @@ img {
   top: 68%;
 }
 
+.home-capture-card,
+.home-vets-shortcut,
+.weight-card {
+  display: grid;
+  gap: 14px;
+  padding: 16px;
+  border-radius: 18px;
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+.home-capture-card {
+  grid-template-columns: 88px minmax(0, 1fr);
+  align-items: center;
+  margin: 18px 0 14px;
+}
+
+.home-capture-media {
+  width: 88px;
+  height: 88px;
+  border-radius: 24px;
+  display: grid;
+  place-items: center;
+  background: linear-gradient(135deg, rgba(74, 222, 128, 0.2), rgba(126, 154, 123, 0.35));
+}
+
+.home-capture-media .material-symbols-outlined {
+  font-size: 2.4rem;
+}
+
+.home-capture-body,
+.specimen-form {
+  display: grid;
+  gap: 12px;
+}
+
+.specimen-form {
+  margin-top: 12px;
+}
+
+.home-capture-body h2,
+.home-vets-shortcut strong,
+.weight-card h3,
+.weight-card h2 {
+  margin: 0;
+}
+
+.home-capture-body p,
+.home-vets-shortcut p,
+.weight-card p,
+.map-message {
+  margin: 0;
+}
+
+.home-capture-actions,
+.specimen-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.home-capture-actions > *,
+.specimen-actions > * {
+  flex: 1 1 160px;
+}
+
+.home-vets-shortcut {
+  grid-template-columns: minmax(0, 1fr) auto;
+  align-items: center;
+  margin-bottom: 14px;
+}
+
+.weight-card {
+  margin-top: 14px;
+}
+
+.chart-canvas-wrap {
+  min-height: 220px;
+  border-radius: 14px;
+  padding: 12px;
+  background: rgba(0, 0, 0, 0.12);
+  display: grid;
+  place-items: center;
+}
+
+.chart-canvas-wrap canvas {
+  width: 100% !important;
+  max-width: 100%;
+}
+
+.map-pin {
+  transition: transform .18s ease;
+}
+
+.map-pin:hover {
+  transform: scale(1.06);
+}
+
+.app-feedback {
+  position: fixed;
+  left: 16px;
+  right: 16px;
+  bottom: 84px;
+  z-index: 40;
+  padding: 12px 14px;
+  border-radius: 14px;
+  background: rgba(16, 20, 18, 0.94);
+  border: 1px solid rgba(74, 222, 128, 0.28);
+  color: var(--on-bg);
+  box-shadow: 0 16px 32px rgba(0, 0, 0, 0.35);
+}
+
 .dot {
   display: block;
   width: 16px;
@@ -471,10 +582,6 @@ img {
 
 .safe-copy {
   color: var(--tertiary);
-}
-
-.warning-copy {
-  color: var(--secondary);
 }
 
 .report-card {
@@ -916,11 +1023,13 @@ img {
 .map-box {
   position: relative;
   margin-top: 12px;
-  height: 150px;
+  min-height: 240px;
+  height: 240px;
   border-radius: 18px;
   background:
-    linear-gradient(rgba(13, 17, 15, 0.2), rgba(13, 17, 15, 0.2)),
-    url('https://images.unsplash.com/photo-1524661135-423995f22d0b?auto=format&fit=crop&w=1200&q=80') center/cover no-repeat;
+    radial-gradient(circle at 20% 22%, rgba(174, 206, 185, 0.16), transparent 24%),
+    radial-gradient(circle at 76% 30%, rgba(255, 181, 156, 0.18), transparent 20%),
+    linear-gradient(180deg, rgba(28, 32, 30, 0.96), rgba(16, 20, 18, 0.98));
   overflow: hidden;
   border: 1px solid rgba(255,255,255,0.06);
 }
@@ -1062,8 +1171,9 @@ img {
   position: fixed;
   left: 50%;
   bottom: 18px;
+  z-index: 30;
   transform: translateX(-50%);
-  width: min(92vw, 440px);
+  width: min(calc(100vw - 32px), 440px);
   display: grid;
   grid-template-columns: repeat(4,minmax(0,1fr));
   gap: 8px;
@@ -1104,6 +1214,7 @@ img {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  flex-wrap: wrap;
   gap: 10px;
   margin-top: 10px;
   color: var(--muted);
@@ -1117,7 +1228,7 @@ img {
 
 .install-button {
   position: fixed;
-  right: max(18px, calc((100vw - 940px) / 2));
+  right: max(18px, calc((100vw - 1000px) / 2 + 18px));
   bottom: 92px;
   z-index: 30;
   display: inline-flex;
@@ -1161,6 +1272,10 @@ img {
   border-radius: 22px;
   background: var(--surface-mid);
   box-shadow: 0 24px 60px rgba(0,0,0,.4);
+}
+
+.modal-card.camera-modal {
+  width: min(100%, 440px);
 }
 
 .modal-card h2 {
@@ -1268,6 +1383,51 @@ img {
   color: var(--outline);
 }
 
+@media (max-width: 560px) {
+  .camera-controls {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width:420px) {
+  .topbar {
+    height: 64px;
+    gap: 8px;
+    padding: 0 10px;
+  }
+
+  .app-shell {
+    width: 100%;
+  }
+
+  .home-capture-card,
+  .home-vets-shortcut {
+    grid-template-columns: 1fr;
+  }
+
+  .home-capture-media {
+    width: 72px;
+    height: 72px;
+  }
+
+  .home-capture-actions,
+  .specimen-actions,
+  .specimen-form,
+  .camera-controls {
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+
+  .home-capture-actions > *,
+  .specimen-actions > * {
+    width: 100%;
+  }
+
+  .chart-canvas-wrap {
+    min-height: 180px;
+  }
+}
+
 @media (min-width: 760px) {
   .app-shell {
     width: min(100%, 1000px);
@@ -1276,6 +1436,10 @@ img {
   .content {
     grid-template-columns: 1.1fr 0.9fr;
     align-items: start;
+  }
+
+  .bottom-nav {
+    width: min(calc(100vw - 32px), 940px);
   }
 
   .scanner-panel,
