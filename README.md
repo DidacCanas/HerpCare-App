@@ -58,14 +58,14 @@ La página `index.html` de la raíz redirige a la aplicación principal para que
 
 1. Crea un cliente OAuth 2.0 de tipo **Web application** en Google Cloud Console.
 2. Añade los dominios autorizados, incluyendo el dominio de GitHub Pages.
-3. Crea `stitch_reptilroom_monitoreo_con_ia/config.local.js` con:
+3. Si quieres mantener las claves fuera del HTML versionado, crea opcionalmente `stitch_reptilroom_monitoreo_con_ia/config.local.js` con:
 
    ```js
    window.HERPCARE_GOOGLE_CLIENT_ID = "TU_CLIENT_ID";
    window.HERPCARE_GOOGLE_MAPS_API_KEY = "TU_MAPS_API_KEY";
    ```
 
-4. Incluye `config.local.js` justo antes de `app.js` en `stitch_reptilroom_monitoreo_con_ia/index.html` si quieres mantener las claves fuera del HTML versionado:
+4. Como paso manual adicional, incluye `config.local.js` justo antes de `app.js` en `stitch_reptilroom_monitoreo_con_ia/index.html`:
 
    ```html
    <script src="config.local.js"></script>

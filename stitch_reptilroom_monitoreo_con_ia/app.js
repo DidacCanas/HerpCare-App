@@ -232,7 +232,9 @@ function escapeHtml(str){ if(!str) return ''; return String(str).replace(/[&<>'"
 function sanitizeImageSource(source) {
   if (!source) return '';
   const value = String(source).trim();
-  return /^(blob:|data:image\/|https?:\/\/)/i.test(value) ? value : '';
+  if (/^(javascript|vbscript):/i.test(value)) return '';
+  if (/^data:/i.test(value) && !/^data:image\//i.test(value)) return '';
+  return value;
 }
 
 function latestWeight(specimen){
@@ -387,18 +389,30 @@ function resetCameraModal() {
   cameraStatus.textContent = 'La foto se guardará en este dispositivo.';
 }
 
-const showPhotoPreview = (source) => {
-  const safeSource = sanitizeImageSource(source);
-  if (!safeSource) {
+function updatePhotoPreview(previewSource) {
+  if (!previewSource) {
     cameraStatus.textContent = 'No se pudo usar la imagen seleccionada.';
     return;
   }
-  cameraPhoto.src = safeSource;
+  cameraPhoto.src = previewSource;
   cameraPhoto.hidden = false;
   cameraVideo.hidden = true;
   cameraPlaceholder.hidden = true;
   cameraStatus.textContent = 'Foto lista. Completa el nombre y la especie para guardar el ejemplar.';
-};
+}
+
+function showCapturedPhotoPreview(dataUrl) {
+  const safeSource = sanitizeImageSource(dataUrl);
+  updatePhotoPreview(safeSource.startsWith('data:image/') ? safeSource : '');
+}
+
+function showSelectedPhotoPreview(file) {
+  if (!file?.type?.startsWith('image/')) {
+    cameraStatus.textContent = 'Selecciona un archivo de imagen válido.';
+    return;
+  }
+  updatePhotoPreview(URL.createObjectURL(file));
+}
 
 function openCameraModal({ openGallery = false } = {}) {
   resetCameraModal();
@@ -456,14 +470,14 @@ capturePhotoButton?.addEventListener('click', () => {
   if (!cameraVideo.videoWidth) return;
   cameraCanvas.width = cameraVideo.videoWidth; cameraCanvas.height = cameraVideo.videoHeight;
   cameraCanvas.getContext('2d').drawImage(cameraVideo,0,0);
-  showPhotoPreview(cameraCanvas.toDataURL('image/jpeg', 0.9)); stopCamera();
+  showCapturedPhotoPreview(cameraCanvas.toDataURL('image/jpeg', 0.9)); stopCamera();
 });
 
 choosePhotoButton?.addEventListener('click', ()=> openGalleryPicker());
 cameraFileInput?.addEventListener('change', ()=>{
   const [file] = cameraFileInput.files || [];
   if(!file) return;
-  showPhotoPreview(URL.createObjectURL(file));
+  showSelectedPhotoPreview(file);
 });
 
 document.querySelectorAll('[data-close-modal]').forEach((b)=>b.addEventListener('click', ()=>{
