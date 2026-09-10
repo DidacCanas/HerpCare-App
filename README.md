@@ -18,7 +18,7 @@
 - `stitch_reptilroom_monitoreo_con_ia/styles.css` — Estilos base y añadidos (empty-state, modales, listas dinámicas, responsive).
 
 ## 4. Configuración de claves de Google (instrucciones seguras)
-Crea un archivo local `config.local.js` en la raíz (NO subir al repo) con este contenido exacto:
+Crea un archivo local `stitch_reptilroom_monitoreo_con_ia/config.local.js` (NO subir al repo) con este contenido exacto:
 
 ```javascript
 // config.local.js (NO subir al repo)
@@ -26,7 +26,7 @@ window.HERPCARE_GOOGLE_CLIENT_ID = "TU_GOOGLE_CLIENT_ID.apps.googleusercontent.c
 window.HERPCARE_GOOGLE_MAPS_API_KEY = "TU_GOOGLE_MAPS_API_KEY";
 ```
 
-- Añade `config.local.js` a `.gitignore`.
+- Añade `stitch_reptilroom_monitoreo_con_ia/config.local.js` a `.gitignore`.
 - Incluye `config.local.js` en `index.html` antes de `app.js`:
   `<script src="./config.local.js"></script>`
 - Para Maps: habilita en Google Cloud **Maps JavaScript API** y **Places API**; restringe la key por HTTP referrer (ej. `http://localhost:8080`) y por API.
