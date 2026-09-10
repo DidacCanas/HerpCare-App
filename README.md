@@ -1,12 +1,12 @@
 # HerpCare
 
 ## 1. Resumen
-- Esta rama `feat/ui-tabs-maps` implementa: navegación por pestañas (IA / Colección / Peso / Vets), CRUD de ejemplares con localStorage, evoluciones de peso por ejemplar con gráficos en Chart.js, panel Vets preparado para Google Maps / Places (fallback simulado), perfil editable y modales de cámara/login/ubicación.
+- La app implementa: navegación por pestañas (IA / Colección / Peso / Vets), CRUD de ejemplares con localStorage, evoluciones de peso por ejemplar con gráficos en Chart.js, panel Vets preparado para Google Maps / Places (fallback simulado), perfil editable y modales de cámara/login/ubicación.
 
 ## 2. Cómo ejecutar localmente
-1. Clona el repo y cambia a la rama que quieras ejecutar:
+1. Clona el repo y cambia a la rama principal:
    - `git fetch`
-   - `git checkout feat/ui-tabs-maps` mientras esta PR siga abierta, o `git checkout main` una vez esté fusionada
+   - `git checkout main`
 2. Sirve el directorio con un servidor estático (no uses `file://`):
    - `cd stitch_reptilroom_monitoreo_con_ia`
    - `npx http-server -p 8080`
