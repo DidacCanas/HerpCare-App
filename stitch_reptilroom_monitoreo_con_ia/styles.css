@@ -498,11 +498,6 @@ img {
   max-width: 100%;
 }
 
-.map-box {
-  min-height: 240px;
-  height: 240px;
-}
-
 .map-pin {
   transition: transform .18s ease;
 }
@@ -587,10 +582,6 @@ img {
 
 .safe-copy {
   color: var(--tertiary);
-}
-
-.warning-copy {
-  color: var(--secondary);
 }
 
 .report-card {
