@@ -17,8 +17,8 @@
 - `stitch_reptilroom_monitoreo_con_ia/app.js` — Lógica: navegación, CRUD de ejemplares (localStorage), gestión de pesajes, gráficos con Chart.js, perfil y mapa condicional.
 - `stitch_reptilroom_monitoreo_con_ia/styles.css` — Estilos base y añadidos (empty-state, modales, listas dinámicas, responsive).
 
-## 4. Configuración de claves de Google (instrucciones seguras)
-Crea un archivo local `stitch_reptilroom_monitoreo_con_ia/config.local.js` (NO subir al repo) con este contenido exacto:
+## 4. Configuración local de Google (solo desarrollo)
+Crea un archivo local `stitch_reptilroom_monitoreo_con_ia/config.local.js` (NO subir al repo) con este contenido exacto para pruebas en local:
 
 ```javascript
 // config.local.js (NO subir al repo)
@@ -29,6 +29,7 @@ window.HERPCARE_GOOGLE_MAPS_API_KEY = "TU_GOOGLE_MAPS_API_KEY";
 - El repositorio ya ignora `stitch_reptilroom_monitoreo_con_ia/config.local.js` en `.gitignore`.
 - `index.html` ya carga `config.local.js` antes de `app.js` con:
   `<script src="./config.local.js" onerror="window.HERPCARE_CONFIG_LOCAL_MISSING = true"></script>`
+- Este archivo **no** oculta secretos en producción: cualquier clave cargada en el navegador será visible para el cliente.
 - Para Maps: habilita en Google Cloud **Maps JavaScript API** y **Places API**; restringe la key por HTTP referrer (ej. `http://localhost:8080`) y por API.
 - Para GSI: crea un **OAuth Client ID (Web)** y añade el origen autorizado (ej. `http://localhost:8080`).
 
@@ -50,7 +51,7 @@ window.HERPCARE_GOOGLE_MAPS_API_KEY = "TU_GOOGLE_MAPS_API_KEY";
 ## 7. Notas de seguridad / despliegue
 - No subas `config.local.js` ni claves al repositorio.
 - Restringe la Maps API key por HTTP referrer y por API.
-- Para proteger llamadas a Places o validar GSI en producción, considera un backend que verifique credenciales y haga las llamadas sensibles.
+- `config.local.js` debe usarse solo para desarrollo local; para proteger llamadas a Places o validar GSI en producción, usa un backend que verifique credenciales y haga las llamadas sensibles.
 
 ## 8. Cámara en Android
 El flujo recomendado de alta ahora empieza desde **Home**, usando **Tomar foto** o **Elegir galería** para registrar el ejemplar. También puedes seguir entrando desde **Colección**.
