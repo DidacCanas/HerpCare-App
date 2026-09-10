@@ -13,15 +13,28 @@ self.addEventListener("activate", (event) => {
 });
 
 self.addEventListener("fetch", (event) => {
-  if (event.request.method !== "GET") return;
+  const { request } = event;
+  if (request.method !== "GET") return;
+
   event.respondWith(
-    fetch(event.request)
+    fetch(request)
       .then((response) => {
-        const responseClone = response.clone();
-        caches.open(CACHE_NAME).then((cache) => cache.put(event.request, responseClone));
+        const isSameOrigin = new URL(request.url).origin === self.location.origin;
+        if (isSameOrigin && response.ok) {
+          const responseClone = response.clone();
+          caches.open(CACHE_NAME).then((cache) => cache.put(request, responseClone));
+        }
         return response;
       })
-      .catch(() => caches.match(event.request).then((cached) => cached || caches.match("./index.html")))
+      .catch(() =>
+        caches.match(request).then((cached) => {
+          if (cached) return cached;
+          if (request.mode === "navigate") {
+            return caches.match("./index.html");
+          }
+          throw new Error(`No cached response for ${request.url}`);
+        })
+      )
   );
 });
 
