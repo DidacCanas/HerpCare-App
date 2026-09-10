@@ -30,6 +30,10 @@ html {
   scroll-behavior: smooth;
 }
 
+html.dark {
+  color-scheme: dark;
+}
+
 body {
   margin: 0;
   min-height: 100vh;
@@ -165,6 +169,31 @@ img {
   align-items: start;
   justify-content: space-between;
   gap: 8px;
+}
+
+.section-head.compact {
+  align-items: center;
+}
+
+.small-label {
+  color: var(--muted);
+  font-size: 0.68rem;
+  font-weight: 600;
+}
+
+.empty-state {
+  margin-top: 14px;
+  padding: 14px;
+  border-radius: 14px;
+  border: 1px dashed rgba(255, 255, 255, 0.1);
+  background: rgba(255, 255, 255, 0.02);
+}
+
+.empty-state p {
+  margin: 0;
+  color: var(--muted);
+  font-size: 0.78rem;
+  line-height: 1.45;
 }
 
 .section-actions {
@@ -903,6 +932,21 @@ img {
   background: linear-gradient(to top, rgba(16,20,18,.7), transparent 42%);
 }
 
+.map-message {
+  position: absolute;
+  left: 12px;
+  right: 12px;
+  bottom: 12px;
+  z-index: 1;
+  border-radius: 12px;
+  background: rgba(11, 15, 13, 0.78);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  color: var(--muted);
+  font-size: 0.68rem;
+  line-height: 1.4;
+  padding: 10px 12px;
+}
+
 .map-pin {
   position: absolute;
   display: flex;
@@ -1208,6 +1252,19 @@ img {
   color: var(--muted);
   font-size: .68rem;
   line-height: 1.4;
+}
+
+.modal-card input {
+  width: 100%;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 10px;
+  background: rgba(255, 255, 255, 0.04);
+  color: var(--on-bg);
+  padding: 10px 12px;
+}
+
+.modal-card input::placeholder {
+  color: var(--outline);
 }
 
 @media (min-width: 760px) {

@@ -16,3 +16,4 @@ build/
 *.log
 *.tmp
 .playwright-cli/
+config.local.js
