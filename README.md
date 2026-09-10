@@ -84,7 +84,7 @@ La aplicación incluye `manifest.webmanifest` y un service worker. En Android, a
 1. Abre el repositorio en GitHub.
 2. Ve a **Settings > Pages**.
 3. En **Build and deployment**, selecciona **Deploy from a branch**.
-4. Selecciona la rama `main` y la carpeta `/ (root)`.
+4. Selecciona la rama `main` y la carpeta `/ (root)`. Es intencional: la página raíz redirige a `stitch_reptilroom_monitoreo_con_ia/`, donde está la app.
 5. Guarda los cambios.
 
 ## 12. Checklist pendiente (opcional)

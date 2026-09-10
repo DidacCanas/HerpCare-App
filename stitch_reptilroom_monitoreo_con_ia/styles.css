@@ -503,11 +503,11 @@ img {
   height: 240px;
 }
 
-#map .map-pin {
+.map-pin {
   transition: transform .18s ease;
 }
 
-#map .map-pin:hover {
+.map-pin:hover {
   transform: scale(1.06);
 }
 
