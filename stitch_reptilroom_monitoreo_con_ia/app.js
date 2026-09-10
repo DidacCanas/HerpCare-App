@@ -24,6 +24,7 @@ const saveProfile = (p) => localStorage.setItem(STORAGE_KEYS.PROFILE, JSON.strin
 
 // ---- DOM Refs -------------------------------------------------------------------------
 const panels = {
+  home: document.getElementById('homePanel'),
   ia: document.getElementById('iaPanel'),
   collection: document.getElementById('collectionPanel'),
   weight: document.getElementById('weightPanel'),
@@ -38,23 +39,21 @@ const weightsListEl = document.getElementById('weightsList');
 const weightPanelTitle = document.getElementById('weightPanelTitle');
 const addWeightButton = document.getElementById('addWeightButton');
 const addSpecimenButton = document.getElementById('addSpecimenButton');
-const addSpecimenFromIAButton = document.getElementById('addSpecimenFromIA');
-const openCameraFromIAButton = document.getElementById('openCameraFromIA');
-const openGalleryFromIAButton = document.getElementById('openGalleryFromIA');
+const addSpecimenFromHomeButton = document.getElementById('addSpecimenFromHome');
+const openCameraFromHomeButton = document.getElementById('openCameraFromHome');
+const openGalleryFromHomeButton = document.getElementById('openGalleryFromHome');
 const openAddSpecimenFromWeightButton = document.getElementById('openAddSpecimenFromWeight');
 const openCameraButtonTop = document.getElementById('openCameraButtonTop');
 const openCameraButton = document.getElementById('openCameraButton');
 const goToVetsFromHomeButton = document.getElementById('goToVetsFromHome');
 const cameraModal = document.getElementById('cameraModal');
-const cameraVideo = document.getElementById('cameraVideo');
-const cameraCanvas = document.getElementById('cameraCanvas');
 const cameraPhoto = document.getElementById('cameraPhoto');
 const cameraPlaceholder = document.getElementById('cameraPlaceholder');
 const cameraStatus = document.getElementById('cameraStatus');
-const startCameraButton = document.getElementById('startCameraButton');
-const capturePhotoButton = document.getElementById('capturePhotoButton');
+const takePhotoButton = document.getElementById('takePhotoButton');
 const choosePhotoButton = document.getElementById('choosePhotoButton');
-const cameraFileInput = document.getElementById('cameraFileInput');
+const cameraCaptureInput = document.getElementById('cameraCaptureInput');
+const galleryFileInput = document.getElementById('galleryFileInput');
 const saveSpecimenButton = document.getElementById('saveSpecimenButton');
 const specimenNameInput = document.getElementById('specimenName');
 const specimenSpeciesInput = document.getElementById('specimenSpecies');
@@ -73,32 +72,30 @@ const mapEl = document.getElementById('map');
 const mapMessageEl = document.getElementById('mapMessage');
 const clinicsListEl = document.getElementById('clinicsList');
 const appFeedbackEl = document.getElementById('appFeedback');
+const installButton = document.getElementById('installButton');
 
 // Chart state
 let currentChart = null;
 let currentSpecimenId = null;
 let feedbackTimeoutId = null;
-
-// Camera state
-let cameraStream;
+let installPromptEvent = null;
 
 // ---- Navigation (tabs) -----------------------------------------------------------------
 function showPanel(targetId) {
-  // map data-target values to panels
   const map = {
+    homePanel: 'home',
     iaPanel: 'ia',
     collectionPanel: 'collection',
     weightPanel: 'weight',
-    vetsPanel: 'vets',
-    home: 'ia'
+    vetsPanel: 'vets'
   };
-  const key = map[targetId] || map['iaPanel'];
+  const normalizedTarget = map[targetId] ? targetId : 'homePanel';
+  const key = map[normalizedTarget];
   Object.values(panels).forEach((p) => p && (p.hidden = true));
   panels[key].hidden = false;
 
-  // update active classes on nav / bottom
   document.querySelectorAll('[data-target]').forEach((btn) => {
-    btn.classList.toggle('active', btn.dataset.target === targetId || (targetId === 'home' && btn.dataset.target === 'iaPanel'));
+    btn.classList.toggle('active', btn.dataset.target === normalizedTarget);
   });
 }
 
@@ -107,7 +104,7 @@ document.querySelectorAll('[data-target]').forEach((btn) => {
 });
 
 // Initialize default view
-showPanel('iaPanel');
+showPanel('homePanel');
 
 // ---- Specimens (CRUD) -----------------------------------------------------------------
 function showFeedback(message) {
@@ -119,6 +116,65 @@ function showFeedback(message) {
    appFeedbackEl.hidden = true;
   }, 3200);
 }
+
+function isAndroid() {
+  return /android/i.test(window.navigator.userAgent || '');
+}
+
+function isStandalone() {
+  return window.matchMedia?.('(display-mode: standalone)')?.matches || window.navigator.standalone === true;
+}
+
+function setInstallButtonLabel(label) {
+  if (!installButton) return;
+  installButton.innerHTML = `<span class="material-symbols-outlined">install_mobile</span>${label}`;
+}
+
+function updateInstallButtonVisibility() {
+  if (!installButton) return;
+
+  if (isStandalone()) {
+    installButton.hidden = true;
+    return;
+  }
+
+  if (installPromptEvent) {
+    installButton.hidden = false;
+    setInstallButtonLabel('Instalar en Android');
+    return;
+  }
+
+  if (isAndroid()) {
+    installButton.hidden = false;
+    setInstallButtonLabel('Cómo instalar');
+    return;
+  }
+
+  installButton.hidden = true;
+}
+
+window.addEventListener('beforeinstallprompt', (event) => {
+  event.preventDefault();
+  installPromptEvent = event;
+  updateInstallButtonVisibility();
+});
+
+installButton?.addEventListener('click', async () => {
+  if (installPromptEvent) {
+    installPromptEvent.prompt();
+    await installPromptEvent.userChoice;
+    installPromptEvent = null;
+    updateInstallButtonVisibility();
+    return;
+  }
+
+  window.alert('En Android, abre el menú de Chrome y pulsa "Instalar aplicación" o "Añadir a pantalla de inicio".');
+});
+
+window.addEventListener('appinstalled', () => {
+  installPromptEvent = null;
+  updateInstallButtonVisibility();
+});
 
 function renderIAContent(specimens = loadSpecimens()) {
   if (!iaContentEl) return;
@@ -384,15 +440,12 @@ addWeightButton?.addEventListener('click', async () => {
   showFeedback(`Peso añadido a ${s.name}: ${value} g.`);
 });
 
-// ---- Camera / Photo capture (re-using and extending existing logic) --------------------
-const stopCamera = () => { try{ cameraStream?.getTracks().forEach(t=>t.stop()); }catch(e){} cameraStream=undefined; cameraVideo.srcObject = null; capturePhotoButton.disabled = true; };
-
+// ---- Camera / Photo capture --------------------------------------------------------------
 function resetCameraModal({ clearForm = true } = {}) {
-  stopCamera();
-  cameraFileInput.value = '';
+  if (cameraCaptureInput) cameraCaptureInput.value = '';
+  if (galleryFileInput) galleryFileInput.value = '';
   cameraPhoto.removeAttribute('src');
   cameraPhoto.hidden = true;
-  cameraVideo.hidden = true;
   cameraPlaceholder.hidden = false;
   if (clearForm) {
     specimenNameInput.value = '';
@@ -407,11 +460,14 @@ function showCapturedPhotoPreview(dataUrl) {
     cameraStatus.textContent = 'No se pudo usar la imagen capturada.';
     return;
   }
+  if (cameraModal.hidden) {
+    cameraModal.hidden = false;
+  }
   cameraPhoto.src = safeSource;
   cameraPhoto.hidden = false;
-  cameraVideo.hidden = true;
   cameraPlaceholder.hidden = true;
   cameraStatus.textContent = 'Foto lista. Completa el nombre y la especie para guardar el ejemplar.';
+  requestAnimationFrame(() => specimenNameInput?.focus());
 }
 
 function showSelectedPhotoPreview(file) {
@@ -426,12 +482,7 @@ function showSelectedPhotoPreview(file) {
       cameraStatus.textContent = 'No se pudo usar la imagen seleccionada.';
       return;
     }
-    cameraPhoto.src = result;
-    cameraPhoto.hidden = false;
-    cameraVideo.hidden = true;
-    cameraPlaceholder.hidden = true;
-    cameraStatus.textContent = 'Foto lista. Completa el nombre y la especie para guardar el ejemplar.';
-    requestAnimationFrame(() => specimenNameInput?.focus());
+    showCapturedPhotoPreview(result);
   };
   reader.onerror = () => {
     cameraStatus.textContent = 'No se pudo leer la imagen seleccionada.';
@@ -439,77 +490,58 @@ function showSelectedPhotoPreview(file) {
   reader.readAsDataURL(file);
 }
 
-function openCameraModal({ openGallery = false } = {}) {
+function currentCameraPhotoSource() {
+  return cameraPhoto.getAttribute('src') || '';
+}
+
+function openCameraModal() {
   cameraModal.hidden = false;
-  cameraStatus.textContent = openGallery ? 'Selecciona una imagen desde la galería para continuar.' : 'La foto se guardará en este dispositivo.';
-  if (!openGallery) {
-    requestAnimationFrame(() => specimenNameInput?.focus());
-  }
-  if (openGallery) {
-    requestAnimationFrame(() => {
-      cameraFileInput.click();
-      window.setTimeout(() => choosePhotoButton?.focus(), 250);
-    });
-  }
+  cameraStatus.textContent = currentCameraPhotoSource() ? 'Foto lista. Completa el nombre y la especie para guardar el ejemplar.' : 'Añade nombre/especie o selecciona una imagen para completar el registro.';
+  requestAnimationFrame(() => (currentCameraPhotoSource() ? specimenNameInput : takePhotoButton)?.focus());
 }
 
 function openGalleryPicker(message = 'Selecciona una imagen desde la galería para continuar.') {
-  stopCamera();
   cameraStatus.textContent = message;
-  cameraFileInput.click();
+  galleryFileInput?.click();
   window.setTimeout(() => choosePhotoButton?.focus(), 250);
 }
 
-async function startCameraCapture() {
-  if (!navigator.mediaDevices?.getUserMedia) {
-    openGalleryPicker('Tu dispositivo no permite cámara web aquí. Continuamos con la galería.');
-    return;
-  }
+function openNativeCameraPicker(message = 'Abriendo la cámara del dispositivo...') {
+  cameraStatus.textContent = message;
+  cameraCaptureInput?.click();
+  window.setTimeout(() => takePhotoButton?.focus(), 250);
+}
 
-  try{
-    stopCamera();
-    cameraStatus.textContent = 'Preparando cámara...';
-    cameraStream = await navigator.mediaDevices.getUserMedia({ video: { facingMode: { ideal: 'environment' } }, audio: false });
-    cameraVideo.srcObject = cameraStream;
-    cameraVideo.hidden = false;
-    cameraPhoto.hidden = true;
-    cameraPlaceholder.hidden = true;
-    capturePhotoButton.disabled = false;
-    cameraStatus.textContent = 'Cámara activa. Captura la foto o guarda el ejemplar sin imagen.';
-  }catch(err){
-    console.error(err);
-    openGalleryPicker('No se pudo acceder a la cámara. Selecciona una foto desde la galería.');
-  }
+function startCameraCapture() {
+  openNativeCameraPicker();
 }
 
 openCameraButtonTop?.addEventListener('click', ()=>{ resetCameraModal(); openCameraModal(); startCameraCapture(); });
 openCameraButton?.addEventListener('click', ()=>{ resetCameraModal(); openCameraModal(); startCameraCapture(); });
 addSpecimenButton?.addEventListener('click', () => { resetCameraModal(); openCameraModal(); });
-addSpecimenFromIAButton?.addEventListener('click', () => { resetCameraModal(); openCameraModal(); });
+addSpecimenFromHomeButton?.addEventListener('click', () => { resetCameraModal(); openCameraModal(); });
 openAddSpecimenFromWeightButton?.addEventListener('click', () => { resetCameraModal(); openCameraModal(); });
-openCameraFromIAButton?.addEventListener('click', () => {
+openCameraFromHomeButton?.addEventListener('click', () => {
   resetCameraModal();
   openCameraModal();
   startCameraCapture();
 });
-openGalleryFromIAButton?.addEventListener('click', () => {
+openGalleryFromHomeButton?.addEventListener('click', () => {
   resetCameraModal();
-  openCameraModal({ openGallery: true });
+  openCameraModal();
+  openGalleryPicker();
 });
 goToVetsFromHomeButton?.addEventListener('click', () => showPanel('vetsPanel'));
 
-startCameraButton?.addEventListener('click', startCameraCapture);
-
-capturePhotoButton?.addEventListener('click', () => {
-  if (!cameraVideo.videoWidth) return;
-  cameraCanvas.width = cameraVideo.videoWidth; cameraCanvas.height = cameraVideo.videoHeight;
-  cameraCanvas.getContext('2d').drawImage(cameraVideo,0,0);
-  showCapturedPhotoPreview(cameraCanvas.toDataURL('image/jpeg', 0.9)); stopCamera();
-});
-
+takePhotoButton?.addEventListener('click', startCameraCapture);
 choosePhotoButton?.addEventListener('click', ()=> openGalleryPicker());
-cameraFileInput?.addEventListener('change', ()=>{
-  const [file] = cameraFileInput.files || [];
+cameraCaptureInput?.addEventListener('change', ()=>{
+  const [file] = cameraCaptureInput.files || [];
+  if(!file) return;
+  showSelectedPhotoPreview(file);
+});
+galleryFileInput?.addEventListener('change', ()=>{
+  const [file] = galleryFileInput.files || [];
   if(!file) return;
   showSelectedPhotoPreview(file);
 });
@@ -523,7 +555,7 @@ document.querySelectorAll('[data-close-modal]').forEach((b)=>b.addEventListener(
 
 saveSpecimenButton?.addEventListener('click', ()=>{
   const name = specimenNameInput.value?.trim(); const species = specimenSpeciesInput.value?.trim();
-  const photo = cameraPhoto.src || '';
+  const photo = currentCameraPhotoSource();
   if(!name) return alert('Añade nombre al ejemplar');
   const wasEmpty = loadSpecimens().length === 0;
   const s = createSpecimen({ name, species, photo });
@@ -632,7 +664,30 @@ window.initMap = function(){
 initMapIfAvailable();
 
 // ---- Boot -----------------------------------------------------------------------------
+if ('serviceWorker' in navigator) {
+  window.addEventListener('load', async () => {
+    try {
+      const registration = await navigator.serviceWorker.register('./sw.js');
+      if (registration.waiting) {
+        registration.waiting.postMessage({ type: 'SKIP_WAITING' });
+      }
+      registration.addEventListener('updatefound', () => {
+        const worker = registration.installing;
+        if (!worker) return;
+        worker.addEventListener('statechange', () => {
+          if (worker.state === 'installed') {
+            worker.postMessage({ type: 'SKIP_WAITING' });
+          }
+        });
+      });
+    } catch (error) {
+      console.error('No se pudo registrar el service worker:', error);
+    }
+  });
+}
+
 renderSpecimens();
+updateInstallButtonVisibility();
 
 // If there are specimens, auto-open collection
 if(loadSpecimens().length) document.querySelector('[data-target="collectionPanel"]')?.classList.remove('');
