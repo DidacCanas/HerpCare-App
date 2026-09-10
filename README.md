@@ -4,9 +4,9 @@
 - La app implementa: navegación por pestañas (IA / Colección / Peso / Vets), CRUD de ejemplares con localStorage, evoluciones de peso por ejemplar con gráficos en Chart.js, panel Vets preparado para Google Maps / Places (fallback simulado), perfil editable y modales de cámara/login/ubicación.
 
 ## 2. Cómo ejecutar localmente
-1. Clona el repo y cambia a la rama principal:
+1. Clona el repo y cambia a la rama que quieras probar:
    - `git fetch`
-   - `git checkout main`
+   - `git checkout <rama>` (durante la revisión de una PR usa la rama actual; para el flujo normal del repositorio usa `main`)
 2. Sirve el directorio con un servidor estático (no uses `file://`):
    - `cd stitch_reptilroom_monitoreo_con_ia`
    - `npx http-server -p 8080`

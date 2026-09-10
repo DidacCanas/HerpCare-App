@@ -1172,7 +1172,7 @@ img {
   bottom: 18px;
   z-index: 30;
   transform: translateX(-50%);
-  width: min(92vw, 440px);
+  width: min(calc(100vw - 32px), 940px);
   display: grid;
   grid-template-columns: repeat(4,minmax(0,1fr));
   gap: 8px;
