@@ -107,7 +107,7 @@ document.querySelectorAll('[data-target]').forEach((btn) => {
 });
 
 // Initialize default view
-showPanel('home');
+showPanel('iaPanel');
 
 // ---- Specimens (CRUD) -----------------------------------------------------------------
 function showFeedback(message) {
@@ -199,7 +199,7 @@ function renderSpecimens() {
    const art = document.createElement('article');
    art.className = 'specimen-card';
    art.innerHTML = `
-      <div class="specimen-image"><img src="${s.photo || placeholderFor(s)}" alt="${s.name || 'Sin nombre'}" /><div class="badge floating">${s.status||'Activo'}</div></div>
+     <div class="specimen-image"><img src="${sanitizeImageSource(s.photo) || placeholderFor(s)}" alt="${s.name || 'Sin nombre'}" /><div class="badge floating">${s.status||'Activo'}</div></div>
       <div class="specimen-body">
         <div class="specimen-top"><h3>${escapeHtml(s.name||'Ejemplar')}</h3><span class="mini-tag safe">${escapeHtml(s.species||'--')}</span></div>
         <p>${escapeHtml(s.species || '')}</p>
@@ -229,6 +229,12 @@ function placeholderFor(s) {
 
 function escapeHtml(str){ if(!str) return ''; return String(str).replace(/[&<>'"]/g, (c)=>({"&":"&amp;","<":"&lt;",">":"&gt;","'":"&#39;","\"":"&quot;"}[c])); }
 
+function sanitizeImageSource(source) {
+  if (!source) return '';
+  const value = String(source).trim();
+  return /^(blob:|data:image\/|https?:\/\/)/i.test(value) ? value : '';
+}
+
 function latestWeight(specimen){
   try{
     const w = specimen.weights || [];
@@ -240,7 +246,7 @@ function latestWeight(specimen){
 
 function createSpecimen({name, species, photo}){
   const specimens = loadSpecimens();
-  const s = { id: uid(), name, species, photo, weights: [], createdAt: Date.now(), status: 'Saludable'};
+  const s = { id: uid(), name, species, photo: sanitizeImageSource(photo), weights: [], createdAt: Date.now(), status: 'Saludable'};
   specimens.push(s);
   currentSpecimenId = s.id;
   saveSpecimens(specimens);
@@ -382,7 +388,12 @@ function resetCameraModal() {
 }
 
 const showPhotoPreview = (source) => {
-  cameraPhoto.src = source;
+  const safeSource = sanitizeImageSource(source);
+  if (!safeSource) {
+    cameraStatus.textContent = 'No se pudo usar la imagen seleccionada.';
+    return;
+  }
+  cameraPhoto.src = safeSource;
   cameraPhoto.hidden = false;
   cameraVideo.hidden = true;
   cameraPlaceholder.hidden = true;

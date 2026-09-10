@@ -65,7 +65,12 @@ La página `index.html` de la raíz redirige a la aplicación principal para que
    window.HERPCARE_GOOGLE_MAPS_API_KEY = "TU_MAPS_API_KEY";
    ```
 
-4. Incluye `config.local.js` antes de `app.js` si quieres mantener las claves fuera del HTML versionado.
+4. Incluye `config.local.js` justo antes de `app.js` en `stitch_reptilroom_monitoreo_con_ia/index.html` si quieres mantener las claves fuera del HTML versionado:
+
+   ```html
+   <script src="config.local.js"></script>
+   <script src="app.js"></script>
+   ```
 
 Sin Client ID la interfaz sigue funcionando, pero el botón muestra el mensaje de configuración en lugar de iniciar sesión.
 
