@@ -28,7 +28,9 @@ La geolocalización requiere servir la app por `localhost` o HTTPS. El navegador
 
 ## Cámara en Android
 
-Desde la colección pulsa **Foto**. Puedes:
+El flujo recomendado de alta ahora empieza desde **Home**, usando **Tomar foto** o **Elegir galería** para registrar el ejemplar. También puedes seguir entrando desde **Colección**.
+
+Puedes:
 
 - Pulsar **Activar cámara** para usar la cámara trasera directamente desde el navegador.
 - Pulsar **Galería** para abrir la cámara o seleccionar una imagen usando el selector nativo de Android.
@@ -56,7 +58,14 @@ La página `index.html` de la raíz redirige a la aplicación principal para que
 
 1. Crea un cliente OAuth 2.0 de tipo **Web application** en Google Cloud Console.
 2. Añade los dominios autorizados, incluyendo el dominio de GitHub Pages.
-3. Copia el Client ID y reemplaza el valor vacío de `window.HERPCARE_GOOGLE_CLIENT_ID` en `stitch_reptilroom_monitoreo_con_ia/index.html`.
+3. Crea `stitch_reptilroom_monitoreo_con_ia/config.local.js` con:
+
+   ```js
+   window.HERPCARE_GOOGLE_CLIENT_ID = "TU_CLIENT_ID";
+   window.HERPCARE_GOOGLE_MAPS_API_KEY = "TU_MAPS_API_KEY";
+   ```
+
+4. Incluye `config.local.js` antes de `app.js` si quieres mantener las claves fuera del HTML versionado.
 
 Sin Client ID la interfaz sigue funcionando, pero el botón muestra el mensaje de configuración en lugar de iniciar sesión.
 

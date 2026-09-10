@@ -42,14 +42,14 @@
       </header>
 
       <main class="content">
-        <!-- IA / Biomódulo (vacío hasta registrar primer animal) -->
-        <section id="iaPanel" class="panel scanner-panel" aria-label="Diagnóstico IA">
+        <!-- Home / Biomódulo -->
+        <section id="iaPanel" class="panel scanner-panel" aria-label="Home y biomódulo">
           <div class="scanner-header">
             <div class="status-wrap">
               <span class="pulse"></span>
               <div>
-                <div class="eyebrow">Módulo Clínico Bio-IA</div>
-                <div class="title">Diagnóstico</div>
+                <div class="eyebrow">Home + Biomódulo</div>
+                <div class="title">Registra y monitoriza tus ejemplares</div>
               </div>
             </div>
             <div class="tag tag-secondary">
@@ -58,12 +58,33 @@
             </div>
           </div>
 
-          <div id="iaEmptyMessage" class="empty-state">
-            <p>No hay ejemplares registrados. Registra tu primer animal para activar diagnósticos IA y almacenamiento de historiales.</p>
-            <div class="action-row">
-              <button class="primary-btn" id="addSpecimenFromIA">Registrar ejemplar</button>
-              <button class="secondary-btn" id="openCameraFromIA">Abrir cámara</button>
+          <article class="home-capture-card">
+            <div class="home-capture-media" aria-hidden="true">
+              <span class="material-symbols-outlined">photo_camera</span>
             </div>
+            <div class="home-capture-body">
+              <div>
+                <h2>Alta rápida desde Home</h2>
+                <p>Haz una foto o elige una imagen para registrar un ejemplar sin salir del inicio.</p>
+              </div>
+              <div class="home-capture-actions">
+                <button class="primary-btn" id="openCameraFromIA" type="button">Tomar foto</button>
+                <button class="secondary-btn" id="openGalleryFromIA" type="button">Elegir galería</button>
+                <button class="secondary-btn" id="addSpecimenFromIA" type="button">Registrar ejemplar</button>
+              </div>
+            </div>
+          </article>
+
+          <div class="home-vets-shortcut">
+            <div>
+              <strong>Veterinarios cercanos</strong>
+              <p>Accede rápido al mapa para localizar clínicas y especialistas.</p>
+            </div>
+            <button class="secondary-btn inline" id="goToVetsFromHome" type="button">Abrir mapa</button>
+          </div>
+
+          <div id="iaEmptyMessage" class="empty-state">
+            <p>El biomódulo mostrará el resumen clínico y accesos a historial de peso cuando registres al menos un ejemplar.</p>
           </div>
 
           <!-- Contenido IA dinámico se renderiza por app.js cuando haya ejemplares -->
@@ -160,6 +181,8 @@
       </nav>
     </div>
 
+    <div id="appFeedback" class="app-feedback" hidden role="status" aria-live="polite"></div>
+
     <button class="install-button" id="installButton" type="button" hidden>
       <span class="material-symbols-outlined">install_mobile</span>
       Instalar en Android
@@ -211,10 +234,10 @@
           <button class="secondary-btn" id="capturePhotoButton" type="button" disabled>Capturar</button>
         </div>
         <div class="camera-status" id="cameraStatus" role="status">La foto se guardará en este dispositivo.</div>
-        <div class="action-row" style="margin-top:12px;">
+        <div class="specimen-form">
           <input id="specimenName" placeholder="Nombre del ejemplar" />
           <input id="specimenSpecies" placeholder="Especie (ej. Eublepharis macularius)" />
-          <button class="primary-btn" id="saveSpecimenButton">Guardar ejemplar</button>
+          <button class="primary-btn" id="saveSpecimenButton" type="button">Guardar ejemplar</button>
         </div>
       </section>
     </div>
