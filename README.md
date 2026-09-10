@@ -1,4 +1,4 @@
-# HerpCare — feature/ui-tabs-maps
+# HerpCare
 
 ## 1. Resumen
 - Esta rama `feat/ui-tabs-maps` implementa: navegación por pestañas (IA / Colección / Peso / Vets), CRUD de ejemplares con localStorage, evoluciones de peso por ejemplar con gráficos en Chart.js, panel Vets preparado para Google Maps / Places (fallback simulado), perfil editable y modales de cámara/login/ubicación.
