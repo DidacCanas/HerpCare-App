@@ -78,6 +78,7 @@ const appFeedbackEl = document.getElementById('appFeedback');
 let currentChart = null;
 let currentSpecimenId = null;
 let feedbackTimeoutId = null;
+let currentPreviewObjectUrl = null;
 
 // Camera state
 let cameraStream;
@@ -267,6 +268,9 @@ function editSpecimen(id){
 function deleteSpecimen(id){
   if(!confirm('Eliminar ejemplar? Esto borrará tambien su historial de peso.')) return;
   const specimens = loadSpecimens().filter(x=>x.id!==id);
+  if (currentSpecimenId === id) {
+    currentSpecimenId = specimens[0]?.id || null;
+  }
   saveSpecimens(specimens);
   renderSpecimens();
   showFeedback('Ejemplar eliminado correctamente.');
@@ -377,8 +381,16 @@ addWeightButton?.addEventListener('click', async () => {
 // ---- Camera / Photo capture (re-using and extending existing logic) --------------------
 const stopCamera = () => { try{ cameraStream?.getTracks().forEach(t=>t.stop()); }catch(e){} cameraStream=undefined; cameraVideo.srcObject = null; capturePhotoButton.disabled = true; };
 
+function revokeCurrentPreviewObjectUrl() {
+  if (currentPreviewObjectUrl) {
+    URL.revokeObjectURL(currentPreviewObjectUrl);
+    currentPreviewObjectUrl = null;
+  }
+}
+
 function resetCameraModal() {
   stopCamera();
+  revokeCurrentPreviewObjectUrl();
   cameraFileInput.value = '';
   cameraPhoto.removeAttribute('src');
   cameraPhoto.hidden = true;
@@ -389,21 +401,18 @@ function resetCameraModal() {
   cameraStatus.textContent = 'La foto se guardará en este dispositivo.';
 }
 
-function updatePhotoPreview(previewSource) {
-  if (!previewSource) {
-    cameraStatus.textContent = 'No se pudo usar la imagen seleccionada.';
+function showCapturedPhotoPreview(dataUrl) {
+  const safeSource = sanitizeImageSource(dataUrl);
+  revokeCurrentPreviewObjectUrl();
+  if (!safeSource.startsWith('data:image/')) {
+    cameraStatus.textContent = 'No se pudo usar la imagen capturada.';
     return;
   }
-  cameraPhoto.src = previewSource;
+  cameraPhoto.src = safeSource;
   cameraPhoto.hidden = false;
   cameraVideo.hidden = true;
   cameraPlaceholder.hidden = true;
   cameraStatus.textContent = 'Foto lista. Completa el nombre y la especie para guardar el ejemplar.';
-}
-
-function showCapturedPhotoPreview(dataUrl) {
-  const safeSource = sanitizeImageSource(dataUrl);
-  updatePhotoPreview(safeSource.startsWith('data:image/') ? safeSource : '');
 }
 
 function showSelectedPhotoPreview(file) {
@@ -411,16 +420,28 @@ function showSelectedPhotoPreview(file) {
     cameraStatus.textContent = 'Selecciona un archivo de imagen válido.';
     return;
   }
-  updatePhotoPreview(URL.createObjectURL(file));
+  revokeCurrentPreviewObjectUrl();
+  currentPreviewObjectUrl = URL.createObjectURL(file);
+  cameraPhoto.src = currentPreviewObjectUrl;
+  cameraPhoto.hidden = false;
+  cameraVideo.hidden = true;
+  cameraPlaceholder.hidden = true;
+  cameraStatus.textContent = 'Foto lista. Completa el nombre y la especie para guardar el ejemplar.';
+  requestAnimationFrame(() => specimenNameInput?.focus());
 }
 
 function openCameraModal({ openGallery = false } = {}) {
   resetCameraModal();
   cameraModal.hidden = false;
   cameraStatus.textContent = openGallery ? 'Selecciona una imagen desde la galería para continuar.' : 'La foto se guardará en este dispositivo.';
-  requestAnimationFrame(() => specimenNameInput?.focus());
+  if (!openGallery) {
+    requestAnimationFrame(() => specimenNameInput?.focus());
+  }
   if (openGallery) {
-    requestAnimationFrame(() => cameraFileInput.click());
+    requestAnimationFrame(() => {
+      cameraFileInput.click();
+      window.setTimeout(() => choosePhotoButton?.focus(), 250);
+    });
   }
 }
 
@@ -428,6 +449,7 @@ function openGalleryPicker(message = 'Selecciona una imagen desde la galería pa
   stopCamera();
   cameraStatus.textContent = message;
   cameraFileInput.click();
+  window.setTimeout(() => choosePhotoButton?.focus(), 250);
 }
 
 async function startCameraCapture() {
