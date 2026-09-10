@@ -24,7 +24,7 @@ window.HERPCARE_GOOGLE_CLIENT_ID = "TU_GOOGLE_CLIENT_ID.apps.googleusercontent.c
 window.HERPCARE_GOOGLE_MAPS_API_KEY = "TU_GOOGLE_MAPS_API_KEY";
 ```
 
-- Añade `config.local.js` a `.gitignore`.
+- Asegúrate de que `config.local.js` esté en `.gitignore` (en esta rama ya está añadido).
 - Incluye `config.local.js` en `index.html` antes de `app.js`:
 
 ```html
