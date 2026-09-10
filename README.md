@@ -81,6 +81,8 @@ La página `index.html` de la raíz redirige a la aplicación principal para que
 La aplicación incluye `manifest.webmanifest` y un service worker. En Android, abre la URL publicada con Chrome y pulsa **Instalar aplicación** cuando aparezca el botón de HerpCare, o usa **Menú > Instalar aplicación**.
 
 ## 11. Publicar en GitHub Pages
+Tras fusionar esta rama en `main`:
+
 1. Abre el repositorio en GitHub.
 2. Ve a **Settings > Pages**.
 3. En **Build and deployment**, selecciona **Deploy from a branch**.
