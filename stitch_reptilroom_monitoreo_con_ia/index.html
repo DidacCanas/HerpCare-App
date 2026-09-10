@@ -18,43 +18,45 @@
   <body>
     <div class="app-shell">
       <header class="topbar">
-        <div class="brand-wrap">
-          <div class="brand-mark" aria-label="Logo HerpCare">
-            <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-              <rect width="100" height="100" rx="24" fill="#18231C"/>
-              <path d="M50 15C30.67 15 15 30.67 15 50C15 69.33 30.67 85 50 85C69.33 85 85 69.33 85 50" stroke="#7E9A7B" stroke-width="4" stroke-linecap="round"/>
-              <circle cx="42" cy="38" r="3.5" fill="#4ADE80"/>
-            </svg>
+        <div class="topbar-row">
+          <div class="brand-wrap">
+            <div class="brand-mark" aria-label="Logo HerpCare">
+              <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                <rect width="100" height="100" rx="24" fill="#18231C"/>
+                <path d="M50 15C30.67 15 15 30.67 15 50C15 69.33 30.67 85 50 85C69.33 85 85 69.33 85 50" stroke="#7E9A7B" stroke-width="4" stroke-linecap="round"/>
+                <circle cx="42" cy="38" r="3.5" fill="#4ADE80"/>
+              </svg>
+            </div>
+            <div class="brand-text">HerpCare</div>
           </div>
-          <div class="brand-text">HerpCare</div>
+
+          <button class="profile-pill" id="profileButton" aria-label="Perfil" type="button">
+            <img id="profileAvatar" src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?auto=format&fit=crop&w=200&q=80" alt="Perfil" />
+          </button>
         </div>
 
         <nav class="nav" aria-label="Navegación principal">
-          <button class="nav-item active" type="button" data-target="iaPanel">IA / Biomódulo</button>
+          <button class="nav-item active" type="button" data-target="homePanel">Home</button>
+          <button class="nav-item" type="button" data-target="iaPanel">IA</button>
           <button class="nav-item" type="button" data-target="collectionPanel">Colección</button>
           <button class="nav-item" type="button" data-target="weightPanel">Peso</button>
           <button class="nav-item" type="button" data-target="vetsPanel">Vets</button>
         </nav>
-
-        <button class="profile-pill" id="profileButton" aria-label="Perfil" type="button">
-          <img id="profileAvatar" src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?auto=format&fit=crop&w=200&q=80" alt="Perfil" />
-        </button>
       </header>
 
       <main class="content">
-        <!-- Home / Biomódulo -->
-        <section id="iaPanel" class="panel scanner-panel" aria-label="Home y biomódulo">
+        <section id="homePanel" class="panel scanner-panel home-panel" aria-label="Inicio y captura rápida">
           <div class="scanner-header">
             <div class="status-wrap">
               <span class="pulse"></span>
               <div>
-                <div class="eyebrow">Home + Biomódulo</div>
+                <div class="eyebrow">Home</div>
                 <div class="title">Registra y monitoriza tus ejemplares</div>
               </div>
             </div>
             <div class="tag tag-secondary">
-              <span class="material-symbols-outlined">biotech</span>
-              <span>HerpScan</span>
+              <span class="material-symbols-outlined">photo_camera</span>
+              <span>Captura rápida</span>
             </div>
           </div>
 
@@ -65,12 +67,12 @@
             <div class="home-capture-body">
               <div>
                 <h2>Alta rápida desde Home</h2>
-                <p>Haz una foto o elige una imagen para registrar un ejemplar sin salir del inicio.</p>
+                <p>Haz una foto con la cámara del dispositivo o elige una imagen de la galería para registrar un ejemplar sin salir del inicio.</p>
               </div>
               <div class="home-capture-actions">
-                <button class="primary-btn" id="openCameraFromIA" type="button">Tomar foto</button>
-                <button class="secondary-btn" id="openGalleryFromIA" type="button">Elegir galería</button>
-                <button class="secondary-btn" id="addSpecimenFromIA" type="button">Registrar ejemplar</button>
+                <button class="primary-btn" id="openCameraFromHome" type="button">Tomar foto</button>
+                <button class="secondary-btn" id="openGalleryFromHome" type="button">Elegir galería</button>
+                <button class="secondary-btn" id="addSpecimenFromHome" type="button">Registrar ejemplar</button>
               </div>
             </div>
           </article>
@@ -81,6 +83,26 @@
               <p>Accede rápido al mapa para localizar clínicas y especialistas.</p>
             </div>
             <button class="secondary-btn inline" id="goToVetsFromHome" type="button">Abrir mapa</button>
+          </div>
+        </section>
+
+        <section id="iaPanel" class="panel scanner-panel ia-panel" aria-label="Biomódulo y diagnóstico IA" hidden>
+          <div class="scanner-header">
+            <div class="status-wrap">
+              <span class="pulse"></span>
+              <div>
+                <div class="eyebrow">IA</div>
+                <div class="title">Biomódulo y resumen clínico</div>
+              </div>
+            </div>
+            <div class="tag tag-secondary">
+              <span class="material-symbols-outlined">biotech</span>
+              <span>HerpScan</span>
+            </div>
+          </div>
+
+          <div class="empty-state">
+            <p>Consulta aquí el biomódulo, el último peso y accesos clínicos rápidos de tus ejemplares.</p>
           </div>
 
           <div id="iaEmptyMessage" class="empty-state">
@@ -94,7 +116,7 @@
         </section>
 
         <!-- Colección (vacío hasta registrar primer animal) -->
-        <section id="collectionPanel" class="panel collection-panel" aria-label="Colección de reptiles">
+        <section id="collectionPanel" class="panel collection-panel" aria-label="Colección de reptiles" hidden>
           <div class="section-head">
             <div>
               <div class="eyebrow">Colección Bioactiva</div>
@@ -126,7 +148,7 @@
         </section>
 
         <!-- Peso y evolución -->
-        <section id="weightPanel" class="panel weight-panel" aria-label="Peso y evolución">
+        <section id="weightPanel" class="panel weight-panel" aria-label="Peso y evolución" hidden>
           <div class="section-head compact">
             <div>
               <div class="eyebrow">Evolución de Peso</div>
@@ -148,7 +170,7 @@
         </section>
 
         <!-- Vets: mapa real con Google Maps -->
-        <section id="vetsPanel" class="panel vets-panel" aria-label="Veterinarios cercanos">
+        <section id="vetsPanel" class="panel vets-panel" aria-label="Veterinarios cercanos" hidden>
           <div class="section-head compact">
             <div>
               <div class="eyebrow">Especialistas cercanos</div>
@@ -174,9 +196,9 @@
       </main>
 
       <nav class="bottom-nav" aria-label="Navegación inferior">
-        <button class="bottom-item active" type="button" data-target="home">Home</button>
-        <button class="bottom-item" type="button" data-target="iaPanel">IA</button>
-        <button class="bottom-item" type="button" data-target="collectionPanel">Reptiles</button>
+        <button class="bottom-item active" type="button" data-target="homePanel">Home</button>
+        <button class="bottom-item" type="button" data-target="collectionPanel">Colección</button>
+        <button class="bottom-item" type="button" data-target="weightPanel">Peso</button>
         <button class="bottom-item" type="button" data-target="vetsPanel">Vets</button>
       </nav>
     </div>
@@ -216,22 +238,20 @@
       <section class="modal-card camera-modal" role="dialog" aria-modal="true" aria-labelledby="cameraTitle">
         <button class="modal-close" data-close-modal="cameraModal" type="button" aria-label="Cerrar">×</button>
         <div class="eyebrow">Registro del animal</div>
-        <h2 id="cameraTitle">Tomar fotografía</h2>
-        <p>Permite el acceso a la cámara para registrar una foto del ejemplar. En Android se abrirá la cámara tras aceptar el permiso.</p>
+        <h2 id="cameraTitle">Completa el registro</h2>
+        <p>Haz una foto con la cámara del dispositivo o elige una imagen de la galería. Después completa el nombre y la especie.</p>
         <div class="camera-preview">
-          <video id="cameraVideo" autoplay playsinline muted hidden></video>
-          <canvas id="cameraCanvas" hidden></canvas>
           <img id="cameraPhoto" alt="Vista previa de la fotografía registrada" hidden />
           <div class="camera-placeholder" id="cameraPlaceholder">
             <span class="material-symbols-outlined">photo_camera</span>
-            <span>La cámara aún no está activa</span>
+            <span>Aún no has seleccionado ninguna imagen</span>
           </div>
         </div>
-        <input id="cameraFileInput" type="file" accept="image/*" capture="environment" hidden />
+        <input id="cameraCaptureInput" type="file" accept="image/*" capture="environment" hidden />
+        <input id="galleryFileInput" type="file" accept="image/*" hidden />
         <div class="camera-controls">
-          <button class="secondary-btn" id="choosePhotoButton" type="button">Galería</button>
-          <button class="primary-btn" id="startCameraButton" type="button">Activar cámara</button>
-          <button class="secondary-btn" id="capturePhotoButton" type="button" disabled>Capturar</button>
+          <button class="secondary-btn" id="choosePhotoButton" type="button">Elegir galería</button>
+          <button class="primary-btn" id="takePhotoButton" type="button">Tomar foto</button>
         </div>
         <div class="camera-status" id="cameraStatus" role="status">La foto se guardará en este dispositivo.</div>
         <div class="specimen-form">

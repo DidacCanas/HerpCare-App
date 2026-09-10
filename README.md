@@ -1,7 +1,7 @@
 # HerpCare
 
 ## 1. Resumen
-- La app implementa: navegación por pestañas (IA / Colección / Peso / Vets), CRUD de ejemplares con localStorage, evoluciones de peso por ejemplar con gráficos en Chart.js, panel Vets preparado para Google Maps / Places (fallback simulado), perfil editable y modales de cámara/login/ubicación.
+- La app implementa: navegación por pestañas separando **Home** e **IA**, CRUD de ejemplares con localStorage, evoluciones de peso por ejemplar con gráficos en Chart.js, panel Vets preparado para Google Maps / Places (fallback simulado), perfil editable y modales de cámara/login/ubicación.
 
 ## 2. Cómo ejecutar localmente
 1. Clona el repo y cambia a la rama que quieras probar:
@@ -56,9 +56,9 @@ window.HERPCARE_GOOGLE_MAPS_API_KEY = "TU_GOOGLE_MAPS_API_KEY";
 El flujo recomendado de alta ahora empieza desde **Home**, usando **Tomar foto** o **Elegir galería** para registrar el ejemplar. También puedes seguir entrando desde **Colección**.
 
 Puedes:
-- Pulsar **Activar cámara** para usar la cámara trasera directamente desde el navegador.
-- Pulsar **Galería** para abrir la cámara o seleccionar una imagen usando el selector nativo de Android.
-- Capturar una vista previa sin subir automáticamente la imagen a ningún servidor.
+- Pulsar **Tomar foto** para priorizar la cámara nativa del dispositivo.
+- Pulsar **Elegir galería** para abrir solo la galería/selector de imágenes.
+- Completar el nombre y la especie en el modal posterior, sin subir automáticamente la imagen a ningún servidor.
 
 La cámara directa requiere HTTPS, por lo que funciona en GitHub Pages. En desarrollo también funciona en `localhost`. Android puede bloquear el acceso si la aplicación se abre desde una URL no segura.
 
