@@ -247,7 +247,7 @@
       window.HERPCARE_GOOGLE_CLIENT_ID = ""; // Para Google Sign-In (GSI)
       window.HERPCARE_GOOGLE_MAPS_API_KEY = ""; // Para Google Maps JS API
     </script>
-    <script src="./config.local.js"></script>
+    <script src="./config.local.js" onerror="window.HERPCARE_CONFIG_LOCAL_MISSING = true"></script>
     <script src="https://accounts.google.com/gsi/client" async defer></script>
     <script src="app.js"></script>
   </body>
