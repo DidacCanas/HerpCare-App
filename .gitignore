@@ -17,3 +17,4 @@ build/
 *.tmp
 .playwright-cli/
 config.local.js
+stitch_reptilroom_monitoreo_con_ia/config.local.js
