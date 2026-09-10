@@ -237,6 +237,13 @@ function sanitizeImageSource(source) {
   return value;
 }
 
+function safeTextLabel(value, fallback = 'Ejemplar') {
+  const normalized = String(value || '')
+    .replace(/[<>\u0000-\u001F\u007F]/g, '')
+    .trim();
+  return normalized || fallback;
+}
+
 function latestWeight(specimen){
   try{
     const w = specimen.weights || [];
@@ -380,15 +387,17 @@ addWeightButton?.addEventListener('click', async () => {
 // ---- Camera / Photo capture (re-using and extending existing logic) --------------------
 const stopCamera = () => { try{ cameraStream?.getTracks().forEach(t=>t.stop()); }catch(e){} cameraStream=undefined; cameraVideo.srcObject = null; capturePhotoButton.disabled = true; };
 
-function resetCameraModal() {
+function resetCameraModal({ clearForm = true } = {}) {
   stopCamera();
   cameraFileInput.value = '';
   cameraPhoto.removeAttribute('src');
   cameraPhoto.hidden = true;
   cameraVideo.hidden = true;
   cameraPlaceholder.hidden = false;
-  specimenNameInput.value = '';
-  specimenSpeciesInput.value = '';
+  if (clearForm) {
+    specimenNameInput.value = '';
+    specimenSpeciesInput.value = '';
+  }
   cameraStatus.textContent = 'La foto se guardará en este dispositivo.';
 }
 
@@ -508,7 +517,7 @@ cameraFileInput?.addEventListener('change', ()=>{
 document.querySelectorAll('[data-close-modal]').forEach((b)=>b.addEventListener('click', ()=>{
   document.getElementById(b.dataset.closeModal).hidden = true;
   if (b.dataset.closeModal === 'cameraModal') {
-    resetCameraModal();
+    resetCameraModal({ clearForm: false });
   }
 }));
 
@@ -520,7 +529,8 @@ saveSpecimenButton?.addEventListener('click', ()=>{
   const s = createSpecimen({ name, species, photo });
   cameraModal.hidden = true;
   resetCameraModal();
-  showFeedback(wasEmpty ? `Primer ejemplar registrado: ${s.name}.` : `Ejemplar registrado correctamente: ${s.name}.`);
+  const specimenLabel = safeTextLabel(s.name);
+  showFeedback(wasEmpty ? `Primer ejemplar registrado: ${specimenLabel}.` : `Ejemplar registrado correctamente: ${specimenLabel}.`);
   showPanel('collectionPanel');
 });
 
