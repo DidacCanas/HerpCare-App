@@ -1,0 +1,8680 @@
+﻿Ã¯Â»Â¿<!DOCTYPE html>
+
+
+
+
+
+
+
+
+<html lang="es" class="dark">
+
+
+
+
+
+
+
+
+  <head>
+
+
+
+
+
+
+
+
+    <meta charset="UTF-8" />
+
+
+
+
+
+
+
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+
+
+
+
+
+
+
+    <meta name="theme-color" content="#101412" />
+
+
+
+
+
+
+
+
+    <meta name="mobile-web-app-capable" content="yes" />
+
+
+
+
+
+
+
+
+    <link rel="manifest" href="manifest.webmanifest" />
+
+
+
+
+
+
+
+
+    <link rel="icon" href="icon.svg" type="image/svg+xml" />
+
+
+
+
+
+
+
+
+    <title>HerpCare Dashboard</title>
+
+
+
+
+
+
+
+
+    <meta name="description" content="Dashboard HerpCare para monitoreo de reptiles, diagnÃÂƒÂƒÃÂ‚ÂƒÃÂƒÂ‚ÃÂ‚ÂƒÃÂƒÂƒÃÂ‚Â‚ÃÂƒÂ‚ÃÂ‚ÂƒÃÂƒÂƒÃÂ‚ÂƒÃÂƒÂ‚ÃÂ‚Â‚ÃÂƒÂƒÃÂ‚Â‚ÃÂƒÂ‚ÃÂ‚ÂƒÃÂƒÂƒÃÂ‚ÂƒÃÂƒÂ‚ÃÂ‚ÂƒÃÂƒÂƒÃÂ‚Â‚ÃÂƒÂ‚ÃÂ‚Â‚ÃÂƒÂƒÃÂ‚ÂƒÃÂƒÂ‚ÃÂ‚Â‚ÃÂƒÂƒÃÂ‚Â‚ÃÂƒÂ‚ÃÂ‚ÂƒÃÂƒÂƒÃÂ‚ÂƒÃÂƒÂ‚ÃÂ‚ÂƒÃÂƒÂƒÃÂ‚Â‚ÃÂƒÂ‚ÃÂ‚ÂƒÃÂƒÂƒÃÂ‚ÂƒÃÂƒÂ‚ÃÂ‚Â‚ÃÂƒÂƒÃÂ‚Â‚ÃÂƒÂ‚ÃÂ‚Â‚ÃÂƒÂƒÃÂ‚ÂƒÃÂƒÂ‚ÃÂ‚ÂƒÃÂƒÂƒÃÂ‚Â‚ÃÂƒÂ‚ÃÂ‚Â‚ÃÂƒÂƒÃÂ‚ÂƒÃÂƒÂ‚ÃÂ‚Â‚ÃÂƒÂƒÃÂ‚Â‚ÃÂƒÂ‚ÃÂ‚ÂƒÃÂƒÂƒÃÂ‚ÂƒÃÂƒÂ‚ÃÂ‚ÂƒÃÂƒÂƒÃÂ‚Â‚ÃÂƒÂ‚ÃÂ‚ÂƒÃÂƒÂƒÃÂ‚ÂƒÃÂƒÂ‚ÃÂ‚Â‚ÃÂƒÂƒÃÂ‚Â‚ÃÂƒÂ‚ÃÂ‚ÂƒÃÂƒÂƒÃÂ‚ÂƒÃÂƒÂ‚ÃÂ‚ÂƒÃÂƒÂƒÃÂ‚Â‚ÃÂƒÂ‚ÃÂ‚Â‚ÃÂƒÂƒÃÂ‚ÂƒÃÂƒÂ‚ÃÂ‚Â‚ÃÂƒÂƒÃÂ‚Â‚ÃÂƒÂ‚ÃÂ‚Â‚ÃÂƒÂƒÃÂ‚ÂƒÃÂƒÂ‚ÃÂ‚ÂƒÃÂƒÂƒÃÂ‚Â‚ÃÂƒÂ‚ÃÂ‚ÂƒÃÂƒÂƒÃÂ‚ÂƒÃÂƒÂ‚ÃÂ‚Â‚ÃÂƒÂƒÃÂ‚Â‚ÃÂƒÂ‚ÃÂ‚Â‚ÃÂƒÂƒÃÂ‚ÂƒÃÂƒÂ‚ÃÂ‚ÂƒÃÂƒÂƒÃÂ‚Â‚ÃÂƒÂ‚ÃÂ‚Â‚ÃÂƒÂƒÃÂ‚ÂƒÃÂƒÂ‚ÃÂ‚Â‚ÃÂƒÂƒÃÂ‚Â‚ÃÂƒÂ‚ÃÂ‚Â³stico IA y veterinarios especializados." />
+
+
+
+
+
+
+
+
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' https://cdn.tailwindcss.com 'unsafe-inline'; style-src 'self' https://fonts.googleapis.com https://cdn.tailwindcss.com 'unsafe-inline'; font-src https://fonts.gstatic.com; img-src 'self' https://images.unsplash.com https://*.tile.openstreetmap.org https://lh3.googleusercontent.com data: blob:; connect-src https://overpass-api.de https://nominatim.openstreetmap.org; frame-src 'none'; object-src 'none'; base-uri 'self'; form-action 'self';" />
+
+
+
+
+
+
+
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+
+
+
+
+
+
+
+
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+
+
+
+
+
+
+
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Plus+Jakarta+Sans:wght@600;700;800&display=swap" rel="stylesheet" />
+
+
+
+
+
+
+
+
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" rel="stylesheet" />
+
+
+
+
+
+
+
+
+    <link rel="stylesheet" href="leaflet.css" integrity="sha384-sHL9NAb7lN7rfvG5lfHpm643Xkcjzp4jFvuavGOndn6pjVqS6ny56CAt3nsEVT4H" crossorigin="anonymous" />
+
+
+
+
+
+
+
+
+    <link rel="stylesheet" href="css/design-tokens.css" />
+
+
+    <link rel="stylesheet" href="styles.css" />
+
+
+
+
+
+
+
+
+    <script src="https://cdn.tailwindcss.com"></script>
+
+
+
+
+
+
+
+
+    <script id="tailwind-config">
+
+
+
+
+
+
+
+
+      tailwind.config = {
+
+
+
+
+
+
+
+
+        darkMode: "class",
+
+
+
+
+
+
+
+
+        theme: {
+
+
+
+
+
+
+
+
+          extend: {
+
+
+
+
+
+
+
+
+            "colors": {
+
+
+
+
+
+
+
+
+              "primary": "#4be277",
+
+
+
+
+
+
+
+
+              "inverse-on-surface": "#223429",
+
+
+
+
+
+
+
+
+              "on-tertiary-fixed": "#2a1700",
+
+
+
+
+
+
+
+
+              "surface-container": "#112319",
+
+
+
+
+
+
+
+
+              "on-secondary-fixed-variant": "#324c3d",
+
+
+
+
+
+
+
+
+              "secondary-fixed": "#cbead4",
+
+
+
+
+
+
+
+
+              "surface-tint": "#4ae176",
+
+
+
+
+
+
+
+
+              "on-primary-fixed": "#002109",
+
+
+
+
+
+
+
+
+              "surface-variant": "#26392d",
+
+
+
+
+
+
+
+
+              "on-primary": "#003915",
+
+
+
+
+
+
+
+
+              "secondary": "#b0ceb9",
+
+
+
+
+
+
+
+
+              "inverse-surface": "#d2e8d7",
+
+
+
+
+
+
+
+
+              "primary-fixed-dim": "#4ae176",
+
+
+
+
+
+
+
+
+              "secondary-fixed-dim": "#b0ceb9",
+
+
+
+
+
+
+
+
+              "on-primary-container": "#004b1e",
+
+
+
+
+
+
+
+
+              "surface-container-lowest": "#021108",
+
+
+
+
+
+
+
+
+              "primary-fixed": "#6bff8f",
+
+
+
+
+
+
+
+
+              "tertiary": "#ffba61",
+
+
+
+
+
+
+
+
+              "tertiary-fixed-dim": "#ffb95f",
+
+
+
+
+
+
+
+
+              "surface-container-highest": "#26392d",
+
+
+
+
+
+
+
+
+              "on-error": "#690005",
+
+
+
+
+
+
+
+
+              "primary-container": "#22c55e",
+
+
+
+
+
+
+
+
+              "error-container": "#93000a",
+
+
+
+
+
+
+
+
+              "on-error-container": "#ffdad6",
+
+
+
+
+
+
+
+
+              "on-secondary-fixed": "#062013",
+
+
+
+
+
+
+
+
+              "surface": "#05170d",
+
+
+
+
+
+
+
+
+              "surface-dim": "#05170d",
+
+
+
+
+
+
+
+
+              "on-surface": "#d2e8d7",
+
+
+
+
+
+
+
+
+              "error": "#ffb4ab",
+
+
+
+
+
+
+
+
+              "secondary-container": "#344f3f",
+
+
+
+
+
+
+
+
+              "on-secondary-container": "#a2bfab",
+
+
+
+
+
+
+
+
+              "on-surface-variant": "#bccbb9",
+
+
+
+
+
+
+
+
+              "surface-container-high": "#1c2e23",
+
+
+
+
+
+
+
+
+              "outline": "#869585",
+
+
+
+
+
+
+
+
+              "surface-container-low": "#0d1f15",
+
+
+
+
+
+
+
+
+              "on-primary-fixed-variant": "#005321",
+
+
+
+
+
+
+
+
+              "tertiary-fixed": "#ffddb8",
+
+
+
+
+
+
+
+
+              "surface-bright": "#2b3d32",
+
+
+
+
+
+
+
+
+              "on-tertiary-container": "#5c3800",
+
+
+
+
+
+
+
+
+              "on-background": "#d2e8d7",
+
+
+
+
+
+
+
+
+              "on-tertiary-fixed-variant": "#653e00",
+
+
+
+
+
+
+
+
+              "on-tertiary": "#472a00",
+
+
+
+
+
+
+
+
+              "tertiary-container": "#ef9900",
+
+
+
+
+
+
+
+
+              "background": "#05170d",
+
+
+
+
+
+
+
+
+              "outline-variant": "#3d4a3d",
+
+
+
+
+
+
+
+
+              "on-secondary": "#1c3627",
+
+
+
+
+
+
+
+
+              "inverse-primary": "#006e2f"
+
+
+
+
+
+
+
+
+            },
+
+
+
+
+
+
+
+
+            "borderRadius": {
+
+
+
+
+
+
+
+
+              "DEFAULT": "0.25rem",
+
+
+
+
+
+
+
+
+              "lg": "0.5rem",
+
+
+
+
+
+
+
+
+              "xl": "0.75rem",
+
+
+
+
+
+
+
+
+              "full": "9999px"
+
+
+
+
+
+
+
+
+            },
+
+
+
+
+
+
+
+
+            "spacing": {
+
+
+
+
+
+
+
+
+              "space-sm": "0.5rem",
+
+
+
+
+
+
+
+
+              "space-xs": "0.25rem",
+
+
+
+
+
+
+
+
+              "space-md": "0.875rem",
+
+
+
+
+
+
+
+
+              "gutter": "1rem",
+
+
+
+
+
+
+
+
+              "space-xl": "1.75rem",
+
+
+
+
+
+
+
+
+              "margin": "1rem",
+
+
+
+
+
+
+
+
+              "space-lg": "1.25rem"
+
+
+
+
+
+
+
+
+            },
+
+
+
+
+
+
+
+
+            "fontFamily": {
+
+
+
+
+
+
+
+
+              "body-sm": ["Inter"],
+
+
+
+
+
+
+
+
+              "body-md": ["Inter"],
+
+
+
+
+
+
+
+
+              "headline-xl": ["Plus Jakarta Sans"],
+
+
+
+
+
+
+
+
+              "label-sm": ["Inter"],
+
+
+
+
+
+
+
+
+              "label-md": ["Inter"],
+
+
+
+
+
+
+
+
+              "numeric-metric": ["Plus Jakarta Sans"],
+
+
+
+
+
+
+
+
+              "headline-lg": ["Plus Jakarta Sans"],
+
+
+
+
+
+
+
+
+              "headline-xl-mobile": ["Plus Jakarta Sans"],
+
+
+
+
+
+
+
+
+              "body-lg": ["Inter"],
+
+
+
+
+
+
+
+
+              "label-lg": ["Inter"],
+
+
+
+
+
+
+
+
+              "headline-md": ["Plus Jakarta Sans"]
+
+
+
+
+
+
+
+
+            },
+
+
+
+
+
+
+
+
+            "fontSize": {
+
+
+
+
+
+
+
+
+              "body-sm": ["12px", { "lineHeight": "18px", "fontWeight": "400" }],
+
+
+
+
+
+
+
+
+              "body-md": ["14px", { "lineHeight": "20px", "fontWeight": "400" }],
+
+
+
+
+
+
+
+
+              "headline-xl": ["32px", { "lineHeight": "40px", "fontWeight": "700" }],
+
+
+
+
+
+
+
+
+              "label-sm": ["11px", { "lineHeight": "14px", "letterSpacing": "0.05em", "fontWeight": "600" }],
+
+
+
+
+
+
+
+
+              "label-md": ["12px", { "lineHeight": "16px", "fontWeight": "600" }],
+
+
+
+
+
+
+
+
+              "numeric-metric": ["20px", { "lineHeight": "24px", "fontWeight": "700" }],
+
+
+
+
+
+
+
+
+              "headline-lg": ["24px", { "lineHeight": "32px", "fontWeight": "600" }],
+
+
+
+
+
+
+
+
+              "headline-xl-mobile": ["26px", { "lineHeight": "32px", "fontWeight": "700" }],
+
+
+
+
+
+
+
+
+              "body-lg": ["16px", { "lineHeight": "24px", "fontWeight": "400" }],
+
+
+
+
+
+
+
+
+              "label-lg": ["14px", { "lineHeight": "20px", "fontWeight": "600" }],
+
+
+
+
+
+
+
+
+              "headline-md": ["20px", { "lineHeight": "28px", "fontWeight": "600" }]
+
+
+
+
+
+
+
+
+            }
+
+
+
+
+
+
+
+
+          }
+
+
+
+
+
+
+
+
+        }
+
+
+
+
+
+
+
+
+      };
+
+
+
+
+
+
+
+
+    </script>
+
+
+
+
+
+
+
+
+  </head>
+
+
+
+
+
+
+
+
+  <body>
+
+
+
+
+
+
+
+
+    <div class="app-shell">
+
+
+
+
+
+
+
+
+      <header class="fixed top-0 w-full z-50 pt-safe bg-surface-container-low/85 backdrop-blur-xl shadow-[0_8px_32px_-8px_rgba(0,0,0,0.5)">
+
+
+
+
+
+
+
+
+<div class="h-16 px-gutter flex items-center justify-between">
+
+
+
+
+
+
+
+
+<div class="flex items-center gap-space-sm">
+
+
+
+
+
+
+
+
+<div class="w-10 h-10 rounded-xl overflow-hidden shadow-[0_0_16px_rgba(75,226,119,0.35)] ring-1 ring-primary/30 flex items-center justify-center bg-surface-container-high/70 backdrop-blur-md p-0.5 flex-shrink-0">
+
+
+
+
+
+
+
+
+<img src="https://lh3.googleusercontent.com/aida-public/AB6AXuAOwjD2dxy159s0ngK5nFldsZ-5D_uHTN-ATGDOKQqOWCmHnOoRPB4GgZa1cnf9oVkWdMoQtyESQAYEqGI-WtLpIY3v79hCiKslqh8Ao2ouYLYVXBO6R_fAWSdvSs_chl_9foLmKBrQLQl-xBshMN5e4QiaaL2t6DbOjDzeTVGyNd95f9GIJn7Nrtulg5vpqhB3x-wvdmxYOXQeLyxE8rlC4HvbhR19oSZ33GCcaxPju7xZ5-hgMv2L" alt="HerpCare Logo" class="w-full h-full object-contain rounded-lg">
+
+
+
+
+
+
+
+
+</div>
+
+
+
+
+
+
+
+
+<div class="flex flex-col">
+
+
+
+
+
+
+
+
+<span class="font-headline-md text-headline-md tracking-tight text-on-surface leading-none">Herp<span class="text-primary">Care</span></span>
+
+
+
+
+
+
+
+
+<div class="flex items-center gap-1.5 mt-0.5">
+
+
+
+
+
+
+
+
+<span class="relative flex h-2 w-2"><span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-primary opacity-75"></span><span class="relative inline-flex rounded-full h-2 w-2 bg-primary"></span></span>
+
+
+
+
+
+
+
+
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider">Bio-Active Sync</span>
+
+
+
+
+
+
+
+
+</div>
+
+
+
+
+
+
+
+
+</div>
+
+
+
+
+
+
+
+
+</div>
+
+
+
+
+
+
+
+
+<div class="flex items-center gap-space-sm"><div class="w-10 h-10 rounded-xl overflow-hidden shadow-[0_0_16px_rgba(75,226,119,0.35)] ring-1 ring-primary/30 flex items-center justify-center bg-surface-container-high/70 backdrop-blur-md p-0.5 flex-shrink-0"><img src="https://lh3.googleusercontent.com/aida-public/AB6AXuAOwjD2dxy159s0ngK5nFldsZ-5D_uHTN-ATGDOKQqOWCmHnOoRPB4GgZa1cnf9oVkWdMoQtyESQAYEqGI-WtLpIY3v79hCiKslqh8Ao2ouYLYVXBO6R_fAWSdvSs_chl_9foLmKBrQLQl-xBshMN5e4QiaaL2t6DbOjDzeTVGyNd95f9GIJn7Nrtulg5vpqhB3x-wvdmxYOXQeLyxE8rlC4HvbhR19oSZ33GCcaxPju7xZ5-hgMv2L" alt="HerpCare Logo" class="w-full h-full object-contain rounded-lg"></div></div>
+
+
+
+
+
+
+
+
+</div></header>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      <main class="content">
+
+
+
+
+
+
+
+
+        <!-- HOME -->
+
+
+
+
+
+
+
+
+        <section class="panel home-panel" data-view="home" aria-label="Inicio">
+
+
+
+
+
+
+
+
+          <div class="home-greeting">
+
+
+
+
+
+
+
+
+            <div class="greeting-text">
+
+
+
+
+
+
+
+
+              <h2>Hola, Didac</h2>
+
+
+
+
+
+
+
+
+              <p>Tu colecciÃ³n bioactiva en  Ã³ptimas condiciones</p>
+
+
+
+
+
+
+
+
+            </div>
+
+
+
+
+
+
+
+
+            <div class="greeting-avatar">
+
+
+
+
+
+
+
+
+              <span class="w-1.5 h-1.5 rounded-full bg-primary animate-pulse"></span>
+
+
+
+
+
+
+
+
+              <span class="font-body-sm text-body-sm text-secondary flex items-center gap-1.5 mt-0.5">
+
+
+
+
+
+
+
+
+                <span class="w-1.5 h-1.5 rounded-full bg-primary animate-pulse"></span>
+
+
+
+
+
+
+
+
+                Tu colecciÃ³n bioactiva en  Ã³ptimas condiciones
+
+
+
+
+
+
+
+
+              </span>
+
+
+
+
+
+
+
+
+            </div>
+
+
+
+
+
+
+
+
+          </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+          <!-- Quick Access Bento Grid 2x2 -->
+
+
+
+
+
+
+
+
+          <div class="grid grid-cols-2 gap-space-sm">
+
+
+
+
+
+
+
+
+            <!-- 1. Mis Animales -->
+
+
+
+
+
+
+
+
+            <button class="group flex flex-col justify-between p-3.5 rounded-xl bg-surface-container-low/85 backdrop-blur-md shadow-md active:scale-[0.98] transition-all" data-navigate="reptiles" type="button">
+
+
+
+
+
+
+
+
+              <div class="flex items-center justify-between">
+
+
+
+
+
+
+
+
+                <div class="w-9 h-9 rounded-lg bg-surface-container-highest flex items-center justify-center text-primary group-hover:bg-primary group-hover:text-on-primary transition-colors">
+
+
+
+
+
+
+
+
+                  <span class="material-symbols-outlined text-[20px]">pets</span>
+
+
+
+
+
+
+
+
+                </div>
+
+
+
+
+
+
+
+
+                <span class="font-label-sm text-label-sm px-2 py-0.5 rounded-full bg-surface-container-high text-secondary">3 vivos</span>
+
+
+
+
+
+
+
+
+              </div>
+
+
+
+
+
+
+
+
+              <div class="mt-3 flex flex-col">
+
+
+
+
+
+
+
+
+                <span class="font-label-sm text-label-sm text-on-surface">Mis Animales</span>
+
+
+
+
+
+
+
+
+                <span class="font-body-sm text-[11px] text-on-surface-variant truncate">ColecciÃ³n activa</span>
+
+
+
+
+
+
+
+
+              </div>
+
+
+
+
+
+
+
+
+            </button>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+            <!-- 2. HerpScan IA -->
+
+
+
+
+
+
+
+
+            <button class="group flex flex-col justify-between p-3.5 rounded-xl bg-surface-container-low/85 backdrop-blur-md shadow-md active:scale-[0.98] transition-all relative overflow-hidden" data-navigate="ia" type="button">
+
+
+
+
+
+
+
+
+              <div class="absolute -right-6 -bottom-6 w-16 h-16 bg-primary/10 rounded-full blur-xl pointer-events-none"></div>
+
+
+
+
+
+
+
+
+              <div class="flex items-center justify-between">
+
+
+
+
+
+
+
+
+                <div class="w-9 h-9 rounded-lg bg-primary/15 text-primary flex items-center justify-center">
+
+
+
+
+
+
+
+
+                  <span class="material-symbols-outlined text-[20px]">auto_awesome</span>
+
+
+
+
+
+
+
+
+                </div>
+
+
+
+
+
+
+
+
+                <div class="flex items-center gap-1 px-1.5 py-0.5 rounded-full bg-primary/15 text-primary">
+
+
+
+
+
+
+
+
+                  <span class="w-1 h-1 rounded-full bg-primary animate-ping"></span>
+
+
+
+
+
+
+
+
+                  <span class="font-label-sm text-[9px] uppercase font-bold tracking-wider">Listo</span>
+
+
+
+
+
+
+
+
+                </div>
+
+
+
+
+
+
+
+
+              </div>
+
+
+
+
+
+
+
+
+              <div class="mt-3 flex flex-col">
+
+
+
+
+
+
+
+
+                <span class="font-label-sm text-label-sm text-on-surface flex items-center gap-1">
+
+
+
+
+
+
+
+
+                  HerpScan IA <span class="material-symbols-outlined text-[14px] text-primary">bolt</span>
+
+
+
+
+
+
+
+
+                </span>
+
+
+
+
+
+
+
+
+                <span class="font-body-sm text-[11px] text-on-surface-variant truncate">DiagnÃ³stico visual</span>
+
+
+
+
+
+
+
+
+              </div>
+
+
+
+
+
+
+
+
+            </button>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+            <!-- 3. Veterinarios -->
+
+
+
+
+
+
+
+
+            <button class="group flex flex-col justify-between p-3.5 rounded-xl bg-surface-container-low/85 backdrop-blur-md shadow-md active:scale-[0.98] transition-all" data-navigate="vets" type="button">
+
+
+
+
+
+
+
+
+              <div class="flex items-center justify-between">
+
+
+
+
+
+
+
+
+                <div class="w-9 h-9 rounded-lg bg-surface-container-highest flex items-center justify-center text-secondary group-hover:bg-surface-bright transition-colors">
+
+
+
+
+
+
+
+
+                  <span class="material-symbols-outlined text-[20px]">local_hospital</span>
+
+
+
+
+
+
+
+
+                </div>
+
+
+
+
+
+
+
+
+                <span class="flex items-center gap-1 font-label-sm text-label-sm text-primary">
+
+
+
+
+
+
+
+
+                  <span class="material-symbols-outlined text-[13px]">near_me</span> GPS
+
+
+
+
+
+
+
+
+                </span>
+
+
+
+
+
+
+
+
+              </div>
+
+
+
+
+
+
+
+
+              <div class="mt-3 flex flex-col">
+
+
+
+
+
+
+
+
+                <span class="font-label-sm text-label-sm text-on-surface">Veterinarios</span>
+
+
+
+
+
+
+
+
+                <span class="font-body-sm text-[11px] text-on-surface-variant truncate">3 especialistas cerca</span>
+
+
+
+
+
+
+
+
+              </div>
+
+
+
+
+
+
+
+
+            </button>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+            <!-- 4. Mi Perfil -->
+
+
+
+
+
+
+
+
+            <button class="group flex flex-col justify-between p-3.5 rounded-xl bg-surface-container-low/85 backdrop-blur-md shadow-md active:scale-[0.98] transition-all" data-navigate="profile" type="button">
+
+
+
+
+
+
+
+
+              <div class="flex items-center justify-between">
+
+
+
+
+
+
+
+
+                <div class="w-9 h-9 rounded-lg bg-surface-container-highest flex items-center justify-center text-on-surface-variant group-hover:bg-surface-bright transition-colors">
+
+
+
+
+
+
+
+
+                  <span class="material-symbols-outlined text-[20px]">tune</span>
+
+
+
+
+
+
+
+
+                </div>
+
+
+
+
+
+
+
+
+                <span class="material-symbols-outlined text-[16px] text-outline">arrow_forward</span>
+
+
+
+
+
+
+
+
+              </div>
+
+
+
+
+
+
+
+
+              <div class="mt-3 flex flex-col">
+
+
+
+
+
+
+
+
+                <span class="font-label-sm text-label-sm text-on-surface">Mi Perfil</span>
+
+
+
+
+
+
+
+
+                <span class="font-body-sm text-[11px] text-on-surface-variant truncate">Ajustes & MÃ©tricas</span>
+
+
+
+
+
+
+
+
+              </div>
+
+
+
+
+
+
+
+
+            </button>
+
+
+
+
+
+
+
+
+          </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+          <!-- Tareas Prioritarias / Action Pills -->
+
+
+
+
+
+
+
+
+          <div class="flex flex-col gap-space-xs">
+
+
+
+
+
+
+
+
+            <div class="flex items-center justify-between">
+
+
+
+
+
+
+
+
+              <span class="font-label-md text-label-md text-on-surface uppercase tracking-wider flex items-center gap-1.5">
+
+
+
+
+
+
+
+
+                <span class="material-symbols-outlined text-[16px] text-tertiary">assignment_late</span>
+
+
+
+
+
+
+
+
+                Tareas Prioritarias
+
+
+
+
+
+
+
+
+              </span>
+
+
+
+
+
+
+
+
+              <span class="font-label-sm text-label-sm text-secondary">2 pendientes</span>
+
+
+
+
+
+
+
+
+            </div>
+
+
+
+
+
+
+
+
+            <!-- Task Pills Carousel -->
+
+
+
+
+
+
+
+
+            <div class="flex items-center gap-space-sm overflow-x-auto py-1 no-scrollbar">
+
+
+
+
+
+
+
+
+              <!-- Task 1 -->
+
+
+
+
+
+
+
+
+              <button class="flex-shrink-0 flex items-center gap-2.5 px-3 py-2 rounded-xl bg-surface-container-high/90 shadow-sm active:scale-95 transition-transform text-left" type="button">
+
+
+
+
+
+
+
+
+                <div class="w-7 h-7 rounded-lg bg-tertiary/20 text-tertiary flex items-center justify-center">
+
+
+
+
+
+
+
+
+                  <span class="material-symbols-outlined text-[16px]">bug_report</span>
+
+
+
+
+
+
+
+
+                </div>
+
+
+
+
+
+
+
+
+                <div class="flex flex-col">
+
+
+
+
+
+
+
+
+                  <span class="font-label-md text-label-md text-on-surface">Alimentar a Ziggy</span>
+
+
+
+
+
+
+
+
+                  <span class="font-body-sm text-[11px] text-tertiary">4 grillos + Calcio D3</span>
+
+
+
+
+
+
+
+
+                </div>
+
+
+
+
+
+
+
+
+                <span class="material-symbols-outlined text-outline text-[16px] ml-1">check_circle</span>
+
+
+
+
+
+
+
+
+              </button>
+
+
+
+
+
+
+
+
+              <!-- Task 2 -->
+
+
+
+
+
+
+
+
+              <button class="flex-shrink-0 flex items-center gap-2.5 px-3 py-2 rounded-xl bg-surface-container-high/90 shadow-sm active:scale-95 transition-transform text-left" type="button">
+
+
+
+
+
+
+
+
+                <div class="w-7 h-7 rounded-lg bg-primary/20 text-primary flex items-center justify-center">
+
+
+
+
+
+
+
+
+                  <span class="material-symbols-outlined text-[16px]">water_drop</span>
+
+
+
+
+
+
+
+
+                </div>
+
+
+
+
+
+
+
+
+                <div class="flex flex-col">
+
+
+
+
+
+
+
+
+                  <span class="font-label-md text-label-md text-on-surface">Niebla Terrario B-3</span>
+
+
+
+
+
+
+
+
+                  <span class="font-body-sm text-[11px] text-primary">Subir a 75% HR</span>
+
+
+
+
+
+
+
+
+                </div>
+
+
+
+
+
+
+
+
+                <span class="material-symbols-outlined text-outline text-[16px] ml-1">check_circle</span>
+
+
+
+
+
+
+
+
+              </button>
+
+
+
+
+
+
+
+
+            </div>
+
+
+
+
+
+
+
+
+          </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+          <!-- Microclimate Overview Card -->
+
+
+
+
+
+
+
+
+          <div class="p-space-md rounded-2xl bg-surface-container-low/75 backdrop-blur-xl shadow-lg flex flex-col gap-space-sm relative overflow-hidden">
+
+
+
+
+
+
+
+
+            <div class="flex items-center justify-between">
+
+
+
+
+
+
+
+
+              <div class="flex items-center gap-2">
+
+
+
+
+
+
+
+
+                <div class="w-2 h-2 rounded-full bg-primary animate-ping"></div>
+
+
+
+
+
+
+
+
+                <span class="font-label-md text-label-md text-on-surface">Bio-Telemetry Matrix</span>
+
+
+
+
+
+
+
+
+              </div>
+
+
+
+
+
+
+
+
+              <span class="font-label-sm text-label-sm text-secondary bg-surface-container-highest px-2 py-0.5 rounded-full">Sincronizado</span>
+
+
+
+
+
+
+
+
+            </div>
+
+
+
+
+
+
+
+
+            <div class="grid grid-cols-3 gap-2 pt-1 text-center">
+
+
+
+
+
+
+
+
+              <div class="p-2.5 rounded-xl bg-surface-container-high flex flex-col items-center">
+
+
+
+
+
+
+
+
+                <span class="font-label-sm text-[10px] text-on-surface-variant flex items-center gap-1">
+
+
+
+
+
+
+
+
+                  <span class="material-symbols-outlined text-[12px] text-tertiary">device_thermostat</span> Temp Prom.
+
+
+
+
+
+
+
+
+                </span>
+
+
+
+
+
+
+
+
+                <span class="font-numeric-metric text-numeric-metric text-on-surface mt-0.5">29.4ÃÂƒÂƒÃÂ‚ÂƒÃÂƒÂ‚ÃÂ‚ÂƒÃÂƒÂƒÃÂ‚Â‚ÃÂƒÂ‚ÃÂ‚ÂƒÃÂƒÂƒÃÂ‚ÂƒÃÂƒÂ‚ÃÂ‚Â‚ÃÂƒÂƒÃÂ‚Â‚ÃÂƒÂ‚ÃÂ‚ÂƒÃÂƒÂƒÃÂ‚ÂƒÃÂƒÂ‚ÃÂ‚ÂƒÃÂƒÂƒÃÂ‚Â‚ÃÂƒÂ‚ÃÂ‚Â‚ÃÂƒÂƒÃÂ‚ÂƒÃÂƒÂ‚ÃÂ‚Â‚ÃÂƒÂƒÃÂ‚Â‚ÃÂƒÂ‚ÃÂ‚ÂƒÃÂƒÂƒÃÂ‚ÂƒÃÂƒÂ‚ÃÂ‚ÂƒÃÂƒÂƒÃÂ‚Â‚ÃÂƒÂ‚ÃÂ‚ÂƒÃÂƒÂƒÃÂ‚ÂƒÃÂƒÂ‚ÃÂ‚Â‚ÃÂƒÂƒÃÂ‚Â‚ÃÂƒÂ‚ÃÂ‚Â‚ÃÂƒÂƒÃÂ‚ÂƒÃÂƒÂ‚ÃÂ‚ÂƒÃÂƒÂƒÃÂ‚Â‚ÃÂƒÂ‚ÃÂ‚Â‚ÃÂƒÂƒÃÂ‚ÂƒÃÂƒÂ‚ÃÂ‚Â‚ÃÂƒÂƒÃÂ‚Â‚ÃÂƒÂ‚ÃÂ‚Â‚ÃÂƒÂƒÃÂ‚ÂƒÃÂƒÂ‚ÃÂ‚ÂƒÃÂƒÂƒÃÂ‚Â‚ÃÂƒÂ‚ÃÂ‚ÂƒÃÂƒÂƒÃÂ‚ÂƒÃÂƒÂ‚ÃÂ‚Â‚ÃÂƒÂƒÃÂ‚Â‚ÃÂƒÂ‚ÃÂ‚ÂƒÃÂƒÂƒÃÂ‚ÂƒÃÂƒÂ‚ÃÂ‚ÂƒÃÂƒÂƒÃÂ‚Â‚ÃÂƒÂ‚ÃÂ‚Â‚ÃÂƒÂƒÃÂ‚ÂƒÃÂƒÂ‚ÃÂ‚Â‚ÃÂƒÂƒÃÂ‚Â‚ÃÂƒÂ‚ÃÂ‚Â‚ÃÂƒÂƒÃÂ‚ÂƒÃÂƒÂ‚ÃÂ‚ÂƒÃÂƒÂƒÃÂ‚Â‚ÃÂƒÂ‚ÃÂ‚ÂƒÃÂƒÂƒÃÂ‚ÂƒÃÂƒÂ‚ÃÂ‚Â‚ÃÂƒÂƒÃÂ‚Â‚ÃÂƒÂ‚ÃÂ‚Â‚ÃÂƒÂƒÃÂ‚ÂƒÃÂƒÂ‚ÃÂ‚ÂƒÃÂƒÂƒÃÂ‚Â‚ÃÂƒÂ‚ÃÂ‚Â‚ÃÂƒÂƒÃÂ‚ÂƒÃÂƒÂ‚ÃÂ‚Â‚ÃÂƒÂƒÃÂ‚Â‚ÃÂƒÂ‚ÃÂ‚Â°C</span>
+
+
+
+
+
+
+
+
+                <span class="font-label-sm text-[9px] text-primary mt-0.5">Estable</span>
+
+
+
+
+
+
+
+
+              </div>
+
+
+
+
+
+
+
+
+              <div class="p-2.5 rounded-xl bg-surface-container-high flex flex-col items-center">
+
+
+
+
+
+
+
+
+                <span class="font-label-sm text-[10px] text-on-surface-variant flex items-center gap-1">
+
+
+
+
+
+
+
+
+                  <span class="material-symbols-outiled text-[12px] text-primary">humidity_percentage</span> Humedad
+
+
+
+
+
+
+
+
+                </span>
+
+
+
+
+
+
+
+
+                <span class="font-numeric-metric text-numeric-metric text-on-surface mt-0.5">64%</span>
+
+
+
+
+
+
+
+
+                <span class="font-label-sm text-[9px] text-primary mt-0.5">ÃÂƒÂƒÃÂ‚ÂƒÃÂƒÂ‚ÃÂ‚ÂƒÃÂƒÂƒÃÂ‚Â‚ÃÂƒÂ‚ÃÂ‚ÂƒÃÂƒÂƒÃÂ‚ÂƒÃÂƒÂ‚ÃÂ‚Â‚ÃÂƒÂƒÃÂ‚Â‚ÃÂƒÂ‚ÃÂ‚ÂƒÃÂƒÂƒÃÂ‚ÂƒÃÂƒÂ‚ÃÂ‚ÂƒÃÂƒÂƒÃÂ‚Â‚ÃÂƒÂ‚ÃÂ‚Â‚ÃÂƒÂƒÃÂ‚ÂƒÃÂƒÂ‚ÃÂ‚Â‚ÃÂƒÂƒÃÂ‚Â‚ÃÂƒÂ‚ÃÂ‚ÂƒÃÂƒÂƒÃÂ‚ÂƒÃÂƒÂ‚ÃÂ‚ÂƒÃÂƒÂƒÃÂ‚Â‚ÃÂƒÂ‚ÃÂ‚ÂƒÃÂƒÂƒÃÂ‚ÂƒÃÂƒÂ‚ÃÂ‚Â‚ÃÂƒÂƒÃÂ‚Â‚ÃÂƒÂ‚ÃÂ‚Â‚ÃÂƒÂƒÃÂ‚ÂƒÃÂƒÂ‚ÃÂ‚ÂƒÃÂƒÂƒÃÂ‚Â‚ÃÂƒÂ‚ÃÂ‚Â‚ÃÂƒÂƒÃÂ‚ÂƒÃÂƒÂ‚ÃÂ‚Â‚ÃÂƒÂƒÃÂ‚Â‚ÃÂƒÂ‚ÃÂ‚ÂƒÃÂƒÂƒÃÂ‚ÂƒÃÂƒÂ‚ÃÂ‚ÂƒÃÂƒÂƒÃÂ‚Â‚ÃÂƒÂ‚ÃÂ‚ÂƒÃÂƒÂƒÃÂ‚ÂƒÃÂƒÂ‚ÃÂ‚Â‚ÃÂƒÂƒÃÂ‚Â‚ÃÂƒÂ‚ÃÂ‚ÂƒÃÂƒÂƒÃÂ‚ÂƒÃÂƒÂ‚ÃÂ‚ÂƒÃÂƒÂƒÃÂ‚Â‚ÃÂƒÂ‚ÃÂ‚Â‚ÃÂƒÂƒÃÂ‚ÂƒÃÂƒÂ‚ÃÂ‚Â‚ÃÂƒÂƒÃÂ‚Â‚ÃÂƒÂ‚ÃÂ‚Â‚ÃÂƒÂƒÃÂ‚ÂƒÃÂƒÂ‚ÃÂ‚ÂƒÃÂƒÂƒÃÂ‚Â‚ÃÂƒÂ‚ÃÂ‚ÂƒÃÂƒÂƒÃÂ‚ÂƒÃÂƒÂ‚ÃÂ‚Â‚ÃÂƒÂƒÃÂ‚Â‚ÃÂƒÂ‚ÃÂ‚Â‚ÃÂƒÂƒÃÂ‚ÂƒÃÂƒÂ‚ÃÂ‚ÂƒÃÂƒÂƒÃÂ‚Â‚ÃÂƒÂ‚ÃÂ‚Â‚ÃÂƒÂƒÃÂ‚ÂƒÃÂƒÂ‚ÃÂ‚Â‚ÃÂƒÂƒÃÂ‚Â‚ÃÂƒÂ‚ÃÂ‚Â“ptimo</span>
+
+
+
+
+
+
+
+
+              </div>
+
+
+
+
+
+
+
+
+              <div class="p-2.5 rounded-xl bg-surface-container-high flex flex-col items-center">
+
+
+
+
+
+
+
+
+                <span class="font-label-sm text-[10px] text-on-surface-variant flex items-center gap-1">
+
+
+
+
+
+
+
+
+                  <span class="material-symbols-outlined text-[12px] text-secondary">wb_sunny</span> Fotoperiodo
+
+
+
+
+
+
+
+
+                </span>
+
+
+
+
+
+
+
+
+                <span class="font-numeric-metric text-numeric-metric text-on-surface mt-0.5">08:14h</span>
+
+
+
+
+
+
+
+
+                <span class="font-label-sm text-[9px] text-on-surface-variant mt-0.5">Ciclo DÃÂƒÂƒÃÂ‚ÂƒÃÂƒÂ‚ÃÂ‚ÂƒÃÂƒÂƒÃÂ‚Â‚ÃÂƒÂ‚ÃÂ‚ÂƒÃÂƒÂƒÃÂ‚ÂƒÃÂƒÂ‚ÃÂ‚Â‚ÃÂƒÂƒÃÂ‚Â‚ÃÂƒÂ‚ÃÂ‚ÂƒÃÂƒÂƒÃÂ‚ÂƒÃÂƒÂ‚ÃÂ‚ÂƒÃÂƒÂƒÃÂ‚Â‚ÃÂƒÂ‚ÃÂ‚Â‚ÃÂƒÂƒÃÂ‚ÂƒÃÂƒÂ‚ÃÂ‚Â‚ÃÂƒÂƒÃÂ‚Â‚ÃÂƒÂ‚ÃÂ‚ÂƒÃÂƒÂƒÃÂ‚ÂƒÃÂƒÂ‚ÃÂ‚ÂƒÃÂƒÂƒÃÂ‚Â‚ÃÂƒÂ‚ÃÂ‚ÂƒÃÂƒÂƒÃÂ‚ÂƒÃÂƒÂ‚ÃÂ‚Â‚ÃÂƒÂƒÃÂ‚Â‚ÃÂƒÂ‚ÃÂ‚Â‚ÃÂƒÂƒÃÂ‚ÂƒÃÂƒÂ‚ÃÂ‚ÂƒÃÂƒÂƒÃÂ‚Â‚ÃÂƒÂ‚ÃÂ‚Â‚ÃÂƒÂƒÃÂ‚ÂƒÃÂƒÂ‚ÃÂ‚Â‚ÃÂƒÂƒÃÂ‚Â‚ÃÂƒÂ‚ÃÂ‚ÂƒÃÂƒÂƒÃÂ‚ÂƒÃÂƒÂ‚ÃÂ‚ÂƒÃÂƒÂƒÃÂ‚Â‚ÃÂƒÂ‚ÃÂ‚ÂƒÃÂƒÂƒÃÂ‚ÂƒÃÂƒÂ‚ÃÂ‚Â‚ÃÂƒÂƒÃÂ‚Â‚ÃÂƒÂ‚ÃÂ‚ÂƒÃÂƒÂƒÃÂ‚ÂƒÃÂƒÂ‚ÃÂ‚ÂƒÃÂƒÂƒÃÂ‚Â‚ÃÂƒÂ‚ÃÂ‚Â‚ÃÂƒÂƒÃÂ‚ÂƒÃÂƒÂ‚ÃÂ‚Â‚ÃÂƒÂƒÃÂ‚Â‚ÃÂƒÂ‚ÃÂ‚Â‚ÃÂƒÂƒÃÂ‚ÂƒÃÂƒÂ‚ÃÂ‚ÂƒÃÂƒÂƒÃÂ‚Â‚ÃÂƒÂ‚ÃÂ‚ÂƒÃÂƒÂƒÃÂ‚ÂƒÃÂƒÂ‚ÃÂ‚Â‚ÃÂƒÂƒÃÂ‚Â‚ÃÂƒÂ‚ÃÂ‚Â‚ÃÂƒÂƒÃÂ‚ÂƒÃÂƒÂ‚ÃÂ‚ÂƒÃÂƒÂƒÃÂ‚Â‚ÃÂƒÂ‚ÃÂ‚Â‚ÃÂƒÂƒÃÂ‚ÂƒÃÂƒÂ‚ÃÂ‚Â‚ÃÂƒÂƒÃÂ‚Â‚ÃÂƒÂ‚ÃÂ‚Â­a</span>
+
+
+
+
+
+
+
+
+              </div>
+
+
+
+
+
+
+
+
+            </div>
+
+
+
+
+
+
+
+
+          </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+          <!-- Ejemplares Section -->
+
+
+
+
+
+
+
+
+          <div class="flex flex-col gap-space-sm">
+
+
+
+
+
+
+
+
+            <div class="flex items-center justify-between">
+
+
+
+
+
+
+
+
+              <div class="flex items-center gap-2">
+
+
+
+
+
+
+
+
+                <span class="font-headline-md text-headline-md text-on-surface">ÃÂƒÂƒÃÂ‚ÂƒÃÂƒÂ‚ÃÂ‚ÂƒÃÂƒÂƒÃÂ‚Â‚ÃÂƒÂ‚ÃÂ‚ÂƒÃÂƒÂƒÃÂ‚ÂƒÃÂƒÂ‚ÃÂ‚Â‚ÃÂƒÂƒÃÂ‚Â‚ÃÂƒÂ‚ÃÂ‚ÂƒÃÂƒÂƒÃÂ‚ÂƒÃÂƒÂ‚ÃÂ‚ÂƒÃÂƒÂƒÃÂ‚Â‚ÃÂƒÂ‚ÃÂ‚Â‚ÃÂƒÂƒÃÂ‚ÂƒÃÂƒÂ‚ÃÂ‚Â‚ÃÂƒÂƒÃÂ‚Â‚ÃÂƒÂ‚ÃÂ‚ÂƒÃÂƒÂƒÃÂ‚ÂƒÃÂƒÂ‚ÃÂ‚ÂƒÃÂƒÂƒÃÂ‚Â‚ÃÂƒÂ‚ÃÂ‚ÂƒÃÂƒÂƒÃÂ‚ÂƒÃÂƒÂ‚ÃÂ‚Â‚ÃÂƒÂƒÃÂ‚Â‚ÃÂƒÂ‚ÃÂ‚Â‚ÃÂƒÂƒÃÂ‚ÂƒÃÂƒÂ‚ÃÂ‚ÂƒÃÂƒÂƒÃÂ‚Â‚ÃÂƒÂ‚ÃÂ‚Â‚ÃÂƒÂƒÃÂ‚ÂƒÃÂƒÂ‚ÃÂ‚Â‚ÃÂƒÂƒÃÂ‚Â‚ÃÂƒÂ‚ÃÂ‚ÂƒÃÂƒÂƒÃÂ‚ÂƒÃÂƒÂ‚ÃÂ‚ÂƒÃÂƒÂƒÃÂ‚Â‚ÃÂƒÂ‚ÃÂ‚ÂƒÃÂƒÂƒÃÂ‚ÂƒÃÂƒÂ‚ÃÂ‚Â‚ÃÂƒÂƒÃÂ‚Â‚ÃÂƒÂ‚ÃÂ‚ÂƒÃÂƒÂƒÃÂ‚ÂƒÃÂƒÂ‚ÃÂ‚ÂƒÃÂƒÂƒÃÂ‚Â‚ÃÂƒÂ‚ÃÂ‚Â‚ÃÂƒÂƒÃÂ‚ÂƒÃÂƒÂ‚ÃÂ‚Â‚ÃÂƒÂƒÃÂ‚Â‚ÃÂƒÂ‚ÃÂ‚Â‚ÃÂƒÂƒÃÂ‚ÂƒÃÂƒÂ‚ÃÂ‚ÂƒÃÂƒÂƒÃÂ‚Â‚ÃÂƒÂ‚ÃÂ‚ÂƒÃÂƒÂƒÃÂ‚ÂƒÃÂƒÂ‚ÃÂ‚Â‚ÃÂƒÂƒÃÂ‚Â‚ÃÂƒÂ‚ÃÂ‚Â‚ÃÂƒÂƒÃÂ‚ÂƒÃÂƒÂ‚ÃÂ‚ÂƒÃÂƒÂƒÃÂ‚Â‚ÃÂƒÂ‚ÃÂ‚Â‚ÃÂƒÂƒÃÂ‚ÂƒÃÂƒÂ‚ÃÂ‚Â‚ÃÂƒÂƒÃÂ‚Â‚ÃÂƒÂ‚ÃÂ‚Âšltimos Ejemplares</span>
+
+
+
+
+
+
+
+
+                <span class="px-2 py-0.5 rounded-full bg-surface-container-high font-label-sm text-label-sm text-secondary">3</span>
+
+
+
+
+
+
+
+
+              </div>
+
+
+
+
+
+
+
+
+              <a class="font-label-md text-label-md text-primary flex items-center gap-0.5 active:opacity-80" data-navigate="reptiles" type="button">
+
+
+
+
+
+
+
+
+                Ver todos <span class="material-symbols-outlined text-[16px]">chevron_right</span>
+
+
+
+
+
+
+
+
+              </a>
+
+
+
+
+
+
+
+
+            </div>
+
+
+
+
+
+
+
+
+            <div id="homeRecentAnimals" class="home-recent-list"></div>
+
+
+
+
+
+
+
+
+          </div>
+
+
+
+
+
+
+
+
+        </section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        <!-- IA / HERPSCAN -->
+
+
+
+
+
+
+
+
+        <section class="panel scanner-panel" data-view="ia" aria-label="DiagnÃ³stico IA">
+
+
+
+
+
+
+
+
+          <div class="flex items-center gap-space-sm mb-space-md">
+
+
+
+
+
+
+
+
+            <div class="w-10 h-10 rounded-xl bg-primary/15 text-primary flex items-center justify-center">
+
+
+
+
+
+
+
+
+              <span class="material-symbols-outlined text-[22px]">auto_awesome</span>
+
+
+
+
+
+
+
+
+            </div>
+
+
+
+
+
+
+
+
+            <div>
+
+
+
+
+
+
+
+
+              <h2 class="font-headline-lg text-headline-lg text-on-surface tracking-tight">HerpScan</h2>
+
+
+
+
+
+
+
+
+              <p class="font-body-sm text-body-sm text-on-surface-variant">Analiza la salud de tu reptil con IA avanzada</p>
+
+
+
+
+
+
+
+
+            </div>
+
+
+
+
+
+
+
+
+          </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+          <div class="herpscan-upload" id="herpscanUploadZone">
+
+
+
+
+
+
+
+
+            <div class="border-2-dashed border-dashed border-dashed-2 border-primary/35 rounded-2xl p-space-lg text-center bg-surface-container/90 backdrop-blur-md">
+
+
+
+
+
+
+
+
+              <div class="herpscan-upload-icon mb-2">
+
+
+
+
+
+
+
+
+                <span class="material-symbols-outlined text-[48px] text-primary">photo_camera</span>
+
+
+
+
+
+
+
+
+              </div>
+
+
+
+
+
+
+
+
+              <p class="font-body-lg text-body-lg text-on-surface">Sube una foto para diagnosticar</p>
+
+
+
+
+
+
+
+
+              <div class="herpscan-upload-actions mt-3 flex justify-center gap-space-sm">
+
+
+
+
+
+
+
+
+                <button class="herpscan-btn flex items-center gap-1.5 px-3.5 py-2.5 rounded-xl bg-primary text-on-primary font-label-md text-label-md font-bold shadow-lg shadow-primary/20 active:scale-95 transition-transform" id="herpscanCameraBtn" type="button">
+
+
+
+
+
+
+
+
+                  <span class="material-symbols-outlined text-[18px]">camera_alt</span>
+
+
+
+
+
+
+
+
+                  Tomar foto
+
+
+
+
+
+
+
+
+                </button>
+
+
+
+
+
+
+
+
+                <button class="herpscan-btn secondary flex items-center gap-1.5 px-3.5 py-2.5 rounded-xl bg-surface-container-high/90 text-on-surface-variant font-label-md text-label-md font-semibold active:scale-95 transition-transform" id="herpscanGalleryBtn" type="button">
+
+
+
+
+
+
+
+
+                  <span class="material-symbols-outlined text-[18px]">photo_library</span>
+
+
+
+
+
+
+
+
+                  Elegir galerÃ­a
+
+
+
+
+
+
+
+
+                </button>
+
+
+
+
+
+
+
+
+              </div>
+
+
+
+
+
+
+
+
+            </div>
+
+
+
+
+
+
+
+
+          </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+          <div class="herpscan-recent mt-space-lg">
+
+
+
+
+
+
+
+
+            <h3 class="font-label-md text-label-md text-on-surface uppercase tracking-wider flex items-center gap-1.5 mb-2">
+
+
+
+
+
+
+
+
+              <span class="material-symbols-outlined text-[16px] text-primary">history</span>
+
+
+
+
+
+
+
+
+              ÃÂƒÂƒÃÂ‚ÂƒÃÂƒÂ‚ÃÂ‚ÂƒÃÂƒÂƒÃÂ‚Â‚ÃÂƒÂ‚ÃÂ‚ÂƒÃÂƒÂƒÃÂ‚ÂƒÃÂƒÂ‚ÃÂ‚Â‚ÃÂƒÂƒÃÂ‚Â‚ÃÂƒÂ‚ÃÂ‚ÂƒÃÂƒÂƒÃÂ‚ÂƒÃÂƒÂ‚ÃÂ‚ÂƒÃÂƒÂƒÃÂ‚Â‚ÃÂƒÂ‚ÃÂ‚Â‚ÃÂƒÂƒÃÂ‚ÂƒÃÂƒÂ‚ÃÂ‚Â‚ÃÂƒÂƒÃÂ‚Â‚ÃÂƒÂ‚ÃÂ‚ÂƒÃÂƒÂƒÃÂ‚ÂƒÃÂƒÂ‚ÃÂ‚ÂƒÃÂƒÂƒÃÂ‚Â‚ÃÂƒÂ‚ÃÂ‚ÂƒÃÂƒÂƒÃÂ‚ÂƒÃÂƒÂ‚ÃÂ‚Â‚ÃÂƒÂƒÃÂ‚Â‚ÃÂƒÂ‚ÃÂ‚Â‚ÃÂƒÂƒÃÂ‚ÂƒÃÂƒÂ‚ÃÂ‚ÂƒÃÂƒÂƒÃÂ‚Â‚ÃÂƒÂ‚ÃÂ‚Â‚ÃÂƒÂƒÃÂ‚ÂƒÃÂƒÂ‚ÃÂ‚Â‚ÃÂƒÂƒÃÂ‚Â‚ÃÂƒÂ‚ÃÂ‚ÂƒÃÂƒÂƒÃÂ‚ÂƒÃÂƒÂ‚ÃÂ‚ÂƒÃÂƒÂƒÃÂ‚Â‚ÃÂƒÂ‚ÃÂ‚ÂƒÃÂƒÂƒÃÂ‚ÂƒÃÂƒÂ‚ÃÂ‚Â‚ÃÂƒÂƒÃÂ‚Â‚ÃÂƒÂ‚ÃÂ‚ÂƒÃÂƒÂƒÃÂ‚ÂƒÃÂƒÂ‚ÃÂ‚ÂƒÃÂƒÂƒÃÂ‚Â‚ÃÂƒÂ‚ÃÂ‚Â‚ÃÂƒÂƒÃÂ‚ÂƒÃÂƒÂ‚ÃÂ‚Â‚ÃÂƒÂƒÃÂ‚Â‚ÃÂƒÂ‚ÃÂ‚Â‚ÃÂƒÂƒÃÂ‚ÂƒÃÂƒÂ‚ÃÂ‚ÂƒÃÂƒÂƒÃÂ‚Â‚ÃÂƒÂ‚ÃÂ‚ÂƒÃÂƒÂƒÃÂ‚ÂƒÃÂƒÂ‚ÃÂ‚Â‚ÃÂƒÂƒÃÂ‚Â‚ÃÂƒÂ‚ÃÂ‚Â‚ÃÂƒÂƒÃÂ‚ÂƒÃÂƒÂ‚ÃÂ‚ÂƒÃÂƒÂƒÃÂ‚Â‚ÃÂƒÂ‚ÃÂ‚Â‚ÃÂƒÂƒÃÂ‚ÂƒÃÂƒÂ‚ÃÂ‚Â‚ÃÂƒÂƒÃÂ‚Â‚ÃÂƒÂ‚ÃÂ‚Âšltimos anÃÂƒÂƒÃÂ‚ÂƒÃÂƒÂ‚ÃÂ‚ÂƒÃÂƒÂƒÃÂ‚Â‚ÃÂƒÂ‚ÃÂ‚ÂƒÃÂƒÂƒÃÂ‚ÂƒÃÂƒÂ‚ÃÂ‚Â‚ÃÂƒÂƒÃÂ‚Â‚ÃÂƒÂ‚ÃÂ‚ÂƒÃÂƒÂƒÃÂ‚ÂƒÃÂƒÂ‚ÃÂ‚ÂƒÃÂƒÂƒÃÂ‚Â‚ÃÂƒÂ‚ÃÂ‚Â‚ÃÂƒÂƒÃÂ‚ÂƒÃÂƒÂ‚ÃÂ‚Â‚ÃÂƒÂƒÃÂ‚Â‚ÃÂƒÂ‚ÃÂ‚ÂƒÃÂƒÂƒÃÂ‚ÂƒÃÂƒÂ‚ÃÂ‚ÂƒÃÂƒÂƒÃÂ‚Â‚ÃÂƒÂ‚ÃÂ‚ÂƒÃÂƒÂƒÃÂ‚ÂƒÃÂƒÂ‚ÃÂ‚Â‚ÃÂƒÂƒÃÂ‚Â‚ÃÂƒÂ‚ÃÂ‚Â‚ÃÂƒÂƒÃÂ‚ÂƒÃÂƒÂ‚ÃÂ‚ÂƒÃÂƒÂƒÃÂ‚Â‚ÃÂƒÂ‚ÃÂ‚Â‚ÃÂƒÂƒÃÂ‚ÂƒÃÂƒÂ‚ÃÂ‚Â‚ÃÂƒÂƒÃÂ‚Â‚ÃÂƒÂ‚ÃÂ‚ÂƒÃÂƒÂƒÃÂ‚ÂƒÃÂƒÂ‚ÃÂ‚ÂƒÃÂƒÂƒÃÂ‚Â‚ÃÂƒÂ‚ÃÂ‚ÂƒÃÂƒÂƒÃÂ‚ÂƒÃÂƒÂ‚ÃÂ‚Â‚ÃÂƒÂƒÃÂ‚Â‚ÃÂƒÂ‚ÃÂ‚ÂƒÃÂƒÂƒÃÂ‚ÂƒÃÂƒÂ‚ÃÂ‚ÂƒÃÂƒÂƒÃÂ‚Â‚ÃÂƒÂ‚ÃÂ‚Â‚ÃÂƒÂƒÃÂ‚ÂƒÃÂƒÂ‚ÃÂ‚Â‚ÃÂƒÂƒÃÂ‚Â‚ÃÂƒÂ‚ÃÂ‚Â‚ÃÂƒÂƒÃÂ‚ÂƒÃÂƒÂ‚ÃÂ‚ÂƒÃÂƒÂƒÃÂ‚Â‚ÃÂƒÂ‚ÃÂ‚ÂƒÃÂƒÂƒÃÂ‚ÂƒÃÂƒÂ‚ÃÂ‚Â‚ÃÂƒÂƒÃÂ‚Â‚ÃÂƒÂ‚ÃÂ‚Â‚ÃÂƒÂƒÃÂ‚ÂƒÃÂƒÂ‚ÃÂ‚ÂƒÃÂƒÂƒÂ¡lisis
+
+
+
+
+
+
+
+
+            </h3>
+
+
+
+
+
+
+
+
+            <div class="herpscan-analysis-list" id="herpscanAnalysisList">
+
+
+
+
+
+
+
+
+              <div class="herpscan-analysis-item flex items-center gap-3 p-3 rounded-xl bg-surface-container/90 backdrop-blur-md shadow-sm">
+
+
+
+
+
+
+
+
+                <img src="https://images.unsplash.com/photo-1517849845537-4d257902454a?auto=format&fit=crop&w=120&q=80" alt="Ziggy" class="w-12 h-12 rounded-lg object-cover" />
+
+
+
+
+
+
+
+
+                <div class="flex flex-col min-w-0">
+
+
+
+
+
+
+
+
+                  <strong class="font-label-lg text-label-lg text-on-surface truncate">Ziggy ÃÂƒÂƒÃÂ‚ÂƒÃÂƒÂ‚ÃÂ‚ÂƒÃÂƒÂƒÃÂ‚Â‚ÃÂƒÂ‚ÃÂ‚ÂƒÃÂƒÂƒÃÂ‚ÂƒÃÂƒÂ‚ÃÂ‚Â‚ÃÂƒÂƒÃÂ‚Â‚ÃÂƒÂ‚ÃÂ‚ÂƒÃÂƒÂƒÃÂ‚ÂƒÃÂƒÂ‚ÃÂ‚ÂƒÃÂƒÂƒÃÂ‚Â‚ÃÂƒÂ‚ÃÂ‚Â‚ÃÂƒÂƒÃÂ‚ÂƒÃÂƒÂ‚ÃÂ‚Â‚ÃÂƒÂƒÃÂ‚Â‚ÃÂƒÂ‚ÃÂ‚ÂƒÃÂƒÂƒÃÂ‚ÂƒÃÂƒÂ‚ÃÂ‚ÂƒÃÂƒÂƒÃÂ‚Â‚ÃÂƒÂ‚ÃÂ‚ÂƒÃÂƒÂƒÃÂ‚ÂƒÃÂƒÂ‚ÃÂ‚Â‚ÃÂƒÂƒÃÂ‚Â‚ÃÂƒÂ‚ÃÂ‚Â‚ÃÂƒÂƒÃÂ‚ÂƒÃÂƒÂ‚ÃÂ‚ÂƒÃÂƒÂƒÃÂ‚Â‚ÃÂƒÂ‚ÃÂ‚Â‚ÃÂƒÂƒÃÂ‚ÂƒÃÂƒÂ‚ÃÂ‚Â‚ÃÂƒÂƒÃÂ‚Â‚ÃÂƒÂ‚ÃÂ‚Â‚ÃÂƒÂƒÃÂ‚ÂƒÃÂƒÂ‚ÃÂ‚ÂƒÃÂƒÂƒÃÂ‚Â‚ÃÂƒÂ‚ÃÂ‚ÂƒÃÂƒÂƒÃÂ‚ÂƒÃÂƒÂ‚ÃÂ‚Â‚ÃÂƒÂƒÃÂ‚Â‚ÃÂƒÂ‚ÃÂ‚ÂƒÃÂƒÂƒÃÂ‚ÂƒÃÂƒÂ‚ÃÂ‚ÂƒÃÂƒÂƒÃÂ‚Â‚ÃÂƒÂ‚ÃÂ‚Â‚ÃÂƒÂƒÃÂ‚ÂƒÃÂƒÂ‚ÃÂ‚Â‚ÃÂƒÂƒÃÂ‚Â‚ÃÂƒÂ‚ÃÂ‚Â‚ÃÂƒÂƒÃÂ‚ÂƒÃÂƒÂ‚ÃÂ‚ÂƒÃÂƒÂƒÃÂ‚Â‚ÃÂƒÂ‚ÃÂ‚ÂƒÃÂƒÂƒÃÂ‚ÂƒÃÂƒÂ‚ÃÂ‚Â‚ÃÂƒÂƒÃÂ‚Â‚ÃÂƒÂ‚ÃÂ‚Â‚ÃÂƒÂƒÃÂ‚ÂƒÃÂƒÂ‚ÃÂ‚ÂƒÃÂƒÂƒÃÂ‚Â‚ÃÂƒÂ‚ÃÂ‚Â‚ÃÂƒÂƒÃÂ‚ÂƒÃÂƒÂ‚ÃÂ‚Â‚ÃÂƒÂƒÃÂ‚Â‚ÃÂƒÂ‚ÃÂ‚Â· Disecdisis Periorbital</strong>
+
+
+
+
+
+
+
+
+                  <small class="font-body-sm text-[11px] text-on-surface-variant">Grado I Â· hace 2 dÃ­as Â· HerpScan v4.8</small>
+
+
+
+
+
+
+
+
+                </div>
+
+
+
+
+
+
+
+
+                <span class="material-symbols-outlined text-outline text-[20px] ml-auto">chevron_right</span>
+
+
+
+
+
+
+
+
+              </div>
+
+
+
+
+
+
+
+
+            </div>
+
+
+
+
+
+
+
+
+          </div>
+
+
+
+
+
+
+
+
+        </section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        <section class="panel collection-panel" data-view="reptiles" aria-label="ColecciÃ³n de reptiles">
+
+
+
+
+
+
+
+
+          <!-- Top Collection Header & Actions -->
+
+
+
+
+
+
+
+
+          <div class="flex flex-col space-y-space-sm">
+
+
+
+
+
+
+
+
+            <div class="flex items-center justify-between">
+
+
+
+
+
+
+
+
+              <div class="flex items-center gap-1.5">
+
+
+
+
+
+
+
+
+                <span class="material-symbols-outlined text-primary text-[18px]">potted_plant</span>
+
+
+
+
+
+
+
+
+                <span class="font-label-sm text-label-sm uppercase tracking-wider text-on-surface-variant font-bold">ColecciÃ³n Bioactiva</span>
+
+
+
+
+
+
+
+
+              </div>
+
+
+
+
+
+
+
+
+              <!-- Microclimate Global Live Badge -->
+
+
+
+
+
+
+
+
+              <div class="flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-surface-container-high/90 shadow-sm backdrop-blur-md">
+
+
+
+
+
+
+
+
+                <span class="relative flex h-2 w-2">
+
+
+
+
+
+
+
+
+                  <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-primary opacity-75"></span>
+
+
+
+
+
+
+
+
+                  <span class="relative inline-flex rounded-full h-2 w-2 bg-primary"></span>
+
+
+
+
+
+
+
+
+                </span>
+
+
+
+
+
+
+
+
+                <span class="font-label-sm text-[10px] text-primary font-bold">Microclima Estable</span>
+
+
+
+
+
+
+
+
+              </div>
+
+
+
+
+
+
+
+
+            </div>
+
+
+
+
+
+
+
+
+            <div class="flex items-center justify-between gap-space-sm">
+
+
+
+
+
+
+
+
+              <div>
+
+
+
+
+
+
+
+
+                <h2 class="font-headline-xl-mobile text-headline-xl-mobile text-on-surface tracking-tight">Reptil Room</h2>
+
+
+
+
+
+
+
+
+                <p class="font-body-sm text-body-sm text-on-surface-variant flex items-center gap-1">
+
+
+
+
+
+
+
+
+                  <span class="">Promedio:</span>
+
+
+
+
+
+
+
+
+                  <span class="text-on-surface font-semibold" id="avgTemp">30.5ÃÂƒÂƒÃÂ‚ÂƒÃÂƒÂ‚ÃÂ‚ÂƒÃÂƒÂƒÃÂ‚Â‚ÃÂƒÂ‚ÃÂ‚ÂƒÃÂƒÂƒÃÂ‚ÂƒÃÂƒÂ‚ÃÂ‚Â‚ÃÂƒÂƒÃÂ‚Â‚ÃÂƒÂ‚ÃÂ‚ÂƒÃÂƒÂƒÃÂ‚ÂƒÃÂƒÂ‚ÃÂ‚ÂƒÃÂƒÂƒÃÂ‚Â‚ÃÂƒÂ‚ÃÂ‚Â‚ÃÂƒÂƒÃÂ‚ÂƒÃÂƒÂ‚ÃÂ‚Â‚ÃÂƒÂƒÃÂ‚Â‚ÃÂƒÂ‚ÃÂ‚ÂƒÃÂƒÂƒÃÂ‚ÂƒÃÂƒÂ‚ÃÂ‚ÂƒÃÂƒÂƒÃÂ‚Â‚ÃÂƒÂ‚ÃÂ‚ÂƒÃÂƒÂƒÃÂ‚ÂƒÃÂƒÂ‚ÃÂ‚Â‚ÃÂƒÂƒÃÂ‚Â‚ÃÂƒÂ‚ÃÂ‚Â‚ÃÂƒÂƒÃÂ‚ÂƒÃÂƒÂ‚ÃÂ‚ÂƒÃÂƒÂƒÃÂ‚Â‚ÃÂƒÂ‚ÃÂ‚Â‚ÃÂƒÂƒÃÂ‚ÂƒÃÂƒÂ‚ÃÂ‚Â‚ÃÂƒÂƒÃÂ‚Â‚ÃÂƒÂ‚ÃÂ‚Â‚ÃÂƒÂƒÃÂ‚ÂƒÃÂƒÂ‚ÃÂ‚ÂƒÃÂƒÂƒÃÂ‚Â‚ÃÂƒÂ‚ÃÂ‚ÂƒÃÂƒÂƒÃÂ‚ÂƒÃÂƒÂ‚ÃÂ‚Â‚ÃÂƒÂƒÃÂ‚Â‚ÃÂƒÂ‚ÃÂ‚ÂƒÃÂƒÂƒÃÂ‚ÂƒÃÂƒÂ‚ÃÂ‚ÂƒÃÂƒÂƒÃÂ‚Â‚ÃÂƒÂ‚ÃÂ‚Â‚ÃÂƒÂƒÃÂ‚ÂƒÃÂƒÂ‚ÃÂ‚Â‚ÃÂƒÂƒÃÂ‚Â‚ÃÂƒÂ‚ÃÂ‚Â‚ÃÂƒÂƒÃÂ‚ÂƒÃÂƒÂ‚ÃÂ‚ÂƒÃÂƒÂƒÃÂ‚Â‚ÃÂƒÂ‚ÃÂ‚ÂƒÃÂƒÂƒÃÂ‚ÂƒÃÂƒÂ‚ÃÂ‚Â‚ÃÂƒÂƒÃÂ‚Â‚ÃÂƒÂ‚ÃÂ‚Â‚ÃÂƒÂƒÃÂ‚ÂƒÃÂƒÂ‚ÃÂ‚ÂƒÃÂƒÂƒÃÂ‚Â‚ÃÂƒÂ‚ÃÂ‚Â‚ÃÂƒÂƒÃÂ‚ÂƒÃÂƒÂ‚ÃÂ‚Â‚ÃÂƒÂƒÃÂ‚Â‚ÃÂƒÂ‚ÃÂ‚Â°C</span>
+
+
+
+
+
+
+
+
+                  <span class="text-outline-variant">ÃÂƒÂƒÃÂ‚ÂƒÃÂƒÂ‚ÃÂ‚ÂƒÃÂƒÂƒÃÂ‚Â‚ÃÂƒÂ‚ÃÂ‚ÂƒÃÂƒÂƒÃÂ‚ÂƒÃÂƒÂ‚ÃÂ‚Â‚ÃÂƒÂƒÃÂ‚Â‚ÃÂƒÂ‚ÃÂ‚ÂƒÃÂƒÂƒÃÂ‚ÂƒÃÂƒÂ‚ÃÂ‚ÂƒÃÂƒÂƒÃÂ‚Â‚ÃÂƒÂ‚ÃÂ‚Â‚ÃÂƒÂƒÃÂ‚ÂƒÃÂƒÂ‚ÃÂ‚Â‚ÃÂƒÂƒÃÂ‚Â‚ÃÂƒÂ‚ÃÂ‚ÂƒÃÂƒÂƒÃÂ‚ÂƒÃÂƒÂ‚ÃÂ‚ÂƒÃÂƒÂƒÃÂ‚Â‚ÃÂƒÂ‚ÃÂ‚ÂƒÃÂƒÂƒÃÂ‚ÂƒÃÂƒÂ‚ÃÂ‚Â‚ÃÂƒÂƒÃÂ‚Â‚ÃÂƒÂ‚ÃÂ‚Â‚ÃÂƒÂƒÃÂ‚ÂƒÃÂƒÂ‚ÃÂ‚ÂƒÃÂƒÂƒÃÂ‚Â‚ÃÂƒÂ‚ÃÂ‚Â‚ÃÂƒÂƒÃÂ‚ÂƒÃÂƒÂ‚ÃÂ‚Â‚ÃÂƒÂƒÃÂ‚Â‚ÃÂƒÂ‚ÃÂ‚Â¢ÃÂƒÂƒÃÂ‚ÂƒÃÂƒÂ‚ÃÂ‚ÂƒÃÂƒÂƒÃÂ‚Â‚ÃÂƒÂ‚ÃÂ‚ÂƒÃÂƒÂƒÃÂ‚ÂƒÃÂƒÂ‚ÃÂ‚Â‚ÃÂƒÂƒÃÂ‚Â‚ÃÂƒÂ‚ÃÂ‚ÂƒÃÂƒÂƒÃÂ‚ÂƒÃÂƒÂ‚ÃÂ‚ÂƒÃÂƒÂƒÃÂ‚Â‚ÃÂƒÂ‚ÃÂ‚Â‚ÃÂƒÂƒÃÂ‚ÂƒÃÂƒÂ‚ÃÂ‚Â‚ÃÂƒÂƒÃÂ‚Â‚ÃÂƒÂ‚ÃÂ‚Â‚ÃÂƒÂƒÃÂ‚ÂƒÃÂƒÂ‚ÃÂ‚ÂƒÃÂƒÂƒÃÂ‚Â‚ÃÂƒÂ‚ÃÂ‚ÂƒÃÂƒÂƒÃÂ‚ÂƒÃÂƒÂ‚ÃÂ‚Â‚ÃÂƒÂƒÃÂ‚Â‚ÃÂƒÂ‚ÃÂ‚Â‚ÃÂƒÂƒÃÂ‚ÂƒÃÂƒÂ‚ÃÂ‚ÂƒÃÂƒÂƒÃÂ‚Â‚ÃÂƒÂ‚ÃÂ‚Â‚ÃÂƒÂƒÃÂ‚ÂƒÃÂƒÂ‚ÃÂ‚Â‚ÃÂƒÂƒÃÂ‚Â‚ÃÂƒÂ‚ÃÂ‚Â€ÃÂƒÂƒÃÂ‚ÂƒÃÂƒÂ‚ÃÂ‚ÂƒÃÂƒÂƒÃÂ‚Â‚ÃÂƒÂ‚ÃÂ‚ÂƒÃÂƒÂƒÃÂ‚ÂƒÃÂƒÂ‚ÃÂ‚Â‚ÃÂƒÂƒÃÂ‚Â‚ÃÂƒÂ‚ÃÂ‚ÂƒÃÂƒÂƒÃÂ‚ÂƒÃÂƒÂ‚ÃÂ‚ÂƒÃÂƒÂƒÃÂ‚Â‚ÃÂƒÂ‚ÃÂ‚Â‚ÃÂƒÂƒÃÂ‚ÂƒÃÂƒÂ‚ÃÂ‚Â‚ÃÂƒÂƒÃÂ‚Â‚ÃÂƒÂ‚ÃÂ‚Â‚ÃÂƒÂƒÃÂ‚ÂƒÃÂƒÂ‚ÃÂ‚ÂƒÃÂƒÂƒÃÂ‚Â‚ÃÂƒÂ‚ÃÂ‚ÂƒÃÂƒÂƒÃÂ‚ÂƒÃÂƒÂ‚ÃÂ‚Â‚ÃÂƒÂƒÃÂ‚Â‚ÃÂƒÂ‚ÃÂ‚Â‚ÃÂƒÂƒÃÂ‚ÂƒÃÂƒÂ‚ÃÂ‚ÂƒÃÂƒÂƒÃÂ‚Â‚ÃÂƒÂ‚ÃÂ‚Â‚ÃÂƒÂƒÃÂ‚ÂƒÃÂƒÂ‚ÃÂ‚Â‚ÃÂƒÂƒÃÂ‚Â‚ÃÂƒÂ‚ÃÂ‚Â¢</span>
+
+
+
+
+
+
+
+
+                  <span class="text-on-surface font-semibold" id="avgHumidity">52% HR</span>
+
+
+
+
+
+
+
+
+                  <span class="material-symbols-outlined text-[14px] text-primary ml-0.5">check_circle</span>
+
+
+
+
+
+
+
+
+                </p>
+
+
+
+
+
+
+
+
+              </div>
+
+
+
+
+
+
+
+
+              <!-- Add Button -->
+
+
+
+
+
+
+
+
+              <button class="flex items-center gap-1.5 px-3.5 py-2.5 rounded-xl bg-primary text-on-primary font-label-md text-label-md font-bold shadow-lg shadow-primary/20 active:scale-95 transition-transform duration-150" id="addReptileButton">
+
+
+
+
+
+
+
+
+                <span class="material-symbols-outlined text-[18px]">add</span>
+
+
+
+
+
+
+
+
+                <span class="">AÃÂƒÂƒÃÂ‚ÂƒÃÂƒÂ‚ÃÂ‚ÂƒÃÂƒÂƒÃÂ‚Â‚ÃÂƒÂ‚ÃÂ‚ÂƒÃÂƒÂƒÃÂ‚ÂƒÃÂƒÂ‚ÃÂ‚Â‚ÃÂƒÂƒÃÂ‚Â‚ÃÂƒÂ‚ÃÂ‚ÂƒÃÂƒÂƒÃÂ‚ÂƒÃÂƒÂ‚ÃÂ‚ÂƒÃÂƒÂƒÃÂ‚Â‚ÃÂƒÂ‚ÃÂ‚Â‚ÃÂƒÂƒÃÂ‚ÂƒÃÂƒÂ‚ÃÂ‚Â‚ÃÂƒÂƒÃÂ‚Â‚ÃÂƒÂ‚ÃÂ‚ÂƒÃÂƒÂƒÃÂ‚ÂƒÃÂƒÂ‚ÃÂ‚ÂƒÃÂƒÂƒÃÂ‚Â‚ÃÂƒÂ‚ÃÂ‚ÂƒÃÂƒÂƒÃÂ‚ÂƒÃÂƒÂ‚ÃÂ‚Â‚ÃÂƒÂƒÃÂ‚Â‚ÃÂƒÂ‚ÃÂ‚Â‚ÃÂƒÂƒÃÂ‚ÂƒÃÂƒÂ‚ÃÂ‚ÂƒÃÂƒÂƒÃÂ‚Â‚ÃÂƒÂ‚ÃÂ‚Â‚ÃÂƒÂƒÃÂ‚ÂƒÃÂƒÂ‚ÃÂ‚Â‚ÃÂƒÂƒÃÂ‚Â‚ÃÂƒÂ‚ÃÂ‚ÂƒÃÂƒÂƒÃÂ‚ÂƒÃÂƒÂ‚ÃÂ‚ÂƒÃÂƒÂƒÃÂ‚Â‚ÃÂƒÂ‚ÃÂ‚ÂƒÃÂƒÂƒÃÂ‚ÂƒÃÂƒÂ‚ÃÂ‚Â‚ÃÂƒÂƒÃÂ‚Â‚ÃÂƒÂ‚ÃÂ‚ÂƒÃÂƒÂƒÃÂ‚ÂƒÃÂƒÂ‚ÃÂ‚ÂƒÃÂƒÂƒÃÂ‚Â‚ÃÂƒÂ‚ÃÂ‚Â‚ÃÂƒÂƒÃÂ‚ÂƒÃÂƒÂ‚ÃÂ‚Â‚ÃÂƒÂƒÃÂ‚Â‚ÃÂƒÂ‚ÃÂ‚Â‚ÃÂƒÂƒÃÂ‚ÂƒÃÂƒÂ‚ÃÂ‚ÂƒÃÂƒÂƒÃÂ‚Â‚ÃÂƒÂ‚ÃÂ‚ÂƒÃÂƒÂƒÃÂ‚ÂƒÃÂƒÂ‚ÃÂ‚Â‚ÃÂƒÂƒÃÂ‚Â‚ÃÂƒÂ‚ÃÂ‚Â‚ÃÂƒÂƒÃÂ‚ÂƒÃÂƒÂ‚ÃÂ‚ÂƒÃÂƒÂƒÃÂ‚Â‚ÃÂƒÂ‚ÃÂ‚Â‚ÃÂƒÂƒÃÂ‚ÂƒÃÂƒÂ‚ÃÂ‚Â‚ÃÂƒÂƒÃÂ‚Â‚ÃÂƒÂ‚ÃÂ‚Â±adir</span>
+
+
+
+
+
+
+
+
+              </button>
+
+
+
+
+
+
+
+
+            </div>
+
+
+
+
+
+
+
+
+          </div>
+
+
+
+
+
+
+
+
+          <!-- Search Bar with Bio-Glass Styling -->
+
+
+
+
+
+
+
+
+          <div class="relative flex items-center mt-3">
+
+
+
+
+
+
+
+
+            <div class="absolute left-3.5 flex items-center pointer-events-none text-primary">
+
+
+
+
+
+
+
+
+              <span class="material-symbols-outlined text-[20px]">search</span>
+
+
+
+
+
+
+
+
+            </div>
+
+
+
+
+
+
+
+
+            <input class="w-full pl-10 pr-10 py-3 rounded-xl bg-surface-container/90 text-on-surface placeholder:text-outline text-body-md font-body-md outline-none shadow-sm transition-all focus:bg-surface-container-high" type="text" placeholder="Buscar por nombre, especie o terrario..." aria-label="Buscar en la colecciÃÂƒÂƒÃÂ‚ÂƒÃÂƒÂ‚ÃÂ‚ÂƒÃÂƒÂƒÃÂ‚Â‚ÃÂƒÂ‚ÃÂ‚ÂƒÃÂƒÂƒÃÂ‚ÂƒÃÂƒÂ‚ÃÂ‚Â‚ÃÂƒÂƒÃÂ‚Â‚ÃÂƒÂ‚ÃÂ‚ÂƒÃÂƒÂƒÃÂ‚ÂƒÃÂƒÂ‚ÃÂ‚ÂƒÃÂƒÂƒÃÂ‚Â‚ÃÂƒÂ‚ÃÂ‚Â‚ÃÂƒÂƒÃÂ‚ÂƒÃÂƒÂ‚ÃÂ‚Â‚ÃÂƒÂƒÃÂ‚Â‚ÃÂƒÂ‚ÃÂ‚ÂƒÃÂƒÂƒÃÂ‚ÂƒÃÂƒÂ‚ÃÂ‚ÂƒÃÂƒÂƒÃÂ‚Â‚ÃÂƒÂ‚ÃÂ‚ÂƒÃÂƒÂƒÃÂ‚ÂƒÃÂƒÂ‚ÃÂ‚Â‚ÃÂƒÂƒÃÂ‚Â‚ÃÂƒÂ‚ÃÂ‚Â‚ÃÂƒÂƒÃÂ‚ÂƒÃÂƒÂ‚ÃÂ‚ÂƒÃÂƒÂƒÃÂ‚Â‚ÃÂƒÂ‚ÃÂ‚Â‚ÃÂƒÂƒÃÂ‚ÂƒÃÂƒÂ‚ÃÂ‚Â‚ÃÂƒÂƒÃÂ‚Â‚ÃÂƒÂ‚ÃÂ‚ÂƒÃÂƒÂƒÃÂ‚ÂƒÃÂƒÂ‚ÃÂ‚ÂƒÃÂƒÂƒÃÂ‚Â‚ÃÂƒÂ‚ÃÂ‚ÂƒÃÂƒÂƒÃÂ‚ÂƒÃÂƒÂ‚ÃÂ‚Â‚ÃÂƒÂƒÃÂ‚Â‚ÃÂƒÂ‚ÃÂ‚ÂƒÃÂƒÂƒÃÂ‚ÂƒÃÂƒÂ‚ÃÂ‚ÂƒÃÂƒÂƒÃÂ‚Â‚ÃÂƒÂ‚ÃÂ‚Â‚ÃÂƒÂƒÃÂ‚ÂƒÃÂƒÂ‚ÃÂ‚Â‚ÃÂƒÂƒÃÂ‚Â‚ÃÂƒÂ‚ÃÂ‚Â‚ÃÂƒÂƒÃÂ‚ÂƒÃÂƒÂ‚ÃÂ‚ÂƒÃÂƒÂƒÃÂ‚Â‚ÃÂƒÂ‚ÃÂ‚ÂƒÃÂƒÂƒÃÂ‚ÂƒÃÂƒÂ‚ÃÂ‚Â‚ÃÂƒÂƒÃÂ‚Â‚ÃÂƒÂ‚ÃÂ‚Â‚ÃÂƒÂƒÃÂ‚ÂƒÃÂƒÂ‚ÃÂ‚ÂƒÃÂƒÂƒÃÂ‚Â‚ÃÂƒÂ‚ÃÂ‚Â‚ÃÂƒÂƒÃÂ‚ÂƒÃÂƒÂ‚ÃÂ‚Â‚ÃÂƒÂƒÃÂ‚Â‚ÃÂƒÂ‚ÃÂ‚ÂƒÃÂƒÂƒÃÂ‚ÂƒÃÂƒÂ‚ÃÂ‚ÂƒÃÂƒÂƒÃÂ‚Â‚ÃÂƒÂ‚ÃÂ‚ÂƒÃÂƒÂƒÃÂ‚ÂƒÃÂƒÂ‚ÃÂ‚Â‚ÃÂƒÂƒÃÂ‚Â‚ÃÂƒÂ‚ÃÂ‚ÂƒÃÂƒÂƒÃÂ‚ÂƒÃÂƒÂ‚ÃÂ‚ÂƒÃÂƒÂƒÃÂ‚Â‚ÃÂƒÂ‚ÃÂ‚Â‚ÃÂƒÂƒÃÂ‚ÂƒÃÂƒÂ‚ÃÂ‚Â‚ÃÂƒÂƒÃÂ‚Â‚ÃÂƒÂ‚ÃÂ‚ÂƒÃÂƒÂƒÃÂ‚ÂƒÃÂƒÂ‚ÃÂ‚ÂƒÃÂƒÂƒÃÂ‚Â‚ÃÂƒÂ‚ÃÂ‚ÂƒÃÂƒÂƒÃÂ‚ÂƒÃÂƒÂ‚ÃÂ‚Â‚ÃÂƒÂƒÃÂ‚Â‚ÃÂƒÂ‚ÃÂ‚Â‚ÃÂƒÂƒÃÂ‚ÂƒÃÂƒÂ‚ÃÂ‚ÂƒÃÂƒÂƒÃÂ‚Â‚ÃÂƒÂ‚ÃÂ‚Â‚ÃÂƒÂƒÃÂ‚ÂƒÃÂƒÂ‚ÃÂ‚Â‚ÃÂƒÂƒÃÂ‚Â‚ÃÂƒÂ‚ÃÂ‚Â‚ÃÂƒÂƒÃÂ‚ÂƒÃÂƒÂ‚ÃÂ‚ÂƒÃÂƒÂƒÃÂ‚Â‚ÃÂƒÂ‚ÃÂ‚ÂƒÃÂƒÂƒÃÂ‚ÂƒÃÂƒÂ‚ÃÂ‚Â‚ÃÂƒÂƒÃÂ‚Â‚ÃÂƒÂ‚ÃÂ‚ÂƒÃÂƒÂƒÃÂ‚ÂƒÃÂƒÂ‚ÃÂ‚ÂƒÃÂƒÂƒÃÂ‚Â‚ÃÂƒÂ‚ÃÂ‚Â‚ÃÂƒÂƒÃÂ‚ÂƒÃÂƒÂ‚ÃÂ‚Â‚ÃÂƒÂƒÃÂ‚Â‚ÃÂƒÂ‚ÃÂ‚Â‚ÃÂƒÂƒÃÂ‚ÂƒÃÂƒÂ‚ÃÂ‚ÂƒÃÂƒÂƒÃÂ‚Â‚ÃÂƒÂ‚ÃÂ‚ÂƒÃÂƒÂƒÃÂ‚ÂƒÃÂƒÂ‚ÃÂ‚Â‚ÃÂƒÂƒÃÂ‚Â‚ÃÂƒÂ‚ÃÂ‚Â‚ÃÂƒÂƒÃÂ‚ÂƒÃÂƒÂ‚ÃÂ‚ÂƒÃÂƒÂƒÃÂ‚Â‚ÃÂƒÂ‚ÃÂ‚Â‚ÃÂƒÂƒÃÂ‚ÂƒÃÂƒÂ‚ÃÂ‚Â‚ÃÂƒÂƒÃÂ‚Â‚ÃÂƒÂ‚ÃÂ‚Â³n" id="specimenSearchInput" />
+
+
+
+
+
+
+
+
+            <div class="absolute right-3 flex items-center">
+
+
+
+
+
+
+
+
+              <button aria-label="Escanear QR terrario" class="w-7 h-7 rounded-lg bg-surface-container-high text-on-surface-variant flex items-center justify-center active:scale-90 transition-transform" id="openCameraButton">
+
+
+
+
+
+
+
+
+                <span class="material-symbols-outlined text-[17px]">qr_code_scanner</span>
+
+
+
+
+
+
+
+
+              </button>
+
+
+
+
+
+
+
+
+            </div>
+
+
+
+
+
+
+
+
+          </div>
+
+
+
+
+
+
+
+
+          <!-- Filter Chips Carousel -->
+
+
+
+
+
+
+
+
+          <div class="flex items-center gap-2 overflow-x-auto pb-1 -mx-gutter px-gutter mt-3" style="scrollbar-width: none;" aria-label="Filtros de colecciÃÂƒÂƒÃÂ‚ÂƒÃÂƒÂ‚ÃÂ‚ÂƒÃÂƒÂƒÃÂ‚Â‚ÃÂƒÂ‚ÃÂ‚ÂƒÃÂƒÂƒÃÂ‚ÂƒÃÂƒÂ‚ÃÂ‚Â‚ÃÂƒÂƒÃÂ‚Â‚ÃÂƒÂ‚ÃÂ‚ÂƒÃÂƒÂƒÃÂ‚ÂƒÃÂƒÂ‚ÃÂ‚ÂƒÃÂƒÂƒÃÂ‚Â‚ÃÂƒÂ‚ÃÂ‚Â‚ÃÂƒÂƒÃÂ‚ÂƒÃÂƒÂ‚ÃÂ‚Â‚ÃÂƒÂƒÃÂ‚Â‚ÃÂƒÂ‚ÃÂ‚ÂƒÃÂƒÂƒÃÂ‚ÂƒÃÂƒÂ‚ÃÂ‚ÂƒÃÂƒÂƒÃÂ‚Â‚ÃÂƒÂ‚ÃÂ‚ÂƒÃÂƒÂƒÃÂ‚ÂƒÃÂƒÂ‚ÃÂ‚Â‚ÃÂƒÂƒÃÂ‚Â‚ÃÂƒÂ‚ÃÂ‚Â‚ÃÂƒÂƒÃÂ‚ÂƒÃÂƒÂ‚ÃÂ‚ÂƒÃÂƒÂƒÃÂ‚Â‚ÃÂƒÂ‚ÃÂ‚Â‚ÃÂƒÂƒÃÂ‚ÂƒÃÂƒÂ‚ÃÂ‚Â‚ÃÂƒÂƒÃÂ‚Â‚ÃÂƒÂ‚ÃÂ‚ÂƒÃÂƒÂƒÃÂ‚ÂƒÃÂƒÂ‚ÃÂ‚ÂƒÃÂƒÂƒÃÂ‚Â‚ÃÂƒÂ‚ÃÂ‚ÂƒÃÂƒÂƒÃÂ‚ÂƒÃÂƒÂ‚ÃÂ‚Â‚ÃÂƒÂƒÃÂ‚Â‚ÃÂƒÂ‚ÃÂ‚ÂƒÃÂƒÂƒÃÂ‚ÂƒÃÂƒÂ‚ÃÂ‚ÂƒÃÂƒÂƒÃÂ‚Â‚ÃÂƒÂ‚ÃÂ‚Â‚ÃÂƒÂƒÃÂ‚ÂƒÃÂƒÂ‚ÃÂ‚Â‚ÃÂƒÂƒÃÂ‚Â‚ÃÂƒÂ‚ÃÂ‚Â‚ÃÂƒÂƒÃÂ‚ÂƒÃÂƒÂ‚ÃÂ‚ÂƒÃÂƒÂƒÃÂ‚Â‚ÃÂƒÂ‚ÃÂ‚ÂƒÃÂƒÂƒÃÂ‚ÂƒÃÂƒÂ‚ÃÂ‚Â‚ÃÂƒÂƒÃÂ‚Â‚ÃÂƒÂ‚ÃÂ‚Â‚ÃÂƒÂƒÃÂ‚ÂƒÃÂƒÂ‚ÃÂ‚ÂƒÃÂƒÂƒÃÂ‚Â‚ÃÂƒÂ‚ÃÂ‚Â‚ÃÂƒÂƒÃÂ‚ÂƒÃÂƒÂ‚ÃÂ‚Â‚ÃÂƒÂƒÃÂ‚Â‚ÃÂƒÂ‚ÃÂ‚ÂƒÃÂƒÂƒÃÂ‚ÂƒÃÂƒÂ‚ÃÂ‚ÂƒÃÂƒÂƒÃÂ‚Â‚ÃÂƒÂ‚ÃÂ‚ÂƒÃÂƒÂƒÃÂ‚ÂƒÃÂƒÂ‚ÃÂ‚Â‚ÃÂƒÂƒÃÂ‚Â‚ÃÂƒÂ‚ÃÂ‚ÂƒÃÂƒÂƒÃÂ‚ÂƒÃÂƒÂ‚ÃÂ‚ÂƒÃÂƒÂƒÃÂ‚Â‚ÃÂƒÂ‚ÃÂ‚Â‚ÃÂƒÂƒÃÂ‚ÂƒÃÂƒÂ‚ÃÂ‚Â‚ÃÂƒÂƒÃÂ‚Â‚ÃÂƒÂ‚ÃÂ‚ÂƒÃÂƒÂƒÃÂ‚ÂƒÃÂƒÂ‚ÃÂ‚ÂƒÃÂƒÂƒÃÂ‚Â‚ÃÂƒÂ‚ÃÂ‚ÂƒÃÂƒÂƒÃÂ‚ÂƒÃÂƒÂ‚ÃÂ‚Â‚ÃÂƒÂƒÃÂ‚Â‚ÃÂƒÂ‚ÃÂ‚Â‚ÃÂƒÂƒÃÂ‚ÂƒÃÂƒÂ‚ÃÂ‚ÂƒÃÂƒÂƒÃÂ‚Â‚ÃÂƒÂ‚ÃÂ‚Â‚ÃÂƒÂƒÃÂ‚ÂƒÃÂƒÂ‚ÃÂ‚Â‚ÃÂƒÂƒÃÂ‚Â‚ÃÂƒÂ‚ÃÂ‚Â‚ÃÂƒÂƒÃÂ‚ÂƒÃÂƒÂ‚ÃÂ‚ÂƒÃÂƒÂƒÃÂ‚Â‚ÃÂƒÂ‚ÃÂ‚ÂƒÃÂƒÂƒÃÂ‚ÂƒÃÂƒÂ‚ÃÂ‚Â‚ÃÂƒÂƒÃÂ‚Â‚ÃÂƒÂ‚ÃÂ‚ÂƒÃÂƒÂƒÃÂ‚ÂƒÃÂƒÂ‚ÃÂ‚ÂƒÃÂƒÂƒÃÂ‚Â‚ÃÂƒÂ‚ÃÂ‚Â‚ÃÂƒÂƒÃÂ‚ÂƒÃÂƒÂ‚ÃÂ‚Â‚ÃÂƒÂƒÃÂ‚Â‚ÃÂƒÂ‚ÃÂ‚Â‚ÃÂƒÂƒÃÂ‚ÂƒÃÂƒÂ‚ÃÂ‚ÂƒÃÂƒÂƒÃÂ‚Â‚ÃÂƒÂ‚ÃÂ‚ÂƒÃÂƒÂƒÃÂ‚ÂƒÃÂƒÂ‚ÃÂ‚Â‚ÃÂƒÂƒÃÂ‚Â‚ÃÂƒÂ‚ÃÂ‚Â‚ÃÂƒÂƒÃÂ‚ÂƒÃÂƒÂ‚ÃÂ‚ÂƒÃÂƒÂƒÃÂ‚Â‚ÃÂƒÂ‚ÃÂ‚Â‚ÃÂƒÂƒÃÂ‚ÂƒÃÂƒÂ‚ÃÂ‚Â‚ÃÂƒÂƒÃÂ‚Â‚ÃÂƒÂ‚ÃÂ‚Â³n">
+
+
+
+
+
+
+
+
+            <button class="filter-chip active flex items-center gap-1.5 px-3.5 py-1.5 rounded-full bg-primary text-on-primary font-label-md text-label-md font-bold shrink-0 shadow-md shadow-primary/20 transition-all" id="filterAll">
+
+
+
+
+
+
+
+
+              <span class="">Todos</span>
+
+
+
+
+
+
+
+
+              <span class="px-1.5 py-0.2 rounded-full bg-on-primary/20 text-on-primary text-[10px]" id="filterAllCount">6</span>
+
+
+
+
+
+
+
+
+            </button>
+
+
+
+
+
+
+
+
+            <button class="filter-chip flex items-center gap-1.5 px-3.5 py-1.5 rounded-full bg-surface-container-high/90 text-on-surface-variant font-label-md text-label-md font-semibold shrink-0 active:bg-surface-container-highest transition-all" id="filterReptiles">
+
+
+
+
+
+
+
+
+              <span class="">Reptiles</span>
+
+
+
+
+
+
+
+
+              <span class="px-1.5 py-0.2 rounded-full bg-surface-variant text-on-surface text-[10px]" id="filterReptilesCount">4</span>
+
+
+
+
+
+
+
+
+            </button>
+
+
+
+
+
+
+
+
+            <button class="filter-chip flex items-center gap-1.5 px-3.5 py-1.5 rounded-full bg-surface-container-high/90 text-on-surface-variant font-label-md text-label-md font-semibold shrink-0 active:bg-surface-container-highest transition-all" id="filterAmphibians">
+
+
+
+
+
+
+
+
+              <span class="">Anfibios</span>
+
+
+
+
+
+
+
+
+              <span class="px-1.5 py-0.2 rounded-full bg-surface-variant text-on-surface text-[10px]" id="filterAmphibiansCount">2</span>
+
+
+
+
+
+
+
+
+            </button>
+
+
+
+
+
+
+
+
+            <button class="filter-chip flex items-center gap-1.5 px-3.5 py-1.5 rounded-full bg-surface-container-high/90 text-tertiary font-label-md text-label-md font-semibold shrink-0 active:bg-surface-container-highest transition-all" id="filterNeedsAttention">
+
+
+
+
+
+
+
+
+              <span class="material-symbols-outlined text-[14px]">warning</span>
+
+
+
+
+
+
+
+
+              <span class="">AtenciÃ³nÃ³n</span>
+
+
+
+
+
+
+
+
+              <span class="px-1.5 py-0.2 rounded-full bg-tertiary/20 text-tertiary text-[10px]" id="filterNeedsAttentionCount">0</span>
+
+
+
+
+
+
+
+
+            </button>
+
+
+
+
+
+
+
+
+          </div>
+
+
+
+
+
+
+
+
+          <!-- Quick Telemetry Row (3 Compact Cards) -->
+
+
+
+
+
+
+
+
+          <div class="grid grid-cols-3 gap-2 mt-3">
+
+
+
+
+
+
+
+
+            <!-- Metric 1 -->
+
+
+
+
+
+
+
+
+            <div class="flex flex-col p-3 rounded-xl bg-surface-container/90 shadow-sm backdrop-blur-md relative overflow-hidden">
+
+
+
+
+
+
+
+
+              <div class="flex items-center justify-between mb-1">
+
+
+
+
+
+
+
+
+                <span class="material-symbols-outlined text-primary text-[18px]">pets</span>
+
+
+
+
+
+
+
+
+                <span class="w-1.5 h-1.5 rounded-full bg-primary"></span>
+
+
+
+
+
+
+
+
+              </div>
+
+
+
+
+
+
+
+
+              <span class="font-numeric-metric text-numeric-metric text-on-surface font-headline-md leading-none" id="activeSpecimensCount">6</span>
+
+
+
+
+
+
+
+
+              <span class="font-label-sm text-[10px] text-on-surface-variant mt-1 leading-tight">Ejemplares Activos</span>
+
+
+
+
+
+
+
+
+            </div>
+
+
+
+
+
+
+
+
+            <!-- Metric 2 -->
+
+
+
+
+
+
+
+
+            <div class="flex flex-col p-3 rounded-xl bg-surface-container/90 shadow-sm backdrop-blur-md relative overflow-hidden">
+
+
+
+
+
+
+
+
+              <div class="flex items-center justify-between mb-1">
+
+
+
+
+
+
+
+
+                <span class="material-symbols-outlined text-tertiary text-[18px]">restaurant</span>
+
+
+
+
+
+
+
+
+                <span class="w-1.5 h-1.5 rounded-full bg-tertiary animate-pulse"></span>
+
+
+
+
+
+
+
+
+              </div>
+
+
+
+
+
+
+
+
+              <span class="font-numeric-metric text-numeric-metric text-tertiary font-headline-md leading-none" id="feedingTodayCount">1</span>
+
+
+
+
+
+
+
+
+              <span class="font-label-sm text-[10px] text-on-surface-variant mt-1 leading-tight">AlimentaciÃ³nÃ³n Hoy</span>
+
+
+
+
+
+
+
+
+            </div>
+
+
+
+
+
+
+
+
+            <!-- Metric 3 -->
+
+
+
+
+
+
+
+
+            <div class="flex flex-col p-3 rounded-xl bg-surface-container/90 shadow-sm backdrop-blur-md relative overflow-hidden">
+
+
+
+
+
+
+
+
+              <div class="flex items-center justify-between mb-1">
+
+
+
+
+
+
+
+
+                <span class="material-symbols-outlined text-secondary text-[18px]">scale</span>
+
+
+
+
+
+
+
+
+                <span class="w-1.5 h-1.5 rounded-full bg-secondary"></span>
+
+
+
+
+
+
+
+
+              </div>
+
+
+
+
+
+
+
+
+              <span class="font-numeric-metric text-numeric-metric text-on-surface font-headline-md leading-none" id="weighingPendingCount">1</span>
+
+
+
+
+
+
+
+
+              <span class="font-label-sm text-[10px] text-on-surface-variant mt-1 leading-tight">Pesaje Pendiente</span>
+
+
+
+
+
+
+
+
+            </div>
+
+
+
+
+
+
+
+
+          </div>
+
+
+
+
+
+
+
+
+          <!-- Specimen Feed Header & Quick Action -->
+
+
+
+
+
+
+
+
+          <div class="flex items-center justify-between pt-1 mt-3">
+
+
+
+
+
+
+
+
+            <span class="font-headline-md text-headline-md text-on-surface font-bold">Mis Ejemplares</span>
+
+
+
+
+
+
+
+
+            <div class="flex items-center gap-1 text-on-surface-variant">
+
+
+
+
+
+
+
+
+              <span class="font-label-sm text-label-sm">Ordenar:</span>
+
+
+
+
+
+
+
+
+              <button class="font-label-sm text-primary font-semibold flex items-center" id="sortButton">
+
+
+
+
+
+
+
+
+                <span class="">Terrario</span>
+
+
+
+
+
+
+
+
+                <span class="material-symbols-outlined text-[16px]">arrow_drop_down</span>
+
+
+
+
+
+
+
+
+              </button>
+
+
+
+
+
+
+
+
+            </div>
+
+
+
+
+
+
+
+
+          </div>
+
+
+
+
+
+
+
+
+          <!-- Specimen List Container -->
+
+
+
+
+
+
+
+
+          <div id="specimenListContainer" class="specimen-list mt-3"></div>
+
+
+
+
+
+
+
+
+          <!-- Floating Quick Environmental Entry Dock Bar -->
+
+
+
+
+
+
+
+
+          <div class="sticky bottom-20 z-30 w-full flex items-center justify-center pt-2">
+
+
+
+
+
+
+
+
+            <div class="flex items-center gap-2 p-1.5 rounded-full bg-surface-container-highest/90 backdrop-blur-2xl shadow-[0_8px_32px_rgba(0,0,0,0.6)]">
+
+
+
+
+
+
+
+
+              <button class="flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-surface-container-high text-on-surface font-label-sm text-label-sm hover:text-primary active:scale-95 transition-all" id="dock-btn-temp">
+
+
+
+
+
+
+
+
+                <span class="material-symbols-outlined text-primary text-[16px]">thermostat</span>
+
+
+
+
+
+
+
+
+                <span class="">+ Temp</span>
+
+
+
+
+
+
+
+
+              </button>
+
+
+
+
+
+
+
+
+              <div class="w-px h-4 bg-outline-variant"></div>
+
+
+
+
+
+
+
+
+              <button class="flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-surface-container-high text-on-surface font-label-sm text-label-sm hover:text-secondary active:scale-95 transition-all" id="dock-btn-hum">
+
+
+
+
+
+
+
+
+                <span class="material-symbols-outlined text-secondary text-[16px]">humidity_mid</span>
+
+
+
+
+
+
+
+
+                <span class="">+ Humedad</span>
+
+
+
+
+
+
+
+
+              </button>
+
+
+
+
+
+
+
+
+              <div class="w-px h-4 bg-outline-variant"></div>
+
+
+
+
+
+
+
+
+              <button class="flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-primary text-on-primary font-label-sm text-label-sm font-bold active:scale-95 shadow-md shadow-primary/25 transition-all" id="dock-btn-feed">
+
+
+
+
+
+
+
+
+                <span class="material-symbols-outlined text-[16px]">restaurant</span>
+
+
+
+
+
+
+
+
+                <span class="">+ Toma</span>
+
+
+
+
+
+
+
+
+              </button>
+
+
+
+
+
+
+
+
+            </div>
+
+
+
+
+
+
+
+
+          </div>
+
+
+
+
+
+
+
+
+        </section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        <!-- FICHA DEL ANIMAL -->
+
+
+
+
+
+
+
+
+        <section class="panel ficha-panel" data-view="ficha" aria-label="Ficha del animal">
+
+
+
+
+
+
+
+
+          <!-- Top Contextual Navigation Bar -->
+
+
+
+
+
+
+
+
+          <div class="flex items-center justify-between pt-space-xs mb-4">
+
+
+
+
+
+
+
+
+            <a class="inline-flex items-center gap-1.5 py-1.5 px-3 rounded-full bg-surface-container-high text-secondary hover:text-primary transition-colors text-label-md font-label-md" href="#" data-navigate="reptiles">
+
+
+
+
+
+
+
+
+              <span class="material-symbols-outlined text-[18px]">arrow_back</span>
+
+
+
+
+
+
+
+
+              <span class="">Volver a Reptiles</span>
+
+
+
+
+
+
+
+
+            </a>
+
+
+
+
+
+
+
+
+            <div class="flex items-center gap-1.5 bg-surface-container-low px-3 py-1.2 rounded-full shadow-sm">
+
+
+
+
+
+
+
+
+              <span class="relative flex h-2 w-2">
+
+
+
+
+
+
+
+
+                <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-primary opacity-75"></span>
+
+
+
+
+
+
+
+
+                <span class="relative inline-flex rounded-full h-2 w-2 bg-primary"></span>
+
+
+
+
+
+
+
+
+              </span>
+
+
+
+
+
+
+
+
+              <span class="font-label-sm text-label-sm text-primary tracking-wide" id="fichaSyncStatus">Sync IoT Activo</span>
+
+
+
+
+
+
+
+
+            </div>
+
+
+
+
+
+
+
+
+          </div>
+
+
+
+
+
+
+
+
+          <!-- Specimen Context Capsule Card -->
+
+
+
+
+
+
+
+
+          <div class="relative overflow-hidden rounded-xl bg-surface-container-high p-4 shadow-lg backdrop-blur-xl">
+
+
+
+
+
+
+
+
+            <div class="absolute -right-10 -bottom-10 w-44 h-44 rounded-full bg-primary/10 blur-3xl pointer-events-none"></div>
+
+
+
+
+
+
+
+
+            <div class="flex items-start gap-4">
+
+
+
+
+
+
+
+
+              <!-- Specimen Mini Portrait -->
+
+
+
+
+
+
+
+
+              <div class="relative w-16 h-16 rounded-xl overflow-hidden shadow-md flex-shrink-0 bg-surface-container-lowest">
+
+
+
+
+
+
+
+
+                <img id="fichaHeroImg" class="w-full h-full object-cover" data-alt="Close up photograph of a vibrant Bell Albino Leopard Gecko with warm sandy desert orange markings and soft alert eyes inside a naturalistic terrarium with clean arid decor and gentle warm bio-light highlights" src="terracarium-home.png" alt="Imagen del reptil" />
+
+
+
+
+
+
+
+
+                <div class="absolute inset-0 bg-gradient-to-t from-surface-container-lowest/80 via-transparent to-transparent"></div>
+
+
+
+
+
+
+
+
+                <span class="absolute bottom-1 left-1.5 font-label-sm text-[9px] text-primary font-bold" id="fichaTerrarioLabel">TER-A1</span>
+
+
+
+
+
+
+
+
+              </div>
+
+
+
+
+
+
+
+
+              <!-- Info & Quick Chips -->
+
+
+
+
+
+
+
+
+              <div class="flex-1 min-w-0">
+
+
+
+
+
+
+
+
+                <div class="flex items-center justify-between gap-1">
+
+
+
+
+
+
+
+
+                  <div class="flex items-center gap-2 truncate">
+
+
+
+
+
+
+
+
+                    <h1 id="fichaName" class="font-headline-md text-headline-md text-on-surface truncate">Ziggy</h1>
+
+
+
+
+
+
+
+
+                    <span class="bg-primary/15 text-primary text-label-sm font-label-sm px-2 py-0.5 rounded-full whitespace-nowrap" id="fichaSexLabel">Macho</span>
+
+
+
+
+
+
+
+
+                  </div>
+
+
+
+
+
+
+
+
+                  <button class="w-8 h-8 rounded-full bg-primary flex items-center justify-center text-on-primary shadow-sm hover:scale-105 active:scale-95 transition-transform flex-shrink-0" id="btnQuickLogOpen" title="AÃÂƒÂƒÃÂ‚ÂƒÃÂƒÂ‚ÃÂ‚ÂƒÃÂƒÂƒÃÂ‚Â‚ÃÂƒÂ‚ÃÂ‚ÂƒÃÂƒÂƒÃÂ‚ÂƒÃÂƒÂ‚ÃÂ‚Â‚ÃÂƒÂƒÃÂ‚Â‚ÃÂƒÂ‚ÃÂ‚ÂƒÃÂƒÂƒÃÂ‚ÂƒÃÂƒÂ‚ÃÂ‚ÂƒÃÂƒÂƒÃÂ‚Â‚ÃÂƒÂ‚ÃÂ‚Â‚ÃÂƒÂƒÃÂ‚ÂƒÃÂƒÂ‚ÃÂ‚Â‚ÃÂƒÂƒÃÂ‚Â‚ÃÂƒÂ‚ÃÂ‚ÂƒÃÂƒÂƒÃÂ‚ÂƒÃÂƒÂ‚ÃÂ‚ÂƒÃÂƒÂƒÃÂ‚Â‚ÃÂƒÂ‚ÃÂ‚ÂƒÃÂƒÂƒÃÂ‚ÂƒÃÂƒÂ‚ÃÂ‚Â‚ÃÂƒÂƒÃÂ‚Â‚ÃÂƒÂ‚ÃÂ‚Â‚ÃÂƒÂƒÃÂ‚ÂƒÃÂƒÂ‚ÃÂ‚ÂƒÃÂƒÂƒÃÂ‚Â‚ÃÂƒÂ‚ÃÂ‚Â‚ÃÂƒÂƒÃÂ‚ÂƒÃÂƒÂ‚ÃÂ‚Â‚ÃÂƒÂƒÃÂ‚Â‚ÃÂƒÂ‚ÃÂ‚ÂƒÃÂƒÂƒÃÂ‚ÂƒÃÂƒÂ‚ÃÂ‚ÂƒÃÂƒÂƒÃÂ‚Â‚ÃÂƒÂ‚ÃÂ‚ÂƒÃÂƒÂƒÃÂ‚ÂƒÃÂƒÂ‚ÃÂ‚Â‚ÃÂƒÂƒÃÂ‚Â‚ÃÂƒÂ‚ÃÂ‚ÂƒÃÂƒÂƒÃÂ‚ÂƒÃÂƒÂ‚ÃÂ‚ÂƒÃÂƒÂƒÃÂ‚Â‚ÃÂƒÂ‚ÃÂ‚Â‚ÃÂƒÂƒÃÂ‚ÂƒÃÂƒÂ‚ÃÂ‚Â‚ÃÂƒÂƒÃÂ‚Â‚ÃÂƒÂ‚ÃÂ‚Â‚ÃÂƒÂƒÃÂ‚ÂƒÃÂƒÂ‚ÃÂ‚ÂƒÃÂƒÂƒÃÂ‚Â‚ÃÂƒÂ‚ÃÂ‚ÂƒÃÂƒÂƒÃÂ‚ÂƒÃÂƒÂ‚ÃÂ‚Â‚ÃÂƒÂƒÃÂ‚Â‚ÃÂƒÂ‚ÃÂ‚Â‚ÃÂƒÂƒÃÂ‚ÂƒÃÂƒÂ‚ÃÂ‚ÂƒÃÂƒÂƒÃÂ‚Â‚ÃÂƒÂ‚ÃÂ‚Â‚ÃÂƒÂƒÃÂ‚ÂƒÃÂƒÂ‚ÃÂ‚Â‚ÃÂƒÂƒÃÂ‚Â‚ÃÂƒÂ‚ÃÂ‚Â±adir lectura inmediata">
+
+
+
+
+
+
+
+
+                    <span class="material-symbols-outlined text-[18px]">add</span>
+
+
+
+
+
+
+
+
+                  </button>
+
+
+
+
+
+
+
+
+                </div>
+
+
+
+
+
+
+
+
+                <p id="fichaSpecies" class="font-body-sm text-body-sm text-on-surface-variant italic truncate mt-0.5">Eublepharis macularius ÃÂƒÂƒÃÂ‚ÂƒÃÂƒÂ‚ÃÂ‚ÂƒÃÂƒÂƒÃÂ‚Â‚ÃÂƒÂ‚ÃÂ‚ÂƒÃÂƒÂƒÃÂ‚ÂƒÃÂƒÂ‚ÃÂ‚Â‚ÃÂƒÂƒÃÂ‚Â‚ÃÂƒÂ‚ÃÂ‚ÂƒÃÂƒÂƒÃÂ‚ÂƒÃÂƒÂ‚ÃÂ‚ÂƒÃÂƒÂƒÃÂ‚Â‚ÃÂƒÂ‚ÃÂ‚Â‚ÃÂƒÂƒÃÂ‚ÂƒÃÂƒÂ‚ÃÂ‚Â‚ÃÂƒÂƒÃÂ‚Â‚ÃÂƒÂ‚ÃÂ‚ÂƒÃÂƒÂƒÃÂ‚ÂƒÃÂƒÂ‚ÃÂ‚ÂƒÃÂƒÂƒÃÂ‚Â‚ÃÂƒÂ‚ÃÂ‚ÂƒÃÂƒÂƒÃÂ‚ÂƒÃÂƒÂ‚ÃÂ‚Â‚ÃÂƒÂƒÃÂ‚Â‚ÃÂƒÂ‚ÃÂ‚Â‚ÃÂƒÂƒÃÂ‚ÂƒÃÂƒÂ‚ÃÂ‚ÂƒÃÂƒÂƒÃÂ‚Â‚ÃÂƒÂ‚ÃÂ‚Â‚ÃÂƒÂƒÃÂ‚ÂƒÃÂƒÂ‚ÃÂ‚Â‚ÃÂƒÂƒÃÂ‚Â‚ÃÂƒÂ‚ÃÂ‚Â¢ÃÂƒÂƒÃÂ‚ÂƒÃÂƒÂ‚ÃÂ‚ÂƒÃÂƒÂƒÃÂ‚Â‚ÃÂƒÂ‚ÃÂ‚ÂƒÃÂƒÂƒÃÂ‚ÂƒÃÂƒÂ‚ÃÂ‚Â‚ÃÂƒÂƒÃÂ‚Â‚ÃÂƒÂ‚ÃÂ‚ÂƒÃÂƒÂƒÃÂ‚ÂƒÃÂƒÂ‚ÃÂ‚ÂƒÃÂƒÂƒÃÂ‚Â‚ÃÂƒÂ‚ÃÂ‚Â‚ÃÂƒÂƒÃÂ‚ÂƒÃÂƒÂ‚ÃÂ‚Â‚ÃÂƒÂƒÃÂ‚Â‚ÃÂƒÂ‚ÃÂ‚Â‚ÃÂƒÂƒÃÂ‚ÂƒÃÂƒÂ‚ÃÂ‚ÂƒÃÂƒÂƒÃÂ‚Â‚ÃÂƒÂ‚ÃÂ‚ÂƒÃÂƒÂƒÃÂ‚ÂƒÃÂƒÂ‚ÃÂ‚Â‚ÃÂƒÂƒÃÂ‚Â‚ÃÂƒÂ‚ÃÂ‚Â‚ÃÂƒÂƒÃÂ‚ÂƒÃÂƒÂ‚ÃÂ‚ÂƒÃÂƒÂƒÃÂ‚Â‚ÃÂƒÂ‚ÃÂ‚Â‚ÃÂƒÂƒÃÂ‚ÂƒÃÂƒÂ‚ÃÂ‚Â‚ÃÂƒÂƒÃÂ‚Â‚ÃÂƒÂ‚ÃÂ‚Â€ÃÂƒÂƒÃÂ‚ÂƒÃÂƒÂ‚ÃÂ‚ÂƒÃÂƒÂƒÃÂ‚Â‚ÃÂƒÂ‚ÃÂ‚ÂƒÃÂƒÂƒÃÂ‚ÂƒÃÂƒÂ‚ÃÂ‚Â‚ÃÂƒÂƒÃÂ‚Â‚ÃÂƒÂ‚ÃÂ‚ÂƒÃÂƒÂƒÃÂ‚ÂƒÃÂƒÂ‚ÃÂ‚ÂƒÃÂƒÂƒÃÂ‚Â‚ÃÂƒÂ‚ÃÂ‚Â‚ÃÂƒÂƒÃÂ‚ÂƒÃÂƒÂ‚ÃÂ‚Â‚ÃÂƒÂƒÃÂ‚Â‚ÃÂƒÂ‚ÃÂ‚Â‚ÃÂƒÂƒÃÂ‚ÂƒÃÂƒÂ‚ÃÂ‚ÂƒÃÂƒÂƒÃÂ‚Â‚ÃÂƒÂ‚ÃÂ‚ÂƒÃÂƒÂƒÃÂ‚ÂƒÃÂƒÂ‚ÃÂ‚Â‚ÃÂƒÂƒÃÂ‚Â‚ÃÂƒÂ‚ÃÂ‚Â‚ÃÂƒÂƒÃÂ‚ÂƒÃÂƒÂ‚ÃÂ‚ÂƒÃÂƒÂƒÃÂ‚Â‚ÃÂƒÂ‚ÃÂ‚Â‚ÃÂƒÂƒÃÂ‚ÂƒÃÂƒÂ‚ÃÂ‚Â‚ÃÂƒÂƒÃÂ‚Â‚ÃÂƒÂ‚ÃÂ‚Â¢ Bell Albino</p>
+
+
+
+
+
+
+
+
+                <!-- Habitat & Subtitle -->
+
+
+
+
+
+
+
+
+                <div class="flex items-center gap-2 mt-2 text-on-surface-variant font-label-sm text-label-sm">
+
+
+
+
+
+
+
+
+                  <span class="material-symbols-outlined text-primary text-[14px]">landscape</span>
+
+
+
+
+
+
+
+
+                  <span class="truncate" id="fichaHabitatLabel">Terrario A-1 (DesÃÂƒÂƒÃÂ‚ÂƒÃÂƒÂ‚ÃÂ‚ÂƒÃÂƒÂƒÃÂ‚Â‚ÃÂƒÂ‚ÃÂ‚ÂƒÃÂƒÂƒÃÂ‚ÂƒÃÂƒÂ‚ÃÂ‚Â‚ÃÂƒÂƒÃÂ‚Â‚ÃÂƒÂ‚ÃÂ‚ÂƒÃÂƒÂƒÃÂ‚ÂƒÃÂƒÂ‚ÃÂ‚ÂƒÃÂƒÂƒÃÂ‚Â‚ÃÂƒÂ‚ÃÂ‚Â‚ÃÂƒÂƒÃÂ‚ÂƒÃÂƒÂ‚ÃÂ‚Â‚ÃÂƒÂƒÃÂ‚Â‚ÃÂƒÂ‚ÃÂ‚ÂƒÃÂƒÂƒÃÂ‚ÂƒÃÂƒÂ‚ÃÂ‚ÂƒÃÂƒÂƒÃÂ‚Â‚ÃÂƒÂ‚ÃÂ‚ÂƒÃÂƒÂƒÃÂ‚ÂƒÃÂƒÂ‚ÃÂ‚Â‚ÃÂƒÂƒÃÂ‚Â‚ÃÂƒÂ‚ÃÂ‚Â‚ÃÂƒÂƒÃÂ‚ÂƒÃÂƒÂ‚ÃÂ‚ÂƒÃÂƒÂƒÃÂ‚Â‚ÃÂƒÂ‚ÃÂ‚Â‚ÃÂƒÂƒÃÂ‚ÂƒÃÂƒÂ‚ÃÂ‚Â‚ÃÂƒÂƒÃÂ‚Â‚ÃÂƒÂ‚ÃÂ‚ÂƒÃÂƒÂƒÃÂ‚ÂƒÃÂƒÂ‚ÃÂ‚ÂƒÃÂƒÂƒÃÂ‚Â‚ÃÂƒÂ‚ÃÂ‚ÂƒÃÂƒÂƒÃÂ‚ÂƒÃÂƒÂ‚ÃÂ‚Â‚ÃÂƒÂƒÃÂ‚Â‚ÃÂƒÂ‚ÃÂ‚ÂƒÃÂƒÂƒÃÂ‚ÂƒÃÂƒÂ‚ÃÂ‚ÂƒÃÂƒÂƒÃÂ‚Â‚ÃÂƒÂ‚ÃÂ‚Â‚ÃÂƒÂƒÃÂ‚ÂƒÃÂƒÂ‚ÃÂ‚Â‚ÃÂƒÂƒÃÂ‚Â‚ÃÂƒÂ‚ÃÂ‚Â‚ÃÂƒÂƒÃÂ‚ÂƒÃÂƒÂ‚ÃÂ‚ÂƒÃÂƒÂƒÃÂ‚Â‚ÃÂƒÂ‚ÃÂ‚ÂƒÃÂƒÂƒÃÂ‚ÂƒÃÂƒÂ‚ÃÂ‚Â‚ÃÂƒÂƒÃÂ‚Â‚ÃÂƒÂ‚ÃÂ‚Â‚ÃÂƒÂƒÃÂ‚ÂƒÃÂƒÂ‚ÃÂ‚ÂƒÃÂƒÂƒÃÂ‚Â‚ÃÂƒÂ‚ÃÂ‚Â‚ÃÂƒÂƒÃÂ‚ÂƒÃÂƒÂ‚ÃÂ‚Â‚ÃÂƒÂƒÃÂ‚Â‚ÃÂƒÂ‚ÃÂ‚Â©rtico Rocoso)</span>
+
+
+
+
+
+
+
+
+                </div>
+
+
+
+
+
+
+
+
+              </div>
+
+
+
+
+
+
+
+
+            </div>
+
+
+
+
+
+
+
+
+          </div>
+
+
+
+
+
+
+
+
+          <!-- Live Telemetry Triple Wells -->
+
+
+
+
+
+
+
+
+          <div class="grid grid-cols-3 gap-2 mt-4">
+
+
+
+
+
+
+
+
+            <div class="rounded-lg bg-surface-container-low p-3 flex flex-col justify-between">
+
+
+
+
+
+
+
+
+              <div class="flex items-center justify-between text-tertiary">
+
+
+
+
+
+
+
+
+                <span class="font-label-sm text-[10px] uppercase font-semibold">T. Punto</span>
+
+
+
+
+
+
+
+
+                <span class="material-symbols-outlined text-[15px]">device_thermostat</span>
+
+
+
+
+
+
+
+
+              </div>
+
+
+
+
+
+
+
+
+              <div class="mt-1 flex items-baseline gap-1">
+
+
+
+
+
+
+
+
+                <span class="font-numeric-metric text-numeric-metric text-on-surface" id="fichaTempPoint">31.4ÃÂƒÂƒÃÂ‚ÂƒÃÂƒÂ‚ÃÂ‚ÂƒÃÂƒÂƒÃÂ‚Â‚ÃÂƒÂ‚ÃÂ‚ÂƒÃÂƒÂƒÃÂ‚ÂƒÃÂƒÂ‚ÃÂ‚Â‚ÃÂƒÂƒÃÂ‚Â‚ÃÂƒÂ‚ÃÂ‚ÂƒÃÂƒÂƒÃÂ‚ÂƒÃÂƒÂ‚ÃÂ‚ÂƒÃÂƒÂƒÃÂ‚Â‚ÃÂƒÂ‚ÃÂ‚Â‚ÃÂƒÂƒÃÂ‚ÂƒÃÂƒÂ‚ÃÂ‚Â‚ÃÂƒÂƒÃÂ‚Â‚ÃÂƒÂ‚ÃÂ‚ÂƒÃÂƒÂƒÃÂ‚ÂƒÃÂƒÂ‚ÃÂ‚ÂƒÃÂƒÂƒÃÂ‚Â‚ÃÂƒÂ‚ÃÂ‚ÂƒÃÂƒÂƒÃÂ‚ÂƒÃÂƒÂ‚ÃÂ‚Â‚ÃÂƒÂƒÃÂ‚Â‚ÃÂƒÂ‚ÃÂ‚Â‚ÃÂƒÂƒÃÂ‚ÂƒÃÂƒÂ‚ÃÂ‚ÂƒÃÂƒÂƒÃÂ‚Â‚ÃÂƒÂ‚ÃÂ‚Â‚ÃÂƒÂƒÃÂ‚ÂƒÃÂƒÂ‚ÃÂ‚Â‚ÃÂƒÂƒÃÂ‚Â‚ÃÂƒÂ‚ÃÂ‚Â‚ÃÂƒÂƒÃÂ‚ÂƒÃÂƒÂ‚ÃÂ‚ÂƒÃÂƒÂƒÃÂ‚Â‚ÃÂƒÂ‚ÃÂ‚ÂƒÃÂƒÂƒÃÂ‚ÂƒÃÂƒÂ‚ÃÂ‚Â‚ÃÂƒÂƒÃÂ‚Â‚ÃÂƒÂ‚ÃÂ‚ÂƒÃÂƒÂƒÃÂ‚ÂƒÃÂƒÂ‚ÃÂ‚ÂƒÃÂƒÂƒÃÂ‚Â‚ÃÂƒÂ‚ÃÂ‚Â‚ÃÂƒÂƒÃÂ‚ÂƒÃÂƒÂ‚ÃÂ‚Â‚ÃÂƒÂƒÃÂ‚Â‚ÃÂƒÂ‚ÃÂ‚Â‚ÃÂƒÂƒÃÂ‚ÂƒÃÂƒÂ‚ÃÂ‚ÂƒÃÂƒÂƒÃÂ‚Â‚ÃÂƒÂ‚ÃÂ‚ÂƒÃÂƒÂƒÃÂ‚ÂƒÃÂƒÂ‚ÃÂ‚Â‚ÃÂƒÂƒÃÂ‚Â‚ÃÂƒÂ‚ÃÂ‚Â‚ÃÂƒÂƒÃÂ‚ÂƒÃÂƒÂ‚ÃÂ‚ÂƒÃÂƒÂƒÃÂ‚Â‚ÃÂƒÂ‚ÃÂ‚Â‚ÃÂƒÂƒÃÂ‚ÂƒÃÂƒÂ‚ÃÂ‚Â‚ÃÂƒÂƒÃÂ‚Â‚ÃÂƒÂ‚ÃÂ‚Â°</span>
+
+
+
+
+
+
+
+
+                <span class="font-label-sm text-[10px] text-primary" id="fichaTempPointStatus">ÃÂƒÂƒÃÂ‚ÂƒÃÂƒÂ‚ÃÂ‚ÂƒÃÂƒÂƒÃÂ‚Â‚ÃÂƒÂ‚ÃÂ‚ÂƒÃÂƒÂƒÃÂ‚ÂƒÃÂƒÂ‚ÃÂ‚Â‚ÃÂƒÂƒÃÂ‚Â‚ÃÂƒÂ‚ÃÂ‚ÂƒÃÂƒÂƒÃÂ‚ÂƒÃÂƒÂ‚ÃÂ‚ÂƒÃÂƒÂƒÃÂ‚Â‚ÃÂƒÂ‚ÃÂ‚Â‚ÃÂƒÂƒÃÂ‚ÂƒÃÂƒÂ‚ÃÂ‚Â‚ÃÂƒÂƒÃÂ‚Â‚ÃÂƒÂ‚ÃÂ‚ÂƒÃÂƒÂƒÃÂ‚ÂƒÃÂƒÂ‚ÃÂ‚ÂƒÃÂƒÂƒÃÂ‚Â‚ÃÂƒÂ‚ÃÂ‚ÂƒÃÂƒÂƒÃÂ‚ÂƒÃÂƒÂ‚ÃÂ‚Â‚ÃÂƒÂƒÃÂ‚Â‚ÃÂƒÂ‚ÃÂ‚Â‚ÃÂƒÂƒÃÂ‚ÂƒÃÂƒÂ‚ÃÂ‚ÂƒÃÂƒÂƒÃÂ‚Â‚ÃÂƒÂ‚ÃÂ‚Â‚ÃÂƒÂƒÃÂ‚ÂƒÃÂƒÂ‚ÃÂ‚Â‚ÃÂƒÂƒÃÂ‚Â‚ÃÂƒÂ‚ÃÂ‚ÂƒÃÂƒÂƒÃÂ‚ÂƒÃÂƒÂ‚ÃÂ‚ÂƒÃÂƒÂƒÃÂ‚Â‚ÃÂƒÂ‚ÃÂ‚ÂƒÃÂƒÂƒÃÂ‚ÂƒÃÂƒÂ‚ÃÂ‚Â‚ÃÂƒÂƒÃÂ‚Â‚ÃÂƒÂ‚ÃÂ‚ÂƒÃÂƒÂƒÃÂ‚ÂƒÃÂƒÂ‚ÃÂ‚ÂƒÃÂƒÂƒÃÂ‚Â‚ÃÂƒÂ‚ÃÂ‚Â‚ÃÂƒÂƒÃÂ‚ÂƒÃÂƒÂ‚ÃÂ‚Â‚ÃÂƒÂƒÃÂ‚Â‚ÃÂƒÂ‚ÃÂ‚Â‚ÃÂƒÂƒÃÂ‚ÂƒÃÂƒÂ‚ÃÂ‚ÂƒÃÂƒÂƒÃÂ‚Â‚ÃÂƒÂ‚ÃÂ‚ÂƒÃÂƒÂƒÃÂ‚ÂƒÃÂƒÂ‚ÃÂ‚Â‚ÃÂƒÂƒÃÂ‚Â‚ÃÂƒÂ‚ÃÂ‚Â‚ÃÂƒÂƒÃÂ‚ÂƒÃÂƒÂ‚ÃÂ‚ÂƒÃÂƒÂƒÃÂ‚Â‚ÃÂƒÂ‚ÃÂ‚Â‚ÃÂƒÂƒÃÂ‚ÂƒÃÂƒÂ‚ÃÂ‚Â‚ÃÂƒÂƒÃÂ‚Â‚ÃÂƒÂ‚ÃÂ‚Â“ptimo</span>
+
+
+
+
+
+
+
+
+              </div>
+
+
+
+
+
+
+
+
+              <span class="font-body-sm text-[10px] text-on-surface-variant mt-0.5 truncate" id="fichaTempPointZone">Zona caliente</span>
+
+
+
+
+
+
+
+
+            </div>
+
+
+
+
+
+
+
+
+            <div class="rounded-lg bg-surface-container-low p-3 flex flex-col justify-between">
+
+
+
+
+
+
+
+
+              <div class="flex items-center justify-between text-secondary">
+
+
+
+
+
+
+
+
+                <span class="font-label-sm text-[10px] uppercase font-semibold">Humedad</span>
+
+
+
+
+
+
+
+
+                <span class="material-symbols-outlined text-[15px]">humidity_mid</span>
+
+
+
+
+
+
+
+
+              </div>
+
+
+
+
+
+
+
+
+              <div class="mt-1 flex items-baseline gap-1">
+
+
+
+
+
+
+
+
+                <span class="font-numeric-metric text-numeric-metric text-on-surface" id="fichaHumidity">45%</span>
+
+
+
+
+
+
+
+
+                <span class="font-label-sm text-[10px] text-primary" id="fichaHumidityStatus">Normal</span>
+
+
+
+
+
+
+
+
+              </div>
+
+
+
+
+
+
+
+
+              <span class="font-body-sm text-[10px] text-on-surface-variant mt-0.5 truncate" id="fichaHumidityZone">Refugio hÃÂƒÂƒÃÂ‚ÂƒÃÂƒÂ‚ÃÂ‚ÂƒÃÂƒÂƒÃÂ‚Â‚ÃÂƒÂ‚ÃÂ‚ÂƒÃÂƒÂƒÃÂ‚ÂƒÃÂƒÂ‚ÃÂ‚Â‚ÃÂƒÂƒÃÂ‚Â‚ÃÂƒÂ‚ÃÂ‚ÂƒÃÂƒÂƒÃÂ‚ÂƒÃÂƒÂ‚ÃÂ‚ÂƒÃÂƒÂƒÃÂ‚Â‚ÃÂƒÂ‚ÃÂ‚Â‚ÃÂƒÂƒÃÂ‚ÂƒÃÂƒÂ‚ÃÂ‚Â‚ÃÂƒÂƒÃÂ‚Â‚ÃÂƒÂ‚ÃÂ‚ÂƒÃÂƒÂƒÃÂ‚ÂƒÃÂƒÂ‚ÃÂ‚ÂƒÃÂƒÂƒÃÂ‚Â‚ÃÂƒÂ‚ÃÂ‚ÂƒÃÂƒÂƒÃÂ‚ÂƒÃÂƒÂ‚ÃÂ‚Â‚ÃÂƒÂƒÃÂ‚Â‚ÃÂƒÂ‚ÃÂ‚Â‚ÃÂƒÂƒÃÂ‚ÂƒÃÂƒÂ‚ÃÂ‚ÂƒÃÂƒÂƒÃÂ‚Â‚ÃÂƒÂ‚ÃÂ‚Â‚ÃÂƒÂƒÃÂ‚ÂƒÃÂƒÂ‚ÃÂ‚Â‚ÃÂƒÂƒÃÂ‚Â‚ÃÂƒÂ‚ÃÂ‚ÂƒÃÂƒÂƒÃÂ‚ÂƒÃÂƒÂ‚ÃÂ‚ÂƒÃÂƒÂƒÃÂ‚Â‚ÃÂƒÂ‚ÃÂ‚ÂƒÃÂƒÂƒÃÂ‚ÂƒÃÂƒÂ‚ÃÂ‚Â‚ÃÂƒÂƒÃÂ‚Â‚ÃÂƒÂ‚ÃÂ‚ÂƒÃÂƒÂƒÃÂ‚ÂƒÃÂƒÂ‚ÃÂ‚ÂƒÃÂƒÂƒÃÂ‚Â‚ÃÂƒÂ‚ÃÂ‚Â‚ÃÂƒÂƒÃÂ‚ÂƒÃÂƒÂ‚ÃÂ‚Â‚ÃÂƒÂƒÃÂ‚Â‚ÃÂƒÂ‚ÃÂ‚Â‚ÃÂƒÂƒÃÂ‚ÂƒÃÂƒÂ‚ÃÂ‚ÂƒÃÂƒÂƒÃÂ‚Â‚ÃÂƒÂ‚ÃÂ‚ÂƒÃÂƒÂƒÃÂ‚ÂƒÃÂƒÂ‚ÃÂ‚Â‚ÃÂƒÂƒÃÂ‚Â‚ÃÂƒÂ‚ÃÂ‚Â‚ÃÂƒÂƒÃÂ‚ÂƒÃÂƒÂ‚ÃÂ‚ÂƒÃÂƒÂƒÃÂ‚Â‚ÃÂƒÂ‚ÃÂ‚Â‚ÃÂƒÂƒÃÂ‚ÂƒÃÂƒÂ‚ÃÂ‚Â‚ÃÂƒÂƒÃÂ‚Â‚ÃÂƒÂ‚ÃÂ‚Âºmedo</span>
+
+
+
+
+
+
+
+
+            </div>
+
+
+
+
+
+
+
+
+            <div class="rounded-lg bg-surface-container-low p-3 flex flex-col justify-between">
+
+
+
+
+
+
+
+
+              <div class="flex items-center justify-between text-primary">
+
+
+
+
+
+
+
+
+                <span class="font-label-sm text-[10px] uppercase font-semibold">Peso Bioma</span>
+
+
+
+
+
+
+
+
+                <span class="material-symbols-outlined text-[15px]">scale</span>
+
+
+
+
+
+
+
+
+              </div>
+
+
+
+
+
+
+
+
+              <div class="mt-1 flex items-baseline gap-1">
+
+
+
+
+
+
+
+
+                <span class="font-numeric-metric text-numeric-metric text-on-surface" id="fichaWeight">68.5<span class="text-label-sm">g</span></span>
+
+
+
+
+
+
+
+
+                <span class="font-label-sm text-[10px] text-primary" id="fichaWeightStatus">+1.5g</span>
+
+
+
+
+
+
+
+
+              </div>
+
+
+
+
+
+
+
+
+              <span class="font-body-sm text-[10px] text-on-surface-variant mt-0.5 truncate" id="fichaWeightDate">12 May 2024</span>
+
+
+
+
+
+
+
+
+            </div>
+
+
+
+
+
+
+
+
+          </div>
+
+
+
+
+
+
+
+
+          <!-- Metric Filter Tabs (Horizontal Scrollable Carousel) -->
+
+
+
+
+
+
+
+
+          <div class="flex items-center gap-2 overflow-x-auto pb-1 -mx-4 px-4 mt-4" style="scrollbar-width: none;">
+
+
+
+
+
+
+
+
+            <button class="flex items-center gap-1.5 px-3.5 py-2 rounded-full bg-primary text-on-primary font-label-md text-label-md shadow-md whitespace-nowrap" id="fichaTabTemp">
+
+
+
+
+
+
+
+
+              <span class="material-symbols-outlined text-[17px]">device_thermostat</span>
+
+
+
+
+
+
+
+
+              <span class="">Temperatura (ÃÂƒÂƒÃÂ‚ÂƒÃÂƒÂ‚ÃÂ‚ÂƒÃÂƒÂƒÃÂ‚Â‚ÃÂƒÂ‚ÃÂ‚ÂƒÃÂƒÂƒÃÂ‚ÂƒÃÂƒÂ‚ÃÂ‚Â‚ÃÂƒÂƒÃÂ‚Â‚ÃÂƒÂ‚ÃÂ‚ÂƒÃÂƒÂƒÃÂ‚ÂƒÃÂƒÂ‚ÃÂ‚ÂƒÃÂƒÂƒÃÂ‚Â‚ÃÂƒÂ‚ÃÂ‚Â‚ÃÂƒÂƒÃÂ‚ÂƒÃÂƒÂ‚ÃÂ‚Â‚ÃÂƒÂƒÃÂ‚Â‚ÃÂƒÂ‚ÃÂ‚ÂƒÃÂƒÂƒÃÂ‚ÂƒÃÂƒÂ‚ÃÂ‚ÂƒÃÂƒÂƒÃÂ‚Â‚ÃÂƒÂ‚ÃÂ‚ÂƒÃÂƒÂƒÃÂ‚ÂƒÃÂƒÂ‚ÃÂ‚Â‚ÃÂƒÂƒÃÂ‚Â‚ÃÂƒÂ‚ÃÂ‚Â‚ÃÂƒÂƒÃÂ‚ÂƒÃÂƒÂ‚ÃÂ‚ÂƒÃÂƒÂƒÃÂ‚Â‚ÃÂƒÂ‚ÃÂ‚Â‚ÃÂƒÂƒÃÂ‚ÂƒÃÂƒÂ‚ÃÂ‚Â‚ÃÂƒÂƒÃÂ‚Â‚ÃÂƒÂ‚ÃÂ‚Â‚ÃÂƒÂƒÃÂ‚ÂƒÃÂƒÂ‚ÃÂ‚ÂƒÃÂƒÂƒÃÂ‚Â‚ÃÂƒÂ‚ÃÂ‚ÂƒÃÂƒÂƒÃÂ‚ÂƒÃÂƒÂ‚ÃÂ‚Â‚ÃÂƒÂƒÃÂ‚Â‚ÃÂƒÂ‚ÃÂ‚ÂƒÃÂƒÂƒÃÂ‚ÂƒÃÂƒÂ‚ÃÂ‚ÂƒÃÂƒÂƒÃÂ‚Â‚ÃÂƒÂ‚ÃÂ‚Â‚ÃÂƒÂƒÃÂ‚ÂƒÃÂƒÂ‚ÃÂ‚Â‚ÃÂƒÂƒÃÂ‚Â‚ÃÂƒÂ‚ÃÂ‚Â‚ÃÂƒÂƒÃÂ‚ÂƒÃÂƒÂ‚ÃÂ‚ÂƒÃÂƒÂƒÃÂ‚Â‚ÃÂƒÂ‚ÃÂ‚ÂƒÃÂƒÂƒÃÂ‚ÂƒÃÂƒÂ‚ÃÂ‚Â‚ÃÂƒÂƒÃÂ‚Â‚ÃÂƒÂ‚ÃÂ‚Â‚ÃÂƒÂƒÃÂ‚ÂƒÃÂƒÂ‚ÃÂ‚ÂƒÃÂƒÂƒÃÂ‚Â‚ÃÂƒÂ‚ÃÂ‚Â‚ÃÂƒÂƒÃÂ‚ÂƒÃÂƒÂ‚ÃÂ‚Â‚ÃÂƒÂƒÃÂ‚Â‚ÃÂƒÂ‚ÃÂ‚Â°C)</span>
+
+
+
+
+
+
+
+
+            </button>
+
+
+
+
+
+
+
+
+            <button class="flex items-center gap-1.5 px-3.5 py-2 rounded-full bg-surface-container-high text-on-surface-variant hover:text-on-surface font-label-md text-label-md whitespace-nowrap" id="fichaTabHum">
+
+
+
+
+
+
+
+
+              <span class="material-symbols-outlined text-[17px]">water_drop</span>
+
+
+
+
+
+
+
+
+              <span class="">Humedad (%)</span>
+
+
+
+
+
+
+
+
+            </button>
+
+
+
+
+
+
+
+
+            <button class="flex items-center gap-1.5 px-3.5 py-2 rounded-full bg-surface-container-high text-on-surface-variant hover:text-on-surface font-label-md text-label-md whitespace-nowrap" id="fichaTabWeight">
+
+
+
+
+
+
+
+
+              <span class="material-symbols-outlined text-[17px]">monitoring</span>
+
+
+
+
+
+
+
+
+              <span class="">Curva Peso</span>
+
+
+
+
+
+
+
+
+            </button>
+
+
+
+
+
+
+
+
+            <button class="flex items-center gap-1.5 px-3.5 py-2 rounded-full bg-surface-container-high text-on-surface-variant hover:text-on-surface font-label-md text-label-md whitespace-nowrap" id="fichaTabUvb">
+
+
+
+
+
+
+
+
+              <span class="material-symbols-outlined text-[17px]">wb_sunny</span>
+
+
+
+
+
+
+
+
+              <span class="">Fotoperiodo / UVB</span>
+
+
+
+
+
+
+
+
+            </button>
+
+
+
+
+
+
+
+
+          </div>
+
+
+
+
+
+
+
+
+          <!-- Main Telemetry Chart Card -->
+
+
+
+
+
+
+
+
+          <div class="rounded-xl bg-surface-container p-4 shadow-md space-y-4 backdrop-blur-xl" id="fichaChartContainer">
+
+
+
+
+
+
+
+
+            <!-- Header of Graph: Title & Timeline Controls -->
+
+
+
+
+
+
+
+
+            <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-2">
+
+
+
+
+
+
+
+
+              <div>
+
+
+
+
+
+
+
+
+                <div class="flex items-center gap-1.5">
+
+
+
+
+
+
+
+
+                  <span class="material-symbols-outlined text-primary text-[18px]">show_chart</span>
+
+
+
+
+
+
+
+
+                  <h2 class="font-headline-md text-headline-md text-on-surface" id="fichaChartTitle">Curva TÃÂƒÂƒÃÂ‚ÂƒÃÂƒÂ‚ÃÂ‚ÂƒÃÂƒÂƒÃÂ‚Â‚ÃÂƒÂ‚ÃÂ‚ÂƒÃÂƒÂƒÃÂ‚ÂƒÃÂƒÂ‚ÃÂ‚Â‚ÃÂƒÂƒÃÂ‚Â‚ÃÂƒÂ‚ÃÂ‚ÂƒÃÂƒÂƒÃÂ‚ÂƒÃÂƒÂ‚ÃÂ‚ÂƒÃÂƒÂƒÃÂ‚Â‚ÃÂƒÂ‚ÃÂ‚Â‚ÃÂƒÂƒÃÂ‚ÂƒÃÂƒÂ‚ÃÂ‚Â‚ÃÂƒÂƒÃÂ‚Â‚ÃÂƒÂ‚ÃÂ‚ÂƒÃÂƒÂƒÃÂ‚ÂƒÃÂƒÂ‚ÃÂ‚ÂƒÃÂƒÂƒÃÂ‚Â‚ÃÂƒÂ‚ÃÂ‚ÂƒÃÂƒÂƒÃÂ‚ÂƒÃÂƒÂ‚ÃÂ‚Â‚ÃÂƒÂƒÃÂ‚Â‚ÃÂƒÂ‚ÃÂ‚Â‚ÃÂƒÂƒÃÂ‚ÂƒÃÂƒÂ‚ÃÂ‚ÂƒÃÂƒÂƒÃÂ‚Â‚ÃÂƒÂ‚ÃÂ‚Â‚ÃÂƒÂƒÃÂ‚ÂƒÃÂƒÂ‚ÃÂ‚Â‚ÃÂƒÂƒÃÂ‚Â‚ÃÂƒÂ‚ÃÂ‚ÂƒÃÂƒÂƒÃÂ‚ÂƒÃÂƒÂ‚ÃÂ‚ÂƒÃÂƒÂƒÃÂ‚Â‚ÃÂƒÂ‚ÃÂ‚ÂƒÃÂƒÂƒÃÂ‚ÂƒÃÂƒÂ‚ÃÂ‚Â‚ÃÂƒÂƒÃÂ‚Â‚ÃÂƒÂ‚ÃÂ‚ÂƒÃÂƒÂƒÃÂ‚ÂƒÃÂƒÂ‚ÃÂ‚ÂƒÃÂƒÂƒÃÂ‚Â‚ÃÂƒÂ‚ÃÂ‚Â‚ÃÂƒÂƒÃÂ‚ÂƒÃÂƒÂ‚ÃÂ‚Â‚ÃÂƒÂƒÃÂ‚Â‚ÃÂƒÂ‚ÃÂ‚Â‚ÃÂƒÂƒÃÂ‚ÂƒÃÂƒÂ‚ÃÂ‚ÂƒÃÂƒÂƒÃÂ‚Â‚ÃÂƒÂ‚ÃÂ‚ÂƒÃÂƒÂƒÃÂ‚ÂƒÃÂƒÂ‚ÃÂ‚Â‚ÃÂƒÂƒÃÂ‚Â‚ÃÂƒÂ‚ÃÂ‚Â‚ÃÂƒÂƒÃÂ‚ÂƒÃÂƒÂ‚ÃÂ‚ÂƒÃÂƒÂƒÃÂ‚Â‚ÃÂƒÂ‚ÃÂ‚Â‚ÃÂƒÂƒÃÂ‚ÂƒÃÂƒÂ‚ÃÂ‚Â‚ÃÂƒÂƒÃÂ‚Â‚ÃÂƒÂ‚ÃÂ‚Â©rmica Diaria</h2>
+
+
+
+
+
+
+
+
+                </div>
+
+
+
+
+
+
+
+
+                <p class="font-body-sm text-body-sm text-on-surface-variant mt-0.5" id="fichaChartDescription">FluctuaciÃ³nÃ³n de gradiente entre sonda cÃÂƒÂƒÃÂ‚ÂƒÃÂƒÂ‚ÃÂ‚ÂƒÃÂƒÂƒÃÂ‚Â‚ÃÂƒÂ‚ÃÂ‚ÂƒÃÂƒÂƒÃÂ‚ÂƒÃÂƒÂ‚ÃÂ‚Â‚ÃÂƒÂƒÃÂ‚Â‚ÃÂƒÂ‚ÃÂ‚ÂƒÃÂƒÂƒÃÂ‚ÂƒÃÂƒÂ‚ÃÂ‚ÂƒÃÂƒÂƒÃÂ‚Â‚ÃÂƒÂ‚ÃÂ‚Â‚ÃÂƒÂƒÃÂ‚ÂƒÃÂƒÂ‚ÃÂ‚Â‚ÃÂƒÂƒÃÂ‚Â‚ÃÂƒÂ‚ÃÂ‚ÂƒÃÂƒÂƒÃÂ‚ÂƒÃÂƒÂ‚ÃÂ‚ÂƒÃÂƒÂƒÃÂ‚Â‚ÃÂƒÂ‚ÃÂ‚ÂƒÃÂƒÂƒÃÂ‚ÂƒÃÂƒÂ‚ÃÂ‚Â‚ÃÂƒÂƒÃÂ‚Â‚ÃÂƒÂ‚ÃÂ‚Â‚ÃÂƒÂƒÃÂ‚ÂƒÃÂƒÂ‚ÃÂ‚ÂƒÃÂƒÂƒÃÂ‚Â‚ÃÂƒÂ‚ÃÂ‚Â‚ÃÂƒÂƒÃÂ‚ÂƒÃÂƒÂ‚ÃÂ‚Â‚ÃÂƒÂƒÃÂ‚Â‚ÃÂƒÂ‚ÃÂ‚ÂƒÃÂƒÂƒÃÂ‚ÂƒÃÂƒÂ‚ÃÂ‚ÂƒÃÂƒÂƒÃÂ‚Â‚ÃÂƒÂ‚ÃÂ‚ÂƒÃÂƒÂƒÃÂ‚ÂƒÃÂƒÂ‚ÃÂ‚Â‚ÃÂƒÂƒÃÂ‚Â‚ÃÂƒÂ‚ÃÂ‚ÂƒÃÂƒÂƒÃÂ‚ÂƒÃÂƒÂ‚ÃÂ‚ÂƒÃÂƒÂƒÃÂ‚Â‚ÃÂƒÂ‚ÃÂ‚Â‚ÃÂƒÂƒÃÂ‚ÂƒÃÂƒÂ‚ÃÂ‚Â‚ÃÂƒÂƒÃÂ‚Â‚ÃÂƒÂ‚ÃÂ‚Â‚ÃÂƒÂƒÃÂ‚ÂƒÃÂƒÂ‚ÃÂ‚ÂƒÃÂƒÂƒÃÂ‚Â‚ÃÂƒÂ‚ÃÂ‚ÂƒÃÂƒÂƒÃÂ‚ÂƒÃÂƒÂ‚ÃÂ‚Â‚ÃÂƒÂƒÃÂ‚Â‚ÃÂƒÂ‚ÃÂ‚Â‚ÃÂƒÂƒÃÂ‚ÂƒÃÂƒÂ‚ÃÂ‚ÂƒÃÂƒÂƒÂ¡lida y ambiente</p>
+
+
+
+
+
+
+
+
+              </div>
+
+
+
+
+
+
+
+
+              <!-- Timeframe Toggle Pills -->
+
+
+
+
+
+
+
+
+              <div class="inline-flex rounded-lg bg-surface-container-low p-1 self-start sm:self-auto shadow-inner">
+
+
+
+
+
+
+
+
+                <button class="px-2.5 py-1 rounded bg-surface-variant text-primary font-label-sm text-label-sm font-semibold shadow-xs" id="fichaTimeframe24h">24h</button>
+
+
+
+
+
+
+
+
+                <button class="px-2.5 py-1 rounded text-on-surface-variant hover:text-on-surface font-label-sm text-label-sm font-medium" id="fichaTimeframe7d">7 DÃÂƒÂƒÃÂ‚ÂƒÃÂƒÂ‚ÃÂ‚ÂƒÃÂƒÂƒÃÂ‚Â‚ÃÂƒÂ‚ÃÂ‚ÂƒÃÂƒÂƒÃÂ‚ÂƒÃÂƒÂ‚ÃÂ‚Â‚ÃÂƒÂƒÃÂ‚Â‚ÃÂƒÂ‚ÃÂ‚ÂƒÃÂƒÂƒÃÂ‚ÂƒÃÂƒÂ‚ÃÂ‚ÂƒÃÂƒÂƒÃÂ‚Â‚ÃÂƒÂ‚ÃÂ‚Â‚ÃÂƒÂƒÃÂ‚ÂƒÃÂƒÂ‚ÃÂ‚Â‚ÃÂƒÂƒÃÂ‚Â‚ÃÂƒÂ‚ÃÂ‚ÂƒÃÂƒÂƒÃÂ‚ÂƒÃÂƒÂ‚ÃÂ‚ÂƒÃÂƒÂƒÃÂ‚Â‚ÃÂƒÂ‚ÃÂ‚ÂƒÃÂƒÂƒÃÂ‚ÂƒÃÂƒÂ‚ÃÂ‚Â‚ÃÂƒÂƒÃÂ‚Â‚ÃÂƒÂ‚ÃÂ‚Â‚ÃÂƒÂƒÃÂ‚ÂƒÃÂƒÂ‚ÃÂ‚ÂƒÃÂƒÂƒÃÂ‚Â‚ÃÂƒÂ‚ÃÂ‚Â‚ÃÂƒÂƒÃÂ‚ÂƒÃÂƒÂ‚ÃÂ‚Â‚ÃÂƒÂƒÃÂ‚Â‚ÃÂƒÂ‚ÃÂ‚ÂƒÃÂƒÂƒÃÂ‚ÂƒÃÂƒÂ‚ÃÂ‚ÂƒÃÂƒÂƒÃÂ‚Â‚ÃÂƒÂ‚ÃÂ‚ÂƒÃÂƒÂƒÃÂ‚ÂƒÃÂƒÂ‚ÃÂ‚Â‚ÃÂƒÂƒÃÂ‚Â‚ÃÂƒÂ‚ÃÂ‚ÂƒÃÂƒÂƒÃÂ‚ÂƒÃÂƒÂ‚ÃÂ‚ÂƒÃÂƒÂƒÃÂ‚Â‚ÃÂƒÂ‚ÃÂ‚Â‚ÃÂƒÂƒÃÂ‚ÂƒÃÂƒÂ‚ÃÂ‚Â‚ÃÂƒÂƒÃÂ‚Â‚ÃÂƒÂ‚ÃÂ‚Â‚ÃÂƒÂƒÃÂ‚ÂƒÃÂƒÂ‚ÃÂ‚ÂƒÃÂƒÂƒÃÂ‚Â‚ÃÂƒÂ‚ÃÂ‚ÂƒÃÂƒÂƒÃÂ‚ÂƒÃÂƒÂ‚ÃÂ‚Â‚ÃÂƒÂƒÃÂ‚Â‚ÃÂƒÂ‚ÃÂ‚Â‚ÃÂƒÂƒÃÂ‚ÂƒÃÂƒÂ‚ÃÂ‚ÂƒÃÂƒÂƒÃÂ‚Â‚ÃÂƒÂ‚ÃÂ‚Â‚ÃÂƒÂƒÃÂ‚ÂƒÃÂƒÂ‚ÃÂ‚Â‚ÃÂƒÂƒÃÂ‚Â‚ÃÂƒÂ‚ÃÂ‚Â­as</button>
+
+
+
+
+
+
+
+
+                <button class="px-2.5 py-1 rounded text-on-surface-variant hover:text-on-surface font-label-sm text-label-sm font-medium" id="fichaTimeframe30d">30D</button>
+
+
+
+
+
+
+
+
+                <button class="px-2.5 py-1 rounded text-on-surface-variant hover:text-on-surface font-label-sm text-label-sm font-medium" id="fichaTimeframe1y">AÃÂƒÂƒÃÂ‚ÂƒÃÂƒÂ‚ÃÂ‚ÂƒÃÂƒÂƒÃÂ‚Â‚ÃÂƒÂ‚ÃÂ‚ÂƒÃÂƒÂƒÃÂ‚ÂƒÃÂƒÂ‚ÃÂ‚Â‚ÃÂƒÂƒÃÂ‚Â‚ÃÂƒÂ‚ÃÂ‚ÂƒÃÂƒÂƒÃÂ‚ÂƒÃÂƒÂ‚ÃÂ‚ÂƒÃÂƒÂƒÃÂ‚Â‚ÃÂƒÂ‚ÃÂ‚Â‚ÃÂƒÂƒÃÂ‚ÂƒÃÂƒÂ‚ÃÂ‚Â‚ÃÂƒÂƒÃÂ‚Â‚ÃÂƒÂ‚ÃÂ‚ÂƒÃÂƒÂƒÃÂ‚ÂƒÃÂƒÂ‚ÃÂ‚ÂƒÃÂƒÂƒÃÂ‚Â‚ÃÂƒÂ‚ÃÂ‚ÂƒÃÂƒÂƒÃÂ‚ÂƒÃÂƒÂ‚ÃÂ‚Â‚ÃÂƒÂƒÃÂ‚Â‚ÃÂƒÂ‚ÃÂ‚Â‚ÃÂƒÂƒÃÂ‚ÂƒÃÂƒÂ‚ÃÂ‚ÂƒÃÂƒÂƒÃÂ‚Â‚ÃÂƒÂ‚ÃÂ‚Â‚ÃÂƒÂƒÃÂ‚ÂƒÃÂƒÂ‚ÃÂ‚Â‚ÃÂƒÂƒÃÂ‚Â‚ÃÂƒÂ‚ÃÂ‚ÂƒÃÂƒÂƒÃÂ‚ÂƒÃÂƒÂ‚ÃÂ‚ÂƒÃÂƒÂƒÃÂ‚Â‚ÃÂƒÂ‚ÃÂ‚ÂƒÃÂƒÂƒÃÂ‚ÂƒÃÂƒÂ‚ÃÂ‚Â‚ÃÂƒÂƒÃÂ‚Â‚ÃÂƒÂ‚ÃÂ‚ÂƒÃÂƒÂƒÃÂ‚ÂƒÃÂƒÂ‚ÃÂ‚ÂƒÃÂƒÂƒÃÂ‚Â‚ÃÂƒÂ‚ÃÂ‚Â‚ÃÂƒÂƒÃÂ‚ÂƒÃÂƒÂ‚ÃÂ‚Â‚ÃÂƒÂƒÃÂ‚Â‚ÃÂƒÂ‚ÃÂ‚Â‚ÃÂƒÂƒÃÂ‚ÂƒÃÂƒÂ‚ÃÂ‚ÂƒÃÂƒÂƒÃÂ‚Â‚ÃÂƒÂ‚ÃÂ‚ÂƒÃÂƒÂƒÃÂ‚ÂƒÃÂƒÂ‚ÃÂ‚Â‚ÃÂƒÂƒÃÂ‚Â‚ÃÂƒÂ‚ÃÂ‚Â‚ÃÂƒÂƒÃÂ‚ÂƒÃÂƒÂ‚ÃÂ‚ÂƒÃÂƒÂƒÃÂ‚Â‚ÃÂƒÂ‚ÃÂ‚Â‚ÃÂƒÂƒÃÂ‚ÂƒÃÂƒÂ‚ÃÂ‚Â‚ÃÂƒÂƒÃÂ‚Â‚ÃÂƒÂ‚ÃÂ‚Â±o</button>
+
+
+
+
+
+
+
+
+              </div>
+
+
+
+
+
+
+
+
+            </div>
+
+
+
+
+
+
+
+
+            <!-- Active Sensor Legend & Range Badges -->
+
+
+
+
+
+
+
+
+            <div class="flex flex-wrap items-center justify-between gap-2 pt-2 pb-2">
+
+
+
+
+
+
+
+
+              <div class="flex items-center gap-3">
+
+
+
+
+
+
+
+
+                <div class="flex items-center gap-1.5">
+
+
+
+
+
+
+
+
+                  <span class="w-2.5 h-2.5 rounded-full bg-primary inline-block shadow-[0_0_8px_rgba(75,226,119,0.7)]"></span>
+
+
+
+
+
+
+
+
+                  <span class="font-label-sm text-label-sm text-on-surface">Sonda #1 (Hot Spot)</span>
+
+
+
+
+
+
+
+
+                </div>
+
+
+
+
+
+
+
+
+                <div class="flex items-center gap-1.5">
+
+
+
+
+
+
+
+
+                  <span class="w-2.5 h-2.5 rounded-full bg-secondary inline-block opacity-70"></span>
+
+
+
+
+
+
+
+
+                  <span class="font-label-sm text-label-sm text-on-surface-variant">Sonda #2 (Cueva FrÃÂƒÂƒÃÂ‚ÂƒÃÂƒÂ‚ÃÂ‚ÂƒÃÂƒÂƒÃÂ‚Â‚ÃÂƒÂ‚ÃÂ‚ÂƒÃÂƒÂƒÃÂ‚ÂƒÃÂƒÂ‚ÃÂ‚Â‚ÃÂƒÂƒÃÂ‚Â‚ÃÂƒÂ‚ÃÂ‚ÂƒÃÂƒÂƒÃÂ‚ÂƒÃÂƒÂ‚ÃÂ‚ÂƒÃÂƒÂƒÃÂ‚Â‚ÃÂƒÂ‚ÃÂ‚Â‚ÃÂƒÂƒÃÂ‚ÂƒÃÂƒÂ‚ÃÂ‚Â‚ÃÂƒÂƒÃÂ‚Â‚ÃÂƒÂ‚ÃÂ‚ÂƒÃÂƒÂƒÃÂ‚ÂƒÃÂƒÂ‚ÃÂ‚ÂƒÃÂƒÂƒÃÂ‚Â‚ÃÂƒÂ‚ÃÂ‚ÂƒÃÂƒÂƒÃÂ‚ÂƒÃÂƒÂ‚ÃÂ‚Â‚ÃÂƒÂƒÃÂ‚Â‚ÃÂƒÂ‚ÃÂ‚Â‚ÃÂƒÂƒÃÂ‚ÂƒÃÂƒÂ‚ÃÂ‚ÂƒÃÂƒÂƒÃÂ‚Â‚ÃÂƒÂ‚ÃÂ‚Â‚ÃÂƒÂƒÃÂ‚ÂƒÃÂƒÂ‚ÃÂ‚Â‚ÃÂƒÂƒÃÂ‚Â‚ÃÂƒÂ‚ÃÂ‚ÂƒÃÂƒÂƒÃÂ‚ÂƒÃÂƒÂ‚ÃÂ‚ÂƒÃÂƒÂƒÃÂ‚Â‚ÃÂƒÂ‚ÃÂ‚ÂƒÃÂƒÂƒÃÂ‚ÂƒÃÂƒÂ‚ÃÂ‚Â‚ÃÂƒÂƒÃÂ‚Â‚ÃÂƒÂ‚ÃÂ‚ÂƒÃÂƒÂƒÃÂ‚ÂƒÃÂƒÂ‚ÃÂ‚ÂƒÃÂƒÂƒÃÂ‚Â‚ÃÂƒÂ‚ÃÂ‚Â‚ÃÂƒÂƒÃÂ‚ÂƒÃÂƒÂ‚ÃÂ‚Â‚ÃÂƒÂƒÃÂ‚Â‚ÃÂƒÂ‚ÃÂ‚Â‚ÃÂƒÂƒÃÂ‚ÂƒÃÂƒÂ‚ÃÂ‚ÂƒÃÂƒÂƒÃÂ‚Â‚ÃÂƒÂ‚ÃÂ‚ÂƒÃÂƒÂƒÃÂ‚ÂƒÃÂƒÂ‚ÃÂ‚Â‚ÃÂƒÂƒÃÂ‚Â‚ÃÂƒÂ‚ÃÂ‚Â‚ÃÂƒÂƒÃÂ‚ÂƒÃÂƒÂ‚ÃÂ‚ÂƒÃÂƒÂƒÃÂ‚Â‚ÃÂƒÂ‚ÃÂ‚Â‚ÃÂƒÂƒÃÂ‚ÂƒÃÂƒÂ‚ÃÂ‚Â‚ÃÂƒÂƒÃÂ‚Â‚ÃÂƒÂ‚ÃÂ‚Â­a)</span>
+
+
+
+
+
+
+
+
+                </div>
+
+
+
+
+
+
+
+
+              </div>
+
+
+
+
+
+
+
+
+              <div class="flex items-center gap-2">
+
+
+
+
+
+
+
+
+                <span class="font-label-sm text-[10px] px-2 py-0.5 rounded bg-surface-container-high text-tertiary" id="fichaChartMaxTemp">Max: 32.8ÃÂƒÂƒÃÂ‚ÂƒÃÂƒÂ‚ÃÂ‚ÂƒÃÂƒÂƒÃÂ‚Â‚ÃÂƒÂ‚ÃÂ‚ÂƒÃÂƒÂƒÃÂ‚ÂƒÃÂƒÂ‚ÃÂ‚Â‚ÃÂƒÂƒÃÂ‚Â‚ÃÂƒÂ‚ÃÂ‚ÂƒÃÂƒÂƒÃÂ‚ÂƒÃÂƒÂ‚ÃÂ‚ÂƒÃÂƒÂƒÃÂ‚Â‚ÃÂƒÂ‚ÃÂ‚Â‚ÃÂƒÂƒÃÂ‚ÂƒÃÂƒÂ‚ÃÂ‚Â‚ÃÂƒÂƒÃÂ‚Â‚ÃÂƒÂ‚ÃÂ‚ÂƒÃÂƒÂƒÃÂ‚ÂƒÃÂƒÂ‚ÃÂ‚ÂƒÃÂƒÂƒÃÂ‚Â‚ÃÂƒÂ‚ÃÂ‚ÂƒÃÂƒÂƒÃÂ‚ÂƒÃÂƒÂ‚ÃÂ‚Â‚ÃÂƒÂƒÃÂ‚Â‚ÃÂƒÂ‚ÃÂ‚Â‚ÃÂƒÂƒÃÂ‚ÂƒÃÂƒÂ‚ÃÂ‚ÂƒÃÂƒÂƒÃÂ‚Â‚ÃÂƒÂ‚ÃÂ‚Â‚ÃÂƒÂƒÃÂ‚ÂƒÃÂƒÂ‚ÃÂ‚Â‚ÃÂƒÂƒÃÂ‚Â‚ÃÂƒÂ‚ÃÂ‚Â‚ÃÂƒÂƒÃÂ‚ÂƒÃÂƒÂ‚ÃÂ‚ÂƒÃÂƒÂƒÃÂ‚Â‚ÃÂƒÂ‚ÃÂ‚ÂƒÃÂƒÂƒÃÂ‚ÂƒÃÂƒÂ‚ÃÂ‚Â‚ÃÂƒÂƒÃÂ‚Â‚ÃÂƒÂ‚ÃÂ‚ÂƒÃÂƒÂƒÃÂ‚ÂƒÃÂƒÂ‚ÃÂ‚ÂƒÃÂƒÂƒÃÂ‚Â‚ÃÂƒÂ‚ÃÂ‚Â‚ÃÂƒÂƒÃÂ‚ÂƒÃÂƒÂ‚ÃÂ‚Â‚ÃÂƒÂƒÃÂ‚Â‚ÃÂƒÂ‚ÃÂ‚Â‚ÃÂƒÂƒÃÂ‚ÂƒÃÂƒÂ‚ÃÂ‚ÂƒÃÂƒÂƒÃÂ‚Â‚ÃÂƒÂ‚ÃÂ‚ÂƒÃÂƒÂƒÃÂ‚ÂƒÃÂƒÂ‚ÃÂ‚Â‚ÃÂƒÂƒÃÂ‚Â‚ÃÂƒÂ‚ÃÂ‚Â‚ÃÂƒÂƒÃÂ‚ÂƒÃÂƒÂ‚ÃÂ‚ÂƒÃÂƒÂƒÃÂ‚Â‚ÃÂƒÂ‚ÃÂ‚Â‚ÃÂƒÂƒÃÂ‚ÂƒÃÂƒÂ‚ÃÂ‚Â‚ÃÂƒÂƒÃÂ‚Â‚ÃÂƒÂ‚ÃÂ‚Â°C</span>
+
+
+
+
+
+
+
+
+                <span class="font-label-sm text-[10px] px-2 py-0.5 rounded bg-surface-container-high text-secondary" id="fichaChartMinTemp">Min: 24.2ÃÂƒÂƒÃÂ‚ÂƒÃÂƒÂ‚ÃÂ‚ÂƒÃÂƒÂƒÃÂ‚Â‚ÃÂƒÂ‚ÃÂ‚ÂƒÃÂƒÂƒÃÂ‚ÂƒÃÂƒÂ‚ÃÂ‚Â‚ÃÂƒÂƒÃÂ‚Â‚ÃÂƒÂ‚ÃÂ‚ÂƒÃÂƒÂƒÃÂ‚ÂƒÃÂƒÂ‚ÃÂ‚ÂƒÃÂƒÂƒÃÂ‚Â‚ÃÂƒÂ‚ÃÂ‚Â‚ÃÂƒÂƒÃÂ‚ÂƒÃÂƒÂ‚ÃÂ‚Â‚ÃÂƒÂƒÃÂ‚Â‚ÃÂƒÂ‚ÃÂ‚ÂƒÃÂƒÂƒÃÂ‚ÂƒÃÂƒÂ‚ÃÂ‚ÂƒÃÂƒÂƒÃÂ‚Â‚ÃÂƒÂ‚ÃÂ‚ÂƒÃÂƒÂƒÃÂ‚ÂƒÃÂƒÂ‚ÃÂ‚Â‚ÃÂƒÂƒÃÂ‚Â‚ÃÂƒÂ‚ÃÂ‚Â‚ÃÂƒÂƒÃÂ‚ÂƒÃÂƒÂ‚ÃÂ‚ÂƒÃÂƒÂƒÃÂ‚Â‚ÃÂƒÂ‚ÃÂ‚Â‚ÃÂƒÂƒÃÂ‚ÂƒÃÂƒÂ‚ÃÂ‚Â‚ÃÂƒÂƒÃÂ‚Â‚ÃÂƒÂ‚ÃÂ‚Â‚ÃÂƒÂƒÃÂ‚ÂƒÃÂƒÂ‚ÃÂ‚ÂƒÃÂƒÂƒÃÂ‚Â‚ÃÂƒÂ‚ÃÂ‚ÂƒÃÂƒÂƒÃÂ‚ÂƒÃÂƒÂ‚ÃÂ‚Â‚ÃÂƒÂƒÃÂ‚Â‚ÃÂƒÂ‚ÃÂ‚ÂƒÃÂƒÂƒÃÂ‚ÂƒÃÂƒÂ‚ÃÂ‚ÂƒÃÂƒÂƒÃÂ‚Â‚ÃÂƒÂ‚ÃÂ‚Â‚ÃÂƒÂƒÃÂ‚ÂƒÃÂƒÂ‚ÃÂ‚Â‚ÃÂƒÂƒÃÂ‚Â‚ÃÂƒÂ‚ÃÂ‚Â‚ÃÂƒÂƒÃÂ‚ÂƒÃÂƒÂ‚ÃÂ‚ÂƒÃÂƒÂƒÃÂ‚Â‚ÃÂƒÂ‚ÃÂ‚ÂƒÃÂƒÂƒÃÂ‚ÂƒÃÂƒÂ‚ÃÂ‚Â‚ÃÂƒÂƒÃÂ‚Â‚ÃÂƒÂ‚ÃÂ‚Â‚ÃÂƒÂƒÃÂ‚ÂƒÃÂƒÂ‚ÃÂ‚ÂƒÃÂƒÂƒÃÂ‚Â‚ÃÂƒÂ‚ÃÂ‚Â‚ÃÂƒÂƒÃÂ‚ÂƒÃÂƒÂ‚ÃÂ‚Â‚ÃÂƒÂƒÃÂ‚Â‚ÃÂƒÂ‚ÃÂ‚Â°C</span>
+
+
+
+
+
+
+
+
+              </div>
+
+
+
+
+
+
+
+
+            </div>
+
+
+
+
+
+
+
+
+            <!-- Placeholder for SVG Chart -->
+
+
+
+
+
+
+
+
+            <div class="relative w-full rounded-lg bg-surface-container-lowest p-2 overflow-hidden shadow-inner" id="fichaChartSvgContainer">
+
+
+
+
+
+
+
+
+              <!-- SVG will be injected here by JavaScript -->
+
+
+
+
+
+
+
+
+              <div class="h-44 flex items-center justify-center text-on-surface-variant/50 text-sm">Cargando grÃÂƒÂƒÃÂ‚ÂƒÃÂƒÂ‚ÃÂ‚ÂƒÃÂƒÂƒÃÂ‚Â‚ÃÂƒÂ‚ÃÂ‚ÂƒÃÂƒÂƒÃÂ‚ÂƒÃÂƒÂ‚ÃÂ‚Â‚ÃÂƒÂƒÃÂ‚Â‚ÃÂƒÂ‚ÃÂ‚ÂƒÃÂƒÂƒÃÂ‚ÂƒÃÂƒÂ‚ÃÂ‚ÂƒÃÂƒÂƒÃÂ‚Â‚ÃÂƒÂ‚ÃÂ‚Â‚ÃÂƒÂƒÃÂ‚ÂƒÃÂƒÂ‚ÃÂ‚Â‚ÃÂƒÂƒÃÂ‚Â‚ÃÂƒÂ‚ÃÂ‚ÂƒÃÂƒÂƒÃÂ‚ÂƒÃÂƒÂ‚ÃÂ‚ÂƒÃÂƒÂƒÃÂ‚Â‚ÃÂƒÂ‚ÃÂ‚ÂƒÃÂƒÂƒÃÂ‚ÂƒÃÂƒÂ‚ÃÂ‚Â‚ÃÂƒÂƒÃÂ‚Â‚ÃÂƒÂ‚ÃÂ‚Â‚ÃÂƒÂƒÃÂ‚ÂƒÃÂƒÂ‚ÃÂ‚ÂƒÃÂƒÂƒÃÂ‚Â‚ÃÂƒÂ‚ÃÂ‚Â‚ÃÂƒÂƒÃÂ‚ÂƒÃÂƒÂ‚ÃÂ‚Â‚ÃÂƒÂƒÃÂ‚Â‚ÃÂƒÂ‚ÃÂ‚ÂƒÃÂƒÂƒÃÂ‚ÂƒÃÂƒÂ‚ÃÂ‚ÂƒÃÂƒÂƒÃÂ‚Â‚ÃÂƒÂ‚ÃÂ‚ÂƒÃÂƒÂƒÃÂ‚ÂƒÃÂƒÂ‚ÃÂ‚Â‚ÃÂƒÂƒÃÂ‚Â‚ÃÂƒÂ‚ÃÂ‚ÂƒÃÂƒÂƒÃÂ‚ÂƒÃÂƒÂ‚ÃÂ‚ÂƒÃÂƒÂƒÃÂ‚Â‚ÃÂƒÂ‚ÃÂ‚Â‚ÃÂƒÂƒÃÂ‚ÂƒÃÂƒÂ‚ÃÂ‚Â‚ÃÂƒÂƒÃÂ‚Â‚ÃÂƒÂ‚ÃÂ‚Â‚ÃÂƒÂƒÃÂ‚ÂƒÃÂƒÂ‚ÃÂ‚ÂƒÃÂƒÂƒÃÂ‚Â‚ÃÂƒÂ‚ÃÂ‚ÂƒÃÂƒÂƒÃÂ‚ÂƒÃÂƒÂ‚ÃÂ‚Â‚ÃÂƒÂƒÃÂ‚Â‚ÃÂƒÂ‚ÃÂ‚Â‚ÃÂƒÂƒÃÂ‚ÂƒÃÂƒÂ‚ÃÂ‚ÂƒÃÂƒÂƒÂ¡fico...</div>
+
+
+
+
+
+
+
+
+            </div>
+
+
+
+
+
+
+
+
+            <!-- Time Axis Legends -->
+
+
+
+
+
+
+
+
+            <div class="flex justify-between items-center px-4 pt-2 text-on-surface-variant font-label-sm text-[10px]" id="fichaChartTimeAxis">
+
+
+
+
+
+
+
+
+              <span class="">00:00 (Noche)</span>
+
+
+
+
+
+
+
+
+              <span class="">06:00 (Amanecer)</span>
+
+
+
+
+
+
+
+
+              <span class="text-primary font-semibold">14:30 (CÃÂƒÂƒÃÂ‚ÂƒÃÂƒÂ‚ÃÂ‚ÂƒÃÂƒÂƒÃÂ‚Â‚ÃÂƒÂ‚ÃÂ‚ÂƒÃÂƒÂƒÃÂ‚ÂƒÃÂƒÂ‚ÃÂ‚Â‚ÃÂƒÂƒÃÂ‚Â‚ÃÂƒÂ‚ÃÂ‚ÂƒÃÂƒÂƒÃÂ‚ÂƒÃÂƒÂ‚ÃÂ‚ÂƒÃÂƒÂƒÃÂ‚Â‚ÃÂƒÂ‚ÃÂ‚Â‚ÃÂƒÂƒÃÂ‚ÂƒÃÂƒÂ‚ÃÂ‚Â‚ÃÂƒÂƒÃÂ‚Â‚ÃÂƒÂ‚ÃÂ‚ÂƒÃÂƒÂƒÃÂ‚ÂƒÃÂƒÂ‚ÃÂ‚ÂƒÃÂƒÂƒÃÂ‚Â‚ÃÂƒÂ‚ÃÂ‚ÂƒÃÂƒÂƒÃÂ‚ÂƒÃÂƒÂ‚ÃÂ‚Â‚ÃÂƒÂƒÃÂ‚Â‚ÃÂƒÂ‚ÃÂ‚Â‚ÃÂƒÂƒÃÂ‚ÂƒÃÂƒÂ‚ÃÂ‚ÂƒÃÂƒÂƒÃÂ‚Â‚ÃÂƒÂ‚ÃÂ‚Â‚ÃÂƒÂƒÃÂ‚ÂƒÃÂƒÂ‚ÃÂ‚Â‚ÃÂƒÂƒÃÂ‚Â‚ÃÂƒÂ‚ÃÂ‚ÂƒÃÂƒÂƒÃÂ‚ÂƒÃÂƒÂ‚ÃÂ‚ÂƒÃÂƒÂƒÃÂ‚Â‚ÃÂƒÂ‚ÃÂ‚ÂƒÃÂƒÂƒÃÂ‚ÂƒÃÂƒÂ‚ÃÂ‚Â‚ÃÂƒÂƒÃÂ‚Â‚ÃÂƒÂ‚ÃÂ‚ÂƒÃÂƒÂƒÃÂ‚ÂƒÃÂƒÂ‚ÃÂ‚ÂƒÃÂƒÂƒÃÂ‚Â‚ÃÂƒÂ‚ÃÂ‚Â‚ÃÂƒÂƒÃÂ‚ÂƒÃÂƒÂ‚ÃÂ‚Â‚ÃÂƒÂƒÃÂ‚Â‚ÃÂƒÂ‚ÃÂ‚Â‚ÃÂƒÂƒÃÂ‚ÂƒÃÂƒÂ‚ÃÂ‚ÂƒÃÂƒÂƒÃÂ‚Â‚ÃÂƒÂ‚ÃÂ‚ÂƒÃÂƒÂƒÃÂ‚ÂƒÃÂƒÂ‚ÃÂ‚Â‚ÃÂƒÂƒÃÂ‚Â‚ÃÂƒÂ‚ÃÂ‚Â‚ÃÂƒÂƒÃÂ‚ÂƒÃÂƒÂ‚ÃÂ‚ÂƒÃÂƒÂƒÃÂ‚Â‚ÃÂƒÂ‚ÃÂ‚Â‚ÃÂƒÂƒÃÂ‚ÂƒÃÂƒÂ‚ÃÂ‚Â‚ÃÂƒÂƒÃÂ‚Â‚ÃÂƒÂ‚ÃÂ‚Â©nit)</span>
+
+
+
+
+
+
+
+
+              <span class="">18:00 (Atardecer)</span>
+
+
+
+
+
+
+
+
+              <span class="">23:59</span>
+
+
+
+
+
+
+
+
+            </div>
+
+
+
+
+
+
+
+
+          </div>
+
+
+
+
+
+
+
+
+          <!-- Microclimate Diagnostic Summary -->
+
+
+
+
+
+
+
+
+          <div class="flex items-center justify-between rounded-lg bg-surface-container-low p-4 mt-4">
+
+
+
+
+
+
+
+
+            <div class="flex items-center gap-2">
+
+
+
+
+
+
+
+
+              <span class="material-symbols-outlined text-primary text-[18px]">verified</span>
+
+
+
+
+
+
+
+
+              <span class="font-body-sm text-body-sm text-on-surface font-medium" id="fichaDiagnosticSummary">Gradiente tÃÂƒÂƒÃÂ‚ÂƒÃÂƒÂ‚ÃÂ‚ÂƒÃÂƒÂƒÃÂ‚Â‚ÃÂƒÂ‚ÃÂ‚ÂƒÃÂƒÂƒÃÂ‚ÂƒÃÂƒÂ‚ÃÂ‚Â‚ÃÂƒÂƒÃÂ‚Â‚ÃÂƒÂ‚ÃÂ‚ÂƒÃÂƒÂƒÃÂ‚ÂƒÃÂƒÂ‚ÃÂ‚ÂƒÃÂƒÂƒÃÂ‚Â‚ÃÂƒÂ‚ÃÂ‚Â‚ÃÂƒÂƒÃÂ‚ÂƒÃÂƒÂ‚ÃÂ‚Â‚ÃÂƒÂƒÃÂ‚Â‚ÃÂƒÂ‚ÃÂ‚ÂƒÃÂƒÂƒÃÂ‚ÂƒÃÂƒÂ‚ÃÂ‚ÂƒÃÂƒÂƒÃÂ‚Â‚ÃÂƒÂ‚ÃÂ‚ÂƒÃÂƒÂƒÃÂ‚ÂƒÃÂƒÂ‚ÃÂ‚Â‚ÃÂƒÂƒÃÂ‚Â‚ÃÂƒÂ‚ÃÂ‚Â‚ÃÂƒÂƒÃÂ‚ÂƒÃÂƒÂ‚ÃÂ‚ÂƒÃÂƒÂƒÃÂ‚Â‚ÃÂƒÂ‚ÃÂ‚Â‚ÃÂƒÂƒÃÂ‚ÂƒÃÂƒÂ‚ÃÂ‚Â‚ÃÂƒÂƒÃÂ‚Â‚ÃÂƒÂ‚ÃÂ‚ÂƒÃÂƒÂƒÃÂ‚ÂƒÃÂƒÂ‚ÃÂ‚ÂƒÃÂƒÂƒÃÂ‚Â‚ÃÂƒÂ‚ÃÂ‚ÂƒÃÂƒÂƒÃÂ‚ÂƒÃÂƒÂ‚ÃÂ‚Â‚ÃÂƒÂƒÃÂ‚Â‚ÃÂƒÂ‚ÃÂ‚ÂƒÃÂƒÂƒÃÂ‚ÂƒÃÂƒÂ‚ÃÂ‚ÂƒÃÂƒÂƒÃÂ‚Â‚ÃÂƒÂ‚ÃÂ‚Â‚ÃÂƒÂƒÃÂ‚ÂƒÃÂƒÂ‚ÃÂ‚Â‚ÃÂƒÂƒÃÂ‚Â‚ÃÂƒÂ‚ÃÂ‚Â‚ÃÂƒÂƒÃÂ‚ÂƒÃÂƒÂ‚ÃÂ‚ÂƒÃÂƒÂƒÃÂ‚Â‚ÃÂƒÂ‚ÃÂ‚ÂƒÃÂƒÂƒÃÂ‚ÂƒÃÂƒÂ‚ÃÂ‚Â‚ÃÂƒÂƒÃÂ‚Â‚ÃÂƒÂ‚ÃÂ‚Â‚ÃÂƒÂƒÃÂ‚ÂƒÃÂƒÂ‚ÃÂ‚ÂƒÃÂƒÂƒÃÂ‚Â‚ÃÂƒÂ‚ÃÂ‚Â‚ÃÂƒÂƒÃÂ‚ÂƒÃÂƒÂ‚ÃÂ‚Â‚ÃÂƒÂƒÃÂ‚Â‚ÃÂƒÂ‚ÃÂ‚Â©rmico correcto (ÃÂƒÂƒÃÂ‚ÂƒÃÂƒÂ‚ÃÂ‚ÂƒÃÂƒÂƒÃÂ‚Â‚ÃÂƒÂ‚ÃÂ‚ÂƒÃÂƒÂƒÃÂ‚ÂƒÃÂƒÂ‚ÃÂ‚Â‚ÃÂƒÂƒÃÂ‚Â‚ÃÂƒÂ‚ÃÂ‚ÂƒÃÂƒÂƒÃÂ‚ÂƒÃÂƒÂ‚ÃÂ‚ÂƒÃÂƒÂƒÃÂ‚Â‚ÃÂƒÂ‚ÃÂ‚Â‚ÃÂƒÂƒÃÂ‚ÂƒÃÂƒÂ‚ÃÂ‚Â‚ÃÂƒÂƒÃÂ‚Â‚ÃÂƒÂ‚ÃÂ‚ÂƒÃÂƒÂƒÃÂ‚ÂƒÃÂƒÂ‚ÃÂ‚ÂƒÃÂƒÂƒÃÂ‚Â‚ÃÂƒÂ‚ÃÂ‚ÂƒÃÂƒÂƒÃÂ‚ÂƒÃÂƒÂ‚ÃÂ‚Â‚ÃÂƒÂƒÃÂ‚Â‚ÃÂƒÂ‚ÃÂ‚Â‚ÃÂƒÂƒÃÂ‚ÂƒÃÂƒÂ‚ÃÂ‚ÂƒÃÂƒÂƒÃÂ‚Â‚ÃÂƒÂ‚ÃÂ‚Â‚ÃÂƒÂƒÃÂ‚ÂƒÃÂƒÂ‚ÃÂ‚Â‚ÃÂƒÂƒÃÂ‚Â‚ÃÂƒÂ‚ÃÂ‚ÂŽÃÂƒÂƒÃÂ‚ÂƒÃÂƒÂ‚ÃÂ‚ÂƒÃÂƒÂƒÃÂ‚Â‚ÃÂƒÂ‚ÃÂ‚ÂƒÃÂƒÂƒÃÂ‚ÂƒÃÂƒÂ‚ÃÂ‚Â‚ÃÂƒÂƒÃÂ‚Â‚ÃÂƒÂ‚ÃÂ‚ÂƒÃÂƒÂƒÃÂ‚ÂƒÃÂƒÂ‚ÃÂ‚ÂƒÃÂƒÂƒÃÂ‚Â‚ÃÂƒÂ‚ÃÂ‚Â‚ÃÂƒÂƒÃÂ‚ÂƒÃÂƒÂ‚ÃÂ‚Â‚ÃÂƒÂƒÃÂ‚Â‚ÃÂƒÂ‚ÃÂ‚Â‚ÃÂƒÂƒÃÂ‚ÂƒÃÂƒÂ‚ÃÂ‚ÂƒÃÂƒÂƒÃÂ‚Â‚ÃÂƒÂ‚ÃÂ‚ÂƒÃÂƒÂƒÃÂ‚ÂƒÃÂƒÂ‚ÃÂ‚Â‚ÃÂƒÂƒÃÂ‚Â‚ÃÂƒÂ‚ÃÂ‚Â‚ÃÂƒÂƒÃÂ‚ÂƒÃÂƒÂ‚ÃÂ‚ÂƒÃÂƒÂƒÃÂ‚Â‚ÃÂƒÂ‚ÃÂ‚Â‚ÃÂƒÂƒÃÂ‚ÂƒÃÂƒÂ‚ÃÂ‚Â‚ÃÂƒÂƒÃÂ‚Â‚ÃÂƒÂ‚ÃÂ‚Â” 7.2ÃÂƒÂƒÃÂ‚ÂƒÃÂƒÂ‚ÃÂ‚ÂƒÃÂƒÂƒÃÂ‚Â‚ÃÂƒÂ‚ÃÂ‚ÂƒÃÂƒÂƒÃÂ‚ÂƒÃÂƒÂ‚ÃÂ‚Â‚ÃÂƒÂƒÃÂ‚Â‚ÃÂƒÂ‚ÃÂ‚ÂƒÃÂƒÂƒÃÂ‚ÂƒÃÂƒÂ‚ÃÂ‚ÂƒÃÂƒÂƒÃÂ‚Â‚ÃÂƒÂ‚ÃÂ‚Â‚ÃÂƒÂƒÃÂ‚ÂƒÃÂƒÂ‚ÃÂ‚Â‚ÃÂƒÂƒÃÂ‚Â‚ÃÂƒÂ‚ÃÂ‚ÂƒÃÂƒÂƒÃÂ‚ÂƒÃÂƒÂ‚ÃÂ‚ÂƒÃÂƒÂƒÃÂ‚Â‚ÃÂƒÂ‚ÃÂ‚ÂƒÃÂƒÂƒÃÂ‚ÂƒÃÂƒÂ‚ÃÂ‚Â‚ÃÂƒÂƒÃÂ‚Â‚ÃÂƒÂ‚ÃÂ‚Â‚ÃÂƒÂƒÃÂ‚ÂƒÃÂƒÂ‚ÃÂ‚ÂƒÃÂƒÂƒÃÂ‚Â‚ÃÂƒÂ‚ÃÂ‚Â‚ÃÂƒÂƒÃÂ‚ÂƒÃÂƒÂ‚ÃÂ‚Â‚ÃÂƒÂƒÃÂ‚Â‚ÃÂƒÂ‚ÃÂ‚Â‚ÃÂƒÂƒÃÂ‚ÂƒÃÂƒÂ‚ÃÂ‚ÂƒÃÂƒÂƒÃÂ‚Â‚ÃÂƒÂ‚ÃÂ‚ÂƒÃÂƒÂƒÃÂ‚ÂƒÃÂƒÂ‚ÃÂ‚Â‚ÃÂƒÂƒÃÂ‚Â‚ÃÂƒÂ‚ÃÂ‚ÂƒÃÂƒÂƒÃÂ‚ÂƒÃÂƒÂ‚ÃÂ‚ÂƒÃÂƒÂƒÃÂ‚Â‚ÃÂƒÂ‚ÃÂ‚Â‚ÃÂƒÂƒÃÂ‚ÂƒÃÂƒÂ‚ÃÂ‚Â‚ÃÂƒÂƒÃÂ‚Â‚ÃÂƒÂ‚ÃÂ‚Â‚ÃÂƒÂƒÃÂ‚ÂƒÃÂƒÂ‚ÃÂ‚ÂƒÃÂƒÂƒÃÂ‚Â‚ÃÂƒÂ‚ÃÂ‚ÂƒÃÂƒÂƒÃÂ‚ÂƒÃÂƒÂ‚ÃÂ‚Â‚ÃÂƒÂƒÃÂ‚Â‚ÃÂƒÂ‚ÃÂ‚Â‚ÃÂƒÂƒÃÂ‚ÂƒÃÂƒÂ‚ÃÂ‚ÂƒÃÂƒÂƒÃÂ‚Â‚ÃÂƒÂ‚ÃÂ‚Â‚ÃÂƒÂƒÃÂ‚ÂƒÃÂƒÂ‚ÃÂ‚Â‚ÃÂƒÂƒÃÂ‚Â‚ÃÂƒÂ‚ÃÂ‚Â°C)</span>
+
+
+
+
+
+
+
+
+            </div>
+
+
+
+
+
+
+
+
+            <span class="font-label-sm text-label-sm text-secondary bg-surface-container-high px-2 py-0.5 rounded" id="fichaDigestiveStatus">DigestiÃ³nÃ³n ÃÂƒÂƒÃÂ‚ÂƒÃÂƒÂ‚ÃÂ‚ÂƒÃÂƒÂƒÃÂ‚Â‚ÃÂƒÂ‚ÃÂ‚ÂƒÃÂƒÂƒÃÂ‚ÂƒÃÂƒÂ‚ÃÂ‚Â‚ÃÂƒÂƒÃÂ‚Â‚ÃÂƒÂ‚ÃÂ‚ÂƒÃÂƒÂƒÃÂ‚ÂƒÃÂƒÂ‚ÃÂ‚ÂƒÃÂƒÂƒÃÂ‚Â‚ÃÂƒÂ‚ÃÂ‚Â‚ÃÂƒÂƒÃÂ‚ÂƒÃÂƒÂ‚ÃÂ‚Â‚ÃÂƒÂƒÃÂ‚Â‚ÃÂƒÂ‚ÃÂ‚ÂƒÃÂƒÂƒÃÂ‚ÂƒÃÂƒÂ‚ÃÂ‚ÂƒÃÂƒÂƒÃÂ‚Â‚ÃÂƒÂ‚ÃÂ‚ÂƒÃÂƒÂƒÃÂ‚ÂƒÃÂƒÂ‚ÃÂ‚Â‚ÃÂƒÂƒÃÂ‚Â‚ÃÂƒÂ‚ÃÂ‚Â‚ÃÂƒÂƒÃÂ‚ÂƒÃÂƒÂ‚ÃÂ‚ÂƒÃÂƒÂƒÃÂ‚Â‚ÃÂƒÂ‚ÃÂ‚Â‚ÃÂƒÂƒÃÂ‚ÂƒÃÂƒÂ‚ÃÂ‚Â‚ÃÂƒÂƒÃÂ‚Â‚ÃÂƒÂ‚ÃÂ‚ÂƒÃÂƒÂƒÃÂ‚ÂƒÃÂƒÂ‚ÃÂ‚ÂƒÃÂƒÂƒÃÂ‚Â‚ÃÂƒÂ‚ÃÂ‚ÂƒÃÂƒÂƒÃÂ‚ÂƒÃÂƒÂ‚ÃÂ‚Â‚ÃÂƒÂƒÃÂ‚Â‚ÃÂƒÂ‚ÃÂ‚ÂƒÃÂƒÂƒÃÂ‚ÂƒÃÂƒÂ‚ÃÂ‚ÂƒÃÂƒÂƒÃÂ‚Â‚ÃÂƒÂ‚ÃÂ‚Â‚ÃÂƒÂƒÃÂ‚ÂƒÃÂƒÂ‚ÃÂ‚Â‚ÃÂƒÂƒÃÂ‚Â‚ÃÂƒÂ‚ÃÂ‚Â‚ÃÂƒÂƒÃÂ‚ÂƒÃÂƒÂ‚ÃÂ‚ÂƒÃÂƒÂƒÃÂ‚Â‚ÃÂƒÂ‚ÃÂ‚ÂƒÃÂƒÂƒÃÂ‚ÂƒÃÂƒÂ‚ÃÂ‚Â‚ÃÂƒÂƒÃÂ‚Â‚ÃÂƒÂ‚ÃÂ‚Â‚ÃÂƒÂƒÃÂ‚ÂƒÃÂƒÂ‚ÃÂ‚ÂƒÃÂƒÂƒÃÂ‚Â‚ÃÂƒÂ‚ÃÂ‚Â‚ÃÂƒÂƒÃÂ‚ÂƒÃÂƒÂ‚ÃÂ‚Â‚ÃÂƒÂƒÃÂ‚Â‚ÃÂƒÂ‚ÃÂ‚Â“ptima</span>
+
+
+
+
+
+
+
+
+          </div>
+
+
+
+
+
+
+
+
+          <!-- Fast Action Deck: "AÃÂƒÂƒÃÂ‚ÂƒÃÂƒÂ‚ÃÂ‚ÂƒÃÂƒÂƒÃÂ‚Â‚ÃÂƒÂ‚ÃÂ‚ÂƒÃÂƒÂƒÃÂ‚ÂƒÃÂƒÂ‚ÃÂ‚Â‚ÃÂƒÂƒÃÂ‚Â‚ÃÂƒÂ‚ÃÂ‚ÂƒÃÂƒÂƒÃÂ‚ÂƒÃÂƒÂ‚ÃÂ‚ÂƒÃÂƒÂƒÃÂ‚Â‚ÃÂƒÂ‚ÃÂ‚Â‚ÃÂƒÂƒÃÂ‚ÂƒÃÂƒÂ‚ÃÂ‚Â‚ÃÂƒÂƒÃÂ‚Â‚ÃÂƒÂ‚ÃÂ‚ÂƒÃÂƒÂƒÃÂ‚ÂƒÃÂƒÂ‚ÃÂ‚ÂƒÃÂƒÂƒÃÂ‚Â‚ÃÂƒÂ‚ÃÂ‚ÂƒÃÂƒÂƒÃÂ‚ÂƒÃÂƒÂ‚ÃÂ‚Â‚ÃÂƒÂƒÃÂ‚Â‚ÃÂƒÂ‚ÃÂ‚Â‚ÃÂƒÂƒÃÂ‚ÂƒÃÂƒÂ‚ÃÂ‚ÂƒÃÂƒÂƒÃÂ‚Â‚ÃÂƒÂ‚ÃÂ‚Â‚ÃÂƒÂƒÃÂ‚ÂƒÃÂƒÂ‚ÃÂ‚Â‚ÃÂƒÂƒÃÂ‚Â‚ÃÂƒÂ‚ÃÂ‚ÂƒÃÂƒÂƒÃÂ‚ÂƒÃÂƒÂ‚ÃÂ‚ÂƒÃÂƒÂƒÃÂ‚Â‚ÃÂƒÂ‚ÃÂ‚ÂƒÃÂƒÂƒÃÂ‚ÂƒÃÂƒÂ‚ÃÂ‚Â‚ÃÂƒÂƒÃÂ‚Â‚ÃÂƒÂ‚ÃÂ‚ÂƒÃÂƒÂƒÃÂ‚ÂƒÃÂƒÂ‚ÃÂ‚ÂƒÃÂƒÂƒÃÂ‚Â‚ÃÂƒÂ‚ÃÂ‚Â‚ÃÂƒÂƒÃÂ‚ÂƒÃÂƒÂ‚ÃÂ‚Â‚ÃÂƒÂƒÃÂ‚Â‚ÃÂƒÂ‚ÃÂ‚Â‚ÃÂƒÂƒÃÂ‚ÂƒÃÂƒÂ‚ÃÂ‚ÂƒÃÂƒÂƒÃÂ‚Â‚ÃÂƒÂ‚ÃÂ‚ÂƒÃÂƒÂƒÃÂ‚ÂƒÃÂƒÂ‚ÃÂ‚Â‚ÃÂƒÂƒÃÂ‚Â‚ÃÂƒÂ‚ÃÂ‚Â‚ÃÂƒÂƒÃÂ‚ÂƒÃÂƒÂ‚ÃÂ‚ÂƒÃÂƒÂƒÃÂ‚Â‚ÃÂƒÂ‚ÃÂ‚Â‚ÃÂƒÂƒÃÂ‚ÂƒÃÂƒÂ‚ÃÂ‚Â‚ÃÂƒÂƒÃÂ‚Â‚ÃÂƒÂ‚ÃÂ‚Â±adir / Registrar Nuevos Datos" -->
+
+
+
+
+
+
+
+
+          <div class="space-y-4 mt-4">
+
+
+
+
+
+
+
+
+            <div class="flex items-center justify-between">
+
+
+
+
+
+
+
+
+              <div class="flex items-center gap-1.5">
+
+
+
+
+
+
+
+
+                <span class="material-symbols-outlined text-primary text-[18px]">add_circle</span>
+
+
+
+
+
+
+
+
+                <h2 class="font-headline-md text-headline-md text-on-surface">Registrar ParÃÂƒÂƒÃÂ‚ÂƒÃÂƒÂ‚ÃÂ‚ÂƒÃÂƒÂƒÃÂ‚Â‚ÃÂƒÂ‚ÃÂ‚ÂƒÃÂƒÂƒÃÂ‚ÂƒÃÂƒÂ‚ÃÂ‚Â‚ÃÂƒÂƒÃÂ‚Â‚ÃÂƒÂ‚ÃÂ‚ÂƒÃÂƒÂƒÃÂ‚ÂƒÃÂƒÂ‚ÃÂ‚ÂƒÃÂƒÂƒÃÂ‚Â‚ÃÂƒÂ‚ÃÂ‚Â‚ÃÂƒÂƒÃÂ‚ÂƒÃÂƒÂ‚ÃÂ‚Â‚ÃÂƒÂƒÃÂ‚Â‚ÃÂƒÂ‚ÃÂ‚ÂƒÃÂƒÂƒÃÂ‚ÂƒÃÂƒÂ‚ÃÂ‚ÂƒÃÂƒÂƒÃÂ‚Â‚ÃÂƒÂ‚ÃÂ‚ÂƒÃÂƒÂƒÃÂ‚ÂƒÃÂƒÂ‚ÃÂ‚Â‚ÃÂƒÂƒÃÂ‚Â‚ÃÂƒÂ‚ÃÂ‚Â‚ÃÂƒÂƒÃÂ‚ÂƒÃÂƒÂ‚ÃÂ‚ÂƒÃÂƒÂƒÃÂ‚Â‚ÃÂƒÂ‚ÃÂ‚Â‚ÃÂƒÂƒÃÂ‚ÂƒÃÂƒÂ‚ÃÂ‚Â‚ÃÂƒÂƒÃÂ‚Â‚ÃÂƒÂ‚ÃÂ‚ÂƒÃÂƒÂƒÃÂ‚ÂƒÃÂƒÂ‚ÃÂ‚ÂƒÃÂƒÂƒÃÂ‚Â‚ÃÂƒÂ‚ÃÂ‚ÂƒÃÂƒÂƒÃÂ‚ÂƒÃÂƒÂ‚ÃÂ‚Â‚ÃÂƒÂƒÃÂ‚Â‚ÃÂƒÂ‚ÃÂ‚ÂƒÃÂƒÂƒÃÂ‚ÂƒÃÂƒÂ‚ÃÂ‚ÂƒÃÂƒÂƒÃÂ‚Â‚ÃÂƒÂ‚ÃÂ‚Â‚ÃÂƒÂƒÃÂ‚ÂƒÃÂƒÂ‚ÃÂ‚Â‚ÃÂƒÂƒÃÂ‚Â‚ÃÂƒÂ‚ÃÂ‚Â‚ÃÂƒÂƒÃÂ‚ÂƒÃÂƒÂ‚ÃÂ‚ÂƒÃÂƒÂƒÃÂ‚Â‚ÃÂƒÂ‚ÃÂ‚ÂƒÃÂƒÂƒÃÂ‚ÂƒÃÂƒÂ‚ÃÂ‚Â‚ÃÂƒÂƒÃÂ‚Â‚ÃÂƒÂ‚ÃÂ‚Â‚ÃÂƒÂƒÃÂ‚ÂƒÃÂƒÂ‚ÃÂ‚ÂƒÃÂƒÂƒÂ¡metro</h2>
+
+
+
+
+
+
+
+
+              </div>
+
+
+
+
+
+
+
+
+              <span class="font-label-sm text-label-sm text-on-surface-variant">Acciones Inmediatas</span>
+
+
+
+
+
+
+
+
+            </div>
+
+
+
+
+
+
+
+
+            <!-- 2-Column Action Button Grid -->
+
+
+
+
+
+
+
+
+            <div class="grid grid-cols-2 gap-2 mt-3">
+
+
+
+
+
+
+
+
+              <!-- Button: Log Temperature -->
+
+
+
+
+
+
+
+
+              <button class="flex flex-col items-start p-2 rounded-xl bg-surface-container-high hover:bg-surface-variant active:scale-[0.98] transition-all text-left group" id="fichaBtnLogTemp">
+
+
+
+
+
+
+
+
+                <div class="w-8 h-8 rounded-lg bg-primary/15 text-primary flex items-center justify-center mb-2 group-hover:bg-primary group-hover:text-on-primary transition-colors">
+
+
+
+
+
+
+
+
+                  <span class="material-symbols-outlined text-[18px]">thermostat</span>
+
+
+
+
+
+
+
+
+                </div>
+
+
+
+
+
+
+
+
+                <span class="font-label-lg text-label-lg text-on-surface font-semibold leading-tight">+ Temperatura</span>
+
+
+
+
+
+
+
+
+                <span class="font-body-sm text-[11px] text-on-surface-variant mt-0.5">Sonda 1, Sonda 2 o LÃÂƒÂƒÃÂ‚ÂƒÃÂƒÂ‚ÃÂ‚ÂƒÃÂƒÂƒÃÂ‚Â‚ÃÂƒÂ‚ÃÂ‚ÂƒÃÂƒÂƒÃÂ‚ÂƒÃÂƒÂ‚ÃÂ‚Â‚ÃÂƒÂƒÃÂ‚Â‚ÃÂƒÂ‚ÃÂ‚ÂƒÃÂƒÂƒÃÂ‚ÂƒÃÂƒÂ‚ÃÂ‚ÂƒÃÂƒÂƒÃÂ‚Â‚ÃÂƒÂ‚ÃÂ‚Â‚ÃÂƒÂƒÃÂ‚ÂƒÃÂƒÂ‚ÃÂ‚Â‚ÃÂƒÂƒÃÂ‚Â‚ÃÂƒÂ‚ÃÂ‚ÂƒÃÂƒÂƒÃÂ‚ÂƒÃÂƒÂ‚ÃÂ‚ÂƒÃÂƒÂƒÃÂ‚Â‚ÃÂƒÂ‚ÃÂ‚ÂƒÃÂƒÂƒÃÂ‚ÂƒÃÂƒÂ‚ÃÂ‚Â‚ÃÂƒÂƒÃÂ‚Â‚ÃÂƒÂ‚ÃÂ‚Â‚ÃÂƒÂƒÃÂ‚ÂƒÃÂƒÂ‚ÃÂ‚ÂƒÃÂƒÂƒÃÂ‚Â‚ÃÂƒÂ‚ÃÂ‚Â‚ÃÂƒÂƒÃÂ‚ÂƒÃÂƒÂ‚ÃÂ‚Â‚ÃÂƒÂƒÃÂ‚Â‚ÃÂƒÂ‚ÃÂ‚ÂƒÃÂƒÂƒÃÂ‚ÂƒÃÂƒÂ‚ÃÂ‚ÂƒÃÂƒÂƒÃÂ‚Â‚ÃÂƒÂ‚ÃÂ‚ÂƒÃÂƒÂƒÃÂ‚ÂƒÃÂƒÂ‚ÃÂ‚Â‚ÃÂƒÂƒÃÂ‚Â‚ÃÂƒÂ‚ÃÂ‚ÂƒÃÂƒÂƒÃÂ‚ÂƒÃÂƒÂ‚ÃÂ‚ÂƒÃÂƒÂƒÃÂ‚Â‚ÃÂƒÂ‚ÃÂ‚Â‚ÃÂƒÂƒÃÂ‚ÂƒÃÂƒÂ‚ÃÂ‚Â‚ÃÂƒÂƒÃÂ‚Â‚ÃÂƒÂ‚ÃÂ‚Â‚ÃÂƒÂƒÃÂ‚ÂƒÃÂƒÂ‚ÃÂ‚ÂƒÃÂƒÂƒÃÂ‚Â‚ÃÂƒÂ‚ÃÂ‚ÂƒÃÂƒÂƒÃÂ‚ÂƒÃÂƒÂ‚ÃÂ‚Â‚ÃÂƒÂƒÃÂ‚Â‚ÃÂƒÂ‚ÃÂ‚Â‚ÃÂƒÂƒÃÂ‚ÂƒÃÂƒÂ‚ÃÂ‚ÂƒÃÂƒÂƒÂ¡ser</span>
+
+
+
+
+
+
+
+
+              </button>
+
+
+
+
+
+
+
+
+              <!-- Button: Log Humidity -->
+
+
+
+
+
+
+
+
+              <button class="flex flex-col items-start p-2 rounded-xl bg-surface-container-high hover:bg-surface-variant active:scale-[0.98] transition-all text-left group" id="fichaBtnLogHum">
+
+
+
+
+
+
+
+
+                <div class="w-8 h-8 rounded-lg bg-secondary/15 text-secondary flex items-center justify-center mb-2 group-hover:bg-secondary group-hover:text-on-secondary transition-colors">
+
+
+
+
+
+
+
+
+                  <span class="material-symbols-outlined text-[18px]">water_drop</span>
+
+
+
+
+
+
+
+
+                </div>
+
+
+
+
+
+
+
+
+                <span class="font-label-lg text-label-lg text-on-surface font-semibold leading-tight">+ Humedad</span>
+
+
+
+
+
+
+
+
+                <span class="font-body-sm text-[11px] text-on-surface-variant mt-0.5">HigrÃÂƒÂƒÃÂ‚ÂƒÃÂƒÂ‚ÃÂ‚ÂƒÃÂƒÂƒÃÂ‚Â‚ÃÂƒÂ‚ÃÂ‚ÂƒÃÂƒÂƒÃÂ‚ÂƒÃÂƒÂ‚ÃÂ‚Â‚ÃÂƒÂƒÃÂ‚Â‚ÃÂƒÂ‚ÃÂ‚ÂƒÃÂƒÂƒÃÂ‚ÂƒÃÂƒÂ‚ÃÂ‚ÂƒÃÂƒÂƒÃÂ‚Â‚ÃÂƒÂ‚ÃÂ‚Â‚ÃÂƒÂƒÃÂ‚ÂƒÃÂƒÂ‚ÃÂ‚Â‚ÃÂƒÂƒÃÂ‚Â‚ÃÂƒÂ‚ÃÂ‚ÂƒÃÂƒÂƒÃÂ‚ÂƒÃÂƒÂ‚ÃÂ‚ÂƒÃÂƒÂƒÃÂ‚Â‚ÃÂƒÂ‚ÃÂ‚ÂƒÃÂƒÂƒÃÂ‚ÂƒÃÂƒÂ‚ÃÂ‚Â‚ÃÂƒÂƒÃÂ‚Â‚ÃÂƒÂ‚ÃÂ‚Â‚ÃÂƒÂƒÃÂ‚ÂƒÃÂƒÂ‚ÃÂ‚ÂƒÃÂƒÂƒÃÂ‚Â‚ÃÂƒÂ‚ÃÂ‚Â‚ÃÂƒÂƒÃÂ‚ÂƒÃÂƒÂ‚ÃÂ‚Â‚ÃÂƒÂƒÃÂ‚Â‚ÃÂƒÂ‚ÃÂ‚ÂƒÃÂƒÂƒÃÂ‚ÂƒÃÂƒÂ‚ÃÂ‚ÂƒÃÂƒÂƒÃÂ‚Â‚ÃÂƒÂ‚ÃÂ‚ÂƒÃÂƒÂƒÃÂ‚ÂƒÃÂƒÂ‚ÃÂ‚Â‚ÃÂƒÂƒÃÂ‚Â‚ÃÂƒÂ‚ÃÂ‚ÂƒÃÂƒÂƒÃÂ‚ÂƒÃÂƒÂ‚ÃÂ‚ÂƒÃÂƒÂƒÃÂ‚Â‚ÃÂƒÂ‚ÃÂ‚Â‚ÃÂƒÂƒÃÂ‚ÂƒÃÂƒÂ‚ÃÂ‚Â‚ÃÂƒÂƒÃÂ‚Â‚ÃÂƒÂ‚ÃÂ‚Â‚ÃÂƒÂƒÃÂ‚ÂƒÃÂƒÂ‚ÃÂ‚ÂƒÃÂƒÂƒÃÂ‚Â‚ÃÂƒÂ‚ÃÂ‚ÂƒÃÂƒÂƒÃÂ‚ÂƒÃÂƒÂ‚ÃÂ‚Â‚ÃÂƒÂƒÃÂ‚Â‚ÃÂƒÂ‚ÃÂ‚Â‚ÃÂƒÂƒÃÂ‚ÂƒÃÂƒÂ‚ÃÂ‚ÂƒÃÂƒÂƒÃÂ‚Â‚ÃÂƒÂ‚ÃÂ‚Â‚ÃÂƒÂƒÃÂ‚ÂƒÃÂƒÂ‚ÃÂ‚Â‚ÃÂƒÂƒÃÂ‚Â‚ÃÂƒÂ‚ÃÂ‚Â³metro o pulverizado</span>
+
+
+
+
+
+
+
+
+              </button>
+
+
+
+
+
+
+
+
+              <!-- Button: Log Weight -->
+
+
+
+
+
+
+
+
+              <button class="flex flex-col items-start p-2 rounded-xl bg-surface-container-high hover:bg-surface-variant active:scale-[0.98] transition-all text-left group" id="fichaBtnLogWeight">
+
+
+
+
+
+
+
+
+                <div class="w-8 h-8 rounded-lg bg-tertiary/15 text-tertiary flex items-center justify-center mb-2 group-hover:bg-tertiary group-hover:text-on-tertiary transition-colors">
+
+
+
+
+
+
+
+
+                  <span class="material-symbols-outlined text-[18px]">scale</span>
+
+
+
+
+
+
+
+
+                </div>
+
+
+
+
+
+
+
+
+                <span class="font-label-lg text-label-lg text-on-surface font-semibold leading-tight">+ Registrar Peso</span>
+
+
+
+
+
+
+
+
+                <span class="font-body-sm text-[11px] text-on-surface-variant mt-0.5">BÃÂƒÂƒÃÂ‚ÂƒÃÂƒÂ‚ÃÂ‚ÂƒÃÂƒÂƒÃÂ‚Â‚ÃÂƒÂ‚ÃÂ‚ÂƒÃÂƒÂƒÃÂ‚ÂƒÃÂƒÂ‚ÃÂ‚Â‚ÃÂƒÂƒÃÂ‚Â‚ÃÂƒÂ‚ÃÂ‚ÂƒÃÂƒÂƒÃÂ‚ÂƒÃÂƒÂ‚ÃÂ‚ÂƒÃÂƒÂƒÃÂ‚Â‚ÃÂƒÂ‚ÃÂ‚Â‚ÃÂƒÂƒÃÂ‚ÂƒÃÂƒÂ‚ÃÂ‚Â‚ÃÂƒÂƒÃÂ‚Â‚ÃÂƒÂ‚ÃÂ‚ÂƒÃÂƒÂƒÃÂ‚ÂƒÃÂƒÂ‚ÃÂ‚ÂƒÃÂƒÂƒÃÂ‚Â‚ÃÂƒÂ‚ÃÂ‚ÂƒÃÂƒÂƒÃÂ‚ÂƒÃÂƒÂ‚ÃÂ‚Â‚ÃÂƒÂƒÃÂ‚Â‚ÃÂƒÂ‚ÃÂ‚Â‚ÃÂƒÂƒÃÂ‚ÂƒÃÂƒÂ‚ÃÂ‚ÂƒÃÂƒÂƒÃÂ‚Â‚ÃÂƒÂ‚ÃÂ‚Â‚ÃÂƒÂƒÃÂ‚ÂƒÃÂƒÂ‚ÃÂ‚Â‚ÃÂƒÂƒÃÂ‚Â‚ÃÂƒÂ‚ÃÂ‚ÂƒÃÂƒÂƒÃÂ‚ÂƒÃÂƒÂ‚ÃÂ‚ÂƒÃÂƒÂƒÃÂ‚Â‚ÃÂƒÂ‚ÃÂ‚ÂƒÃÂƒÂƒÃÂ‚ÂƒÃÂƒÂ‚ÃÂ‚Â‚ÃÂƒÂƒÃÂ‚Â‚ÃÂƒÂ‚ÃÂ‚ÂƒÃÂƒÂƒÃÂ‚ÂƒÃÂƒÂ‚ÃÂ‚ÂƒÃÂƒÂƒÃÂ‚Â‚ÃÂƒÂ‚ÃÂ‚Â‚ÃÂƒÂƒÃÂ‚ÂƒÃÂƒÂ‚ÃÂ‚Â‚ÃÂƒÂƒÃÂ‚Â‚ÃÂƒÂ‚ÃÂ‚Â‚ÃÂƒÂƒÃÂ‚ÂƒÃÂƒÂ‚ÃÂ‚ÂƒÃÂƒÂƒÃÂ‚Â‚ÃÂƒÂ‚ÃÂ‚ÂƒÃÂƒÂƒÃÂ‚ÂƒÃÂƒÂ‚ÃÂ‚Â‚ÃÂƒÂƒÃÂ‚Â‚ÃÂƒÂ‚ÃÂ‚Â‚ÃÂƒÂƒÃÂ‚ÂƒÃÂƒÂ‚ÃÂ‚ÂƒÃÂƒÂƒÂ¡scula gramera digital</span>
+
+
+
+
+
+
+
+
+              </button>
+
+
+
+
+
+
+
+
+              <!-- Button: Log Shed / Feeding -->
+
+
+
+
+
+
+
+
+              <button class="flex flex-col items-start p-2 rounded-xl bg-surface-container-high hover:bg-surface-variant active:scale-[0.98] transition-all text-left group" id="fichaBtnLogFeed">
+
+
+
+
+
+
+
+
+                <div class="w-8 h-8 rounded-lg bg-primary-container/20 text-primary-fixed flex items-center justify-center mb-2 group-hover:bg-primary-container group-hover:text-on-primary-container transition-colors">
+
+
+
+
+
+
+
+
+                  <span class="material-symbols-outlined text-[18px]">restaurant</span>
+
+
+
+
+
+
+
+
+                </div>
+
+
+
+
+
+
+
+
+                <span class="font-label-lg text-label-lg text-on-surface font-semibold leading-tight">+ Comida / Muda</span>
+
+
+
+
+
+
+
+
+                <span class="font-body-sm text-[11px] text-on-surface-variant mt-0.5">Presas vivas & suplementos</span>
+
+
+
+
+
+
+
+
+              </button>
+
+
+
+
+
+
+
+
+            </div>
+
+
+
+
+
+
+
+
+          </div>
+
+
+
+
+
+
+
+
+          <!-- Alert Setup Banner -->
+
+
+
+
+
+
+
+
+          <div class="rounded-xl bg-surface-container p-4 flex items-center justify-between gap-2 shadow-sm mt-4" id="fichaAlertBanner">
+
+
+
+
+
+
+
+
+            <div class="flex items-center gap-3">
+
+
+
+
+
+
+
+
+              <div class="w-9 h-9 rounded-lg bg-tertiary-container/30 text-tertiary flex items-center justify-center flex-shrink-0">
+
+
+
+
+
+
+
+
+                <span class="material-symbols-outlined text-[20px]">notifications_active</span>
+
+
+
+
+
+
+
+
+              </div>
+
+
+
+
+
+
+
+
+              <div>
+
+
+
+
+
+
+
+
+                <h3 class="font-label-lg text-label-lg text-on-surface" id="fichaAlertTitle">Umbrales de Seguridad</h3>
+
+
+
+
+
+
+
+
+                <p class="font-body-sm text-body-sm text-on-surface-variant" id="fichaAlertDescription">Alertar si la temp cae < 26ÃÂƒÂƒÃÂ‚ÂƒÃÂƒÂ‚ÃÂ‚ÂƒÃÂƒÂƒÃÂ‚Â‚ÃÂƒÂ‚ÃÂ‚ÂƒÃÂƒÂƒÃÂ‚ÂƒÃÂƒÂ‚ÃÂ‚Â‚ÃÂƒÂƒÃÂ‚Â‚ÃÂƒÂ‚ÃÂ‚ÂƒÃÂƒÂƒÃÂ‚ÂƒÃÂƒÂ‚ÃÂ‚ÂƒÃÂƒÂƒÃÂ‚Â‚ÃÂƒÂ‚ÃÂ‚Â‚ÃÂƒÂƒÃÂ‚ÂƒÃÂƒÂ‚ÃÂ‚Â‚ÃÂƒÂƒÃÂ‚Â‚ÃÂƒÂ‚ÃÂ‚ÂƒÃÂƒÂƒÃÂ‚ÂƒÃÂƒÂ‚ÃÂ‚ÂƒÃÂƒÂƒÃÂ‚Â‚ÃÂƒÂ‚ÃÂ‚ÂƒÃÂƒÂƒÃÂ‚ÂƒÃÂƒÂ‚ÃÂ‚Â‚ÃÂƒÂƒÃÂ‚Â‚ÃÂƒÂ‚ÃÂ‚Â‚ÃÂƒÂƒÃÂ‚ÂƒÃÂƒÂ‚ÃÂ‚ÂƒÃÂƒÂƒÃÂ‚Â‚ÃÂƒÂ‚ÃÂ‚Â‚ÃÂƒÂƒÃÂ‚ÂƒÃÂƒÂ‚ÃÂ‚Â‚ÃÂƒÂƒÃÂ‚Â‚ÃÂƒÂ‚ÃÂ‚Â‚ÃÂƒÂƒÃÂ‚ÂƒÃÂƒÂ‚ÃÂ‚ÂƒÃÂƒÂƒÃÂ‚Â‚ÃÂƒÂ‚ÃÂ‚ÂƒÃÂƒÂƒÃÂ‚ÂƒÃÂƒÂ‚ÃÂ‚Â‚ÃÂƒÂƒÃÂ‚Â‚ÃÂƒÂ‚ÃÂ‚ÂƒÃÂƒÂƒÃÂ‚ÂƒÃÂƒÂ‚ÃÂ‚ÂƒÃÂƒÂƒÃÂ‚Â‚ÃÂƒÂ‚ÃÂ‚Â‚ÃÂƒÂƒÃÂ‚ÂƒÃÂƒÂ‚ÃÂ‚Â‚ÃÂƒÂƒÃÂ‚Â‚ÃÂƒÂ‚ÃÂ‚Â‚ÃÂƒÂƒÃÂ‚ÂƒÃÂƒÂ‚ÃÂ‚ÂƒÃÂƒÂƒÃÂ‚Â‚ÃÂƒÂ‚ÃÂ‚ÂƒÃÂƒÂƒÃÂ‚ÂƒÃÂƒÂ‚ÃÂ‚Â‚ÃÂƒÂƒÃÂ‚Â‚ÃÂƒÂ‚ÃÂ‚Â‚ÃÂƒÂƒÃÂ‚ÂƒÃÂƒÂ‚ÃÂ‚ÂƒÃÂƒÂƒÃÂ‚Â‚ÃÂƒÂ‚ÃÂ‚Â‚ÃÂƒÂƒÃÂ‚ÂƒÃÂƒÂ‚ÃÂ‚Â‚ÃÂƒÂƒÃÂ‚Â‚ÃÂƒÂ‚ÃÂ‚Â°C o sube > 34ÃÂƒÂƒÃÂ‚ÂƒÃÂƒÂ‚ÃÂ‚ÂƒÃÂƒÂƒÃÂ‚Â‚ÃÂƒÂ‚ÃÂ‚ÂƒÃÂƒÂƒÃÂ‚ÂƒÃÂƒÂ‚ÃÂ‚Â‚ÃÂƒÂƒÃÂ‚Â‚ÃÂƒÂ‚ÃÂ‚ÂƒÃÂƒÂƒÃÂ‚ÂƒÃÂƒÂ‚ÃÂ‚ÂƒÃÂƒÂƒÃÂ‚Â‚ÃÂƒÂ‚ÃÂ‚Â‚ÃÂƒÂƒÃÂ‚ÂƒÃÂƒÂ‚ÃÂ‚Â‚ÃÂƒÂƒÃÂ‚Â‚ÃÂƒÂ‚ÃÂ‚ÂƒÃÂƒÂƒÃÂ‚ÂƒÃÂƒÂ‚ÃÂ‚ÂƒÃÂƒÂƒÃÂ‚Â‚ÃÂƒÂ‚ÃÂ‚ÂƒÃÂƒÂƒÃÂ‚ÂƒÃÂƒÂ‚ÃÂ‚Â‚ÃÂƒÂƒÃÂ‚Â‚ÃÂƒÂ‚ÃÂ‚Â‚ÃÂƒÂƒÃÂ‚ÂƒÃÂƒÂ‚ÃÂ‚ÂƒÃÂƒÂƒÃÂ‚Â‚ÃÂƒÂ‚ÃÂ‚Â‚ÃÂƒÂƒÃÂ‚ÂƒÃÂƒÂ‚ÃÂ‚Â‚ÃÂƒÂƒÃÂ‚Â‚ÃÂƒÂ‚ÃÂ‚Â‚ÃÂƒÂƒÃÂ‚ÂƒÃÂƒÂ‚ÃÂ‚ÂƒÃÂƒÂƒÃÂ‚Â‚ÃÂƒÂ‚ÃÂ‚ÂƒÃÂƒÂƒÃÂ‚ÂƒÃÂƒÂ‚ÃÂ‚Â‚ÃÂƒÂƒÃÂ‚Â‚ÃÂƒÂ‚ÃÂ‚ÂƒÃÂƒÂƒÃÂ‚ÂƒÃÂƒÂ‚ÃÂ‚ÂƒÃÂƒÂƒÃÂ‚Â‚ÃÂƒÂ‚ÃÂ‚Â‚ÃÂƒÂƒÃÂ‚ÂƒÃÂƒÂ‚ÃÂ‚Â‚ÃÂƒÂƒÃÂ‚Â‚ÃÂƒÂ‚ÃÂ‚Â‚ÃÂƒÂƒÃÂ‚ÂƒÃÂƒÂ‚ÃÂ‚ÂƒÃÂƒÂƒÃÂ‚Â‚ÃÂƒÂ‚ÃÂ‚ÂƒÃÂƒÂƒÃÂ‚ÂƒÃÂƒÂ‚ÃÂ‚Â‚ÃÂƒÂƒÃÂ‚Â‚ÃÂƒÂ‚ÃÂ‚Â‚ÃÂƒÂƒÃÂ‚ÂƒÃÂƒÂ‚ÃÂ‚ÂƒÃÂƒÂƒÃÂ‚Â‚ÃÂƒÂ‚ÃÂ‚Â‚ÃÂƒÂƒÃÂ‚ÂƒÃÂƒÂ‚ÃÂ‚Â‚ÃÂƒÂƒÃÂ‚Â‚ÃÂƒÂ‚ÃÂ‚Â°C</p>
+
+
+
+
+
+
+
+
+              </div>
+
+
+
+
+
+
+
+
+            </div>
+
+
+
+
+
+
+
+
+            <button class="px-3 py-1.5 rounded-full bg-surface-container-high text-primary hover:bg-surface-variant font-label-md text-label-md whitespace-nowrap" id="fichaBtnAdjustAlerts">
+
+
+
+
+
+
+
+
+              Ajustar
+
+
+
+
+
+
+
+
+            </button>
+
+
+
+
+
+
+
+
+          </div>
+
+
+
+
+
+
+
+
+          <!-- Detailed Historical Telemetry Log Stream -->
+
+
+
+
+
+
+
+
+          <div class="space-y-4 mt-4" id="fichaHistoryContainer">
+
+
+
+
+
+
+
+
+            <div class="flex items-center justify-between">
+
+
+
+
+
+
+
+
+              <div class="flex items-center gap-1.5">
+
+
+
+
+
+
+
+
+                <span class="material-symbols-outlined text-secondary text-[18px]">history</span>
+
+
+
+
+
+
+
+
+                <h2 class="font-headline-md text-headline-md text-on-surface">Historial de Lecturas</h2>
+
+
+
+
+
+
+
+
+              </div>
+
+
+
+
+
+
+
+
+              <span class="font-label-sm text-label-sm text-on-surface-variant" id="fichaHistoryCount">4 entradas registradas</span>
+
+
+
+
+
+
+
+
+            </div>
+
+
+
+
+
+
+
+
+            <!-- History Card List -->
+
+
+
+
+
+
+
+
+            <div class="space-y-2" id="fichaHistoryList">
+
+
+
+
+
+
+
+
+              <!-- Records will be injected here by JavaScript -->
+
+
+
+
+
+
+
+
+              <div class="h-56 flex items-center justify-center text-on-surface-variant/50 text-sm">Sin historial disponible</div>
+
+
+
+
+
+
+
+
+            </div>
+
+
+
+
+
+
+
+
+          </div>
+
+
+
+
+
+
+
+
+        </section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        <section class="panel vets-panel" data-view="vets" aria-label="Veterinarios cercanos">
+
+
+          <div class="flex flex-col w-full px-margin pb-10">
+
+
+            <!-- Search & Geolocation Controls -->
+
+
+            <div class="flex flex-col gap-space-sm p-space-md rounded-xl bg-surface-container-high/90 backdrop-blur-xl shadow-lg mb-space-lg">
+
+
+              <!-- Quick GPS Locate CTA -->
+
+
+              <button class="w-full flex items-center justify-center gap-space-sm py-2.5 px-space-md rounded-lg bg-primary text-on-primary font-label-lg text-label-lg transition-transform active:scale-[0.98] shadow-md hover:bg-primary-fixed-dim" id="locationButton">
+
+
+                <span class="relative flex h-3 w-3 items-center justify-center">
+
+
+                  <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-on-primary opacity-50"></span>
+
+
+                  <span class="material-symbols-outlined text-[18px]">my_location</span>
+
+
+                </span>
+
+
+                <span>Buscar cerca de mÃÂƒÂƒÃÂ‚ÂƒÃÂƒÂ‚ÃÂ‚ÂƒÃÂƒÂƒÃÂ‚Â‚ÃÂƒÂ‚ÃÂ‚ÂƒÃÂƒÂƒÃÂ‚ÂƒÃÂƒÂ‚ÃÂ‚Â‚ÃÂƒÂƒÃÂ‚Â‚ÃÂƒÂ‚ÃÂ‚ÂƒÃÂƒÂƒÃÂ‚ÂƒÃÂƒÂ‚ÃÂ‚ÂƒÃÂƒÂƒÃÂ‚Â‚ÃÂƒÂ‚ÃÂ‚Â‚ÃÂƒÂƒÃÂ‚ÂƒÃÂƒÂ‚ÃÂ‚Â‚ÃÂƒÂƒÃÂ‚Â‚ÃÂƒÂ‚ÃÂ‚ÂƒÃÂƒÂƒÃÂ‚ÂƒÃÂƒÂ‚ÃÂ‚ÂƒÃÂƒÂƒÃÂ‚Â‚ÃÂƒÂ‚ÃÂ‚ÂƒÃÂƒÂƒÃÂ‚ÂƒÃÂƒÂ‚ÃÂ‚Â‚ÃÂƒÂƒÃÂ‚Â‚ÃÂƒÂ‚ÃÂ‚Â‚ÃÂƒÂƒÃÂ‚ÂƒÃÂƒÂ‚ÃÂ‚ÂƒÃÂƒÂƒÃÂ‚Â‚ÃÂƒÂ‚ÃÂ‚Â‚ÃÂƒÂƒÃÂ‚ÂƒÃÂƒÂ‚ÃÂ‚Â‚ÃÂƒÂƒÃÂ‚Â‚ÃÂƒÂ‚ÃÂ‚Â­</span>
+
+
+              </button>
+
+
+              <!-- Text Search and Trigger -->
+
+
+              <div class="flex items-center gap-space-xs bg-surface-container-lowest/80 rounded-lg p-1.5 focus-within:ring-0">
+
+
+                <span class="material-symbols-outlined text-primary text-[20px] ml-1">search</span>
+
+
+                <input aria-label="Buscar veterinario por ciudad o cÃÂƒÂƒÃÂ‚ÂƒÃÂƒÂ‚ÃÂ‚ÂƒÃÂƒÂƒÃÂ‚Â‚ÃÂƒÂ‚ÃÂ‚ÂƒÃÂƒÂƒÃÂ‚ÂƒÃÂƒÂ‚ÃÂ‚Â‚ÃÂƒÂƒÃÂ‚Â‚ÃÂƒÂ‚ÃÂ‚ÂƒÃÂƒÂƒÃÂ‚ÂƒÃÂƒÂ‚ÃÂ‚ÂƒÃÂƒÂƒÃÂ‚Â‚ÃÂƒÂ‚ÃÂ‚Â‚ÃÂƒÂƒÃÂ‚ÂƒÃÂƒÂ‚ÃÂ‚Â‚ÃÂƒÂƒÃÂ‚Â‚ÃÂƒÂ‚ÃÂ‚ÂƒÃÂƒÂƒÃÂ‚ÂƒÃÂƒÂ‚ÃÂ‚ÂƒÃÂƒÂƒÃÂ‚Â‚ÃÂƒÂ‚ÃÂ‚ÂƒÃÂƒÂƒÃÂ‚ÂƒÃÂƒÂ‚ÃÂ‚Â‚ÃÂƒÂƒÃÂ‚Â‚ÃÂƒÂ‚ÃÂ‚Â‚ÃÂƒÂƒÃÂ‚ÂƒÃÂƒÂ‚ÃÂ‚ÂƒÃÂƒÂƒÃÂ‚Â‚ÃÂƒÂ‚ÃÂ‚Â‚ÃÂƒÂƒÃÂ‚ÂƒÃÂƒÂ‚ÃÂ‚Â‚ÃÂƒÂƒÃÂ‚Â‚ÃÂƒÂ‚ÃÂ‚Â³digo postal" class="flex-1 bg-transparent text-on-surface placeholder:text-outline font-body-md text-body-md focus:outline-none px-1" id="vetSearchInput" placeholder="Ciudad o CÃÂƒÂƒÃÂ‚ÂƒÃÂƒÂ‚ÃÂ‚ÂƒÃÂƒÂƒÃÂ‚Â‚ÃÂƒÂ‚ÃÂ‚ÂƒÃÂƒÂƒÃÂ‚ÂƒÃÂƒÂ‚ÃÂ‚Â‚ÃÂƒÂƒÃÂ‚Â‚ÃÂƒÂ‚ÃÂ‚ÂƒÃÂƒÂƒÃÂ‚ÂƒÃÂƒÂ‚ÃÂ‚ÂƒÃÂƒÂƒÃÂ‚Â‚ÃÂƒÂ‚ÃÂ‚Â‚ÃÂƒÂƒÃÂ‚ÂƒÃÂƒÂ‚ÃÂ‚Â‚ÃÂƒÂƒÃÂ‚Â‚ÃÂƒÂ‚ÃÂ‚ÂƒÃÂƒÂƒÃÂ‚ÂƒÃÂƒÂ‚ÃÂ‚ÂƒÃÂƒÂƒÃÂ‚Â‚ÃÂƒÂ‚ÃÂ‚ÂƒÃÂƒÂƒÃÂ‚ÂƒÃÂƒÂ‚ÃÂ‚Â‚ÃÂƒÂƒÃÂ‚Â‚ÃÂƒÂ‚ÃÂ‚Â‚ÃÂƒÂƒÃÂ‚ÂƒÃÂƒÂ‚ÃÂ‚ÂƒÃÂƒÂƒÃÂ‚Â‚ÃÂƒÂ‚ÃÂ‚Â‚ÃÂƒÂƒÃÂ‚ÂƒÃÂƒÂ‚ÃÂ‚Â‚ÃÂƒÂƒÃÂ‚Â‚ÃÂƒÂ‚ÃÂ‚Â³digo postal..." type="text"/>
+
+
+                <button id="vetSearchButton" class="h-9 w-9 rounded-lg bg-surface-container flex items-center justify-center text-on-surface-variant hover:text-primary transition-colors active:scale-95">
+
+
+                  Buscar
+
+
+                </button>
+
+
+              </div>
+
+
+            </div>
+
+
+
+
+
+            <!-- Interactive Map Preview with Bio-Active Dark Frame -->
+
+
+            <div class="relative w-full rounded-xl overflow-hidden bg-surface-container-low shadow-xl mb-space-lg group" id="vetMap">
+
+
+              <!-- Map Surface Element with Google Maps Static pipeline -->
+
+
+              <div class="w-full h-44 bg-cover bg-center brightness-[0.78] contrast-125 filter" data-location="Barcelona, Spain" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuBja6JF4Gp-IP_lY5aM8RRbb8ODouTPEnVduadL6gnS1cswTui4xG9AZhIiJ0cdwEwyuxIl4hPyNLmRNJ27YUpkNTCqRD2gEONrxeYk44VEt1q8B2QZCAszCBu1Hjl6Ju1Ljb-PYuLf9SP8-UaIb4jwYPoDc1L-0H7K88UiC2R3cZArMR__uTkjFL_dGpg91r0RQahq4SRlty5DsOXzYYCGAHoeyIxaEgvIP5reKrk')"></div>
+
+
+              <div class="absolute inset-0 bg-gradient-to-t from-surface-container-low via-transparent to-surface-container-low/40 pointer-events-none"></div>
+
+
+              <!-- Map Floating Overlays & Live Pin Nodes -->
+
+
+              <div class="absolute top-2 left-2 flex items-center gap-1.5 px-2 py-1 rounded-full bg-surface-container-lowest/90 backdrop-blur-md shadow-md">
+
+
+                <span class="relative flex h-2 w-2">
+
+
+                  <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-primary opacity-75"></span>
+
+
+                  <span class="relative inline-flex rounded-full h-2 w-2 bg-primary"></span>
+
+
+                </span>
+
+
+                <span class="font-label-sm text-label-sm text-on-surface">3 clÃÂƒÂƒÃÂ‚ÂƒÃÂƒÂ‚ÃÂ‚ÂƒÃÂƒÂƒÃÂ‚Â‚ÃÂƒÂ‚ÃÂ‚ÂƒÃÂƒÂƒÃÂ‚ÂƒÃÂƒÂ‚ÃÂ‚Â‚ÃÂƒÂƒÃÂ‚Â‚ÃÂƒÂ‚ÃÂ‚ÂƒÃÂƒÂƒÃÂ‚ÂƒÃÂƒÂ‚ÃÂ‚ÂƒÃÂƒÂƒÃÂ‚Â‚ÃÂƒÂ‚ÃÂ‚Â‚ÃÂƒÂƒÃÂ‚ÂƒÃÂƒÂ‚ÃÂ‚Â‚ÃÂƒÂƒÃÂ‚Â‚ÃÂƒÂ‚ÃÂ‚ÂƒÃÂƒÂƒÃÂ‚ÂƒÃÂƒÂ‚ÃÂ‚ÂƒÃÂƒÂƒÃÂ‚Â‚ÃÂƒÂ‚ÃÂ‚ÂƒÃÂƒÂƒÃÂ‚ÂƒÃÂƒÂ‚ÃÂ‚Â‚ÃÂƒÂƒÃÂ‚Â‚ÃÂƒÂ‚ÃÂ‚Â‚ÃÂƒÂƒÃÂ‚ÂƒÃÂƒÂ‚ÃÂ‚ÂƒÃÂƒÂƒÃÂ‚Â‚ÃÂƒÂ‚ÃÂ‚Â‚ÃÂƒÂƒÃÂ‚ÂƒÃÂƒÂ‚ÃÂ‚Â‚ÃÂƒÂƒÃÂ‚Â‚ÃÂƒÂ‚ÃÂ‚Â­nicas en rango</span>
+
+
+              </div>
+
+
+              <button class="absolute bottom-2 right-2 flex items-center gap-1 px-2.5 py-1 rounded-full bg-surface-container-high/90 text-primary font-label-sm text-label-sm backdrop-blur-md shadow hover:bg-surface-variant active:scale-95 transition-all" id="toggle-map-expand">
+
+
+                <span class="material-symbols-outlined text-[16px]">fullscreen</span>
+
+
+                <span>Ampliar mapa</span>
+
+
+              </button>
+
+
+              <!-- Simulated Bioactive Pins -->
+
+
+              <div class="absolute top-1/2 left-1/3 -translate-x-1/2 -translate-y-1/2 flex flex-col items-center pointer-events-none">
+
+
+                <div class="w-7 h-7 rounded-full bg-primary flex items-center justify-center text-on-primary font-numeric-metric text-[12px] font-bold shadow-[0_0_14px_rgba(75,226,119,0.8)] animate-bounce">
+
+
+                  1
+
+
+                </div>
+
+
+                <span class="w-2 h-1 bg-primary/70 rounded-full mt-0.5 blur-[1px]"></span>
+
+
+              </div>
+
+
+              <div class="absolute top-1/3 right-1/4 -translate-x-1/2 -translate-y-1/2 flex flex-col items-center pointer-events-none opacity-90">
+
+
+                <div class="w-6 h-6 rounded-full bg-surface-bright text-primary flex items-center justify-center text-[11px] font-bold shadow-md">
+
+
+                  2
+
+
+                </div>
+
+
+              </div>
+
+
+            </div>
+
+
+
+
+
+            <!-- List of Veterinary Clinics -->
+
+
+            <div class="flex flex-col gap-space-md mb-space-xl" id="vetResults">
+
+
+              <!-- Clinic Card 1 -->
+
+
+              <article class="flex flex-col rounded-xl bg-surface-container p-space-md shadow-md transition-all hover:bg-surface-container-high/60">
+
+
+                <div class="flex items-start justify-between gap-space-sm mb-space-xs">
+
+
+                  <div class="flex flex-col">
+
+
+                    <div class="flex items-center gap-1.5 mb-1">
+
+
+                      <span class="px-2 py-0.5 rounded-full bg-primary-container/20 text-primary font-label-sm text-label-sm font-semibold flex items-center gap-1">
+
+
+                        <span class="w-1.5 h-1.5 rounded-full bg-primary animate-pulse"></span>
+
+
+                        Abierto ahora ÃÂƒÂƒÃÂ‚ÂƒÃÂƒÂ‚ÃÂ‚ÂƒÃÂƒÂƒÃÂ‚Â‚ÃÂƒÂ‚ÃÂ‚ÂƒÃÂƒÂƒÃÂ‚ÂƒÃÂƒÂ‚ÃÂ‚Â‚ÃÂƒÂƒÃÂ‚Â‚ÃÂƒÂ‚ÃÂ‚ÂƒÃÂƒÂƒÃÂ‚ÂƒÃÂƒÂ‚ÃÂ‚ÂƒÃÂƒÂƒÃÂ‚Â‚ÃÂƒÂ‚ÃÂ‚Â‚ÃÂƒÂƒÃÂ‚ÂƒÃÂƒÂ‚ÃÂ‚Â‚ÃÂƒÂƒÃÂ‚Â‚ÃÂƒÂ‚ÃÂ‚Â¢ÃÂƒÂƒÃÂ‚ÂƒÃÂƒÂ‚ÃÂ‚ÂƒÃÂƒÂƒÃÂ‚Â‚ÃÂƒÂ‚ÃÂ‚ÂƒÃÂƒÂƒÃÂ‚ÂƒÃÂƒÂ‚ÃÂ‚Â‚ÃÂƒÂƒÃÂ‚Â‚ÃÂƒÂ‚ÃÂ‚Â‚ÃÂƒÂƒÃÂ‚ÂƒÃÂƒÂ‚ÃÂ‚ÂƒÃÂƒÂƒÃÂ‚Â‚ÃÂƒÂ‚ÃÂ‚Â‚ÃÂƒÂƒÃÂ‚ÂƒÃÂƒÂ‚ÃÂ‚Â‚ÃÂƒÂƒÃÂ‚Â‚ÃÂƒÂ‚ÃÂ‚Â€ÃÂƒÂƒÃÂ‚ÂƒÃÂƒÂ‚ÃÂ‚ÂƒÃÂƒÂƒÃÂ‚Â‚ÃÂƒÂ‚ÃÂ‚ÂƒÃÂƒÂƒÃÂ‚ÂƒÃÂƒÂ‚ÃÂ‚Â‚ÃÂƒÂƒÃÂ‚Â‚ÃÂƒÂ‚ÃÂ‚Â‚ÃÂƒÂƒÃÂ‚ÂƒÃÂƒÂ‚ÃÂ‚ÂƒÃÂƒÂƒÃÂ‚Â‚ÃÂƒÂ‚ÃÂ‚Â‚ÃÂƒÂƒÃÂ‚ÂƒÃÂƒÂ‚ÃÂ‚Â‚ÃÂƒÂƒÃÂ‚Â‚ÃÂƒÂ‚ÃÂ‚Â¢ Urgencias 24h
+
+
+                      </span>
+
+
+                    </div>
+
+
+                    <h2 class="font-headline-md text-headline-md text-on-surface">
+
+
+                      ClÃÂƒÂƒÃÂ‚ÂƒÃÂƒÂ‚ÃÂ‚ÂƒÃÂƒÂƒÃÂ‚Â‚ÃÂƒÂ‚ÃÂ‚ÂƒÃÂƒÂƒÃÂ‚ÂƒÃÂƒÂ‚ÃÂ‚Â‚ÃÂƒÂƒÃÂ‚Â‚ÃÂƒÂ‚ÃÂ‚ÂƒÃÂƒÂƒÃÂ‚ÂƒÃÂƒÂ‚ÃÂ‚ÂƒÃÂƒÂƒÃÂ‚Â‚ÃÂƒÂ‚ÃÂ‚Â‚ÃÂƒÂƒÃÂ‚ÂƒÃÂƒÂ‚ÃÂ‚Â‚ÃÂƒÂƒÃÂ‚Â‚ÃÂƒÂ‚ÃÂ‚ÂƒÃÂƒÂƒÃÂ‚ÂƒÃÂƒÂ‚ÃÂ‚ÂƒÃÂƒÂƒÃÂ‚Â‚ÃÂƒÂ‚ÃÂ‚ÂƒÃÂƒÂƒÃÂ‚ÂƒÃÂƒÂ‚ÃÂ‚Â‚ÃÂƒÂƒÃÂ‚Â‚ÃÂƒÂ‚ÃÂ‚Â‚ÃÂƒÂƒÃÂ‚ÂƒÃÂƒÂ‚ÃÂ‚ÂƒÃÂƒÂƒÃÂ‚Â‚ÃÂƒÂ‚ÃÂ‚Â‚ÃÂƒÂƒÃÂ‚ÂƒÃÂƒÂ‚ÃÂ‚Â‚ÃÂƒÂƒÃÂ‚Â‚ÃÂƒÂ‚ÃÂ‚Â­nica Veterinaria Exotics Care Barcelona
+
+
+                    </h2>
+
+
+                  </div>
+
+
+                  <div class="flex items-center gap-1 px-2 py-1 rounded-lg bg-surface-container-highest shrink-0">
+
+
+                    <span class="material-symbols-outlined text-tertiary text-[16px]" style="font-variation-settings: 'FILL' 1;">star</span>
+
+
+                    <span class="font-label-md text-label-md text-on-surface font-bold">4.9</span>
+
+
+                    <span class="font-label-sm text-label-sm text-on-surface-variant">(128)</span>
+
+
+                  </div>
+
+
+                </div>
+
+
+                <div class="flex items-center gap-space-sm text-on-surface-variant font-body-sm text-body-sm mb-space-sm">
+
+
+                  <span class="flex items-center gap-1 text-primary">
+
+
+                    <span class="material-symbols-outlined text-[16px]">near_me</span>
+
+
+                    <span class="font-semibold text-on-surface">1.8 km</span>
+
+
+                  </span>
+
+
+                  <span>ÃÂƒÂƒÃÂ‚ÂƒÃÂƒÂ‚ÃÂ‚ÂƒÃÂƒÂƒÃÂ‚Â‚ÃÂƒÂ‚ÃÂ‚ÂƒÃÂƒÂƒÃÂ‚ÂƒÃÂƒÂ‚ÃÂ‚Â‚ÃÂƒÂƒÃÂ‚Â‚ÃÂƒÂ‚ÃÂ‚ÂƒÃÂƒÂƒÃÂ‚ÂƒÃÂƒÂ‚ÃÂ‚ÂƒÃÂƒÂƒÃÂ‚Â‚ÃÂƒÂ‚ÃÂ‚Â‚ÃÂƒÂƒÃÂ‚ÂƒÃÂƒÂ‚ÃÂ‚Â‚ÃÂƒÂƒÃÂ‚Â‚ÃÂƒÂ‚ÃÂ‚Â¢ÃÂƒÂƒÃÂ‚ÂƒÃÂƒÂ‚ÃÂ‚ÂƒÃÂƒÂƒÃÂ‚Â‚ÃÂƒÂ‚ÃÂ‚ÂƒÃÂƒÂƒÃÂ‚ÂƒÃÂƒÂ‚ÃÂ‚Â‚ÃÂƒÂƒÃÂ‚Â‚ÃÂƒÂ‚ÃÂ‚Â‚ÃÂƒÂƒÃÂ‚ÂƒÃÂƒÂ‚ÃÂ‚ÂƒÃÂƒÂƒÃÂ‚Â‚ÃÂƒÂ‚ÃÂ‚Â‚ÃÂƒÂƒÃÂ‚ÂƒÃÂƒÂ‚ÃÂ‚Â‚ÃÂƒÂƒÃÂ‚Â‚ÃÂƒÂ‚ÃÂ‚Â€ÃÂƒÂƒÃÂ‚ÂƒÃÂƒÂ‚ÃÂ‚ÂƒÃÂƒÂƒÃÂ‚Â‚ÃÂƒÂ‚ÃÂ‚ÂƒÃÂƒÂƒÃÂ‚ÂƒÃÂƒÂ‚ÃÂ‚Â‚ÃÂƒÂƒÃÂ‚Â‚ÃÂƒÂ‚ÃÂ‚Â‚ÃÂƒÂƒÃÂ‚ÂƒÃÂƒÂ‚ÃÂ‚ÂƒÃÂƒÂƒÃÂ‚Â‚ÃÂƒÂ‚ÃÂ‚Â‚ÃÂƒÂƒÃÂ‚ÂƒÃÂƒÂ‚ÃÂ‚Â‚ÃÂƒÂƒÃÂ‚Â‚ÃÂƒÂ‚ÃÂ‚Â¢</span>
+
+
+                  <span class="truncate">Carrer de Mallorca, 214, Eixample</span>
+
+
+                </div>
+
+
+                <!-- Specialized Tags -->
+
+
+                <div class="flex flex-wrap gap-1.5 mb-space-md">
+
+
+                  <span class="px-2 py-0.5 rounded-md bg-surface-container-high text-on-secondary-container font-label-sm text-label-sm">
+
+
+                    Saurios
+
+
+                  </span>
+
+
+                  <span class="px-2 py-0.5 rounded-md bg-surface-container-high text-on-secondary-container font-label-sm text-label-sm">
+
+
+                    Ofidios
+
+
+                  </span>
+
+
+                  <span class="px-2 py-0.5 rounded-md bg-surface-container-high text-on-secondary-container font-label-sm text-label-sm">
+
+
+                    Anfibios y Quelonios
+
+
+                  </span>
+
+
+                  <span class="px-2 py-0.5 rounded-md bg-secondary-container/40 text-secondary font-label-sm text-label-sm flex items-center gap-1">
+
+
+                    <span class="material-symbols-outlined text-[13px]">emergency</span> UCI Especializada
+
+
+                  </span>
+
+
+                </div>
+
+
+                <!-- Action Buttons -->
+
+
+                <div class="grid grid-cols-2 gap-space-sm pt-space-xs">
+
+
+                  <a class="flex items-center justify-center gap-1.5 py-2 px-space-sm rounded-lg bg-error-container text-on-error-container font-label-md text-label-md font-semibold transition-transform active:scale-95 text-center" href="tel:+34932001122">
+
+
+                    <span class="material-symbols-outlined text-[18px]">call</span>
+
+
+                    <span>Llamar Urgencia</span>
+
+
+                  </a>
+
+
+                  <a class="flex items-center justify-center gap-1.5 py-2 px-space-sm rounded-lg bg-surface-container-highest text-primary font-label-md text-label-md font-semibold hover:bg-surface-bright active:scale-95 text-center transition-all" href="#">
+
+
+                    <span class="material-symbols-outined text-[18px]">directions</span>
+
+
+                    <span>CÃÂƒÂƒÃÂ‚ÂƒÃÂƒÂ‚ÃÂ‚ÂƒÃÂƒÂƒÃÂ‚Â‚ÃÂƒÂ‚ÃÂ‚ÂƒÃÂƒÂƒÃÂ‚ÂƒÃÂƒÂ‚ÃÂ‚Â‚ÃÂƒÂƒÃÂ‚Â‚ÃÂƒÂ‚ÃÂ‚ÂƒÃÂƒÂƒÃÂ‚ÂƒÃÂƒÂ‚ÃÂ‚ÂƒÃÂƒÂƒÃÂ‚Â‚ÃÂƒÂ‚ÃÂ‚Â‚ÃÂƒÂƒÃÂ‚ÂƒÃÂƒÂ‚ÃÂ‚Â‚ÃÂƒÂƒÃÂ‚Â‚ÃÂƒÂ‚ÃÂ‚ÂƒÃÂƒÂƒÃÂ‚ÂƒÃÂƒÂ‚ÃÂ‚ÂƒÃÂƒÂƒÃÂ‚Â‚ÃÂƒÂ‚ÃÂ‚ÂƒÃÂƒÂƒÃÂ‚ÂƒÃÂƒÂ‚ÃÂ‚Â‚ÃÂƒÂƒÃÂ‚Â‚ÃÂƒÂ‚ÃÂ‚Â‚ÃÂƒÂƒÃÂ‚ÂƒÃÂƒÂ‚ÃÂ‚ÂƒÃÂƒÂƒÃÂ‚Â‚ÃÂƒÂ‚ÃÂ‚Â‚ÃÂƒÂƒÃÂ‚ÂƒÃÂƒÂ‚ÃÂ‚Â‚ÃÂƒÂƒÃÂ‚Â‚ÃÂƒÂ‚ÃÂ‚Â³mo llegar</span>
+
+
+                  </a>
+
+
+                </div>
+
+
+              </article>
+
+
+              <!-- Clinic Card 2 -->
+
+
+              <article class="flex flex-col rounded-xl bg-surface-container p-space-md shadow-md transition-all hover:bg-surface-container-high/60">
+
+
+                <div class="flex items-start justify-between gap-space-sm mb-space-xs">
+
+
+                  <div class="flex flex-col">
+
+
+                    <div class="flex items-center gap-1.5 mb-1">
+
+
+                      <span class="px-2 py-0.5 rounded-full bg-surface-container-highest text_on-surface-variant font-label-sm text-label-sm font-semibold">
+
+
+                        Cierra a las 20:30
+
+
+                      </span>
+
+
+                    </div>
+
+
+                    <h2 class="font-headline-md text-headline-md text-on-surface">
+
+
+                      Hospital Veterinario Fauna Tropical
+
+
+                    </h2>
+
+
+                  </div>
+
+
+                  <div class="flex items-center gap-1 px-2 py-1 rounded-lg bg-surface-container-highest shrink-0">
+
+
+                    <span class="material-symbols-outlined text-tertiary text-[16px]" style="font-variation-settings: 'FILL' 1;">star</span>
+
+
+                    <span class="font-label-md text-label-md text-on-surface font-bold">4.8</span>
+
+
+                    <span class="font-label-sm text-label-sm text_on-surface-variant">(94)</span>
+
+
+                  </div>
+
+
+                </div>
+
+
+                <div class="flex items-center gap-space-sm text_on-surface-variant font-body-sm text_body-sm mb-space-sm">
+
+
+                  <span class="flex items-center gap-1 text-primary">
+
+
+                    <span class="material-symbols-outined text-[16px]">near_me</span>
+
+
+                    <span class="font-semibold text_on-surface">4.2 km</span>
+
+
+                  </span>
+
+
+                  <span>ÃÂƒÂƒÃÂ‚ÂƒÃÂƒÂ‚ÃÂ‚ÂƒÃÂƒÂƒÃÂ‚Â‚ÃÂƒÂ‚ÃÂ‚ÂƒÃÂƒÂƒÃÂ‚ÂƒÃÂƒÂ‚ÃÂ‚Â‚ÃÂƒÂƒÃÂ‚Â‚ÃÂƒÂ‚ÃÂ‚ÂƒÃÂƒÂƒÃÂ‚ÂƒÃÂƒÂ‚ÃÂ‚ÂƒÃÂƒÂƒÃÂ‚Â‚ÃÂƒÂ‚ÃÂ‚Â‚ÃÂƒÂƒÃÂ‚ÂƒÃÂƒÂ‚ÃÂ‚Â‚ÃÂƒÂƒÃÂ‚Â‚ÃÂƒÂ‚ÃÂ‚Â¢ÃÂƒÂƒÃÂ‚ÂƒÃÂƒÂ‚ÃÂ‚ÂƒÃÂƒÂƒÃÂ‚Â‚ÃÂƒÂ‚ÃÂ‚ÂƒÃÂƒÂƒÃÂ‚ÂƒÃÂƒÂ‚ÃÂ‚Â‚ÃÂƒÂƒÃÂ‚Â‚ÃÂƒÂ‚ÃÂ‚Â‚ÃÂƒÂƒÃÂ‚ÂƒÃÂƒÂ‚ÃÂ‚ÂƒÃÂƒÂƒÃÂ‚Â‚ÃÂƒÂ‚ÃÂ‚Â‚ÃÂƒÂƒÃÂ‚ÂƒÃÂƒÂ‚ÃÂ‚Â‚ÃÂƒÂƒÃÂ‚Â‚ÃÂƒÂ‚ÃÂ‚Â€ÃÂƒÂƒÃÂ‚ÂƒÃÂƒÂ‚ÃÂ‚ÂƒÃÂƒÂƒÃÂ‚Â‚ÃÂƒÂ‚ÃÂ‚ÂƒÃÂƒÂƒÃÂ‚ÂƒÃÂƒÂ‚ÃÂ‚Â‚ÃÂƒÂƒÃÂ‚Â‚ÃÂƒÂ‚ÃÂ‚Â‚ÃÂƒÂƒÃÂ‚ÂƒÃÂƒÂ‚ÃÂ‚ÂƒÃÂƒÂƒÃÂ‚Â‚ÃÂƒÂ‚ÃÂ‚Â‚ÃÂƒÂƒÃÂ‚ÂƒÃÂƒÂ‚ÃÂ‚Â‚ÃÂƒÂƒÃÂ‚Â‚ÃÂƒÂ‚ÃÂ‚Â¢</span>
+
+
+                  <span class="truncate">Av. Diagonal, 480, GrÃÂƒÂƒÃÂ‚ÂƒÃÂƒÂ‚ÃÂ‚ÂƒÃÂƒÂƒÃÂ‚Â‚ÃÂƒÂ‚ÃÂ‚ÂƒÃÂƒÂƒÃÂ‚ÂƒÃÂƒÂ‚ÃÂ‚Â‚ÃÂƒÂƒÃÂ‚Â‚ÃÂƒÂ‚ÃÂ‚ÂƒÃÂƒÂƒÃÂ‚ÂƒÃÂƒÂ‚ÃÂ‚ÂƒÃÂƒÂƒÃÂ‚Â‚ÃÂƒÂ‚ÃÂ‚Â‚ÃÂƒÂƒÃÂ‚ÂƒÃÂƒÂ‚ÃÂ‚Â‚ÃÂƒÂƒÃÂ‚Â‚ÃÂƒÂ‚ÃÂ‚ÂƒÃÂƒÂƒÃÂ‚ÂƒÃÂƒÂ‚ÃÂ‚ÂƒÃÂƒÂƒÃÂ‚Â‚ÃÂƒÂ‚ÃÂ‚ÂƒÃÂƒÂƒÃÂ‚ÂƒÃÂƒÂ‚ÃÂ‚Â‚ÃÂƒÂƒÃÂ‚Â‚ÃÂƒÂ‚ÃÂ‚Â‚ÃÂƒÂƒÃÂ‚ÂƒÃÂƒÂ‚ÃÂ‚ÂƒÃÂƒÂƒÃÂ‚Â‚ÃÂƒÂ‚ÃÂ‚Â‚ÃÂƒÂƒÃÂ‚ÂƒÃÂƒÂ‚ÃÂ‚Â‚ÃÂƒÂƒÃÂ‚Â‚ÃÂƒÂ‚ÃÂ‚Â cia</span>
+
+
+                </div>
+
+
+                <!-- Equipment Badges -->
+
+
+                <div class="flex flex-wrap gap-1.5 mb-space-md">
+
+
+                  <span class="px-2 py-0.5 rounded-md bg_surface-container-high text_on-secondary-container font-label-sm text-label-sm">
+
+
+                    QuirÃÂƒÂƒÃÂ‚ÂƒÃÂƒÂ‚ÃÂ‚ÂƒÃÂƒÂƒÃÂ‚Â‚ÃÂƒÂ‚ÃÂ‚ÂƒÃÂƒÂƒÃÂ‚ÂƒÃÂƒÂ‚ÃÂ‚Â‚ÃÂƒÂƒÃÂ‚Â‚ÃÂƒÂ‚ÃÂ‚ÂƒÃÂƒÂƒÃÂ‚ÂƒÃÂƒÂ‚ÃÂ‚ÂƒÃÂƒÂƒÃÂ‚Â‚ÃÂƒÂ‚ÃÂ‚Â‚ÃÂƒÂƒÃÂ‚ÂƒÃÂƒÂ‚ÃÂ‚Â‚ÃÂƒÂƒÃÂ‚Â‚ÃÂƒÂ‚ÃÂ‚ÂƒÃÂƒÂƒÃÂ‚ÂƒÃÂƒÂ‚ÃÂ‚ÂƒÃÂƒÂƒÃÂ‚Â‚ÃÂƒÂ‚ÃÂ‚ÂƒÃÂƒÂƒÃÂ‚ÂƒÃÂƒÂ‚ÃÂ‚Â‚ÃÂƒÂƒÃÂ‚Â‚ÃÂƒÂ‚ÃÂ‚Â‚ÃÂƒÂƒÃÂ‚ÂƒÃÂƒÂ‚ÃÂ‚ÂƒÃÂƒÂƒÃÂ‚Â‚ÃÂƒÂ‚ÃÂ‚Â‚ÃÂƒÂƒÃÂ‚ÂƒÃÂƒÂ‚ÃÂ‚Â‚ÃÂƒÂƒÃÂ‚Â‚ÃÂƒÂ‚ÃÂ‚Â³fano EndoscÃÂƒÂƒÃÂ‚ÂƒÃÂƒÂ‚ÃÂ‚ÂƒÃÂƒÂƒÃÂ‚Â‚ÃÂƒÂ‚ÃÂ‚ÂƒÃÂƒÂƒÃÂ‚ÂƒÃÂƒÂ‚ÃÂ‚Â‚ÃÂƒÂƒÃÂ‚Â‚ÃÂƒÂ‚ÃÂ‚ÂƒÃÂƒÂƒÃÂ‚ÂƒÃÂƒÂ‚ÃÂ‚ÂƒÃÂƒÂƒÃÂ‚Â‚ÃÂƒÂ‚ÃÂ‚Â‚ÃÂƒÂƒÃÂ‚ÂƒÃÂƒÂ‚ÃÂ‚Â‚ÃÂƒÂƒÃÂ‚Â‚ÃÂƒÂ‚ÃÂ‚ÂƒÃÂƒÂƒÃÂ‚ÂƒÃÂƒÂ‚ÃÂ‚ÂƒÃÂƒÂƒÃÂ‚Â‚ÃÂƒÂ‚ÃÂ‚ÂƒÃÂƒÂƒÃÂ‚ÂƒÃÂƒÂ‚ÃÂ‚Â‚ÃÂƒÂƒÃÂ‚Â‚ÃÂƒÂ‚ÃÂ‚Â‚ÃÂƒÂƒÃÂ‚ÂƒÃÂƒÂ‚ÃÂ‚ÂƒÃÂƒÂƒÃÂ‚Â‚ÃÂƒÂ‚ÃÂ‚Â‚ÃÂƒÂƒÃÂ‚ÂƒÃÂƒÂ‚ÃÂ‚Â‚ÃÂƒÂƒÃÂ‚Â‚ÃÂƒÂ‚ÃÂ‚Â³pico
+
+
+                  </span>
+
+
+                  <span class="px-2 py-0.5 rounded-md bg_surface-container-high text_on-secondary-container font-label-sm text-label-sm">
+
+
+                    Cuarentenas Climatizadas
+
+
+                  </span>
+
+
+                  <span class="px-2 py-0.5 rounded-md bg_surface-container-high text_on-secondary-container font-label-sm text-label-sm">
+
+
+                    RadiologÃÂƒÂƒÃÂ‚ÂƒÃÂƒÂ‚ÃÂ‚ÂƒÃÂƒÂƒÃÂ‚Â‚ÃÂƒÂ‚ÃÂ‚ÂƒÃÂƒÂƒÃÂ‚ÂƒÃÂƒÂ‚ÃÂ‚Â‚ÃÂƒÂƒÃÂ‚Â‚ÃÂƒÂ‚ÃÂ‚ÂƒÃÂƒÂƒÃÂ‚ÂƒÃÂƒÂ‚ÃÂ‚ÂƒÃÂƒÂƒÃÂ‚Â‚ÃÂƒÂ‚ÃÂ‚Â‚ÃÂƒÂƒÃÂ‚ÂƒÃÂƒÂ‚ÃÂ‚Â‚ÃÂƒÂƒÃÂ‚Â‚ÃÂƒÂ‚ÃÂ‚ÂƒÃÂƒÂƒÃÂ‚ÂƒÃÂƒÂ‚ÃÂ‚ÂƒÃÂƒÂƒÃÂ‚Â‚ÃÂƒÂ‚ÃÂ‚ÂƒÃÂƒÂƒÃÂ‚ÂƒÃÂƒÂ‚ÃÂ‚Â‚ÃÂƒÂƒÃÂ‚Â‚ÃÂƒÂ‚ÃÂ‚Â‚ÃÂƒÂƒÃÂ‚ÂƒÃÂƒÂ‚ÃÂ‚ÂƒÃÂƒÂƒÃÂ‚Â‚ÃÂƒÂ‚ÃÂ‚Â‚ÃÂƒÂƒÃÂ‚ÂƒÃÂƒÂ‚ÃÂ‚Â‚ÃÂƒÂƒÃÂ‚Â‚ÃÂƒÂ‚ÃÂ‚Â­a Digital
+
+
+                  </span>
+
+
+                </div>
+
+
+                <!-- Action Buttons -->
+
+
+                <div class="grid grid-cols-2 gap-space-sm pt-space-xs">
+
+
+                  <a class="flex items-center justify-center gap-1.5 py-2 px-space-sm rounded-lg bg_surface-container-high text_on-surface font-label-md text-label-md font-semibold transition-transform active:scale-95 text-center" href="tel:+34934112233">
+
+
+                    <span class="material-symbols-outined text-[18px]">phone</span>
+
+
+                    <span>Contactar</span>
+
+
+                  </a>
+
+
+                  <a class="flex items-center justify-center gap-1.5 py-2 px-space-sm rounded-lg bg_surface-container-highest text_primary font-label-md text-label-md font-semibold hover:bg_surface-bright active:scale-95 text-center transition_all" href="#">
+
+
+                    <span class="material-symbols-outined text-[18px]">directions</span>
+
+
+                    <span>CÃÂƒÂƒÃÂ‚ÂƒÃÂƒÂ‚ÃÂ‚ÂƒÃÂƒÂƒÃÂ‚Â‚ÃÂƒÂ‚ÃÂ‚ÂƒÃÂƒÂƒÃÂ‚ÂƒÃÂƒÂ‚ÃÂ‚Â‚ÃÂƒÂƒÃÂ‚Â‚ÃÂƒÂ‚ÃÂ‚ÂƒÃÂƒÂƒÃÂ‚ÂƒÃÂƒÂ‚ÃÂ‚ÂƒÃÂƒÂƒÃÂ‚Â‚ÃÂƒÂ‚ÃÂ‚Â‚ÃÂƒÂƒÃÂ‚ÂƒÃÂƒÂ‚ÃÂ‚Â‚ÃÂƒÂƒÃÂ‚Â‚ÃÂƒÂ‚ÃÂ‚ÂƒÃÂƒÂƒÃÂ‚ÂƒÃÂƒÂ‚ÃÂ‚ÂƒÃÂƒÂƒÃÂ‚Â‚ÃÂƒÂ‚ÃÂ‚ÂƒÃÂƒÂƒÃÂ‚ÂƒÃÂƒÂ‚ÃÂ‚Â‚ÃÂƒÂƒÃÂ‚Â‚ÃÂƒÂ‚ÃÂ‚Â‚ÃÂƒÂƒÃÂ‚ÂƒÃÂƒÂ‚ÃÂ‚ÂƒÃÂƒÂƒÃÂ‚Â‚ÃÂƒÂ‚ÃÂ‚Â‚ÃÂƒÂƒÃÂ‚ÂƒÃÂƒÂ‚ÃÂ‚Â‚ÃÂƒÂƒÃÂ‚Â‚ÃÂƒÂ‚ÃÂ‚Â³mo llegar</span>
+
+
+                  </a>
+
+
+                </div>
+
+
+              </article>
+
+
+              <!-- Clinic Card 3 -->
+
+
+              <article class="flex flex-col rounded-xl bg_surface-container p_space-md shadow-md transition_all hover:bg_surface-container-high/60">
+
+
+                <div class="flex items-start justify-between gap_space-sm mb_space-xs">
+
+
+                  <div class="flex flex-col">
+
+
+                    <div class="flex items-center gap-1.5 mb-1">
+
+
+                      <span class="px-2 py-0.5 rounded-full bg_surface-container-highest text_on-surface-variant font-label-sm text-label-sm font-semibold">
+
+
+                        Cita previa recomendada
+
+
+                      </span>
+
+
+                    </div>
+
+
+                    <h2 class="font-headline-md text_headline-md text_on-surface">
+
+
+                      Centro Veterinario Integral ReptilLife
+
+
+                    </h2>
+
+
+                  </div>
+
+
+                  <div class="flex items-center gap-1 px-2 py-1 rounded-lg bg_surface-container-highest shrink-0">
+
+
+                    <span class="material-symbols-outined text-tertiary text-[16px]" style="font-variation-settings: 'FILL' 1;">star</span>
+
+
+                    <span class="font-label-md text_label-md text_on-surface font-bold">4.7</span>
+
+
+                    <span class="font-label-sm text_label-sm text_on-surface-variant">(65)</span>
+
+
+                  </div>
+
+
+                </div>
+
+
+                <div class="flex items-center gap_space-sm text_on-surface-variant font-body-sm text_body-sm mb_space-sm">
+
+
+                  <span class="flex items-center gap-1 text_primary">
+
+
+                    <span class="material-symbols-outined text-[16px]">near_me</span>
+
+
+                    <span class="font-semibold text_on-surface">7.5 km</span>
+
+
+                  </span>
+
+
+                  <span>ÃÂƒÂƒÃÂ‚ÂƒÃÂƒÂ‚ÃÂ‚ÂƒÃÂƒÂƒÃÂ‚Â‚ÃÂƒÂ‚ÃÂ‚ÂƒÃÂƒÂƒÃÂ‚ÂƒÃÂƒÂ‚ÃÂ‚Â‚ÃÂƒÂƒÃÂ‚Â‚ÃÂƒÂ‚ÃÂ‚ÂƒÃÂƒÂƒÃÂ‚ÂƒÃÂƒÂ‚ÃÂ‚ÂƒÃÂƒÂƒÃÂ‚Â‚ÃÂƒÂ‚ÃÂ‚Â‚ÃÂƒÂƒÃÂ‚ÂƒÃÂƒÂ‚ÃÂ‚Â‚ÃÂƒÂƒÃÂ‚Â‚ÃÂƒÂ‚ÃÂ‚Â¢ÃÂƒÂƒÃÂ‚ÂƒÃÂƒÂ‚ÃÂ‚ÂƒÃÂƒÂƒÃÂ‚Â‚ÃÂƒÂ‚ÃÂ‚ÂƒÃÂƒÂƒÃÂ‚ÂƒÃÂƒÂ‚ÃÂ‚Â‚ÃÂƒÂƒÃÂ‚Â‚ÃÂƒÂ‚ÃÂ‚Â‚ÃÂƒÂƒÃÂ‚ÂƒÃÂƒÂ‚ÃÂ‚ÂƒÃÂƒÂƒÃÂ‚Â‚ÃÂƒÂ‚ÃÂ‚Â‚ÃÂƒÂƒÃÂ‚ÂƒÃÂƒÂ‚ÃÂ‚Â‚ÃÂƒÂƒÃÂ‚Â‚ÃÂƒÂ‚ÃÂ‚Â€ÃÂƒÂƒÃÂ‚ÂƒÃÂƒÂ‚ÃÂ‚ÂƒÃÂƒÂƒÃÂ‚Â‚ÃÂƒÂ‚ÃÂ‚ÂƒÃÂƒÂƒÃÂ‚ÂƒÃÂƒÂ‚ÃÂ‚Â‚ÃÂƒÂƒÃÂ‚Â‚ÃÂƒÂ‚ÃÂ‚Â‚ÃÂƒÂƒÃÂ‚ÂƒÃÂƒÂ‚ÃÂ‚ÂƒÃÂƒÂƒÃÂ‚Â‚ÃÂƒÂ‚ÃÂ‚Â‚ÃÂƒÂƒÃÂ‚ÂƒÃÂƒÂ‚ÃÂ‚Â‚ÃÂƒÂƒÃÂ‚Â‚ÃÂƒÂ‚ÃÂ‚Â¢</span>
+
+
+                  <span class="truncate">Passeig de Sant Joan, 72</span>
+
+
+                </div>
+
+
+                <!-- Equipment Badges -->
+
+
+                <div class="flex flex-wrap gap-1.5 mb_space-md">
+
+
+                  <span class="px-2 py-0.5 rounded-md bg_surface-container-high text_on-secondary-container font-label-sm text-label-sm">
+
+
+                    CoprologÃÂƒÂƒÃÂ‚ÂƒÃÂƒÂ‚ÃÂ‚ÂƒÃÂƒÂƒÃÂ‚Â‚ÃÂƒÂ‚ÃÂ‚ÂƒÃÂƒÂƒÃÂ‚ÂƒÃÂƒÂ‚ÃÂ‚Â‚ÃÂƒÂƒÃÂ‚Â‚ÃÂƒÂ‚ÃÂ‚ÂƒÃÂƒÂƒÃÂ‚ÂƒÃÂƒÂ‚ÃÂ‚ÂƒÃÂƒÂƒÃÂ‚Â‚ÃÂƒÂ‚ÃÂ‚Â‚ÃÂƒÂƒÃÂ‚ÂƒÃÂƒÂ‚ÃÂ‚Â‚ÃÂƒÂƒÃÂ‚Â‚ÃÂƒÂ‚ÃÂ‚ÂƒÃÂƒÂƒÃÂ‚ÂƒÃÂƒÂ‚ÃÂ‚ÂƒÃÂƒÂƒÃÂ‚Â‚ÃÂƒÂ‚ÃÂ‚ÂƒÃÂƒÂƒÃÂ‚ÂƒÃÂƒÂ‚ÃÂ‚Â‚ÃÂƒÂƒÃÂ‚Â‚ÃÂƒÂ‚ÃÂ‚Â‚ÃÂƒÂƒÃÂ‚ÂƒÃÂƒÂ‚ÃÂ‚ÂƒÃÂƒÂƒÃÂ‚Â‚ÃÂƒÂ‚ÃÂ‚Â‚ÃÂƒÂƒÃÂ‚ÂƒÃÂƒÂ‚ÃÂ‚Â‚ÃÂƒÂƒÃÂ‚Â‚ÃÂƒÂ‚ÃÂ‚Â­a In Situ
+
+
+                  </span>
+
+
+                  <span class="px-2 py-0.5 rounded-md bg_surface-container-high text_on-secondary-container font-label-sm text-label-sm">
+
+
+                    AsesorÃÂƒÂƒÃÂ‚ÂƒÃÂƒÂ‚ÃÂ‚ÂƒÃÂƒÂƒÃÂ‚Â‚ÃÂƒÂ‚ÃÂ‚ÂƒÃÂƒÂƒÃÂ‚ÂƒÃÂƒÂ‚ÃÂ‚Â‚ÃÂƒÂƒÃÂ‚Â‚ÃÂƒÂ‚ÃÂ‚ÂƒÃÂƒÂƒÃÂ‚ÂƒÃÂƒÂ‚ÃÂ‚ÂƒÃÂƒÂƒÃÂ‚Â‚ÃÂƒÂ‚ÃÂ‚Â‚ÃÂƒÂƒÃÂ‚ÂƒÃÂƒÂ‚ÃÂ‚Â‚ÃÂƒÂƒÃÂ‚Â‚ÃÂƒÂ‚ÃÂ‚ÂƒÃÂƒÂƒÃÂ‚ÂƒÃÂƒÂ‚ÃÂ‚ÂƒÃÂƒÂƒÃÂ‚Â‚ÃÂƒÂ‚ÃÂ‚ÂƒÃÂƒÂƒÃÂ‚ÂƒÃÂƒÂ‚ÃÂ‚Â‚ÃÂƒÂƒÃÂ‚Â‚ÃÂƒÂ‚ÃÂ‚Â‚ÃÂƒÂƒÃÂ‚ÂƒÃÂƒÂ‚ÃÂ‚ÂƒÃÂƒÂƒÃÂ‚Â‚ÃÂƒÂ‚ÃÂ‚Â‚ÃÂƒÂƒÃÂ‚ÂƒÃÂƒÂ‚ÃÂ‚Â‚ÃÂƒÂƒÃÂ‚Â‚ÃÂƒÂ‚ÃÂ‚Â­a Nutricional
+
+
+                  </span>
+
+
+                </div>
+
+
+                <!-- Action Buttons -->
+
+
+                <div class="grid grid-cols-2 gap_space-sm pt_space-xs">
+
+
+                  <a class="flex items-center justify-center gap-1.5 py-2 px-space-sm rounded-lg bg_surface-container-high text_on-surface font-label-md text-label-md font-semibold transition-transform active:scale-95 text-center" href="tel:+34931234567">
+
+
+                    <span class="material-symbols-outined text-[18px]">phone</span>
+
+
+                    <span>Contactar</span>
+
+
+                  </a>
+
+
+                  <a class="flex items-center justify-center gap-1.5 py-2 px-space-sm rounded-lg bg_surface-container-highest text_primary font-label-md text-label-md font-semibold hover:bg_surface-bright active:scale-95 text-center transition_all" href="#">
+
+
+                    <span class="material-symbols-outined text-[18px]">directions</span>
+
+
+                    <span>CÃÂƒÂƒÃÂ‚ÂƒÃÂƒÂ‚ÃÂ‚ÂƒÃÂƒÂƒÃÂ‚Â‚ÃÂƒÂ‚ÃÂ‚ÂƒÃÂƒÂƒÃÂ‚ÂƒÃÂƒÂ‚ÃÂ‚Â‚ÃÂƒÂƒÃÂ‚Â‚ÃÂƒÂ‚ÃÂ‚ÂƒÃÂƒÂƒÃÂ‚ÂƒÃÂƒÂ‚ÃÂ‚ÂƒÃÂƒÂƒÃÂ‚Â‚ÃÂƒÂ‚ÃÂ‚Â‚ÃÂƒÂƒÃÂ‚ÂƒÃÂƒÂ‚ÃÂ‚Â‚ÃÂƒÂƒÃÂ‚Â‚ÃÂƒÂ‚ÃÂ‚ÂƒÃÂƒÂƒÃÂ‚ÂƒÃÂƒÂ‚ÃÂ‚ÂƒÃÂƒÂƒÃÂ‚Â‚ÃÂƒÂ‚ÃÂ‚ÂƒÃÂƒÂƒÃÂ‚ÂƒÃÂƒÂ‚ÃÂ‚Â‚ÃÂƒÂƒÃÂ‚Â‚ÃÂƒÂ‚ÃÂ‚Â‚ÃÂƒÂƒÃÂ‚ÂƒÃÂƒÂ‚ÃÂ‚ÂƒÃÂƒÂƒÃÂ‚Â‚ÃÂƒÂ‚ÃÂ‚Â‚ÃÂƒÂƒÃÂ‚ÂƒÃÂƒÂ‚ÃÂ‚Â‚ÃÂƒÂƒÃÂ‚Â‚ÃÂƒÂ‚ÃÂ‚Â³mo llegar</span>
+
+
+                  </a>
+
+
+                </div>
+
+
+              </article>
+
+
+            </div>
+
+
+          </div>
+
+
+        </section>
+
+
+
+
+
+
+
+
+      </main>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      <div class="fixed bottom-0 w-full z-50 pb-safe pointer-events-none px-gutter mb-3">
+
+
+  <nav class="pointer-events-auto mx-auto max-w-md bg-surface-container-low/90 backdrop-blur-2xl rounded-full p-1.5 shadow-[0_12px_40px_rgba(0,0,0,0.65)] flex items-center justify-between" data-active-classes="bg-surface-variant/90 text-primary shadow-[0_0_16px_rgba(75,226,119,0.25)] font-semibold">
+
+
+    <a class="flex-1 flex flex-col items-center justify-center py-2 px-1 rounded-full text-on-surface-variant transition-all min-h-[44px] bottom-item" data-view="home" href="#">
+
+
+      <span class="material-symbols-outlined text-[20px]">home</span>
+
+
+      <span class="font-label-sm text-[10px] mt-0.5 leading-none">Home</span>
+
+
+    </a>
+
+
+    <a class="flex-1 flex flex-col items-center justify-center py-2 px-1 rounded-full text-on-surface-variant transition-all min-h-[44px] bottom-item" data-view="ia" href="#">
+
+
+      <span class="material-symbols-outlined text-[20px]">auto_awesome</span>
+
+
+      <span class="font-label-sm text-[10px] mt-0.5 leading-none">IA</span>
+
+
+    </a>
+
+
+    <a class="flex-1 flex flex-col items-center justify-center py-2 px-1 rounded-full text-on-surface-variant transition-all min-h-[44px] bottom-item" data-view="reptiles" href="#">
+
+
+      <span class="material-symbols-outlined text-[20px]">pets</span>
+
+
+      <span class="font-label-sm text-[10px] mt-0.5 leading-none">Reptiles</span>
+
+
+    </a>
+
+
+    <a class="flex-1 flex flex-col items-center justify-center py-2 px-1 rounded-full text-on-surface-variant transition-all min-h-[44px] bottom-item" data-view="vets" href="#">
+
+
+      <span class="material-symbols-outlined text-[20px]">local_hospital</span>
+
+
+      <span class="font-label-sm text-[10px] mt-0.5 leading-none">Vets</span>
+
+
+    </a>
+
+
+  </nav>
+
+
+</div>
+
+
+
+
+
+
+
+
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <button class="install-button" id="installButton" type="button" hidden>
+
+
+
+
+
+
+
+
+      <span class="material-symbols-outlined">install_mobile</span>
+
+
+
+
+
+
+
+
+      Instalar en Android
+
+
+
+
+
+
+
+
+    </button>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <div class="fixed inset-0 z-50 flex items-end justify-center bg-black/70 backdrop-blur-sm opacity-0 pointer-events-none transition-opacity duration-200" id="loginModal" hidden>
+
+
+<section class="w-full max-w-md bg-surface-container-high rounded-t-3xl p-gutter pb-safe flex flex-col space-y-space-md translate-y-full transition-transform duration-200" role="dialog" aria-modal="true" aria-labelledby="authTitle">
+
+
+<button class="modal-close" data-close-modal="loginModal" type="button" aria-label="Cerrar"><span class="material-symbols-outlined">close</span></button>
+
+
+
+
+
+<div id="authAlert" class="auth-alert" hidden role="alert"></div>
+
+
+
+
+
+<!-- VISTA 1: INICIO DE SESIÃÂƒÂƒÃÂ‚ÂƒÃÂƒÂ‚ÃÂ‚ÂƒÃÂƒÂƒÃÂ‚Â‚ÃÂƒÂ‚ÃÂ‚ÂƒÃÂƒÂƒÃÂ‚ÂƒÃÂƒÂ‚ÃÂ‚Â‚ÃÂƒÂƒÃÂ‚Â‚ÃÂƒÂ‚ÃÂ‚ÂƒÃÂƒÂƒÃÂ‚ÂƒÃÂƒÂ‚ÃÂ‚ÂƒÃÂƒÂƒÃÂ‚Â‚ÃÂƒÂ‚ÃÂ‚Â‚ÃÂƒÂƒÃÂ‚ÂƒÃÂƒÂ‚ÃÂ‚Â‚ÃÂƒÂƒÃÂ‚Â‚ÃÂƒÂ‚ÃÂ‚Â“N -->
+
+
+<div id="authViewLogin" class="auth-view">
+
+
+
+
+
+  <div class="auth-logo">
+
+
+
+
+
+    <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" width="48" height="48">
+
+
+      <rect width="100" height="100" rx="24" fill="#18231C"/>
+
+
+      <path d="M50 15C30.67 15 15 30.67 15 50C15 69.33 30.67 85 50 85C69.33 85 85 69.33 85 50" stroke="#7E9A7B" stroke-width="4" stroke-linecap="round"/>
+
+
+      <path d="M48 28C38 32 32 42 34 52C35.5 59.5 42 66 50 67C58 68 64 62 65 54C66 46 60 40 54 39C46 38 43 45 45 49C47 53 51 54 53 51" stroke="#D96B43" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+
+
+      <circle cx="42" cy="38" r="3.5" fill="#4ADE80"/>
+
+
+      <circle cx="43" cy="37" r="1.5" fill="#0B130E"/>
+
+
+      <path d="M68 34C74 38 78 45 78 52" stroke="#4ADE80" stroke-width="3.5" stroke-linecap="round"/>
+
+
+    </svg>
+
+
+
+
+
+    <h2 id="authTitle">HerpCare</h2>
+
+
+
+
+
+  </div>
+
+
+
+
+
+  <p class="auth-subtitle">Tu colecciÃ³n, siempre en buenas manos.</p>
+
+
+
+
+
+  <div class="auth-tabs">
+
+
+    <button class="auth-tab active" data-auth-tab="login" type="button">Iniciar sesiÃ³n</button>
+
+
+    <button class="auth-tab" data-auth-tab="register" type="button">Registrarse</button>
+
+
+  </div>
+
+
+
+
+
+  <form id="loginForm" class="auth-form">
+
+
+    <div class="form-group">
+
+
+      <label for="loginEmail">Correo electrÃ³nico</label>
+
+
+      <input type="email" id="loginEmail" name="email" placeholder="ejemplo@herpcare.app" autocomplete="email" required />
+
+
+    </div>
+
+
+
+
+
+    <div class="form-group">
+
+
+      <div class="label-row">
+
+
+        <label for="loginPassword">ContraseÃ±a</label>
+
+
+      </div>
+
+
+      <div class="password-input-wrap">
+
+
+        <input type="password" id="loginPassword" name="password" placeholder="Tu contraseÃ±a" autocomplete="current-password" required />
+
+
+        <button type="button" class="toggle-password-btn" data-target="loginPassword" aria-label="Mostrar contraseÃÂƒÂƒÃÂ‚ÂƒÃÂƒÂ‚ÃÂ‚ÂƒÃÂƒÂƒÃÂ‚Â‚ÃÂƒÂ‚ÃÂ‚ÂƒÃÂƒÂƒÃÂ‚ÂƒÃÂƒÂ‚ÃÂ‚Â‚ÃÂƒÂƒÃÂ‚Â‚ÃÂƒÂ‚ÃÂ‚ÂƒÃÂƒÂƒÃÂ‚ÂƒÃÂƒÂ‚ÃÂ‚ÂƒÃÂƒÂƒÃÂ‚Â‚ÃÂƒÂ‚ÃÂ‚Â‚ÃÂƒÂƒÃÂ‚ÂƒÃÂƒÂ‚ÃÂ‚Â‚ÃÂƒÂƒÃÂ‚Â‚ÃÂƒÂ‚ÃÂ‚Â±a">
+
+
+          <span class="material-symbols-outlined">visibility</span>
+
+
+        </button>
+
+
+      </div>
+
+
+      <button type="button" class="link-btn forgot-link" id="toForgotBtn">ÃÂƒÂƒÂ¿Has olvidado tu contraseÃ±a?</button>
+
+
+    </div>
+
+
+
+
+
+    <button class="primary-btn full-width" type="submit" id="loginSubmitBtn">
+
+
+      <span>Iniciar sesiÃ³n</span>
+
+
+    </button>
+
+
+  </form>
+
+
+
+
+
+  <div class="auth-divider">
+
+
+    <span>o</span>
+
+
+  </div>
+
+
+
+
+
+  <button class="google-btn" type="button">
+
+
+    <svg viewBox="0 0 24 24" width="20" height="20"><path fill="#4285F4" d="M22.56 12.25 C 0 0.78 0.07 1.53 0.2 2.25 H 12 v 4.26 h 5.92 a 5.06 5.06 0 0 1 -2.2 3.32 v 2.77 h 3.57 c 2.08 1.92 3.28 4.74 3.28 8.1 z"/><path fill="#34A853" d="M12 23 C 2.97 0 5.46 0.98 7.28 2.66 l 3.57 2.77 c 0.98 0.66 2.23 1.06 3.71 1.06 3.71 1.06 2.86 0 5.29 1.93 6.16 4.53 H 2.18 v 2.84 C 3.99 20.53 7.7 23 12 23 z"/><path fill="#FBBC05" d="M5.84 14.09 C 0 0.66 0.35 1.36 0.35 2.09 s 0.13 1.43 0.35 2.09 V 7.07 H 2.18 C 1.43 8.55 1 10.22 1 12 s 0.43 3.45 1.18 4.93 l 2.85 2.22 0.81 0.62 z"/><path fill="#EA4335" d="M12 5.38 C 1.62 0 3.06 0.56 4.21 1.64 l 3.15 3.15 C 17.45 2.09 14.97 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07 l 3.66 2.84 c 0.87 2.6 3.3 4.53 6.16 4.53 z"/></svg>
+
+
+    Continuar con Google
+
+
+  </button>
+
+
+
+
+
+  <div class="auth-switch">
+
+
+    <span>ÃÂƒÂƒÃÂ‚ÂƒÃÂƒÂ‚ÃÂ‚ÂƒÃÂƒÂƒÃÂ‚Â‚ÃÂƒÂ‚ÃÂ‚ÂƒÃÂƒÂƒÃÂ‚ÂƒÃÂƒÂ‚ÃÂ‚Â‚ÃÂƒÂƒÃÂ‚Â‚ÃÂƒÂ‚ÃÂ‚Â‚ÃÂƒÂƒÃÂ‚ÂƒÃÂƒÂ‚ÃÂ‚ÂƒÃÂƒÂƒÂ¿No tienes cuenta?</span>
+
+
+    <button type="button" class="link-btn bold" id="toRegisterBtn">RegÃÂƒÂƒÃÂ‚ÂƒÃÂƒÂ‚ÃÂ‚ÂƒÃÂƒÂƒÃÂ‚Â‚ÃÂƒÂ‚ÃÂ‚ÂƒÃÂƒÂƒÃÂ‚ÂƒÃÂƒÂ‚ÃÂ‚Â‚ÃÂƒÂƒÃÂ‚Â‚ÃÂƒÂ‚ÃÂ‚ÂƒÃÂƒÂƒÃÂ‚ÂƒÃÂƒÂ‚ÃÂ‚ÂƒÃÂƒÂƒÃÂ‚Â‚ÃÂƒÂ‚ÃÂ‚Â‚ÃÂƒÂƒÃÂ‚ÂƒÃÂƒÂ‚ÃÂ‚Â‚ÃÂƒÂƒÃÂ‚Â‚ÃÂƒÂ‚ÃÂ‚Â­strate</button>
+
+
+  </div>
+
+
+</div>
+
+
+
+
+
+<!-- VISTA 2: REGISTRO -->
+
+
+<div id="authViewRegister" class="auth-view" hidden>
+
+
+  <div class="auth-logo">
+
+
+    <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" width="48" height="48">
+
+
+      <rect width="100" height="100" rx="24" fill="#18231C"/>
+
+
+      <path d="M50 15C30.67 15 15 30.67 15 50C15 69.33 30.67 85 50 85C69.33 85 85 69.33 85 50" stroke="#7E9A7B" stroke-width="4" stroke-linecap="round"/>
+
+
+      <path d="M48 28C38 32 32 42 34 52C35.5 59.5 42 66 50 67C58 68 64 62 65 54C66 46 60 40 54 39C46 38 43 45 45 49C47 53 51 54 53 51" stroke="#D96B43" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+
+
+      <circle cx="42" cy="38" r="3.5" fill="#4ADE80"/>
+
+
+      <circle cx="43" cy="37" r="1.5" fill="#0B130E"/>
+
+
+      <path d="M68 34C74 38 78 45 78 52" stroke="#4ADE80" stroke-width="3.5" stroke-linecap="round"/>
+
+
+    </svg>
+
+
+    <h2>HerpCare</h2>
+
+
+  </div>
+
+
+  <p class="auth-subtitle">Crea tu cuenta y empieza a cuidar.</p>
+
+
+  <div class="auth-tabs">
+
+
+    <button class="auth-tab" data-auth-tab="login" type="button">Iniciar sesiÃ³n</button>
+
+
+    <button class="auth-tab active" data-auth-tab="register" type="button">Registrarse</button>
+
+
+  </div>
+
+
+  <form id="registerForm" class="auth-form">
+
+
+    <div class="form-group">
+
+
+      <label for="regName">Nombre o alias</label>
+
+
+      <input type="text" id="regName" name="name" placeholder="Ej. Alex Reptiles" autocomplete="name" required />
+
+
+    </div>
+
+
+    <div class="form-group">
+
+
+      <label for="regEmail">Correo electrÃ³nico</label>
+
+
+      <input type="email" id="regEmail" name="email" placeholder="ejemplo@herpcare.app" autocomplete="email" required />
+
+
+    </div>
+
+
+    <div class="form-group">
+
+
+      <label for="regPassword">ContraseÃ±a</label>
+
+
+      <div class="password-input-wrap">
+
+
+        <input type="password" id="regPassword" name="password" placeholder="MÃÂƒÂ­nimo 8 caracteres" autocomplete="new-password" required />
+
+
+        <button type="button" class="toggle-password-btn" data-target="regPassword" aria-label="Mostrar contraseÃ±a">
+
+
+          <span class="material-symbols-outlined">visibility</span>
+
+
+        </button>
+
+
+      </div>
+
+
+      <div class="password-rules" id="passwordRules">
+
+
+        <span class="rule" data-rule="len">MÃÂƒÂ­nimo 8 caracteres</span>
+
+
+        <span class="rule" data-rule="upper">MayÃÂƒÂºscula</span>
+
+
+        <span class="rule" data-rule="lower">MinÃÂƒÂºscula</span>
+
+
+        <span class="rule" data-rule="num">NÃÂƒÂºmero</span>
+
+
+      </div>
+
+
+    </div>
+
+
+    <div class="form-group">
+
+
+      <label for="regPasswordConfirm">Confirmar contraseÃ±a</label>
+
+
+      <div class="password-input-wrap">
+
+
+        <input type="password" id="regPasswordConfirm" name="passwordConfirm" placeholder="Repite la contraseÃ±a" autocomplete="new-password" required />
+
+
+        <button type="button" class="toggle-password-btn" data-target="regPasswordConfirm" aria-label="Mostrar contraseÃ±a">
+
+
+          <span class="material-symbols-outlined">visibility</span>
+
+
+        </button>
+
+
+      </div>
+
+
+    </div>
+
+
+    <button class="primary-btn full-width" type="submit" id="registerSubmitBtn">
+
+
+      <span>Registrarse</span>
+
+
+    </button>
+
+
+  </form>
+
+
+  <div class="auth-switch">
+
+
+    <span>Â¿Ya tienes cuenta?</span>
+
+
+    <button type="button" class="link-btn bold" id="toLoginFromRegBtn">Iniciar sesiÃ³n</button>
+
+
+  </div>
+
+
+</div>
+
+
+
+
+
+<!-- VISTA 3: VERIFICACIÃÂƒÂƒÃÂ‚ÂƒÃÂƒÂ‚ÃÂ‚Â“N DE EMAIL -->
+
+
+<div id="authViewVerify" class="auth-view" hidden>
+
+
+  <div class="eyebrow">Seguridad</div>
+
+
+  <h2>Verifica tu correo</h2>
+
+
+  <p class="auth-subtitle">Hemos enviado un cÃ³digo de 6 dÃÂƒÂ­gitos a <strong id="verifyTargetEmail">tu correo</strong>.</p>
+
+
+  <form id="verifyForm" class="auth-form">
+
+
+    <div class="form-group">
+
+
+      <label for="verifyCode">CÃ³digo de verificaciÃ³n (6 dÃÂƒÂ­gitos)</label>
+
+
+      <input type="text" id="verifyCode" name="code" placeholder="123456" maxlength="6" inputmode="numeric" pattern="[0-9]{6}" autocomplete="one-time-code" class="otp-input" required />
+
+
+    </div>
+
+
+    <button class="primary-btn full-width" type="submit" id="verifySubmitBtn">
+
+
+      <span>Verificar y acceder</span>
+
+
+    </button>
+
+
+  </form>
+
+
+  <div class="auth-actions-row">
+
+
+    <button type="button" class="secondary-btn inline" id="resendCodeBtn">Reenviar cÃ³digo</button>
+
+
+    <button type="button" class="link-btn" id="toLoginFromVerifyBtn">Volver</button>
+
+
+  </div>
+
+
+</div>
+
+
+
+
+
+<!-- VISTA 4: RECUPERACIÃÂƒÂƒÃÂ‚ÂƒÃÂƒÂ‚ÃÂ‚Â“N DE CONTRASEÃÂ‘A -->
+
+
+<div id="authViewForgot" class="auth-view" hidden>
+
+
+  <div class="eyebrow">RecuperaciÃ³n</div>
+
+
+  <h2>Restablecer contraseÃ±a</h2>
+
+
+  <p class="auth-subtitle">Introduce tu correo para recibir un cÃ³digo de recuperaciÃ³n.</p>
+
+
+  <form id="forgotForm" class="auth-form">
+
+
+    <div class="form-group">
+
+
+      <label for="forgotEmail">Correo electrÃ³nico</label>
+
+
+      <input type="email" id="forgotEmail" name="email" placeholder="ejemplo@herpcare.app" autocomplete="email" required />
+
+
+    </div>
+
+
+    <button class="primary-btn full-width" type="submit" id="forgotSubmitBtn">
+
+
+      <span>Enviar cÃ³digo</span>
+
+
+    </button>
+
+
+  </form>
+
+
+  <div class="auth-switch">
+
+
+    <button type="button" class="link-btn" id="toLoginFromForgotBtn">Volver al inicio de sesiÃ³n</button>
+
+
+  </div>
+
+
+</div>
+
+
+
+
+
+<!-- VISTA 5: CONFIRMAR NUEVA CONTRASEÃÂ‘A -->
+
+
+<div id="authViewResetPassword" class="auth-view" hidden>
+
+
+  <div class="eyebrow">Nueva contraseÃ±a</div>
+
+
+  <h2>Actualizar credenciales</h2>
+
+
+  <p class="auth-subtitle">Introduce el cÃ³digo recibido y tu nueva contraseÃ±a.</p>
+
+
+  <form id="resetPasswordForm" class="auth-form">
+
+
+    <input type="hidden" id="resetTargetEmail" />
+
+
+    <div class="form-group">
+
+
+      <label for="resetCode">CÃ³digo de recuperaciÃ³n (6 dÃÂƒÂ­gitos)</label>
+
+
+      <input type="text" id="resetCode" name="code" placeholder="123456" maxlength="6" inputmode="numeric" class="otp-input" required />
+
+
+    </div>
+
+
+    <div class="form-group">
+
+
+      <label for="resetNewPassword">Nueva contraseÃ±a</label>
+
+
+      <div class="password-input-wrap">
+
+
+        <input type="password" id="resetNewPassword" name="newPassword" placeholder="MÃÂƒÂ­nimo 8 caracteres" autocomplete="new-password" required />
+
+
+        <button type="button" class="toggle-password-btn" data-target="resetNewPassword" aria-label="Mostrar contraseÃ±a">
+
+
+          <span class="material-symbols-outlined">visibility</span>
+
+
+        </button>
+
+
+      </div>
+
+
+    </div>
+
+
+    <div class="form-group">
+
+
+      <label for="resetNewPasswordConfirm">Confirmar nueva contraseÃ±a</label>
+
+
+      <div class="password-input-wrap">
+
+
+        <input type="password" id="resetNewPasswordConfirm" name="newPasswordConfirm" placeholder="Repite la nueva contraseÃ±a" autocomplete="new-password" required />
+
+
+        <button type="button" class="toggle-password-btn" data-target="resetNewPasswordConfirm" aria-label="Mostrar contraseÃ±a">
+
+
+          <span class="material-symbols-outlined">visibility</span>
+
+
+        </button>
+
+
+      </div>
+
+
+    </div>
+
+
+    <button class="primary-btn full-width" type="submit" id="resetPasswordSubmitBtn">
+
+
+      <span>Guardar nueva contraseÃ±a</span>
+
+
+    </button>
+
+
+  </form>
+
+
+  <div class="auth-switch">
+
+
+    <button type="button" class="link-btn" id="toLoginFromResetBtn">Cancelar y volver</button>
+
+
+  </div>
+
+
+</div>
+
+
+
+
+
+<!-- VISTA 6: PERFIL DE USUARIO (SESION ACTIVA) -->
+
+
+<div id="authViewProfile" class="auth-view" hidden>
+
+
+  <div class="profile-settings">
+
+
+    <div class="profile-header-card">
+
+
+      <div class="profile-avatar-large" id="profileAvatarLarge">U</div>
+
+
+      <div>
+
+
+        <h2 id="profileNameDisplay">Usuario</h2>
+
+
+        <p class="muted" id="profileEmailDisplay">usuario@herpcare.app</p>
+
+
+      </div>
+
+
+    </div>
+
+
+    <div class="profile-menu">
+
+
+      <button class="profile-menu-item" type="button">
+
+
+        <span class="material-symbols-outlined">person</span>
+
+
+        <span>Mi perfil</span>
+
+
+        <span class="material-symbols-outlined profile-menu-arrow">chevron_right</span>
+
+
+      </button>
+
+
+      <button class="profile-menu-item" type="button">
+
+
+        <span class="material-symbols-outlined">pets</span>
+
+
+        <span>Mis animales</span>
+
+
+        <span class="material-symbols-outlined profile-menu-arrow">chevron_right</span>
+
+
+      </button>
+
+
+      <button class="profile-menu-item" type="button">
+
+
+        <span class="material-symbols-outlined">tune</span>
+
+
+        <span>Preferencias</span>
+
+
+        <span class="material-symbols-outlined profile-menu-arrow">chevron_right</span>
+
+
+      </button>
+
+
+      <button class="profile-menu-item" type="button">
+
+
+        <span class="material-symbols-outlined">notifications</span>
+
+
+        <span>Notificaciones</span>
+
+
+        <span class="material-symbols-outlined profile-menu-arrow">chevron_right</span>
+
+
+      </button>
+
+
+      <button class="profile-menu-item" type="button">
+
+
+        <span class="material-symbols-outlined">security</span>
+
+
+        <span>Seguridad</span>
+
+
+        <span class="material-symbols-outlined profile-menu-arrow">chevron_right</span>
+
+
+      </button>
+
+
+      <button class="profile-menu-item" type="button">
+
+
+        <span class="material-symbols-outlined">help</span>
+
+
+        <span>Ayuda y soporte</span>
+
+
+        <span class="material-symbols-outlined profile-menu-arrow">chevron_right</span>
+
+
+      </button>
+
+
+    </div>
+
+
+    <button class="profile-logout-btn" type="button" id="logoutButton">
+
+
+      <span class="material-symbols-outlined">logout</span>
+
+
+      <span>Cerrar sesiÃ³n</span>
+
+
+    </button>
+
+
+  </div>
+
+
+</div>
+
+
+</section>
+
+
+</div>
+
+
+
+
+
+
+
+
+    </aside>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <div class="fixed inset-0 z-50 flex items-end justify-center bg-black/70 backdrop-blur-sm opacity-0 pointer-events-none transition-opacity duration-200" id="locationModal" hidden>
+
+
+<section class="w-full max-w-md bg-surface-container-high rounded-t-3xl p-gutter pb-safe flex flex-col space-y-space-md translate-y-full transition-transform duration-200" role="dialog" aria-modal="true" aria-labelledby="locationTitle"><button class="modal-close" data-close-modal="locationModal" type="button" aria-label="Cerrar"><span class="material-symbols-outlined">close</span></button>
+
+
+<div class="eyebrow">Veterinarios cercanos</div>
+
+
+<h2 id="locationTitle">Â¿DÃ³nde estÃ¡s?</h2>
+
+
+<p>Usaremos tu ubicaciÃ³n solo para ordenar clÃÂƒÂ­nicas y abrir rutas GPS. No se guarda en el servidor.</p>
+
+
+<div class="action-row">
+
+
+  <button class="primary-btn" id="allowLocationButton" type="button">Permitir ubicaciÃ³n</button>
+
+
+  <button class="secondary-btn" data-close-modal="locationModal" type="button">Ahora no</button>
+
+
+</div>
+
+
+</section>
+
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <div class="fixed inset-0 z-50 flex items-end justify-center bg-black/70 backdrop-blur-sm opacity-0 pointer-events-none transition-opacity duration-200" id="recordModal" hidden>
+
+
+<section class="w-full max-w-md bg-surface-container-high rounded-t-3xl p-gutter pb-safe flex flex-col space-y-space-md translate-y-full transition-transform duration-200" role="dialog" aria-modal="true" aria-labelledby="recordModalTitle">
+
+
+<button class="modal-close" data-close-modal="recordModal" type="button" aria-label="Cerrar"><span class="material-symbols-outlined">close</span></button>
+
+
+<div class="eyebrow" id="recordModalEyebrow">Nuevo registro</div>
+
+
+<h2 id="recordModalTitle">AÃ±adir registro</h2>
+
+
+<form id="recordForm" class="auth-form">
+
+
+  <div id="recordFormFields"></div>
+
+
+  <div class="action-row">
+
+
+    <button class="primary-btn" type="submit" id="recordSubmitBtn">Guardar</button>
+
+
+    <button class="secondary-btn" data-close-modal="recordModal" type="button">Cancelar</button>
+
+
+  </div>
+
+
+</form>
+
+
+</section>
+
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <div class="fixed inset-0 z-50 flex items-end justify-center bg-black/70 backdrop-blur-sm opacity-0 pointer-events-none transition-opacity duration-200" id="addReptileModal" hidden><section class="w-full max-w-md bg-surface-container-high rounded-t-3xl p-gutter pb-safe flex flex-col space-y-space-md translate-y-full transition-transform duration-200" role="dialog" aria-modal="true" aria-labelledby="addReptileTitle">
+
+
+
+
+
+
+
+
+        <button class="modal-close" data-close-modal="addReptileModal" type="button" aria-label="Cerrar"><span class="material-symbols-outlined">close</span></button>
+
+
+
+
+
+
+
+
+        <div class="eyebrow" id="addReptileEyebrow">Nueva ficha</div>
+
+
+
+
+
+
+
+
+        <h2 id="addReptileTitle">AÃ±adir reptil</h2>
+
+
+
+
+
+
+
+
+        <form id="addReptileForm" class="auth-form">
+
+
+
+
+
+
+
+
+          <div id="addReptileFields"></div>
+
+
+
+
+
+
+
+
+          <div class="form-error" id="addReptileError" hidden></div>
+
+
+
+
+
+
+
+
+          <div class="action-row">
+
+
+
+
+
+
+
+
+            <button class="primary-btn" type="submit" id="addReptileSubmitBtn">Guardar</button>
+
+
+
+
+
+
+
+
+            <button class="secondary-btn" data-close-modal="addReptileModal" type="button">Cancel</button>
+
+
+
+
+
+
+
+
+          </div>
+
+
+
+
+
+
+
+
+        </form>
+
+
+
+
+
+
+
+
+      </section></div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <div class="fixed inset-0 z-50 flex items-end justify-center bg-black/70 backdrop-blur-sm opacity-0 pointer-events-none transition-opacity duration-200" id="cameraModal" hidden><section class="w-full max-w-md bg-surface-container-high rounded-t-3xl p-gutter pb-safe flex flex-col space-y-space-md translate-y-full transition-transform duration-200" role="dialog" aria-modal="true" aria-labelledby="cameraTitle">
+
+
+
+
+
+
+
+
+        <button class="modal-close" data-close-modal="cameraModal" type="button" aria-label="Cerrar"><span class="material-symbols-outlined">close</span></button>
+
+
+
+
+
+
+
+
+        <div class="eyebrow">Registro del animal</div>
+
+
+
+
+
+
+
+
+        <h2 id="cameraTitle">AÃ±adir foto</h2>
+
+
+
+
+
+
+
+
+        <div class="camera-preview">
+
+
+
+
+
+
+
+
+          <video id="cameraVideo" autoplay playsinline muted hidden></video>
+
+
+
+
+
+
+
+
+          <canvas id="cameraCanvas" hidden></canvas>
+
+
+
+
+
+
+
+
+          <img id="cameraPhoto" src="icon.svg" alt="Vista previa" hidden />
+
+
+
+
+
+
+
+
+          <div class="camera-placeholder" id="cameraPlaceholder">
+
+
+
+
+
+
+
+
+            <span class="material-symbols-outlined">photo_camera</span>
+
+
+
+
+
+
+
+
+            <span>Toca para activar la cÃÂƒÂƒÃÂ‚ÂƒÃÂƒÂ‚ÃÂ‚ÂƒÃÂƒÂƒÃÂ‚Â‚ÃÂƒÂ‚ÃÂ‚ÂƒÃÂƒÂƒÃÂ‚ÂƒÃÂƒÂ‚ÃÂ‚Â‚ÃÂƒÂƒÃÂ‚Â‚ÃÂƒÂ‚ÃÂ‚ÂƒÃÂƒÂƒÃÂ‚ÂƒÃÂƒÂ‚ÃÂ‚ÂƒÃÂƒÂƒÃÂ‚Â‚ÃÂƒÂ‚ÃÂ‚Â‚ÃÂƒÂƒÃÂ‚ÂƒÃÂƒÂ‚ÃÂ‚Â‚ÃÂƒÂƒÃÂ‚Â‚ÃÂƒÂ‚ÃÂ‚ÂƒÃÂƒÂƒÃÂ‚ÂƒÃÂƒÂ‚ÃÂ‚ÂƒÃÂƒÂƒÃÂ‚Â‚ÃÂƒÂ‚ÃÂ‚ÂƒÃÂƒÂƒÃÂ‚ÂƒÃÂƒÂ‚ÃÂ‚Â‚ÃÂƒÂƒÃÂ‚Â‚ÃÂƒÂ‚ÃÂ‚Â‚ÃÂƒÂƒÃÂ‚ÂƒÃÂƒÂ‚ÃÂ‚ÂƒÃÂƒÂƒÃÂ‚Â‚ÃÂƒÂ‚ÃÂ‚Â‚ÃÂƒÂƒÃÂ‚ÂƒÃÂƒÂ‚ÃÂ‚Â‚ÃÂƒÂƒÃÂ‚Â‚ÃÂƒÂ‚ÃÂ‚ÂƒÃÂƒÂƒÃÂ‚ÂƒÃÂƒÂ‚ÃÂ‚ÂƒÃÂƒÂƒÃÂ‚Â‚ÃÂƒÂ‚ÃÂ‚ÂƒÃÂƒÂƒÃÂ‚ÂƒÃÂƒÂ‚ÃÂ‚Â‚ÃÂƒÂƒÃÂ‚Â‚ÃÂƒÂ‚ÃÂ‚ÂƒÃÂƒÂƒÃÂ‚ÂƒÃÂƒÂ‚ÃÂ‚ÂƒÃÂƒÂƒÃÂ‚Â‚ÃÂƒÂ‚ÃÂ‚Â‚ÃÂƒÂƒÃÂ‚ÂƒÃÂƒÂ‚ÃÂ‚Â‚ÃÂƒÂƒÃÂ‚Â‚ÃÂƒÂ‚ÃÂ‚Â‚ÃÂƒÂƒÃÂ‚ÂƒÃÂƒÂ‚ÃÂ‚ÂƒÃÂƒÂƒÃÂ‚Â‚ÃÂƒÂ‚ÃÂ‚ÂƒÃÂƒÂƒÃÂ‚ÂƒÃÂƒÂ‚ÃÂ‚Â‚ÃÂƒÂƒÃÂ‚Â‚ÃÂƒÂ‚ÃÂ‚Â‚ÃÂƒÂƒÃÂ‚ÂƒÃÂƒÂ‚ÃÂ‚ÂƒÃÂƒÂƒÃÂ‚Â‚ÃÂƒÂ‚ÃÂ‚Â‚ÃÂƒÂƒÃÂ‚ÂƒÃÂƒÂ‚ÃÂ‚Â‚ÃÂƒÂƒÃÂ‚Â‚ÃÂƒÂ‚ÃÂ‚ÂƒÃÂƒÂƒÃÂ‚ÂƒÃÂƒÂ‚ÃÂ‚ÂƒÃÂƒÂƒÃÂ‚Â‚ÃÂƒÂ‚ÃÂ‚ÂƒÃÂƒÂƒÃÂ‚ÂƒÃÂƒÂ‚ÃÂ‚Â‚ÃÂƒÂƒÃÂ‚Â‚ÃÂƒÂ‚ÃÂ‚ÂƒÃÂƒÂƒÃÂ‚ÂƒÃÂƒÂ‚ÃÂ‚ÂƒÃÂƒÂƒÃÂ‚Â‚ÃÂƒÂ‚ÃÂ‚Â‚ÃÂƒÂƒÃÂ‚ÂƒÃÂƒÂ‚ÃÂ‚Â‚ÃÂƒÂƒÃÂ‚Â‚ÃÂƒÂ‚ÃÂ‚ÂƒÃÂƒÂƒÃÂ‚ÂƒÃÂƒÂ‚ÃÂ‚ÂƒÃÂƒÂƒÃÂ‚Â‚ÃÂƒÂ‚ÃÂ‚ÂƒÃÂƒÂƒÃÂ‚ÂƒÃÂƒÂ‚ÃÂ‚Â‚ÃÂƒÂƒÃÂ‚Â‚ÃÂƒÂ‚ÃÂ‚Â‚ÃÂƒÂƒÃÂ‚ÂƒÃÂƒÂ‚ÃÂ‚ÂƒÃÂƒÂƒÃÂ‚Â‚ÃÂƒÂ‚ÃÂ‚Â‚ÃÂƒÂƒÃÂ‚ÂƒÃÂƒÂ‚ÃÂ‚Â‚ÃÂƒÂƒÃÂ‚Â‚ÃÂƒÂ‚ÃÂ‚Â‚ÃÂƒÂƒÃÂ‚ÂƒÃÂƒÂ‚ÃÂ‚ÂƒÃÂƒÂƒÃÂ‚Â‚ÃÂƒÂ‚ÃÂ‚ÂƒÃÂƒÂƒÃÂ‚ÂƒÃÂƒÂ‚ÃÂ‚Â‚ÃÂƒÂƒÃÂ‚Â‚ÃÂƒÂ‚ÃÂ‚ÂƒÃÂƒÂƒÃÂ‚ÂƒÃÂƒÂ‚ÃÂ‚ÂƒÃÂƒÂƒÃÂ‚Â‚ÃÂƒÂ‚ÃÂ‚Â‚ÃÂƒÂƒÃÂ‚ÂƒÃÂƒÂ‚ÃÂ‚Â‚ÃÂƒÂƒÃÂ‚Â‚ÃÂƒÂ‚ÃÂ‚Â‚ÃÂƒÂƒÃÂ‚ÂƒÃÂƒÂ‚ÃÂ‚ÂƒÃÂƒÂƒÃÂ‚Â‚ÃÂƒÂ‚ÃÂ‚ÂƒÃÂƒÂƒÃÂ‚ÂƒÃÂƒÂ‚ÃÂ‚Â‚ÃÂƒÂƒÃÂ‚Â‚ÃÂƒÂ‚ÃÂ‚Â‚ÃÂƒÂƒÃÂ‚ÂƒÃÂƒÂ‚ÃÂ‚ÂƒÃÂƒÂƒÂ¡mara</span>
+
+
+
+
+
+
+
+
+          </div>
+
+
+
+
+
+
+
+
+        </div>
+
+
+
+
+
+
+
+
+        <input id="cameraFileInput" type="file" accept="image/*" capture="environment" hidden />
+
+
+
+
+
+
+
+
+        <input id="galleryFileInput" type="file" accept="image/*" hidden />
+
+
+
+
+
+
+
+
+        <div class="camera-controls-new">
+
+
+
+
+
+
+
+
+          <button class="camera-toggle-btn active" id="choosePhotoButton" type="button">
+
+
+
+
+
+
+
+
+            <span class="material-symbols-outlined">photo_library</span>
+
+
+
+
+
+
+
+
+            GalerÃÂƒÂƒÃÂ‚ÂƒÃÂƒÂ‚ÃÂ‚ÂƒÃÂƒÂƒÃÂ‚Â‚ÃÂƒÂ‚ÃÂ‚ÂƒÃÂƒÂƒÃÂ‚ÂƒÃÂƒÂ‚ÃÂ‚Â‚ÃÂƒÂƒÃÂ‚Â‚ÃÂƒÂ‚ÃÂ‚ÂƒÃÂƒÂƒÃÂ‚ÂƒÃÂƒÂ‚ÃÂ‚ÂƒÃÂƒÂƒÃÂ‚Â‚ÃÂƒÂ‚ÃÂ‚Â‚ÃÂƒÂƒÃÂ‚ÂƒÃÂƒÂ‚ÃÂ‚Â‚ÃÂƒÂƒÃÂ‚Â‚ÃÂƒÂ‚ÃÂ‚ÂƒÃÂƒÂƒÃÂ‚ÂƒÃÂƒÂ‚ÃÂ‚ÂƒÃÂƒÂƒÃÂ‚Â‚ÃÂƒÂ‚ÃÂ‚ÂƒÃÂƒÂƒÃÂ‚ÂƒÃÂƒÂ‚ÃÂ‚Â‚ÃÂƒÂƒÃÂ‚Â‚ÃÂƒÂ‚ÃÂ‚Â‚ÃÂƒÂƒÃÂ‚ÂƒÃÂƒÂ‚ÃÂ‚ÂƒÃÂƒÂƒÃÂ‚Â‚ÃÂƒÂ‚ÃÂ‚Â‚ÃÂƒÂƒÃÂ‚ÂƒÃÂƒÂ‚ÃÂ‚Â‚ÃÂƒÂƒÃÂ‚Â‚ÃÂƒÂ‚ÃÂ‚ÂƒÃÂƒÂƒÃÂ‚ÂƒÃÂƒÂ‚ÃÂ‚ÂƒÃÂƒÂƒÃÂ‚Â‚ÃÂƒÂ‚ÃÂ‚ÂƒÃÂƒÂƒÃÂ‚ÂƒÃÂƒÂ‚ÃÂ‚Â‚ÃÂƒÂƒÃÂ‚Â‚ÃÂƒÂ‚ÃÂ‚ÂƒÃÂƒÂƒÃÂ‚ÂƒÃÂƒÂ‚ÃÂ‚ÂƒÃÂƒÂƒÃÂ‚Â‚ÃÂƒÂ‚ÃÂ‚Â‚ÃÂƒÂƒÃÂ‚ÂƒÃÂƒÂ‚ÃÂ‚Â‚ÃÂƒÂƒÃÂ‚Â‚ÃÂƒÂ‚ÃÂ‚Â‚ÃÂƒÂƒÃÂ‚ÂƒÃÂƒÂ‚ÃÂ‚ÂƒÃÂƒÂƒÃÂ‚Â‚ÃÂƒÂ‚ÃÂ‚ÂƒÃÂƒÂƒÃÂ‚ÂƒÃÂƒÂ‚ÃÂ‚Â‚ÃÂƒÂƒÃÂ‚Â‚ÃÂƒÂ‚ÃÂ‚Â‚ÃÂƒÂƒÃÂ‚ÂƒÃÂƒÂ‚ÃÂ‚ÂƒÃÂƒÂƒÃÂ‚Â‚ÃÂƒÂ‚ÃÂ‚Â‚ÃÂƒÂƒÃÂ‚ÂƒÃÂƒÂ‚ÃÂ‚Â‚ÃÂƒÂƒÃÂ‚Â‚ÃÂƒÂ‚ÃÂ‚ÂƒÃÂƒÂƒÃÂ‚ÂƒÃÂƒÂ‚ÃÂ‚ÂƒÃÂƒÂƒÃÂ‚Â‚ÃÂƒÂ‚ÃÂ‚ÂƒÃÂƒÂƒÃÂ‚ÂƒÃÂƒÂ‚ÃÂ‚Â‚ÃÂƒÂƒÃÂ‚Â‚ÃÂƒÂ‚ÃÂ‚ÂƒÃÂƒÂƒÃÂ‚ÂƒÃÂƒÂ‚ÃÂ‚ÂƒÃÂƒÂƒÃÂ‚Â‚ÃÂƒÂ‚ÃÂ‚Â‚ÃÂƒÂƒÃÂ‚ÂƒÃÂƒÂ‚ÃÂ‚Â‚ÃÂƒÂƒÃÂ‚Â‚ÃÂƒÂ‚ÃÂ‚ÂƒÃÂƒÂƒÃÂ‚ÂƒÃÂƒÂ‚ÃÂ‚ÂƒÃÂƒÂƒÃÂ‚Â‚ÃÂƒÂ‚ÃÂ‚ÂƒÃÂƒÂƒÃÂ‚ÂƒÃÂƒÂ‚ÃÂ‚Â‚ÃÂƒÂƒÃÂ‚Â‚ÃÂƒÂ‚ÃÂ‚Â‚ÃÂƒÂƒÃÂ‚ÂƒÃÂƒÂ‚ÃÂ‚ÂƒÃÂƒÂƒÃÂ‚Â‚ÃÂƒÂ‚ÃÂ‚Â‚ÃÂƒÂƒÃÂ‚ÂƒÃÂƒÂ‚ÃÂ‚Â‚ÃÂƒÂƒÃÂ‚Â‚ÃÂƒÂ‚ÃÂ‚Â‚ÃÂƒÂƒÃÂ‚ÂƒÃÂƒÂ‚ÃÂ‚ÂƒÃÂƒÂƒÃÂ‚Â‚ÃÂƒÂ‚ÃÂ‚ÂƒÃÂƒÂƒÃÂ‚ÂƒÃÂƒÂ‚ÃÂ‚Â‚ÃÂƒÂƒÃÂ‚Â‚ÃÂƒÂ‚ÃÂ‚ÂƒÃÂƒÂƒÃÂ‚ÂƒÃÂƒÂ‚ÃÂ‚ÂƒÃÂƒÂƒÃÂ‚Â‚ÃÂƒÂ‚ÃÂ‚Â‚ÃÂƒÂƒÃÂ‚ÂƒÃÂƒÂ‚ÃÂ‚Â‚ÃÂƒÂƒÃÂ‚Â‚ÃÂƒÂ‚ÃÂ‚Â‚ÃÂƒÂƒÃÂ‚ÂƒÃÂƒÂ‚ÃÂ‚ÂƒÃÂƒÂƒÃÂ‚Â‚ÃÂƒÂ‚ÃÂ‚ÂƒÃÂƒÂƒÃÂ‚ÂƒÃÂƒÂ‚ÃÂ‚Â‚ÃÂƒÂƒÃÂ‚Â‚ÃÂƒÂ‚ÃÂ‚Â‚ÃÂƒÂƒÃÂ‚ÂƒÃÂƒÂ‚ÃÂ‚ÂƒÃÂƒÂƒÃÂ‚Â‚ÃÂƒÂ‚ÃÂ‚Â‚ÃÂƒÂƒÃÂ‚ÂƒÃÂƒÂ‚ÃÂ‚Â‚ÃÂƒÂƒÃÂ‚Â‚ÃÂƒÂ‚ÃÂ‚Â­a
+
+
+
+
+
+
+
+
+          </button>
+
+
+
+
+
+
+
+
+          <button class="camera-shutter-btn" id="startCameraButton" type="button">
+
+
+
+
+
+
+
+
+            <span class="material-symbols-outlined">camera_alt</span>
+
+
+
+
+
+
+
+
+          </button>
+
+
+
+
+
+
+
+
+          <button class="camera-toggle-btn" id="capturePhotoButton" type="button" disabled>
+
+
+
+
+
+
+
+
+            <span class="material-symbols-outlined">check</span>
+
+
+
+
+
+
+
+
+            Capturar
+
+
+
+
+
+
+
+
+          </button>
+
+
+
+
+
+
+
+
+        </div>
+
+
+
+
+
+
+
+
+        <div class="camera-status" id="cameraStatus" role="status"></div>
+
+
+
+
+
+
+
+
+      </section></div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <script src="security_config.js" integrity="sha384-46qx9hrenvnMWKerZNgRbNmgT2S/ehmpF57Oktt+A0kfErPlcI+nHOFsJrvz8eQK" crossorigin="anonymous"></script>
+
+
+
+
+
+
+
+
+    <script src="auth.js" integrity="sha384-ppG4IsIvCjktxFci+NvPXBs37DC9ndqOgY1pxFO4FV6e2VW2reiUScHhl4JbzOS0" crossorigin="anonymous"></script>
+
+
+
+
+
+
+
+
+    <script src="data_service.js" integrity="sha384-LOXiON5N4aWbIQhAnACa3HnGxjpJuExItP8dhZ8PWMjdvzQmCbX8hQi5mzkDLrkE" crossorigin="anonymous"></script>
+
+
+
+
+
+
+
+
+    <script src="leaflet.js" integrity="sha384-cxOPjt7s7Iz04uaHJceBmS+qpjv2JkIHNVcuOrM+YHwZOmJGBXI00mdUXEq65HTH" crossorigin="anonymous"></script>
+
+
+
+
+
+
+
+
+    <script src="vet_search_service.js" integrity="sha384-vM3Ujb6G1rC1yrPqU4AV2eQRO/gB28HT9T5ymXOobPdQduMVwWCZoKTbp50l/KNp" crossorigin="anonymous"></script>
+
+
+
+
+
+
+
+
+    <script src="app.js" integrity="sha384-5fXH1bnPCRumLbKUf8EEchKb7Jlp5pfRvM6ShH3zjxjgX5gvBBCDQrFug8O/eAmY" crossorigin="anonymous"></script>
+
+
+
+
+
+
+
+
+  </body>
+
+
+
+
+
+
+
+
+</html>

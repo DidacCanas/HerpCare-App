@@ -1,0 +1,75 @@
+/**
+ * HerpCare Design Tokens — Dark Botanical Exotic Care / Terrarium Bio-Minimalism
+ * Fase 1: Capa Base de Variables CSS (Design Tokens)
+ */
+
+:root {
+  /* Surfaces & Backgrounds */
+  --bg: #101412;
+  --bg-deep: #0b0f0d;
+  --surface: #101412;
+  --surface-low: #181c1a;
+  --surface-container: #1c201e;
+  --surface-container-high: #272b29;
+  --surface-container-highest: #323633;
+
+  /* Text & Readability */
+  --text-primary: #e0e3df;
+  --text-secondary: #c2c8c2;
+  --text-muted: #8b9a90;
+
+  /* Primary (Forest Moss / Bio Green) */
+  --primary: #aeceb9;
+  --on-primary: #1a3627;
+  --primary-container: #1e3a2b;
+  --on-primary-container: #85a490;
+
+  /* Secondary (Warm Terracotta / Clay) */
+  --secondary: #ffb59c;
+  --on-secondary: #5c1900;
+  --secondary-container: #832c07;
+  --on-secondary-container: #ffa080;
+
+  /* Tertiary (Sage / Bio Balance) */
+  --tertiary: #b1cead;
+  --on-tertiary: #1d361e;
+  --tertiary-container: #223a22;
+
+  /* Semantics & Feedback */
+  --success: #58B37E;
+  --warning: #E8A248;
+  --danger: #ffb4ab;
+  --on-error: #690005;
+  --error-container: #93000a;
+
+  /* Typography */
+  --font-heading: 'Outfit', sans-serif;
+  --font-body: 'Inter', sans-serif;
+  --font-mono: 'JetBrains Mono', monospace;
+
+  /* Radius */
+  --radius-sm: 0.25rem;
+  --radius-DEFAULT: 0.5rem;
+  --radius-md: 0.75rem;
+  --radius-lg: 1rem;
+  --radius-xl: 1.5rem;
+  --radius-full: 9999px;
+
+  /* Spacing Grid (8pt) */
+  --space-2xs: 0.25rem;
+  --space-xs: 0.5rem;
+  --space-sm: 0.75rem;
+  --space-md: 1rem;
+  --space-lg: 1.5rem;
+  --space-xl: 2rem;
+  --space-2xl: 3rem;
+  --gutter-mobile: 1rem;
+  --card-pad: 1.25rem;
+
+  /* Elevation & Motion */
+  --shadow-elevation-1: 0 2px 4px rgba(0,0,0,0.2);
+  --shadow-elevation-2: 0 4px 8px rgba(0,0,0,0.3);
+  --transition-fast: 150ms ease;
+  --transition-DEFAULT: 250ms ease;
+  --transition-slow: 400ms ease;
+}
