@@ -1,0 +1,59 @@
+# ============================================================
+# HerpCare — .gitignore definitivo (PROPUESTO, no aplicado)
+# ============================================================
+
+# Sistema operativo y artefactos de editor
+.DS_Store
+Thumbs.db
+Desktop.ini
+.vscode/
+.idea/
+
+# Entornos y secretos (NUNCA publicar)
+.env
+.env.*
+.env.txt
+*.pem
+*.key
+*.secret
+
+# Dependencias y builds generados
+node_modules/
+dist/
+build/
+
+# Backups y artefactos locales
+.backup_*
+*.bak_*
+*.corrupted*
+reports/
+test-results/
+impeccable-audit-*.json
+HERPCARE_*_DIAGNOSTIC.md
+HERPCARE_*_REPORT.md
+HERPCARE_*_PLAN.md
+HERPCARE_*_AUDIT.md
+
+# Capturas de auditoría y visuales internas
+screenshot-*.png
+herpcare_app.png
+herpcare_sri_*.png
+
+# Configuración de infraestructura local
+.mcp.json
+.impeccable/
+.superpowers/
+.design-inspect.json
+
+# Scripts de utilería y desarrollo
+*.py
+*.sh
+*.ps1
+run_*
+take_screenshots.py
+clean_home.py
+fix_*.py
+
+# Tests internos de seguridad
+test_auth.js
+test_security_idor.js
